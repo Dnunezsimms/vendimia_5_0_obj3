@@ -1,0 +1,42 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Python
+__pycache__/
+*.py[cod]
+*.class
+*.so
+
+# IDE
+.vscode/
+.history/
+.idea/
+*.swp
+*.swo
+
+# Temporary and sensitive files
+*.tmp
+*.temp
+*~$*
+~$*.xlsx
+*.bak
+*.old
+credentials.json
+token.json
+client_secret.json
+client_secrets.json
+
+# Data ignores (allow structured data dirs but ignore mass dumps)
+data/all_project/
+data/historical_reference/
+data/external/
+
+# Logs
+logs/
+*.log
