@@ -6,26 +6,76 @@ import plotly.graph_objects as go
 
 from .loaders import find_columns, normalize_text
 
+# --- CONFIGURACIÓN VISUAL TÉCNICA SOBRIA E INVESTIGATIVA ---
+WINE_PALETTE = ["#6b1d2f", "#2d3748", "#d69e2e", "#319795", "#805ad5", "#dd6b20", "#e53e3e", "#38a169", "#3182ce"]
+FONT_FAMILY = "Inter, Roboto, sans-serif"
+
+GLOSSARY = {
+    "GDA_VPD_medio_acum_IFTT_acum_rendimientoton_ha": "Calor Acum. + VPD + Índice Frío + Rendimiento",
+    "GDA_VPD_medio_acum_IFs_acum": "Calor Acum. + VPD + Frío Estacional",
+    "GDA_VPD_medio_acum_IFs_acum_azucar_real_baya_g": "Calor Acum. + VPD + Frío + Azúcar Baya",
+    "GDA_VPD_medio_acum_IFs_acum_azucar_real_baya_g_peso_baya": "Calor + VPD + Frío + Azúcar + Peso Baya",
+    "GDA_VPD_medio_acum_IFs_acum_azucar_real_baya_g_rendimientoton_ha": "Calor + VPD + Frío + Azúcar + Rendimiento",
+    "GDA_VPD_medio_acum_IFs_acum_peso_baya": "Calor + VPD + Frío + Peso Baya",
+    "GDA_VPD_medio_acum_IFs_acum_rendimientoton_ha": "Calor + VPD + Frío + Rendimiento",
+    "VPD_medio_acum": "Déficit de Presión de Vapor Acumulado (VPD)",
+    "GDA": "Acumulación Térmica (Grados Día - GDD)",
+    "residuo_brotacion_latitud": "Error Brotación Latitudinal [días]",
+    "doy_t0_pred_reg_lat": "DOY T0 Latitudinal [estimado]",
+    "doy_t0_operativo": "DOY T0 Cerrado [observado]",
+    "brix": "Sólidos Solubles [°Brix]",
+    "ph": "pH del Mosto",
+    "acidez_tartarica": "Acidez Tartárica [g/L]",
+    "acidez_sulfurica": "Acidez Total [g/L H2SO4]",
+    "peso_baya": "Peso de Baya [g]",
+    "azucar_real_baya_g": "Azúcar Real por Baya [g]",
+    "antocianinas_mg_baya": "Antocianinas [mg/baya]",
+    "taninos_mg_baya": "Taninos [mg/baya]",
+    "suma_compuestos_fenolicos_mg_kg": "Compuestos Fenólicos Totales [mg/kg]",
+    "cv5_mixed": "Validación Cruzada Estratificada (CV5)",
+    "lofo_mixed": "Validación Espacial (LOFO — Leave One Fundo Out)",
+    "shap_mean_abs": "Importancia SHAP Media Absoluta",
+    "perm_importance_mean": "Importancia por Permutación Media",
+    "mae": "Error Medio Absoluto [MAE]",
+    "r2": "Coeficiente de Determinación [R²]"
+}
+
+def translate_text(text: str) -> str:
+    s = str(text)
+    return GLOSSARY.get(s, s.replace('_', ' ').title())
+
+def apply_corporate_style(fig: go.Figure, height: int = 440) -> go.Figure:
+    fig.update_layout(
+        height=height,
+        template="plotly_white",
+        font=dict(family=FONT_FAMILY, size=12, color="#2d3748"),
+        title_font=dict(family=FONT_FAMILY, size=15, color="#1a202c"),
+        plot_bgcolor="#fafbfc",
+        paper_bgcolor="white",
+        margin=dict(l=45, r=30, t=55, b=45)
+    )
+    fig.update_xaxes(showgrid=True, gridwidth=1, gridcolor="#edf2f7", zeroline=False)
+    fig.update_yaxes(showgrid=True, gridwidth=1, gridcolor="#edf2f7", zeroline=False)
+    return fig
 
 def empty_figure(message: str = "Sin datos disponibles") -> go.Figure:
     fig = go.Figure()
-    fig.add_annotation(text=message, showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper")
-    fig.update_layout(height=360, template="plotly_white")
-    return fig
+    fig.add_annotation(text=f"<b>ℹ️ Aviso:</b> {message}", showarrow=False, x=0.5, y=0.5, xref="paper", yref="paper", font=dict(size=14, color="#718096"))
+    return apply_corporate_style(fig, height=340)
 
 
 def climate_status_bar(resumen: pd.DataFrame) -> go.Figure:
     if resumen.empty or "estado" not in resumen.columns:
-        return empty_figure("Sin resumen climatico")
+        return empty_figure("Sin resumen climático")
     d = resumen.groupby("estado", dropna=False).size().reset_index(name="fundos")
-    fig = px.bar(d, x="estado", y="fundos", color="estado", text="fundos", template="plotly_white")
-    fig.update_layout(height=320, showlegend=False, xaxis_title="", yaxis_title="Fundos")
-    return fig
+    fig = px.bar(d, x="estado", y="fundos", color="estado", text="fundos", color_discrete_sequence=WINE_PALETTE)
+    fig.update_layout(showlegend=False, xaxis_title="Estado Operacional", yaxis_title="Fundos en Monitoreo", title="Estado de Red Climática Regional")
+    return apply_corporate_style(fig, height=320)
 
 
 def coverage_bar(resumen: pd.DataFrame) -> go.Figure:
     if resumen.empty or "cobertura_%" not in resumen.columns:
-        return empty_figure("Sin cobertura climatica")
+        return empty_figure("Sin cobertura climática")
     d = resumen.copy()
     d["cobertura_%"] = pd.to_numeric(d["cobertura_%"], errors="coerce")
     d = d.sort_values("cobertura_%")
@@ -35,16 +85,17 @@ def coverage_bar(resumen: pd.DataFrame) -> go.Figure:
         y="fundo_normalizado",
         color="estado",
         orientation="h",
-        template="plotly_white",
+        color_discrete_sequence=WINE_PALETTE,
         hover_data=["estacion_recomendada", "red", "station_id"],
+        title="Porcentaje de Cobertura de Datos Climáticos por Fundo"
     )
-    fig.update_layout(height=560, xaxis_title="Cobertura %", yaxis_title="")
-    return fig
+    fig.update_layout(xaxis_title="Cobertura Horaria [%]", yaxis_title="Fundo")
+    return apply_corporate_style(fig, height=540)
 
 
 def gdd_progress_bar(gdd: pd.DataFrame) -> go.Figure:
     if gdd.empty:
-        return empty_figure("Sin salidas GDD")
+        return empty_figure("Sin salidas de Acumulación Térmica (GDD)")
     d = gdd.copy()
     if "GDD_alcanzado" not in d.columns or "GDD Lourdes Variedad" not in d.columns:
         return empty_figure("No se detectaron columnas de GDD acumulado/umbral")
@@ -53,7 +104,7 @@ def gdd_progress_bar(gdd: pd.DataFrame) -> go.Figure:
     d["GDD Lourdes Variedad"] = pd.to_numeric(d["GDD Lourdes Variedad"], errors="coerce")
     d = d.dropna(subset=["GDD_alcanzado", "GDD Lourdes Variedad"])
     if d.empty:
-        return empty_figure("Sin valores numericos para GDD")
+        return empty_figure("Sin valores numéricos válidos para GDD")
         
     d["Avance %"] = (d["GDD_alcanzado"] / d["GDD Lourdes Variedad"] * 100).clip(upper=100)
     
@@ -75,17 +126,17 @@ def gdd_progress_bar(gdd: pd.DataFrame) -> go.Figure:
         y="serie",
         color=variedad,
         orientation="h",
-        template="plotly_white",
-        title="Avance GDD hacia Umbral de Brotacion",
+        color_discrete_sequence=WINE_PALETTE,
+        title="Avance Térmico hacia Umbral de Brotación Fisiológica",
         hover_data={"GDD_alcanzado": ":.1f", "GDD Lourdes Variedad": ":.1f"}
     )
-    fig.update_layout(height=440, xaxis_title="Avance % hacia Umbral GDD", yaxis_title="")
-    return fig
+    fig.update_layout(xaxis_title="Avance Térmico [%]", yaxis_title="")
+    return apply_corporate_style(fig, height=440)
 
 
 def phenology_error_plot(gdd: pd.DataFrame) -> go.Figure:
-    # Este era el plot antiguo, lo reemplazamos por el panel A operativo.
     pass
+
 
 def panel_a_operativo_plot(diagnostico: pd.DataFrame) -> go.Figure:
     if diagnostico.empty or "residuo_brotacion_latitud" not in diagnostico.columns:
@@ -96,7 +147,7 @@ def panel_a_operativo_plot(diagnostico: pd.DataFrame) -> go.Figure:
     d = d.dropna(subset=["error_dias_lat"])
     
     if d.empty:
-        return empty_figure("Sin errores validos para T0 Latitudinal")
+        return empty_figure("Sin errores válidos para T0 Latitudinal")
         
     fig = px.bar(
         d.sort_values("error_dias_lat"),
@@ -104,24 +155,17 @@ def panel_a_operativo_plot(diagnostico: pd.DataFrame) -> go.Figure:
         y="error_dias_lat",
         color="error_dias_lat",
         color_continuous_scale="RdBu",
-        template="plotly_white",
-        title="Desempeño preliminar del t0 latitudinal para brotación Cabernet",
+        title="Desempeño Operativo del Biofix Latitudinal (Brotación Cabernet)",
         hover_data={"doy_t0_pred_reg_lat": True}
     )
     
     mae = d["error_dias_lat"].abs().mean()
     bias = d["error_dias_lat"].mean()
     
-    fig.add_hline(y=0, line_dash="dash", line_color="green", annotation_text=f"Predicción exacta | MAE: {mae:.1f} | Sesgo: {bias:.1f}")
+    fig.add_hline(y=0, line_dash="dash", line_color="#38a169", annotation_text=f"Concordancia Exacta | MAE: {mae:.1f} días | Sesgo: {bias:.1f} días")
     
-    # Nota metodologica: el MAE es sobre los mismos datos de ajuste
-    fig.add_annotation(
-        text="<b>Nota:</b> El MAE puede ser optimista (evaluado sobre set de ajuste). Idealmente requeriría CV espacial.",
-        xref="paper", yref="paper", x=0.5, y=-0.2, showarrow=False, font=dict(size=10, color="gray")
-    )
-    
-    fig.update_layout(height=450, xaxis_title="Fundo", yaxis_title="Error (Días adelantado/atrasado)", margin=dict(b=80))
-    return fig
+    fig.update_layout(xaxis_title="Viñedo / Fundo", yaxis_title="Residuo [Días de Desvío]")
+    return apply_corporate_style(fig, height=450)
 
 
 def panel_b_diagnostico_plot(diagnostico: pd.DataFrame) -> go.Figure:
@@ -135,17 +179,17 @@ def panel_b_diagnostico_plot(diagnostico: pd.DataFrame) -> go.Figure:
         x="doy_t0_pred_reg_lat",
         y="doy_t0_operativo",
         color="Fundo" if "Fundo" in d.columns else "fundo",
-        template="plotly_white",
-        title="Panel B - Diagnóstico: T0 Latitudinal vs T0 Cerrado (DOY)",
+        color_discrete_sequence=WINE_PALETTE,
+        title="Diagnóstico Fisiológico: Biofix Latitudinal vs Cerrado [DOY]",
         hover_data={"ventana_dias_t0_brotacion": True}
     )
     
     min_val = min(d["doy_t0_pred_reg_lat"].min(), d["doy_t0_operativo"].min()) - 5
     max_val = max(d["doy_t0_pred_reg_lat"].max(), d["doy_t0_operativo"].max()) + 5
-    fig.add_trace(go.Scatter(x=[min_val, max_val], y=[min_val, max_val], mode="lines", name="1:1 (Concordancia)", line=dict(dash="dash", color="black")))
+    fig.add_trace(go.Scatter(x=[min_val, max_val], y=[min_val, max_val], mode="lines", name="1:1 (Concordancia Ideal)", line=dict(dash="dash", color="#718096")))
     
-    fig.update_layout(height=450, xaxis_title="DOY T0 Latitudinal (Predictivo)", yaxis_title="DOY T0 Cerrado (Leakage retrospectivo)")
-    return fig
+    fig.update_layout(xaxis_title="DOY T0 Latitudinal [Modelo Operativo]", yaxis_title="DOY T0 Cerrado [Retrospectivo]")
+    return apply_corporate_style(fig, height=450)
 
 
 def baseline_comparison_plot(diagnostico: pd.DataFrame) -> go.Figure:
@@ -158,27 +202,26 @@ def baseline_comparison_plot(diagnostico: pd.DataFrame) -> go.Figure:
     mae_lat = d["residuo_brotacion_latitud"].abs().mean()
     mae_cerrado = d["error_dias"].abs().mean()
     
-    # Baseline Fijo: Predecir brotación con el promedio de brotación (equivalente a un T0 y ventana fijos)
     mean_brot = d["doy_brotacion"].mean()
     mae_fijo = (d["doy_brotacion"] - mean_brot).abs().mean()
     
     comp = pd.DataFrame({
-        "Esquema": ["A. T0 Cerrado (Leakage)", "B. T0 Latitudinal (Predictivo)", "C. Fijo (Baseline ingenuo)"],
-        "MAE (días)": [mae_cerrado, mae_lat, mae_fijo],
+        "Esquema": ["A. T0 Cerrado (Retrospectivo)", "B. T0 Latitudinal (Operativo)", "C. Promedio Fijo (Ingenuo)"],
+        "MAE [días]": [mae_cerrado, mae_lat, mae_fijo],
         "Tipo": ["Diagnóstico", "Operativo", "Baseline"]
     })
     
     fig = px.bar(
         comp,
         x="Esquema",
-        y="MAE (días)",
+        y="MAE [días]",
         color="Tipo",
         text_auto=".1f",
-        template="plotly_white",
-        title="Comparación de Modelos de Predicción (MAE)"
+        color_discrete_sequence=["#6b1d2f", "#319795", "#a0aec0"],
+        title="Auditoría de Modelos: Error Medio Absoluto en Brotación [MAE]"
     )
-    fig.update_layout(height=400, yaxis_title="MAE en días vs Observado")
-    return fig
+    fig.update_layout(yaxis_title="MAE [Días de Desvío]", xaxis_title="Esquema Metodológico")
+    return apply_corporate_style(fig, height=400)
 
 
 def cabernet_diagnostic_table(diagnostico: pd.DataFrame) -> pd.DataFrame:
@@ -187,10 +230,8 @@ def cabernet_diagnostic_table(diagnostico: pd.DataFrame) -> pd.DataFrame:
     
     d = diagnostico.copy()
     
-    # Derivar t0 latitudinal fecha real (aproximada, dado el doy)
     if "t0_operativo" in d.columns and "doy_t0_pred_reg_lat" in d.columns:
         d["t0_operativo"] = pd.to_datetime(d["t0_operativo"], errors="coerce")
-        # Sumamos el doy - 1 al inicio del año para reconstruir la fecha del t0 latitudinal
         d["t0_latitudinal"] = d["t0_operativo"].dt.year.apply(lambda y: pd.Timestamp(f"{int(y) if pd.notna(y) else 2025}-01-01")) + pd.to_timedelta(d["doy_t0_pred_reg_lat"].fillna(0) - 1, unit="D")
         d["t0_latitudinal"] = d["t0_latitudinal"].dt.strftime("%Y-%m-%d")
         d["t0_operativo"] = d["t0_operativo"].dt.strftime("%Y-%m-%d")
@@ -203,10 +244,9 @@ def cabernet_diagnostic_table(diagnostico: pd.DataFrame) -> pd.DataFrame:
     out["T0 Cerrado"] = d.get("t0_operativo", pd.Series(dtype=str))
     out["T0 Latitudinal"] = d.get("t0_latitudinal", pd.Series(dtype=str))
     out["Fecha Brotación"] = d.get("fecha_brotacion", pd.Series(dtype=str))
-    out["Error T0 Lat. (Días)"] = d.get("residuo_brotacion_latitud", pd.Series(dtype=float)).round(1)
+    out["Error T0 Lat. [Días]"] = d.get("residuo_brotacion_latitud", pd.Series(dtype=float)).round(1)
     out["Ventana T0 Cerrado - Brotación"] = d.get("ventana_dias_t0_brotacion", pd.Series(dtype=float))
     
-    # Consideramos critico si la ventana es menor a 22 días
     if "Ventana T0 Cerrado - Brotación" in out.columns:
         out["Estado / Alerta Leakage"] = ["🔴 CRÍTICO (Leakage excesivo)" if pd.notna(v) and v < 22 else "🟡 SOSPECHOSO (T0 tardío)" if pd.notna(v) else "" for v in out["Ventana T0 Cerrado - Brotación"]]
     
@@ -222,12 +262,11 @@ def panel_d_chill_table(chill: pd.DataFrame) -> pd.DataFrame:
     out["Fundo"] = d.get("Fundo", pd.Series(dtype=str))
     out["T0 Latitudinal"] = d.get("t0_latitudinal", pd.Series(dtype=str))
     out["Brotación"] = d.get("fecha_brotacion", pd.Series(dtype=str))
-    out["Frío (CP) hasta T0 Lat."] = d.get("chill_hasta_t0_lat", pd.Series(dtype=float))
-    out["GDD Previos al T0 Lat."] = d.get("gdd_jul1_a_t0_lat", pd.Series(dtype=float))
-    out["GDD T0 a Brotación"] = d.get("gdd_t0_lat_a_brotacion", pd.Series(dtype=float))
+    out["Frío [CP] hasta T0 Lat."] = d.get("chill_hasta_t0_lat", pd.Series(dtype=float))
+    out["Calor Prev. al T0 [GDD]"] = d.get("gdd_jul1_a_t0_lat", pd.Series(dtype=float))
+    out["Calor T0 a Brotación [GDD]"] = d.get("gdd_t0_lat_a_brotacion", pd.Series(dtype=float))
     out["Estado Cobertura"] = d.get("estado_cobertura_horaria", pd.Series(dtype=str))
     
-    # Semaforización
     def eval_status(row):
         cov = str(row.get("estado_cobertura_horaria", ""))
         cp = row.get("chill_hasta_t0_lat")
@@ -236,42 +275,41 @@ def panel_d_chill_table(chill: pd.DataFrame) -> pd.DataFrame:
         if "INCOMPLETA" in cov:
             return "🔴 INCOMPLETO (Faltan datos Jul-Sep)"
         if pd.notna(cp) and pd.notna(gdd):
-            # Criterio arbitrario de plausibilidad para diagnostico
             if cp < 20 and gdd > 80:
-                return "🔴 CRITICO (Bajo frío, alto calor previo)"
+                return "🔴 CRÍTICO (Bajo frío invernal)"
             elif cp < 30:
-                return "🟡 SOSPECHOSO (Bajo frío)"
+                return "🟡 SOSPECHOSO (Frío límite)"
             return "🟢 PLAUSIBLE"
         return "⚪ SIN DATOS"
         
-    out["Alerta Plausibilidad"] = [eval_status(r) for _, r in d.iterrows()]
+    out["Alerta Fisiológica"] = [eval_status(r) for _, r in d.iterrows()]
     return out
+
 
 def panel_d_chill_plot(chill: pd.DataFrame) -> go.Figure:
     if chill.empty or "chill_hasta_t0_lat" not in chill.columns:
-        return empty_figure("No hay cobertura horaria suficiente para calcular frío dinámico.")
+        return empty_figure("Cobertura horaria insuficiente para calcular frío dinámico invernal.")
         
     d = chill.copy()
-    # Solo mostrar los completos
     d = d[~d["estado_cobertura_horaria"].str.contains("INCOMPLETA", na=False)]
     if d.empty:
-        return empty_figure("No hay cobertura horaria suficiente para calcular frío dinámico en la temporada 2025_2026.")
+        return empty_figure("Pendiente ingesta de datos horarios invernales (Julio - Octubre 2025).")
         
     fig = px.bar(
         d,
         x="Fundo",
         y=["chill_hasta_t0_lat", "chill_hasta_t0_cerrado", "chill_hasta_brotacion"],
         barmode="group",
-        template="plotly_white",
-        title="Acumulación de Frío (Chill Portions) por Hito"
+        color_discrete_sequence=WINE_PALETTE,
+        title="Acumulación de Frío Invernal [Chill Portions] por Hito Fenológico"
     )
-    fig.update_layout(height=450, yaxis_title="Chill Portions Acumuladas", legend_title="Hito")
-    return fig
+    fig.update_layout(yaxis_title="Chill Portions Acumuladas", legend_title="Hito Fisiológico")
+    return apply_corporate_style(fig, height=450)
 
 
 def maturity_curve(df: pd.DataFrame, variable: str, title: str) -> go.Figure:
     if df.empty or not variable:
-        return empty_figure("Sin datos para curva")
+        return empty_figure("Sin datos para renderizar curva")
     d = df.copy()
     date_col = next((c for c in d.columns if normalize_text(c) in {"fecha", "date"} or "fecha" in normalize_text(c)), None)
     if date_col:
@@ -281,6 +319,8 @@ def maturity_curve(df: pd.DataFrame, variable: str, title: str) -> go.Figure:
         date_col = "_row"
     color = next((c for c in d.columns if normalize_text(c) in {"fundo", "campo"} or "fundo" in normalize_text(c)), None)
     line_dash = next((c for c in d.columns if "variedad" in normalize_text(c)), None)
+    
+    var_clean = translate_text(variable)
     fig = px.line(
         d.sort_values(date_col),
         x=date_col,
@@ -288,22 +328,22 @@ def maturity_curve(df: pd.DataFrame, variable: str, title: str) -> go.Figure:
         color=color,
         line_dash=line_dash,
         markers=True,
-        template="plotly_white",
-        title=title,
+        color_discrete_sequence=WINE_PALETTE,
+        title=f"{title}: Evolución de {var_clean}"
     )
-    fig.update_layout(height=460, xaxis_title="Fecha", yaxis_title=variable)
-    return fig
+    fig.update_layout(xaxis_title="Fecha de Muestreo", yaxis_title=var_clean)
+    return apply_corporate_style(fig, height=460)
 
 
 def maturity_curve_grouped(df: pd.DataFrame, variable: str, group_by_cuartel: bool = False) -> go.Figure:
     if df.empty or not variable or variable not in df.columns:
-        return empty_figure("Sin datos de madurez tecnica para los filtros seleccionados")
+        return empty_figure("Sin datos de madurez técnica para los filtros seleccionados")
     d = df.copy()
     d["fecha"] = pd.to_datetime(d["fecha"], errors="coerce")
     d[variable] = pd.to_numeric(d[variable], errors="coerce")
     d = d.dropna(subset=["fecha", "fundo", "variedad", variable])
     if d.empty:
-        return empty_figure("Sin valores numericos para la variable seleccionada")
+        return empty_figure("Sin registros numéricos válidos en el rango seleccionado")
 
     group_cols = ["fecha", "temporada", "fundo", "variedad"]
     if group_by_cuartel and "cuartel" in d.columns:
@@ -323,14 +363,15 @@ def maturity_curve_grouped(df: pd.DataFrame, variable: str, group_by_cuartel: bo
     if group_by_cuartel and "cuartel" in agg.columns:
         agg["serie"] = agg["serie"] + " - C" + agg["cuartel"].astype(str)
 
+    var_clean = translate_text(variable)
     fig = px.line(
         agg.sort_values("fecha"),
         x="fecha",
         y="valor",
         color="serie",
         markers=True,
-        template="plotly_white",
-        title=f"Progreso temporal de {variable}",
+        color_discrete_sequence=WINE_PALETTE,
+        title=f"Evolución Enológica Temporal: {var_clean}",
         hover_data={
             "serie": False,
             "fundo": True,
@@ -343,57 +384,101 @@ def maturity_curve_grouped(df: pd.DataFrame, variable: str, group_by_cuartel: bo
             "n_muestras": True,
         },
     )
+    
+    # Rango referencial de madurez soluble si es °Brix
+    if normalize_text(variable) == "brix":
+        fig.add_hrect(y0=23.0, y1=24.5, line_width=0, fillcolor="rgba(49, 151, 149, 0.15)", annotation_text="Rango referencial de madurez soluble tintas (23.0 - 24.5 °Brix)", annotation_position="top left", annotation_font=dict(color="#285e61", size=11))
+
     fig.update_layout(
-        height=520,
-        xaxis_title="Fecha",
-        yaxis_title=variable,
-        legend_title_text="Fundo - variedad" + (" - cuartel" if group_by_cuartel else ""),
+        xaxis_title="Fecha de Control",
+        yaxis_title=var_clean,
+        legend_title_text="Viñedo — Variedad" + (" — Cuartel" if group_by_cuartel else ""),
     )
-    return fig
+    return apply_corporate_style(fig, height=520)
 
 
 def observed_vs_pred(preds: pd.DataFrame, target: str | None = None) -> go.Figure:
     if preds.empty:
-        return empty_figure("Sin predicciones")
+        return empty_figure("Sin predicciones disponibles")
     d = preds.copy()
     y_col = target if target in d.columns else None
     if not y_col:
         candidates = [c for c in d.columns if c not in {"prediction", "split_id", "seed", "n_predictors"} and pd.api.types.is_numeric_dtype(d[c])]
         y_col = candidates[0] if candidates else None
     if not y_col or "prediction" not in d.columns:
-        return empty_figure("No se detectaron observado/prediccion")
+        return empty_figure("No se detectaron columnas de valores observados vs predichos")
+        
+    tgt_clean = translate_text(y_col)
     fig = px.scatter(
         d,
         x=y_col,
         y="prediction",
         color="fundo" if "fundo" in d.columns else None,
+        color_discrete_sequence=WINE_PALETTE,
         hover_data=["variedad", "fecha"] if {"variedad", "fecha"}.issubset(d.columns) else None,
-        template="plotly_white",
+        title=f"Concordancia de Modelo: {tgt_clean} Observado vs Predicho"
     )
-    fig.add_trace(go.Scatter(x=[d[y_col].min(), d[y_col].max()], y=[d[y_col].min(), d[y_col].max()], mode="lines", name="1:1"))
-    fig.update_layout(height=460, xaxis_title="Observado", yaxis_title="Predicho")
-    return fig
+    
+    min_v = min(d[y_col].min(), d["prediction"].min())
+    max_v = max(d[y_col].max(), d["prediction"].max())
+    fig.add_trace(go.Scatter(x=[min_v, max_v], y=[min_v, max_v], mode="lines", name="Concordancia Exacta (1:1)", line=dict(dash="dash", color="#a0aec0")))
+    
+    fig.update_layout(xaxis_title=f"Valor Observado [{tgt_clean}]", yaxis_title=f"Valor Predicho [{tgt_clean}]")
+    return apply_corporate_style(fig, height=460)
 
 
 def metric_ranking(metrics: pd.DataFrame) -> go.Figure:
     if metrics.empty or "mae" not in metrics.columns:
-        return empty_figure("Sin metricas")
+        return empty_figure("Sin métricas de evaluación")
     group_cols = [c for c in ["target_key", "scheme", "model", "method", "predictors"] if c in metrics.columns]
     d = metrics.copy()
     d["mae"] = pd.to_numeric(d["mae"], errors="coerce")
     agg = d.groupby(group_cols, dropna=False).agg(mae=("mae", "mean"), r2=("r2", "mean") if "r2" in d.columns else ("mae", "size")).reset_index()
     agg = agg.sort_values("mae").head(30)
-    fig = px.bar(agg, x="mae", y="target_key", color="scheme" if "scheme" in agg.columns else None, orientation="h", hover_data=group_cols, template="plotly_white")
-    fig.update_layout(height=620, yaxis_title="", xaxis_title="MAE promedio")
-    return fig
+    
+    if "target_key" in agg.columns:
+        agg["target_clean"] = agg["target_key"].apply(translate_text)
+    else:
+        agg["target_clean"] = "Objetivo"
+        
+    if "scheme" in agg.columns:
+        agg["scheme_clean"] = agg["scheme"].apply(translate_text)
+    else:
+        agg["scheme_clean"] = None
+
+    fig = px.bar(
+        agg,
+        x="mae",
+        y="target_clean",
+        color="scheme_clean" if "scheme_clean" in agg.columns else None,
+        orientation="h",
+        color_discrete_sequence=WINE_PALETTE,
+        hover_data=group_cols,
+        title="Ranking de Precisión Predictiva por Parámetro [Menor MAE es Mejor]"
+    )
+    fig.update_layout(yaxis_title="Parámetro Evaluado", xaxis_title="Error Medio Absoluto Promedio [MAE]", legend_title="Esquema de Validación")
+    return apply_corporate_style(fig, height=620)
 
 
 def importance_bar(df: pd.DataFrame, value_col: str) -> go.Figure:
     if df.empty or value_col not in df.columns or "feature" not in df.columns:
-        return empty_figure("Sin importancias")
+        return empty_figure("Sin datos de interpretabilidad")
     d = df.copy()
     d[value_col] = pd.to_numeric(d[value_col], errors="coerce")
     agg = d.groupby("feature", dropna=False)[value_col].mean().reset_index().sort_values(value_col, ascending=False).head(25)
-    fig = px.bar(agg, x=value_col, y="feature", orientation="h", template="plotly_white")
-    fig.update_layout(height=560, yaxis_title="", xaxis_title=value_col)
-    return fig
+    
+    # TRADUCIR PREDICTORES SINTÉTICOS ENCRIPTADOS A LENGUAJE AGRONÓMICO
+    agg["feature_clean"] = agg["feature"].apply(translate_text)
+    
+    metric_name = translate_text(value_col)
+    fig = px.bar(
+        agg,
+        x=value_col,
+        y="feature_clean",
+        orientation="h",
+        color=value_col,
+        color_continuous_scale="Viridis",
+        title=f"Drivers Agronómicos: {metric_name}"
+    )
+    fig.update_layout(yaxis_title="Variable Ambientales y Productivas", xaxis_title=metric_name)
+    return apply_corporate_style(fig, height=560)

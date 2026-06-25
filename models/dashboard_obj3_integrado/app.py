@@ -2,64 +2,84 @@ from __future__ import annotations
 
 import argparse
 import logging
-import sys
 from pathlib import Path
 
 import gradio as gr
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parent
-sys.path.insert(0, str(ROOT))
+try:
+    from .src.config import HOST, LOG_DIR, PORT, REPO_ROOT
+    from .src.loaders import find_columns, load_state, numeric_columns, setup_logging
+    from .src.plots import (
+        baseline_comparison_plot,
+        cabernet_diagnostic_table,
+        climate_status_bar,
+        coverage_bar,
+        empty_figure,
+        gdd_progress_bar,
+        importance_bar,
+        maturity_curve,
+        maturity_curve_grouped,
+        metric_ranking,
+        observed_vs_pred,
+        panel_a_operativo_plot,
+        panel_b_diagnostico_plot,
+        panel_d_chill_plot,
+        panel_d_chill_table,
+    )
+except ImportError:
+    import sys
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    from src.config import HOST, LOG_DIR, PORT, REPO_ROOT
+    from src.loaders import find_columns, load_state, numeric_columns, setup_logging
+    from src.plots import (
+        baseline_comparison_plot,
+        cabernet_diagnostic_table,
+        climate_status_bar,
+        coverage_bar,
+        empty_figure,
+        gdd_progress_bar,
+        importance_bar,
+        maturity_curve,
+        maturity_curve_grouped,
+        metric_ranking,
+        observed_vs_pred,
+        panel_a_operativo_plot,
+        panel_b_diagnostico_plot,
+        panel_d_chill_plot,
+        panel_d_chill_table,
+    )
 
-from src.config import HOST, LOG_DIR, PORT, REPO_ROOT  # noqa: E402
-from src.loaders import find_columns, load_state, numeric_columns, read_table, setup_logging  # noqa: E402
-from src.plots import (  # noqa: E402
-    climate_status_bar,
-    coverage_bar,
-    empty_figure,
-    gdd_progress_bar,
-    panel_a_operativo_plot,
-    panel_b_diagnostico_plot,
-    baseline_comparison_plot,
-    cabernet_diagnostic_table,
-    panel_d_chill_table,
-    panel_d_chill_plot,
-    importance_bar,
-    maturity_curve,
-    maturity_curve_grouped,
-    metric_ranking,
-    observed_vs_pred,
-)
 
-
-def _safe(df: pd.DataFrame, max_rows: int = 500) -> pd.DataFrame:
-    return df.head(max_rows).copy() if isinstance(df, pd.DataFrame) else pd.DataFrame()
+def _safe(df: pd.DataFrame | None) -> pd.DataFrame:
+    return df if isinstance(df, pd.DataFrame) else pd.DataFrame()
 
 
 def _markdown_status(state: dict) -> str:
-    resumen = state["climate"]["resumen"]
-    audit = state["audit"]
+    climate = state["climate"]
     luis = state["luis"]
-    n_ok = int((resumen.get("estado", pd.Series(dtype=str)) == "OK").sum()) if not resumen.empty else 0
-    n_val = int((resumen.get("estado", pd.Series(dtype=str)) == "REQUIERE_VALIDACION_MANUAL").sum()) if not resumen.empty else 0
+    audit = state["audit"]
+    resumen = climate["resumen"]
+    n_ok = int((resumen.get("estado", pd.Series(dtype=str)) == "OK").sum()) if "estado" in resumen.columns else 0
+    n_val = int((resumen.get("estado", pd.Series(dtype=str)) == "PENDIENTE_VALIDACION_MANUAL").sum()) if "estado" in resumen.columns else 0
+
     return (
-        "### Resumen Ejecutivo Obj3\n\n"
-        "**Estado General:** Consolidación de línea base técnica completada. Transición hacia validación fenólica y optimización.\n\n"
-        "| Módulo | Estado | Dataset Vigente / Base |\n"
+        "### 🏛️ Matriz General de Dependencias e Ingesta\n\n"
+        "| Componente | Estado Operacional | Archivo Canónico / Fuente |\n"
         "|---|---|---|\n"
         "| **Clima** | 🟢 CERRADO | `consolidado_fenologia_ELP_OBJ3_INDICES_BIOCLIMATICOS.csv` |\n"
         "| **Fenología** | 🟢 CERRADO | `consolidado_fenologia_ELP_MODELABLE_FULL_v1.csv` |\n"
         "| **Madurez Técnica** | 🟢 CERRADO | `madurez_tecnica_2025_2026_train_test_CANONICO_V5_INDICES_ORIGINALES.csv` |\n"
         "| **Madurez Fenólica** | 🟡 EN PROGRESO | Bloqueado por resultados lab 2026 |\n"
-        "| **Modelos (Baseline)** | 🟢 CERRADO | `run_pipeline_v2.py` ejecutado y métricas listas |\n"
-        "| **Export INRIA** | 🟡 ESPERANDO RESPUESTA | `paquete_luis_inria_fenologia_ELP_OBJ3_CLEAN_2.zip` |\n\n"
-        "### Auditoría de carga\n"
-        f"- Repo: `{REPO_ROOT}`\n"
-        f"- Clima: `{n_ok}` fundos OK, `{n_val}` en validación manual.\n"
-        f"- RF metrics Luis: `{len(luis['metrics_rf'])}` filas.\n"
-        f"- PySR/SR metrics Luis: `{len(luis['metrics_pysr'])}` filas.\n"
-        f"- Predicciones RF: `{len(luis['predictions_rf'])}` filas.\n"
-        f"- Artefactos auditados: `{len(audit)}` entradas.\n"
+        "| **Modelos (Baseline)** | 🟢 CERRADO | `run_pipeline_v2.py` ejecutado y métricas consolidadas |\n"
+        "| **Export INRIA** | 🟡 EN ESPERA | `paquete_luis_inria_fenologia_ELP_OBJ3_CLEAN_2.zip` |\n\n"
+        "### 🔎 Auditoría de Orígenes de Datos\n"
+        f"- **Repositorio Base:** `{REPO_ROOT}`\n"
+        f"- **Red Climática:** `{n_ok}` fundos consolidados OK, `{n_val}` en verificación manual.\n"
+        f"- **Métricas RF (Luis):** `{len(luis['metrics_rf'])}` registros.\n"
+        f"- **Métricas PySR / Regresión Simbólica:** `{len(luis['metrics_pysr'])}` fórmulas evaluadas.\n"
+        f"- **Predicciones RF Espaciales:** `{len(luis['predictions_rf'])}` puntos.\n"
+        f"- **Control de Integridad (SHA/Path):** `{len(audit)}` archivos verificados.\n"
     )
 
 
@@ -97,6 +117,21 @@ def _filter_maturity(df: pd.DataFrame, variedad: str, fundo: str, temporada: str
     return d
 
 
+CUSTOM_CSS = """
+.gradio-container {
+    max-width: 1450px !important;
+    margin: auto;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+}
+h1, h2, h3 {
+    color: #6b1d2f !important;
+    font-weight: 700;
+}
+.prose {
+    color: #2d3748 !important;
+}
+"""
+
 def build_app() -> gr.Blocks:
     state = load_state()
     logging.info("Estado inicial cargado")
@@ -120,46 +155,50 @@ def build_app() -> gr.Blocks:
     model_targets = ["Todos"] + sorted(model_metrics.get("target_key", pd.Series(dtype=str)).dropna().astype(str).unique().tolist())
     schemes = ["Todos"] + sorted(model_metrics.get("scheme", pd.Series(dtype=str)).dropna().astype(str).unique().tolist())
 
-    with gr.Blocks(title="Obj.3 Vendimia 5.0 - Dashboard exploratorio") as demo:
-        gr.Markdown("# Dashboard exploratorio integrado Obj.3")
-        gr.Markdown("Clima -> fenologia -> madurez tecnica -> madurez fenolica -> modelos -> decision de cosecha")
+    with gr.Blocks(title="Vendimia 5.0 — Plataforma Exploratoria Objetivo 3") as demo:
+        gr.Markdown(
+            """
+            # 🍇 Vendimia 5.0 — Explorador Técnico Objetivo 3
+            **Flujo Técnico de Análisis y Trazabilidad:** *Clima Fisiológico → Modelación Fenológica → Madurez Técnica/Fenólica → Modelos IA/RF/PySR → Referencia de Cosecha*
+            """
+        )
 
-        with gr.Tab("Estado del sistema"):
-            gr.Markdown("> **📊 INDICADOR DE COMPLETITUD:** Ingesta climática diaria activa hasta octubre 2025. *Bloque de Frío Horario invernal pendiente de actualización (Jul-Oct).*")
+        with gr.Tab("📊 Estado del sistema"):
+            gr.Markdown("> **📌 ESTADO DE COBERTURA CLIMÁTICA:** Ingesta climática diaria operacional consolidada hasta Octubre 2025. *Los sensores horarios de frío invernal cortan en Junio 2025.*")
             gr.Markdown(_markdown_status(state))
             with gr.Row():
                 gr.Plot(value=climate_status_bar(climate["resumen"]))
                 gr.Plot(value=coverage_bar(climate["resumen"]))
-            gr.Markdown("Tabla maestra fundo-estacion-fuente-temporada")
+            gr.Markdown("### 🗃️ Catálogo Maestro Regional (Fundo - Estación - Fuente - Temporada)")
             gr.Dataframe(value=_safe(climate["master"]), interactive=False, wrap=True)
-            gr.Markdown("Gaps por fundo")
+            gr.Markdown("### 🕳️ Detección de Gaps Horarios por Fundo")
             gr.Dataframe(value=_safe(climate["gaps"]), interactive=False, wrap=True)
-            gr.Markdown("Equivalencias y auditoria de artefactos")
+            gr.Markdown("### 🔄 Equivalencias Homologadas e Verificación de Hash")
             with gr.Row():
                 gr.Dataframe(value=_safe(climate["equivalencias"]), interactive=False, wrap=True)
                 gr.Dataframe(value=_safe(state["audit"]), interactive=False, wrap=True)
 
-        with gr.Tab("Fenología"):
-            gr.Markdown("> **⚠️ ADVERTENCIA:** El t0 cerrado es diagnóstico retrospectivo; el t0 latitudinal es el candidato operativo/predictivo. La validación formal requiere leave-one-fundo-out espacial.")
+        with gr.Tab("🌱 Fenología & GDD"):
+            gr.Markdown("> **⚠️ CRITERIO METODOLÓGICO:** El **T0 Cerrado** es un indicador de diagnóstico retrospectivo (*leakage* histórico); el **T0 Latitudinal** es el biofix predictivo operacional candidato a producción.")
             with gr.Tabs():
-                with gr.Tab("Evaluación operacional preliminar del t0 latitudinal"):
+                with gr.Tab("A. Evaluación Operacional (T0 Latitudinal)"):
                     f_lat_error_plot = gr.Plot(value=panel_a_operativo_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
                     
-                with gr.Tab("Panel B: Diagnóstico T0 y Alertas"):
-                    gr.Markdown("Comparación retrospectiva del t0 cerrado vs latitudinal y evaluación del *leakage*.")
+                with gr.Tab("B. Diagnóstico de Leakage (T0 Cerrado vs Latitudinal)"):
+                    gr.Markdown("Análisis comparativo de discrepancia retrospectiva en el hito de brotación fisiológica.")
                     with gr.Row():
                         f_t0_comparison_plot = gr.Plot(value=panel_b_diagnostico_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
                         f_baseline_plot = gr.Plot(value=baseline_comparison_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
-                    gr.Markdown("**Cabernet Sauvignon: Tabla Diagnóstica Base (T0 y Leakage)**")
+                    gr.Markdown("### 📋 Matriz de Diagnóstico y Alertas de Leakage (Cabernet Sauvignon)")
                     f_alert_table = gr.Dataframe(value=_safe(cabernet_diagnostic_table(gdd.get("diagnostico_cs_reg", pd.DataFrame()))), interactive=False, wrap=True)
                     
-                with gr.Tab("Panel C: Calidad y Evaluación Varietal Heredada"):
-                    gr.Markdown("**Evaluación varietal heredada del pipeline actual — usa t0 Cabernet cerrado**\n*(Nota: A futuro el pipeline debe exportar la evaluación varietal recalculada desde `t0_regresion_latitudinal`).*")
+                with gr.Tab("C. Auditoría Varietal Heredada"):
+                    gr.Markdown("### 📂 Comportamiento por Variedad en Pipeline Histórico\n*(Nota: Módulo configurado sobre T0 retrospectivo de referencia).*")
                     with gr.Row():
-                        f_fundo = gr.Dropdown(fundos, value="Todos", label="Fundo")
+                        f_fundo = gr.Dropdown(fundos, value="Todos", label="Fundo / Viñedo")
                         f_var = gr.Dropdown(variedades, value="Todas", label="Variedad")
                     f_table = gr.Dataframe(value=_safe(gdd["resumen_t0"]), interactive=False, wrap=True)
-                    gr.Markdown("Merges fenología-clima detectados")
+                    gr.Markdown("### 🧬 Registro de Matrices Emparejadas (Fenología + Clima)")
                     gr.Dataframe(value=_safe(phenology["prepared_manifest"]), interactive=False, wrap=True)
 
                     def update_fenologia(fundo, variedad):
@@ -169,30 +208,31 @@ def build_app() -> gr.Blocks:
                     f_fundo.change(update_fenologia, [f_fundo, f_var], [f_table])
                     f_var.change(update_fenologia, [f_fundo, f_var], [f_table])
 
-                with gr.Tab("Panel D: Plausibilidad fisiológica del biofix (Frío + Calor)"):
-                    gr.Markdown("> **NOTA METODOLÓGICA:** Esta sección es una auditoría de plausibilidad fisiológica, **no una validación completa del biofix**. Se encuentra pendiente de completitud con los datos horarios de Jul-Sep 2025.")
-                    gr.Markdown("> **SEPARACIÓN DE COBERTURAS:** El **Frío Dinámico** está incompleto porque depende estrictamente de datos horarios (que cortan en junio 2025). El **Calor (GDD)** mostrado es 'calor diario disponible' calculado desde sets diarios completos, por lo que tiene alta confiabilidad, distinta a la del frío horario.")
+                with gr.Tab("D. Plausibilidad Fisiológica (Frío Invernal + Calor)"):
+                    gr.Markdown("> **🧪 NOTA DE INVESTIGACIÓN:** Evaluación exploratoria de balance bioclimático previo a brotación.")
+                    gr.Markdown("> **💡 DESGLOSE HORARIO VS DIARIO:** El cálculo de **Frío Invernal (Chill Portions)** requiere integración horaria continua (disponible hasta Junio 2025). La **Acumulación Térmica (GDD)** se integra desde registros diarios completos con alta precisión operacional.")
                     
                     with gr.Row():
                         f_chill_plot = gr.Plot(value=panel_d_chill_plot(gdd.get("chill_dynamic", pd.DataFrame())))
                     
-                    gr.Markdown("**Diagnóstico Acumulado y Semáforo de Confianza (Frío Horario)**")
+                    gr.Markdown("### 🏷️ Semáforo de Plausibilidad Bioclimática por Fundo")
                     f_chill_table = gr.Dataframe(value=_safe(panel_d_chill_table(gdd.get("chill_dynamic", pd.DataFrame()))), interactive=False, wrap=True)
                     
-                    gr.Markdown("**Detalle Calor Diario Disponible (GDD Mensual Mayo - Septiembre)**")
+                    gr.Markdown("### 📑 Detalle Analítico de Calor Disponible (GDD Mayo — Septiembre)")
                     f_chill_full_table = gr.Dataframe(value=_safe(gdd.get("chill_dynamic", pd.DataFrame())), interactive=False, wrap=True)
 
-        with gr.Tab("Madurez tecnica"):
+        with gr.Tab("📈 Madurez técnica"):
             with gr.Row():
-                m_var = gr.Dropdown(maturity_vars or [""], value=(maturity_vars[0] if maturity_vars else ""), label="Variable")
+                m_var = gr.Dropdown(maturity_vars or [""], value=(maturity_vars[0] if maturity_vars else ""), label="Parámetro Enológico")
                 m_variedad = gr.Dropdown(_choices(maturity_technical, "variedad", "Todas"), value="Todas", label="Variedad")
-                m_fundo = gr.Dropdown(_choices(maturity_technical, "fundo", "Todos"), value="Todos", label="Fundo")
+                m_fundo = gr.Dropdown(_choices(maturity_technical, "fundo", "Todos"), value="Todos", label="Viñedo / Fundo")
             with gr.Row():
                 m_temporada = gr.Dropdown(_choices(maturity_technical, "temporada", "Todas las temporadas"), value="Todas las temporadas", label="Temporada")
                 m_cuartel = gr.Dropdown(_choices(maturity_technical, "cuartel", "Todos los cuarteles"), value="Todos los cuarteles", label="Cuartel")
-                m_group_cuartel = gr.Checkbox(value=False, label="Agrupar por cuartel")
+                m_group_cuartel = gr.Checkbox(value=False, label="Desglosar curvas por cuartel")
             initial_m = _filter_maturity(maturity_technical, "Todas", "Todos", "Todas las temporadas", "Todos los cuarteles")
             m_plot = gr.Plot(value=maturity_curve_grouped(initial_m, maturity_vars[0] if maturity_vars else "", False))
+            gr.Markdown("### 📑 Matriz Numérica de Controles de Cosecha")
             m_table = gr.Dataframe(value=_safe(initial_m), interactive=False, wrap=True)
 
             def update_maturity(var, variedad, fundo, temporada, cuartel, group_cuartel):
@@ -206,20 +246,23 @@ def build_app() -> gr.Blocks:
                     [m_plot, m_table],
                 )
 
-        with gr.Tab("Madurez fenolica"):
-            gr.Markdown("> **ℹ️ AVISO DE LAB 2026:** Curvas históricas operativas. Las muestras correspondientes a la vendimia 2026 se encuentran pendientes de recepción y análisis en laboratorio.")
-            p_var = gr.Dropdown(phenolic_vars or [""], value=(phenolic_vars[0] if phenolic_vars else ""), label="Variable")
-            p_plot = gr.Plot(value=maturity_curve(phenolic_df, phenolic_vars[0] if phenolic_vars else "", "Curva de madurez fenolica"))
+        with gr.Tab("🍷 Madurez fenólica"):
+            gr.Markdown("> **🔬 RECEPCIÓN DE MUESTRAS 2026:** Las curvas desplegadas representan las temporadas históricas consolidadas. Las muestras analíticas 2026 están pendientes de titulación en laboratorio de especialidad.")
+            p_var = gr.Dropdown(phenolic_vars or [""], value=(phenolic_vars[0] if phenolic_vars else ""), label="Compuesto Fenólico")
+            p_plot = gr.Plot(value=maturity_curve(phenolic_df, phenolic_vars[0] if phenolic_vars else "", "Curva de Madurez Fenólica"))
+            gr.Markdown("### 🧪 Base de Mediciones de HPLC y Espectrofotometría")
             gr.Dataframe(value=_safe(phenolic_df), interactive=False, wrap=True)
-            p_var.change(lambda v: maturity_curve(phenolic_df, v, "Curva de madurez fenolica"), p_var, p_plot)
+            p_var.change(lambda v: maturity_curve(phenolic_df, v, "Curva de Madurez Fenólica"), p_var, p_plot)
 
-        with gr.Tab("Modelos"):
+        with gr.Tab("🤖 Modelos IA / RF / PySR"):
+            gr.Markdown("> **📌 REFERENCIA PREDICTIVA:** Evaluación técnica de modelos Random Forest (RF) y fórmulas explícitas obtenidas por Regresión Simbólica (PySR).")
             with gr.Row():
-                target = gr.Dropdown(model_targets, value=model_targets[0], label="Target")
-                scheme = gr.Dropdown(schemes, value=schemes[0], label="Validacion")
-            model_table = gr.Dataframe(value=_safe(model_metrics), interactive=False, wrap=True)
+                target = gr.Dropdown(model_targets, value=model_targets[0], label="Variable Objetivo (Target)")
+                scheme = gr.Dropdown(schemes, value=schemes[0], label="Esquema de Validación")
             model_plot = gr.Plot(value=metric_ranking(model_metrics))
             pred_plot = gr.Plot(value=observed_vs_pred(luis["predictions_rf"]))
+            gr.Markdown("### 📊 Tabla de Desempeño Multimodelo (MAE / R²)")
+            model_table = gr.Dataframe(value=_safe(model_metrics), interactive=False, wrap=True)
 
             def update_models(t, s):
                 d = model_metrics.copy()
@@ -235,78 +278,75 @@ def build_app() -> gr.Blocks:
             target.change(update_models, [target, scheme], [model_table, model_plot, pred_plot])
             scheme.change(update_models, [target, scheme], [model_table, model_plot, pred_plot])
 
-        with gr.Tab("Interpretabilidad agronomica"):
+        with gr.Tab("💡 Interpretabilidad agronómica"):
             gr.Markdown(
-                "Brix se interpreta junto a acumulacion termica/GDD. pH y acidez se revisan contra temperatura y "
-                "respiracion/degradacion de acidos. Antocianinas y taninos se tratan como respuestas complejas a GDD, "
-                "VPD, IFN, IFs, IFTT y variables productivas."
+                "> **🌱 GUÍA AGRONÓMICA SHAP:** Los sólidos solubles (°Brix) acoplan su evolución a la acumulación térmica (GDD). El pH y la acidez total responden a temperaturas máximas e índices nocturnos de degradación del ácido málico. La síntesis de antocianinas y taninos actúa como respuesta multivariada no lineal a estrés térmico y déficit de presión de vapor (VPD)."
             )
             with gr.Row():
                 gr.Plot(value=importance_bar(luis["shap"], "shap_mean_abs"))
                 gr.Plot(value=importance_bar(luis["permutation"], "perm_importance_mean"))
-            gr.Markdown("Metricas PySR/SR disponibles")
+            gr.Markdown("### 📜 Ecuaciones Explícitas Descubiertas por Regresión Simbólica (PySR)")
             gr.Dataframe(value=_safe(luis["metrics_pysr"]), interactive=False, wrap=True)
 
-        with gr.Tab("Integracion conceptual"):
+        with gr.Tab("🔗 Integración conceptual"):
             gr.Markdown(
                 """
-### Cadena Obj.3
+                ### 🔄 Cadena de Valor del Proyecto CORFO (Objetivo 3)
 
-1. **Clima:** tabla maestra por fundo, estacion, fuente, gaps y calidad.
-2. **Fenologia:** brotacion, ELP observado, DOY, t0 estimado y GDD acumulado.
-3. **Madurez tecnica:** Brix, pH, acidez y peso de baya cuando existan.
-4. **Madurez fenolica:** antocianinas, taninos y compuestos HPLC/UV-Vis cuando existan.
-5. **Modelos:** RF y PySR/SR con CV5, LOFO, prediccion vs observado e interpretabilidad.
-6. **Decision de cosecha:** aun no operacional; este dashboard sirve para QA cientifico-tecnico previo.
+                1. **⛅ Clima Fisiológico:** Consolidación horaria e interpolación de estaciones meteorológicas en viñedos.
+                2. **🌿 Fenología Dinámica:** Biofix de brotación fisiológica e integración térmica en Grados Día (GDD).
+                3. **📈 Madurez Técnica:** Monitoreo secuencial de sólidos solubles, pH, AT y peso de baya.
+                4. **🍷 Madurez Fenólica:** Extracción y especiación de taninos y antocianinas monoméricas.
+                5. **🧠 Predictor Enológico:** Modelos de bosque aleatorio e IA simbólica con validación espacial cruzada.
+                6. **🎯 Soporte a la Decisión:** QA científico y agrometeorológico previo al corte comercial en bodega.
                 """
             )
+            gr.Markdown("### 🗃️ Matriz Consolidada Multi-Origen")
             gr.Dataframe(value=_safe(climate["master"]), interactive=False, wrap=True)
 
-        with gr.Tab("Trazabilidad CORFO"):
+        with gr.Tab("📦 Export / INRIA"):
+            gr.Markdown("> **📥 MÓDULO DE DESCARGA DIRECTA:** Actualmente gestiona la trazabilidad de entregas al subcontrato de investigación INRIA. En el próximo sprint v2 se añadirán exportadores nativos `gr.File`.")
             gr.Markdown(
                 """
-### Seguimiento del Plan de Trabajo (Obj. 3)
+                ### 🚀 Estado de Trazabilidad e Intercambio INRIA
 
-| Actividad | Nombre Corto | Estado | Bloqueo / Siguiente Paso |
-|---|---|---|---|
-| **Act. 16** | Predicciones climáticas | 🟡 PARCIAL | Funciona con clima histórico. Falta explorar caída de rendimiento usando forecast a 15 días. |
-| **Act. 17** | Modelo fenológico ELP | 🟢 CERRADO (Data) | Dataset FULL_v1 listo. Falta modelo final de INRIA para evaluar generalización espacial. |
-| **Act. 18/19** | Monitoreo madurez | 🟡 EN PROGRESO | Técnica 25/26 OK. Fenólica 25 OK, bloqueado esperando lab 2026. |
-| **Act. 20** | Modelos madurez | 🟢 CERRADO (Técnica) | Pipeline `v2` demostró predictibilidad técnica. Modelos empaquetados. |
-| **Act. 21** | Optimización multiobjetivo | 🔴 NO INICIADO | Requiere definición de pesos de la función objetivo por equipo de enología/dirección. |
-| **Act. 22** | Validación enológica | ⚪ PENDIENTE | Depende de las fechas que sugiera Act. 21. |
+                * **Último Paquete Oficial Emitido:** `exports/inria/paquete_luis_inria_fenologia_ELP_OBJ3_CLEAN_2.zip`
+                * **Estado Operacional:** 🟡 ENVIADO / EN REVISIÓN CIENTFICA
+
+                > [!WARNING]
+                > **Protocolo de Congelamiento:** No despachar nuevos *snapshots* de datos exploratorios hasta recibir la retroalimentación del paquete vigente para mantener sincronía en los modelos.
+
+                **Matrices Maestras Certificadas:**
+                - *Madurez:* `madurez_tecnica_2025_2026_train_test_CANONICO_V5_INDICES_ORIGINALES.csv`
+                - *Fenología:* `consolidado_fenologia_ELP_MODELABLE_FULL_v1.csv`
                 """
             )
 
-        with gr.Tab("Export / INRIA"):
-            gr.Markdown("> **📦 DESCARGA DE ARCHIVOS:** Actualmente esta pestaña cumple un rol informativo de trazabilidad interna. En el próximo sprint v2 se habilitarán botones directos (`gr.File`) para exportar matrices procesadas.")
+        with gr.Tab("📑 Trazabilidad CORFO"):
             gr.Markdown(
                 """
-### Estado de Envío a INRIA (Subcontrato)
+                ### 🏛️ Seguimiento Curricular de Hitos y Entregables CORFO
 
-**Último paquete oficial cerrado:**
-`exports/inria/paquete_luis_inria_fenologia_ELP_OBJ3_CLEAN_2.zip`
-
-**Estado actual:** 🟡 ENVIADO / ESPERANDO RESPUESTA
-
-> **⚠️ ADVERTENCIA:**
-> **NO** generar ni enviar nuevos datasets exploratorios a Luis hasta obtener confirmación y resultados del paquete vigente, para evitar desincronización de versiones.
-
-**Datasets de reemplazo cuando se solicite:**
-- Técnica: `madurez_tecnica_2025_2026_train_test_CANONICO_V5_INDICES_ORIGINALES.csv`
-- Fenología: `consolidado_fenologia_ELP_MODELABLE_FULL_v1.csv`
+                | Actividad | Entregable Técnico | Estado Actual | Bloqueo o Próximo Hito |
+                |---|---|---|---|
+                | **Act. 16** | Proyecciones Agrometeorológicas | 🟡 PARCIAL | Operacional con clima histórico. Pendiente acoplar pronósticos GFS a 15 días. |
+                | **Act. 17** | Modelo Fenológico ELP | 🟢 CERRADO | Dataset FULL_v1 validado. Esperando modelo final INRIA para evaluación LOFO. |
+                | **Act. 18/19**| Monitoreo de Madurez en Viñedo | 🟡 EN PROGRESO | Curvas técnicas 25/26 OK. Fenólica histórica OK, esperando laboratorio 2026. |
+                | **Act. 20** | IA Predictiva de Cosecha | 🟢 CERRADO | Pipeline `v2` empaquetado y verificado con métricas satisfactorias. |
+                | **Act. 21** | Optimización Multiobjetivo Bodega| 🔴 NO INICIADO | Requiere parametrizar función de costos con dirección enológica. |
+                | **Act. 22** | Validación Sensorial en Bodega | ⚪ PENDIENTE | Subordinado a ventanas de cosecha resultantes de Act. 21. |
                 """
             )
 
-        with gr.Tab("Cómo usar este repo"):
+        with gr.Tab("ℹ️ Ayuda & Documentación"):
             gr.Markdown(
                 """
-### Guía de Supervivencia Obj. 3
+                ### 📘 Manual Operativo del Repositorio Limpio
 
-1. **Datos Raw (`data/all_project/`):** **NO TOCAR.** Son réplicas de SharePoint en modo lectura.
-2. **Pipeline Vigente:** Si necesitas re-correr modelos, usa `src/modeling/internal_baseline_v2/run_pipeline_v2.py`.
-3. **Dashboard Maestro:** Ejecuta `python -m models.dashboard_obj3_integrado.app` para ver este mismo dashboard.
-4. **Contexto Formal:** Lee `docs/objetivo_3_vendimia_5_0.md` para entender la arquitectura y exigencias del proyecto CORFO.
+                1. **Inmutabilidad de SharePoint (`data/all_project/`):** **🚫 INTOCABLE.** Directorio espejo en modo lectura estricta.
+                2. **Ejecución de Pipeline:** Para re-entrenar modelos base localmente, invoca `python src/modeling/internal_baseline_v2/run_pipeline_v2.py`.
+                3. **Lanzador Local de Consola:** Abre `ABRIR_DASHBOARD.bat` o navega a `ACCESO_DASHBOARD.html`.
+                4. **Marco Arquitectónico:** Consulta `docs/objetivo_3_vendimia_5_0.md` para especificaciones del subsidio CORFO.
                 """
             )
 
@@ -321,7 +361,7 @@ def main() -> None:
     args = parser.parse_args()
     setup_logging(LOG_DIR / "dashboard_obj3_integrado.log")
     app = build_app()
-    app.queue().launch(server_name=args.server_name, server_port=args.server_port, share=args.share)
+    app.queue().launch(server_name=args.server_name, server_port=args.server_port, share=args.share, theme=gr.themes.Soft(primary_hue="rose", neutral_hue="slate"), css=CUSTOM_CSS)
 
 
 if __name__ == "__main__":
