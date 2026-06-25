@@ -1,0 +1,169 @@
+fundo,temporada,variedad,biofix_tipo,biofix_fecha,fecha_brotacion_ELP4,gdd_acumulado_a_brotacion,gdd_acumulado_previo_t0,threshold_GDD_usado,alerta_temporada_anterior,diagnostico_biofix
+qba_seca,2025_2026,cabernet_sauvignon,1_julio,2025-07-01,2025-08-21,164.12150823610463,93.10006580751475,71.02144242858984,SI: Acumulación térmica previa a t0 (93.1 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+qba_seca,2025_2026,cabernet_sauvignon,1_agosto,2025-08-01,2025-08-21,73.34715008063506,2.325707652045214,71.02144242858984,SI: Acumulación térmica previa a t0 (2.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+qba_seca,2025_2026,cabernet_sauvignon,15_agosto,2025-08-15,2025-08-21,20.308907471716225,0.0,71.02144242858984,NO,OK
+qba_seca,2025_2026,cabernet_sauvignon,1_septiembre,2025-09-01,2025-08-21,,0.0,71.02144242858984,SI: Biofix posterior a fecha de brotación observada,biofix_posterior_a_brotacion
+qba_seca,2025_2026,cabernet_sauvignon,t0_operativo,2025-08-02,2025-08-21,71.02144242858985,0.0,71.02144242858984,NO,OK
+qba_seca,2025_2026,cabernet_sauvignon,t0_latitudinal,2025-07-31,2025-08-21,76.64715008063506,5.6257076520452145,71.02144242858984,SI: Acumulación térmica previa a t0 (5.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+idahue,2025_2026,cabernet_sauvignon,1_julio,2025-07-01,2025-09-05,150.74147334492704,80.33810619946158,70.40336714546544,SI: Acumulación térmica previa a t0 (80.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+idahue,2025_2026,cabernet_sauvignon,1_agosto,2025-08-01,2025-09-05,91.00851456465519,20.605147419189734,70.40336714546544,SI: Acumulación térmica previa a t0 (20.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+idahue,2025_2026,cabernet_sauvignon,15_agosto,2025-08-15,2025-09-05,55.96786577136609,0.0,70.40336714546544,NO,OK
+idahue,2025_2026,cabernet_sauvignon,1_septiembre,2025-09-01,2025-09-05,14.809560974071372,0.0,70.40336714546544,NO,OK
+idahue,2025_2026,cabernet_sauvignon,t0_operativo,2025-08-11,2025-09-05,70.40336714546545,0.0,70.40336714546544,NO,OK
+idahue,2025_2026,cabernet_sauvignon,t0_latitudinal,2025-08-20,2025-09-05,42.30985723923907,0.0,70.40336714546544,NO,OK
+ucuquer,2025_2026,cabernet_sauvignon,1_julio,2025-07-01,2025-09-09,184.7132304479888,113.59986392739937,71.11336652058942,SI: Acumulación térmica previa a t0 (113.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+ucuquer,2025_2026,cabernet_sauvignon,1_agosto,2025-08-01,2025-09-09,106.98177481123606,35.86840829064664,71.11336652058942,SI: Acumulación térmica previa a t0 (35.9 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+ucuquer,2025_2026,cabernet_sauvignon,15_agosto,2025-08-15,2025-09-09,63.53073151289827,0.0,71.11336652058942,NO,OK
+ucuquer,2025_2026,cabernet_sauvignon,1_septiembre,2025-09-01,2025-09-09,19.696658888579762,0.0,71.11336652058942,NO,OK
+ucuquer,2025_2026,cabernet_sauvignon,t0_operativo,2025-08-13,2025-09-09,71.11336652058944,0.0,71.11336652058942,NO,OK
+ucuquer,2025_2026,cabernet_sauvignon,t0_latitudinal,2025-08-17,2025-09-09,56.70707779618275,0.0,71.11336652058942,NO,OK
+los_acacios,2025_2026,cabernet_sauvignon,1_julio,2025-07-01,2025-09-14,254.3403420800527,184.11679985284655,70.22354222720604,SI: Acumulación térmica previa a t0 (184.1 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,cabernet_sauvignon,1_agosto,2025-08-01,2025-09-14,165.00111100314518,94.77756877593913,70.22354222720604,SI: Acumulación térmica previa a t0 (94.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,cabernet_sauvignon,15_agosto,2025-08-15,2025-09-14,109.27199508286337,39.04845285565732,70.22354222720604,SI: Acumulación térmica previa a t0 (39.0 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,cabernet_sauvignon,1_septiembre,2025-09-01,2025-09-14,57.98443684234679,0.0,70.22354222720604,NO,OK
+los_acacios,2025_2026,cabernet_sauvignon,t0_operativo,2025-08-28,2025-09-14,70.22354222720604,0.0,70.22354222720604,NO,OK
+los_acacios,2025_2026,cabernet_sauvignon,t0_latitudinal,2025-08-01,2025-09-14,165.00111100314518,94.77756877593913,70.22354222720604,SI: Acumulación térmica previa a t0 (94.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,cabernet_sauvignon,1_julio,2025-07-01,2025-09-17,195.14642943201176,125.79694291185933,69.34948652015238,SI: Acumulación térmica previa a t0 (125.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,cabernet_sauvignon,1_agosto,2025-08-01,2025-09-17,137.19408587945995,67.8445993593076,69.34948652015238,SI: Acumulación térmica previa a t0 (67.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,cabernet_sauvignon,15_agosto,2025-08-15,2025-09-17,104.57506943675492,35.22558291660255,69.34948652015238,SI: Acumulación térmica previa a t0 (35.2 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,cabernet_sauvignon,1_septiembre,2025-09-01,2025-09-17,53.52550754466483,0.0,69.34948652015238,NO,OK
+lourdes,2025_2026,cabernet_sauvignon,t0_operativo,2025-08-27,2025-09-17,69.34948652015238,0.0,69.34948652015238,NO,OK
+lourdes,2025_2026,cabernet_sauvignon,t0_latitudinal,2025-08-25,2025-09-17,78.06404193919359,8.714555419041194,69.34948652015238,SI: Acumulación térmica previa a t0 (8.7 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,cabernet_sauvignon,1_julio,2025-07-01,2025-09-20,203.2844642229949,133.1457180864952,70.13874613649969,SI: Acumulación térmica previa a t0 (133.1 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,cabernet_sauvignon,1_agosto,2025-08-01,2025-09-20,138.40921662500705,68.27047048850736,70.13874613649969,SI: Acumulación térmica previa a t0 (68.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,cabernet_sauvignon,15_agosto,2025-08-15,2025-09-20,103.00540664585303,32.86666050935331,70.13874613649969,SI: Acumulación térmica previa a t0 (32.9 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,cabernet_sauvignon,1_septiembre,2025-09-01,2025-09-20,61.744151182007926,0.0,70.13874613649969,NO,OK
+nilahue,2025_2026,cabernet_sauvignon,t0_operativo,2025-08-28,2025-09-20,70.1387461364997,0.0,70.13874613649969,NO,OK
+nilahue,2025_2026,cabernet_sauvignon,t0_latitudinal,2025-08-21,2025-09-20,86.50126554708936,16.362519410589663,70.13874613649969,SI: Acumulación térmica previa a t0 (16.4 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,cabernet_sauvignon,1_julio,2025-07-01,2025-09-22,188.6810099092482,117.67603803949457,71.00497186975362,SI: Acumulación térmica previa a t0 (117.7 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,cabernet_sauvignon,1_agosto,2025-08-01,2025-09-22,137.5677385878784,66.56276671812478,71.00497186975362,SI: Acumulación térmica previa a t0 (66.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,cabernet_sauvignon,15_agosto,2025-08-15,2025-09-22,106.33414407231325,35.329172202559626,71.00497186975362,SI: Acumulación térmica previa a t0 (35.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,cabernet_sauvignon,1_septiembre,2025-09-01,2025-09-22,62.97119115593025,0.0,71.00497186975362,NO,OK
+keule,2025_2026,cabernet_sauvignon,t0_operativo,2025-08-29,2025-09-22,71.00497186975363,0.0,71.00497186975362,NO,OK
+keule,2025_2026,cabernet_sauvignon,t0_latitudinal,2025-08-27,2025-09-22,75.85872595379945,4.853754084045832,71.00497186975362,SI: Acumulación térmica previa a t0 (4.9 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+idahue,2025_2026,carmenere,1_julio,2025-07-01,2025-09-19,207.47796979047925,80.33810619946158,75.00055191349769,SI: Acumulación térmica previa a t0 (80.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+idahue,2025_2026,carmenere,1_agosto,2025-08-01,2025-09-19,147.7450110102074,20.605147419189734,75.00055191349769,SI: Acumulación térmica previa a t0 (20.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+idahue,2025_2026,carmenere,15_agosto,2025-08-15,2025-09-19,112.70436221691831,0.0,75.00055191349769,NO,OK
+idahue,2025_2026,carmenere,1_septiembre,2025-09-01,2025-09-19,71.5460574196236,0.0,75.00055191349769,NO,OK
+idahue,2025_2026,carmenere,t0_operativo,2025-08-11,2025-09-19,127.13986359101767,0.0,75.00055191349769,NO,OK
+idahue,2025_2026,carmenere,t0_latitudinal,2025-08-20,2025-09-19,99.04635368479128,0.0,75.00055191349769,NO,OK
+keule,2025_2026,carmenere,1_julio,2025-07-01,2025-09-14,162.2753154157695,117.67603803949457,75.00055191349769,SI: Acumulación térmica previa a t0 (117.7 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,carmenere,1_agosto,2025-08-01,2025-09-14,111.16204409439969,66.56276671812478,75.00055191349769,SI: Acumulación térmica previa a t0 (66.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,carmenere,15_agosto,2025-08-15,2025-09-14,79.92844957883455,35.329172202559626,75.00055191349769,SI: Acumulación térmica previa a t0 (35.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,carmenere,1_septiembre,2025-09-01,2025-09-14,36.565496662451544,0.0,75.00055191349769,NO,OK
+keule,2025_2026,carmenere,t0_operativo,2025-08-29,2025-09-14,44.599277376274934,0.0,75.00055191349769,NO,OK
+keule,2025_2026,carmenere,t0_latitudinal,2025-08-27,2025-09-14,49.45303146032076,4.853754084045832,75.00055191349769,SI: Acumulación térmica previa a t0 (4.9 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,carmenere,1_julio,2025-07-01,2025-09-01,200.61316431706993,184.11679985284655,75.00055191349769,SI: Acumulación térmica previa a t0 (184.1 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,carmenere,1_agosto,2025-08-01,2025-09-01,111.27393324016245,94.77756877593913,75.00055191349769,SI: Acumulación térmica previa a t0 (94.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,carmenere,15_agosto,2025-08-15,2025-09-01,55.54481731988063,39.04845285565732,75.00055191349769,SI: Acumulación térmica previa a t0 (39.0 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,carmenere,1_septiembre,2025-09-01,2025-09-01,4.257259079364048,0.0,75.00055191349769,NO,OK
+los_acacios,2025_2026,carmenere,t0_operativo,2025-08-28,2025-09-01,16.496364464223316,0.0,75.00055191349769,NO,OK
+los_acacios,2025_2026,carmenere,t0_latitudinal,2025-08-01,2025-09-01,111.27393324016245,94.77756877593913,75.00055191349769,SI: Acumulación térmica previa a t0 (94.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,carmenere,1_julio,2025-07-01,2025-09-20,208.4369417075827,125.79694291185933,75.00055191349769,SI: Acumulación térmica previa a t0 (125.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,carmenere,1_agosto,2025-08-01,2025-09-20,150.48459815503088,67.8445993593076,75.00055191349769,SI: Acumulación térmica previa a t0 (67.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,carmenere,15_agosto,2025-08-15,2025-09-20,117.86558171232583,35.22558291660255,75.00055191349769,SI: Acumulación térmica previa a t0 (35.2 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,carmenere,1_septiembre,2025-09-01,2025-09-20,66.81601982023575,0.0,75.00055191349769,NO,OK
+lourdes,2025_2026,carmenere,t0_operativo,2025-08-27,2025-09-20,82.6399987957233,0.0,75.00055191349769,NO,OK
+lourdes,2025_2026,carmenere,t0_latitudinal,2025-08-25,2025-09-20,91.3545542147645,8.714555419041194,75.00055191349769,SI: Acumulación térmica previa a t0 (8.7 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,carmenere,1_julio,2025-07-01,2025-09-04,151.93320651040173,133.1457180864952,75.00055191349769,SI: Acumulación térmica previa a t0 (133.1 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,carmenere,1_agosto,2025-08-01,2025-09-04,87.0579589124139,68.27047048850736,75.00055191349769,SI: Acumulación térmica previa a t0 (68.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,carmenere,15_agosto,2025-08-15,2025-09-04,51.65414893325988,32.86666050935331,75.00055191349769,SI: Acumulación térmica previa a t0 (32.9 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,carmenere,1_septiembre,2025-09-01,2025-09-04,10.3928934694148,0.0,75.00055191349769,NO,OK
+nilahue,2025_2026,carmenere,t0_operativo,2025-08-28,2025-09-04,18.787488423906563,0.0,75.00055191349769,NO,OK
+nilahue,2025_2026,carmenere,t0_latitudinal,2025-08-21,2025-09-04,35.15000783449623,16.362519410589663,75.00055191349769,SI: Acumulación térmica previa a t0 (16.4 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+qba_seca,2025_2026,carmenere,1_julio,2025-07-01,2025-08-11,134.80195522020256,93.10006580751475,75.00055191349769,SI: Acumulación térmica previa a t0 (93.1 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+qba_seca,2025_2026,carmenere,1_agosto,2025-08-01,2025-08-11,44.02759706473303,2.325707652045214,75.00055191349769,SI: Acumulación térmica previa a t0 (2.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+qba_seca,2025_2026,carmenere,15_agosto,2025-08-15,2025-08-11,,0.0,75.00055191349769,SI: Biofix posterior a fecha de brotación observada,biofix_posterior_a_brotacion
+qba_seca,2025_2026,carmenere,1_septiembre,2025-09-01,2025-08-11,,0.0,75.00055191349769,SI: Biofix posterior a fecha de brotación observada,biofix_posterior_a_brotacion
+qba_seca,2025_2026,carmenere,t0_operativo,2025-08-02,2025-08-11,41.70188941268781,0.0,75.00055191349769,NO,OK
+qba_seca,2025_2026,carmenere,t0_latitudinal,2025-07-31,2025-08-11,47.32759706473302,5.6257076520452145,75.00055191349769,SI: Acumulación térmica previa a t0 (5.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+ucuquer,2025_2026,carmenere,1_julio,2025-07-01,2025-08-27,155.3591446362338,113.59986392739937,75.00055191349769,SI: Acumulación térmica previa a t0 (113.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+ucuquer,2025_2026,carmenere,1_agosto,2025-08-01,2025-08-27,77.6276889994811,35.86840829064664,75.00055191349769,SI: Acumulación térmica previa a t0 (35.9 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+ucuquer,2025_2026,carmenere,15_agosto,2025-08-15,2025-08-27,34.1766457011433,0.0,75.00055191349769,NO,OK
+ucuquer,2025_2026,carmenere,1_septiembre,2025-09-01,2025-08-27,,0.0,75.00055191349769,SI: Biofix posterior a fecha de brotación observada,biofix_posterior_a_brotacion
+ucuquer,2025_2026,carmenere,t0_operativo,2025-08-13,2025-08-27,41.75928070883446,0.0,75.00055191349769,NO,OK
+ucuquer,2025_2026,carmenere,t0_latitudinal,2025-08-17,2025-08-27,27.352991984427774,0.0,75.00055191349769,NO,OK
+idahue,2025_2026,chardonnay,1_julio,2025-07-01,2025-09-19,207.47796979047925,80.33810619946158,21.274585190099017,SI: Acumulación térmica previa a t0 (80.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+idahue,2025_2026,chardonnay,1_agosto,2025-08-01,2025-09-19,147.7450110102074,20.605147419189734,21.274585190099017,SI: Acumulación térmica previa a t0 (20.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+idahue,2025_2026,chardonnay,15_agosto,2025-08-15,2025-09-19,112.70436221691831,0.0,21.274585190099017,NO,OK
+idahue,2025_2026,chardonnay,1_septiembre,2025-09-01,2025-09-19,71.5460574196236,0.0,21.274585190099017,NO,OK
+idahue,2025_2026,chardonnay,t0_operativo,2025-08-11,2025-09-19,127.13986359101767,0.0,21.274585190099017,NO,OK
+idahue,2025_2026,chardonnay,t0_latitudinal,2025-08-20,2025-09-19,99.04635368479128,0.0,21.274585190099017,NO,OK
+keule,2025_2026,chardonnay,1_julio,2025-07-01,2025-08-26,112.82228395544875,117.67603803949457,21.274585190099017,SI: Acumulación térmica previa a t0 (117.7 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,chardonnay,1_agosto,2025-08-01,2025-08-26,61.70901263407893,66.56276671812478,21.274585190099017,SI: Acumulación térmica previa a t0 (66.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,chardonnay,15_agosto,2025-08-15,2025-08-26,30.475418118513804,35.329172202559626,21.274585190099017,SI: Acumulación térmica previa a t0 (35.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,chardonnay,1_septiembre,2025-09-01,2025-08-26,,0.0,21.274585190099017,SI: Biofix posterior a fecha de brotación observada,biofix_posterior_a_brotacion
+keule,2025_2026,chardonnay,t0_operativo,2025-08-29,2025-08-26,,0.0,21.274585190099017,SI: Biofix posterior a fecha de brotación observada,biofix_posterior_a_brotacion
+keule,2025_2026,chardonnay,t0_latitudinal,2025-08-27,2025-08-26,,4.853754084045832,21.274585190099017,SI: Acumulación térmica previa a t0 (4.9 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,chardonnay,1_julio,2025-07-01,2025-09-01,200.61316431706993,184.11679985284655,21.274585190099017,SI: Acumulación térmica previa a t0 (184.1 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,chardonnay,1_agosto,2025-08-01,2025-09-01,111.27393324016245,94.77756877593913,21.274585190099017,SI: Acumulación térmica previa a t0 (94.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,chardonnay,15_agosto,2025-08-15,2025-09-01,55.54481731988063,39.04845285565732,21.274585190099017,SI: Acumulación térmica previa a t0 (39.0 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,chardonnay,1_septiembre,2025-09-01,2025-09-01,4.257259079364048,0.0,21.274585190099017,NO,OK
+los_acacios,2025_2026,chardonnay,t0_operativo,2025-08-28,2025-09-01,16.496364464223316,0.0,21.274585190099017,NO,OK
+los_acacios,2025_2026,chardonnay,t0_latitudinal,2025-08-01,2025-09-01,111.27393324016245,94.77756877593913,21.274585190099017,SI: Acumulación térmica previa a t0 (94.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,chardonnay,1_julio,2025-07-01,2025-09-06,154.710974984184,125.79694291185933,21.274585190099017,SI: Acumulación térmica previa a t0 (125.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,chardonnay,1_agosto,2025-08-01,2025-09-06,96.75863143163221,67.8445993593076,21.274585190099017,SI: Acumulación térmica previa a t0 (67.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,chardonnay,15_agosto,2025-08-15,2025-09-06,64.13961498892718,35.22558291660255,21.274585190099017,SI: Acumulación térmica previa a t0 (35.2 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,chardonnay,1_septiembre,2025-09-01,2025-09-06,13.090053096837082,0.0,21.274585190099017,NO,OK
+lourdes,2025_2026,chardonnay,t0_operativo,2025-08-27,2025-09-06,28.914032072324627,0.0,21.274585190099017,NO,OK
+lourdes,2025_2026,chardonnay,t0_latitudinal,2025-08-25,2025-09-06,37.62858749136583,8.714555419041194,21.274585190099017,SI: Acumulación térmica previa a t0 (8.7 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,chardonnay,1_julio,2025-07-01,2025-08-29,135.99063653904827,133.1457180864952,21.274585190099017,SI: Acumulación térmica previa a t0 (133.1 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,chardonnay,1_agosto,2025-08-01,2025-08-29,71.11538894106044,68.27047048850736,21.274585190099017,SI: Acumulación térmica previa a t0 (68.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,chardonnay,15_agosto,2025-08-15,2025-08-29,35.711578961906426,32.86666050935331,21.274585190099017,SI: Acumulación térmica previa a t0 (32.9 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,chardonnay,1_septiembre,2025-09-01,2025-08-29,,0.0,21.274585190099017,SI: Biofix posterior a fecha de brotación observada,biofix_posterior_a_brotacion
+nilahue,2025_2026,chardonnay,t0_operativo,2025-08-28,2025-08-29,2.8449184525531117,0.0,21.274585190099017,NO,OK
+nilahue,2025_2026,chardonnay,t0_latitudinal,2025-08-21,2025-08-29,19.207437863142776,16.362519410589663,21.274585190099017,SI: Acumulación térmica previa a t0 (16.4 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+qba_seca,2025_2026,chardonnay,1_julio,2025-07-01,2025-08-11,134.80195522020256,93.10006580751475,21.274585190099017,SI: Acumulación térmica previa a t0 (93.1 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+qba_seca,2025_2026,chardonnay,1_agosto,2025-08-01,2025-08-11,44.02759706473303,2.325707652045214,21.274585190099017,SI: Acumulación térmica previa a t0 (2.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+qba_seca,2025_2026,chardonnay,15_agosto,2025-08-15,2025-08-11,,0.0,21.274585190099017,SI: Biofix posterior a fecha de brotación observada,biofix_posterior_a_brotacion
+qba_seca,2025_2026,chardonnay,1_septiembre,2025-09-01,2025-08-11,,0.0,21.274585190099017,SI: Biofix posterior a fecha de brotación observada,biofix_posterior_a_brotacion
+qba_seca,2025_2026,chardonnay,t0_operativo,2025-08-02,2025-08-11,41.70188941268781,0.0,21.274585190099017,NO,OK
+qba_seca,2025_2026,chardonnay,t0_latitudinal,2025-07-31,2025-08-11,47.32759706473302,5.6257076520452145,21.274585190099017,SI: Acumulación térmica previa a t0 (5.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+ucuquer,2025_2026,chardonnay,1_julio,2025-07-01,2025-08-19,135.04341824995586,113.59986392739937,21.274585190099017,SI: Acumulación térmica previa a t0 (113.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+ucuquer,2025_2026,chardonnay,1_agosto,2025-08-01,2025-08-19,57.311962613203164,35.86840829064664,21.274585190099017,SI: Acumulación térmica previa a t0 (35.9 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+ucuquer,2025_2026,chardonnay,15_agosto,2025-08-15,2025-08-19,13.860919314865374,0.0,21.274585190099017,NO,OK
+ucuquer,2025_2026,chardonnay,1_septiembre,2025-09-01,2025-08-19,,0.0,21.274585190099017,SI: Biofix posterior a fecha de brotación observada,biofix_posterior_a_brotacion
+ucuquer,2025_2026,chardonnay,t0_operativo,2025-08-13,2025-08-19,21.44355432255653,0.0,21.274585190099017,NO,OK
+ucuquer,2025_2026,chardonnay,t0_latitudinal,2025-08-17,2025-08-19,7.037265598149847,0.0,21.274585190099017,NO,OK
+idahue,2025_2026,sauvignon_blanc,1_julio,2025-07-01,2025-09-17,197.2880770759434,80.33810619946158,61.71003963792677,SI: Acumulación térmica previa a t0 (80.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+idahue,2025_2026,sauvignon_blanc,1_agosto,2025-08-01,2025-09-17,137.55511829567155,20.605147419189734,61.71003963792677,SI: Acumulación térmica previa a t0 (20.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+idahue,2025_2026,sauvignon_blanc,15_agosto,2025-08-15,2025-09-17,102.51446950238245,0.0,61.71003963792677,NO,OK
+idahue,2025_2026,sauvignon_blanc,1_septiembre,2025-09-01,2025-09-17,61.35616470508773,0.0,61.71003963792677,NO,OK
+idahue,2025_2026,sauvignon_blanc,t0_operativo,2025-08-11,2025-09-17,116.94997087648181,0.0,61.71003963792677,NO,OK
+idahue,2025_2026,sauvignon_blanc,t0_latitudinal,2025-08-20,2025-09-17,88.85646097025543,0.0,61.71003963792677,NO,OK
+keule,2025_2026,sauvignon_blanc,1_julio,2025-07-01,2025-09-07,137.73863215220334,117.67603803949457,61.71003963792677,SI: Acumulación térmica previa a t0 (117.7 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,sauvignon_blanc,1_agosto,2025-08-01,2025-09-07,86.62536083083351,66.56276671812478,61.71003963792677,SI: Acumulación térmica previa a t0 (66.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,sauvignon_blanc,15_agosto,2025-08-15,2025-09-07,55.39176631526836,35.329172202559626,61.71003963792677,SI: Acumulación térmica previa a t0 (35.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+keule,2025_2026,sauvignon_blanc,1_septiembre,2025-09-01,2025-09-07,12.028813398885355,0.0,61.71003963792677,NO,OK
+keule,2025_2026,sauvignon_blanc,t0_operativo,2025-08-29,2025-09-07,20.062594112708744,0.0,61.71003963792677,NO,OK
+keule,2025_2026,sauvignon_blanc,t0_latitudinal,2025-08-27,2025-09-07,24.91634819675457,4.853754084045832,61.71003963792677,SI: Acumulación térmica previa a t0 (4.9 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,sauvignon_blanc,1_julio,2025-07-01,2025-09-10,233.57607232802215,184.11679985284655,61.71003963792677,SI: Acumulación térmica previa a t0 (184.1 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,sauvignon_blanc,1_agosto,2025-08-01,2025-09-10,144.23684125111464,94.77756877593913,61.71003963792677,SI: Acumulación térmica previa a t0 (94.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,sauvignon_blanc,15_agosto,2025-08-15,2025-09-10,88.50772533083287,39.04845285565732,61.71003963792677,SI: Acumulación térmica previa a t0 (39.0 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+los_acacios,2025_2026,sauvignon_blanc,1_septiembre,2025-09-01,2025-09-10,37.220167090316274,0.0,61.71003963792677,NO,OK
+los_acacios,2025_2026,sauvignon_blanc,t0_operativo,2025-08-28,2025-09-10,49.45927247517554,0.0,61.71003963792677,NO,OK
+los_acacios,2025_2026,sauvignon_blanc,t0_latitudinal,2025-08-01,2025-09-10,144.23684125111464,94.77756877593913,61.71003963792677,SI: Acumulación térmica previa a t0 (94.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,sauvignon_blanc,1_julio,2025-07-01,2025-09-17,195.14642943201176,125.79694291185933,61.71003963792677,SI: Acumulación térmica previa a t0 (125.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,sauvignon_blanc,1_agosto,2025-08-01,2025-09-17,137.19408587945995,67.8445993593076,61.71003963792677,SI: Acumulación térmica previa a t0 (67.8 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,sauvignon_blanc,15_agosto,2025-08-15,2025-09-17,104.57506943675492,35.22558291660255,61.71003963792677,SI: Acumulación térmica previa a t0 (35.2 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+lourdes,2025_2026,sauvignon_blanc,1_septiembre,2025-09-01,2025-09-17,53.52550754466483,0.0,61.71003963792677,NO,OK
+lourdes,2025_2026,sauvignon_blanc,t0_operativo,2025-08-27,2025-09-17,69.34948652015238,0.0,61.71003963792677,NO,OK
+lourdes,2025_2026,sauvignon_blanc,t0_latitudinal,2025-08-25,2025-09-17,78.06404193919359,8.714555419041194,61.71003963792677,SI: Acumulación térmica previa a t0 (8.7 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,sauvignon_blanc,1_julio,2025-07-01,2025-09-08,157.54493987047059,133.1457180864952,61.71003963792677,SI: Acumulación térmica previa a t0 (133.1 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,sauvignon_blanc,1_agosto,2025-08-01,2025-09-08,92.66969227248273,68.27047048850736,61.71003963792677,SI: Acumulación térmica previa a t0 (68.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,sauvignon_blanc,15_agosto,2025-08-15,2025-09-08,57.26588229332872,32.86666050935331,61.71003963792677,SI: Acumulación térmica previa a t0 (32.9 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+nilahue,2025_2026,sauvignon_blanc,1_septiembre,2025-09-01,2025-09-08,16.004626829483644,0.0,61.71003963792677,NO,OK
+nilahue,2025_2026,sauvignon_blanc,t0_operativo,2025-08-28,2025-09-08,24.399221783975406,0.0,61.71003963792677,NO,OK
+nilahue,2025_2026,sauvignon_blanc,t0_latitudinal,2025-08-21,2025-09-08,40.76174119456507,16.362519410589663,61.71003963792677,SI: Acumulación térmica previa a t0 (16.4 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+qba_seca,2025_2026,sauvignon_blanc,1_julio,2025-07-01,2025-08-11,134.80195522020256,93.10006580751475,61.71003963792677,SI: Acumulación térmica previa a t0 (93.1 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+qba_seca,2025_2026,sauvignon_blanc,1_agosto,2025-08-01,2025-08-11,44.02759706473303,2.325707652045214,61.71003963792677,SI: Acumulación térmica previa a t0 (2.3 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+qba_seca,2025_2026,sauvignon_blanc,15_agosto,2025-08-15,2025-08-11,,0.0,61.71003963792677,SI: Biofix posterior a fecha de brotación observada,biofix_posterior_a_brotacion
+qba_seca,2025_2026,sauvignon_blanc,1_septiembre,2025-09-01,2025-08-11,,0.0,61.71003963792677,SI: Biofix posterior a fecha de brotación observada,biofix_posterior_a_brotacion
+qba_seca,2025_2026,sauvignon_blanc,t0_operativo,2025-08-02,2025-08-11,41.70188941268781,0.0,61.71003963792677,NO,OK
+qba_seca,2025_2026,sauvignon_blanc,t0_latitudinal,2025-07-31,2025-08-11,47.32759706473302,5.6257076520452145,61.71003963792677,SI: Acumulación térmica previa a t0 (5.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+ucuquer,2025_2026,sauvignon_blanc,1_julio,2025-07-01,2025-09-17,221.147814980726,113.59986392739937,61.71003963792677,SI: Acumulación térmica previa a t0 (113.6 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+ucuquer,2025_2026,sauvignon_blanc,1_agosto,2025-08-01,2025-09-17,143.41635934397323,35.86840829064664,61.71003963792677,SI: Acumulación térmica previa a t0 (35.9 GDD acumulados invernales),acumulacion_termica_previa_a_t0
+ucuquer,2025_2026,sauvignon_blanc,15_agosto,2025-08-15,2025-09-17,99.96531604563542,0.0,61.71003963792677,NO,OK
+ucuquer,2025_2026,sauvignon_blanc,1_septiembre,2025-09-01,2025-09-17,56.13124342131692,0.0,61.71003963792677,NO,OK
+ucuquer,2025_2026,sauvignon_blanc,t0_operativo,2025-08-13,2025-09-17,107.54795105332657,0.0,61.71003963792677,NO,OK
+ucuquer,2025_2026,sauvignon_blanc,t0_latitudinal,2025-08-17,2025-09-17,93.1416623289199,0.0,61.71003963792677,NO,OK

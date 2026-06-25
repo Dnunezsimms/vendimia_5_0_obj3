@@ -175,6 +175,8 @@ def load_gdd_outputs() -> dict[str, pd.DataFrame]:
         "resultados_t0": resultados_t0,
         "diagnostico_cs_reg": diagnostico_cs_reg,
         "chill_dynamic": chill_dynamic,
+        "biofix_timeseries": read_table(GDD_DIR / "gdd_acumulado_por_biofix.csv"),
+        "biofix_summary": read_table(GDD_DIR / "gdd_acumulado_por_biofix_summary.csv"),
         "inferencia_t0": read_table(GDD_DIR / "inferencia_t0_multisitio.csv"),
         "inferencia_t0_spatial": read_table(GDD_DIR / "inferencia_t0_multisitio_spatial.csv"),
         "qa_brotacion": read_table(GDD_DIR / "qa_brotacion.csv"),

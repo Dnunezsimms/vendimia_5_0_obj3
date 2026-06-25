@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import pandas as pd
+import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -666,3 +667,121 @@ def latitudinal_regression_plot(
         legend=dict(orientation="v", x=1.01, y=1),
     )
     return apply_corporate_style(fig, height=520)
+
+
+def gdd_biofix_timeseries_plot(
+    df: pd.DataFrame, fundo: str, temporada: str, variedad: str, biofix_tipo: str
+) -> go.Figure:
+    """Auditoría temporal de acumulación térmica GDD según candidato de biofix."""
+    if df.empty:
+        return empty_figure("Sin datos de series temporales GDD por biofix.")
+
+    sub = df[
+        (df["fundo"].astype(str).str.strip().str.lower() == str(fundo).strip().lower())
+        & (df["temporada"].astype(str) == str(temporada))
+        & (df["variedad"].astype(str).str.strip().str.lower() == str(variedad).strip().lower())
+        & (df["biofix_tipo"].astype(str) == str(biofix_tipo))
+    ].copy()
+
+    if sub.empty or sub["fecha"].isna().all():
+        return empty_figure(f"Combinación sin insumos o sin registros climáticos para biofix {biofix_tipo}.")
+
+    sub["fecha"] = pd.to_datetime(sub["fecha"], errors="coerce")
+    sub = sub.dropna(subset=["fecha"]).sort_values("fecha")
+    fundo_name = sub.iloc[0].get("Fundo", fundo)
+    b_fecha = sub.iloc[0].get("biofix_fecha", np.nan)
+    t0_op = sub.iloc[0].get("t0_operativo", np.nan)
+    t0_lat = sub.iloc[0].get("t0_latitudinal", np.nan)
+    brot_elp4 = sub.iloc[0].get("fecha_brotacion_ELP4", np.nan)
+    threshold = sub.iloc[0].get("threshold_GDD_usado", np.nan)
+    gdd_previo = sub.iloc[0].get("gdd_acumulado_previo_t0", 0.0)
+    alerta = sub.iloc[0].get("alerta_temporada_anterior", "NO")
+    diag_bf = sub.iloc[0].get("diagnostico_biofix", "OK")
+
+    # Limitar ventana visual por defecto a brotación + 10 días
+    if pd.notna(brot_elp4) and str(brot_elp4).strip().lower() != "nan":
+        end_plot_dt = max(
+            pd.Timestamp(brot_elp4) + pd.Timedelta(days=10),
+            sub["fecha"].min() + pd.Timedelta(days=10),
+        )
+        sub = sub[sub["fecha"] <= end_plot_dt]
+    else:
+        sub = sub[sub["fecha"] <= sub["fecha"].min() + pd.Timedelta(days=45)]
+
+    fig = go.Figure()
+
+    # Curva principal GDD acumulado
+    fig.add_trace(go.Scatter(
+        x=sub["fecha"],
+        y=sub["gdd_acumulado"],
+        mode="lines",
+        name=f"GDD Acumulado ({biofix_tipo})",
+        line=dict(color=WINE_PALETTE[0], width=3.5),
+    ))
+
+    # Curva secundaria GDD diario
+    fig.add_trace(go.Bar(
+        x=sub["fecha"],
+        y=sub["gdd_diario"],
+        name="GDD Diario",
+        marker=dict(color="rgba(113, 128, 150, 0.22)"),
+        yaxis="y2",
+    ))
+
+    # Línea horizontal threshold
+    if pd.notna(threshold) and float(threshold) > 0:
+        fig.add_hline(
+            y=float(threshold),
+            line_dash="dash",
+            line_color="#d69e2e",
+            annotation_text=f"Umbral Varietal ({float(threshold):.1f} GDD)",
+            annotation_position="top left",
+        )
+
+    # Líneas verticales de hitos
+    hitos = [
+        (b_fecha, "#3182ce", "solid", f"Biofix ({b_fecha})"),
+        (t0_op, "#805ad5", "dot", f"T0 Operativo ({t0_op})"),
+        (t0_lat if str(t0_lat) != str(t0_op) else np.nan, "#dd6b20", "dot", f"T0 Latitudinal ({t0_lat})"),
+        (brot_elp4, "#38a169", "solid", f"Brotación ELP4 ({brot_elp4})"),
+    ]
+    for val, color, dash, label in hitos:
+        if pd.notna(val) and str(val) != "nan":
+            fig.add_vline(x=val, line_dash=dash, line_color=color, line_width=2)
+            fig.add_annotation(
+                x=val, y=1.01, yref="paper",
+                text=f"<b>{label}</b>", showarrow=False,
+                font=dict(size=10, color=color),
+                yanchor="bottom", textangle=-90,
+            )
+
+    alerta_color = "#2b6cb0" if diag_bf == "OK" else "#e53e3e"
+    fig.add_annotation(
+        x=0.01,
+        y=0.98,
+        xref="paper",
+        yref="paper",
+        text=(
+            f"🏷️ <b>Diagnóstico Biofix:</b> <b style='color:{alerta_color}'>{diag_bf.upper()}</b><br>"
+            f"🔍 <b>Calor previo a T0:</b> {float(gdd_previo or 0):.1f} GDD | "
+            f"⚠️ <b>Alerta:</b> {alerta}"
+        ),
+        showarrow=False,
+        font=dict(size=11, color="#1a202c"),
+        align="left",
+        bgcolor="rgba(237,242,247,0.92)",
+        bordercolor=alerta_color,
+        borderwidth=1,
+        borderpad=6,
+    )
+
+    fig.update_layout(
+        title=f"Auditoría GDD: {fundo_name} | {variedad} ({temporada}) — Biofix {biofix_tipo}",
+        xaxis_title="Fecha",
+        yaxis=dict(title="GDD Acumulado"),
+        yaxis2=dict(title="GDD Diario", overlaying="y", side="right", showgrid=False, range=[0, 25]),
+        legend=dict(orientation="h", y=-0.18, x=0.5, xanchor="center"),
+        barmode="overlay",
+    )
+    return apply_corporate_style(fig, height=520)
+

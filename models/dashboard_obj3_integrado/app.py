@@ -28,6 +28,7 @@ try:
         panel_b_diagnostico_plot,
         panel_d_chill_plot,
         panel_d_chill_table,
+        gdd_biofix_timeseries_plot,
     )
 except ImportError:
     import sys
@@ -52,6 +53,7 @@ except ImportError:
         panel_b_diagnostico_plot,
         panel_d_chill_plot,
         panel_d_chill_table,
+        gdd_biofix_timeseries_plot,
     )
 
 
@@ -277,40 +279,51 @@ def build_app() -> gr.Blocks:
                     f_fundo.change(update_fenologia, [f_fundo, f_var], [f_table])
                     f_var.change(update_fenologia, [f_fundo, f_var], [f_table])
 
-                with gr.Tab("E. Panel GDD por Biofix [PENDIENTE]"):
+                with gr.Tab("E. Auditoría GDD por Biofix"):
                     gr.Markdown(
-                        """
-                        ### ⏳ Panel GDD Acumulado por Biofix — Pendiente
-
-                        > Este panel requiere un CSV canónico exportado desde el notebook:
-                        > `models/indicador_biologico/multisite_multivariety_gdd_analysis_v2_t0_latitudinal.ipynb`
-
-                        **Columnas requeridas del CSV (`gdd_acumulado_por_biofix.csv`):**
-
-                        | Columna | Descripción |
-                        |---|---|
-                        | `fundo` | Identificador del fundo |
-                        | `Fundo` | Nombre legible del fundo |
-                        | `temporada` | Ej: `2025_2026` |
-                        | `variedad` | Variedad indicadora |
-                        | `fecha` | Fecha de registro |
-                        | `biofix_tipo` | `1-Jul`, `1-Ago`, `15-Ago`, `1-Sep`, `t0_operativo`, `t0_latitudinal` |
-                        | `biofix_fecha` | Fecha de inicio de conteo de GDD |
-                        | `t0_operativo` | Fecha T0 operativo |
-                        | `t0_latitudinal` | Fecha T0 latitudinal estimado |
-                        | `fecha_brotacion_ELP4` | Fecha de brotación observada |
-                        | `gdd_diario` | GDD acumulado en ese día |
-                        | `gdd_acumulado` | GDD acumulado desde el biofix |
-                        | `gdd_acumulado_previo_t0` | GDD acumulado justo antes del T0 |
-                        | `threshold_GDD_usado` | Umbral de GDD utilizado (Ej: 70 GDD) |
-                        | `fuente_clima` | Fuente de datos climáticos usada |
-                        | `archivo_origen` | Archivo fuente |
-                        | `alerta_temporada_anterior` | `SI`/`NO` — si el biofix podría estar contando calor de temporada previa |
-
-                        **Una vez exportado, depositar en:**
-                        `models/indicador_biologico/outputs_multisite_gdd/gdd_acumulado_por_biofix.csv`
-                        """
+                        "**Evaluación fisiológica del inicio de conteo térmico (Biofix).** "
+                        "Permite contrastar cómo cambia la curva de GDD acumulado y detectar posibles "
+                        "arrastres de calor invernal de la temporada anterior."
                     )
+                    bf_df = gdd.get("biofix_timeseries", pd.DataFrame())
+                    bf_sum = gdd.get("biofix_summary", pd.DataFrame())
+
+                    bf_fundos = sorted(bf_df["fundo"].dropna().unique().tolist()) if not bf_df.empty else ["qba_seca"]
+                    bf_temps = sorted(bf_df["temporada"].dropna().unique().tolist()) if not bf_df.empty else ["2025_2026"]
+                    bf_vars = sorted(bf_df["variedad"].dropna().unique().tolist()) if not bf_df.empty else ["cabernet_sauvignon"]
+                    bf_tipos = sorted(bf_df["biofix_tipo"].dropna().unique().tolist()) if not bf_df.empty else ["t0_operativo"]
+
+                    with gr.Row():
+                        bf_fundo_dd = gr.Dropdown(bf_fundos, value=bf_fundos[0] if bf_fundos else "", label="Fundo / Viñedo")
+                        bf_temp_dd = gr.Dropdown(bf_temps, value=bf_temps[0] if bf_temps else "", label="Temporada")
+                        bf_var_dd = gr.Dropdown(bf_vars, value=bf_vars[0] if bf_vars else "", label="Variedad")
+                        bf_tipo_dd = gr.Dropdown(bf_tipos, value="t0_operativo" if "t0_operativo" in bf_tipos else (bf_tipos[0] if bf_tipos else ""), label="Candidato Biofix")
+
+                    init_bf_fig = gdd_biofix_timeseries_plot(
+                        bf_df,
+                        bf_fundos[0] if bf_fundos else "",
+                        bf_temps[0] if bf_temps else "",
+                        bf_vars[0] if bf_vars else "",
+                        "t0_operativo" if "t0_operativo" in bf_tipos else (bf_tipos[0] if bf_tipos else ""),
+                    )
+                    bf_plot = gr.Plot(value=init_bf_fig)
+
+                    gr.Markdown("### 📋 Resumen Comparativo de Acumulación y Alertas por Biofix")
+                    bf_table = gr.Dataframe(value=_safe(bf_sum), interactive=False, wrap=True)
+
+                    def update_bf_panel(f, t, v, b):
+                        fig = gdd_biofix_timeseries_plot(bf_df, f, t, v, b)
+                        sub_sum = pd.DataFrame()
+                        if not bf_sum.empty:
+                            sub_sum = bf_sum[
+                                (bf_sum["fundo"].astype(str).str.strip().str.lower() == str(f).strip().lower())
+                                & (bf_sum["temporada"].astype(str) == str(t))
+                                & (bf_sum["variedad"].astype(str).str.strip().str.lower() == str(v).strip().lower())
+                            ].copy()
+                        return fig, _safe(sub_sum)
+
+                    for dd in [bf_fundo_dd, bf_temp_dd, bf_var_dd, bf_tipo_dd]:
+                        dd.change(update_bf_panel, [bf_fundo_dd, bf_temp_dd, bf_var_dd, bf_tipo_dd], [bf_plot, bf_table])
 
                 with gr.Tab("F. Plausibilidad Fisiológica (Frío Invernal)"):
                     gr.Markdown("> **🧪 NOTA DE INVESTIGACIÓN:** Evaluación exploratoria de balance bioclimático previo a brotación.")
