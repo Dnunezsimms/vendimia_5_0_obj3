@@ -125,6 +125,7 @@ def build_app() -> gr.Blocks:
         gr.Markdown("Clima -> fenologia -> madurez tecnica -> madurez fenolica -> modelos -> decision de cosecha")
 
         with gr.Tab("Estado del sistema"):
+            gr.Markdown("> **📊 INDICADOR DE COMPLETITUD:** Ingesta climática diaria activa hasta octubre 2025. *Bloque de Frío Horario invernal pendiente de actualización (Jul-Oct).*")
             gr.Markdown(_markdown_status(state))
             with gr.Row():
                 gr.Plot(value=climate_status_bar(climate["resumen"]))
@@ -206,6 +207,7 @@ def build_app() -> gr.Blocks:
                 )
 
         with gr.Tab("Madurez fenolica"):
+            gr.Markdown("> **ℹ️ AVISO DE LAB 2026:** Curvas históricas operativas. Las muestras correspondientes a la vendimia 2026 se encuentran pendientes de recepción y análisis en laboratorio.")
             p_var = gr.Dropdown(phenolic_vars or [""], value=(phenolic_vars[0] if phenolic_vars else ""), label="Variable")
             p_plot = gr.Plot(value=maturity_curve(phenolic_df, phenolic_vars[0] if phenolic_vars else "", "Curva de madurez fenolica"))
             gr.Dataframe(value=_safe(phenolic_df), interactive=False, wrap=True)
@@ -277,6 +279,7 @@ def build_app() -> gr.Blocks:
             )
 
         with gr.Tab("Export / INRIA"):
+            gr.Markdown("> **📦 DESCARGA DE ARCHIVOS:** Actualmente esta pestaña cumple un rol informativo de trazabilidad interna. En el próximo sprint v2 se habilitarán botones directos (`gr.File`) para exportar matrices procesadas.")
             gr.Markdown(
                 """
 ### Estado de Envío a INRIA (Subcontrato)
