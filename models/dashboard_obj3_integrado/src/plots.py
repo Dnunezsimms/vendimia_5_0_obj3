@@ -568,54 +568,57 @@ def latitudinal_regression_plot(
 
     fig = go.Figure()
 
-    # --- Datos por fundo ---
+    d_sorted = d.sort_values("lat", ascending=True)
+    tick_vals = d_sorted["lat"].tolist()
+    tick_text = [f"<b>{r['Fundo']}</b> ({r['lat']:.1f}°)" for _, r in d_sorted.iterrows()]
+
     incluidos = d[d.get("incluido_en_regresion", pd.Series(True, index=d.index)).astype(str).str.upper() != "FALSE"].copy()
     excluidos = d[d.get("incluido_en_regresion", pd.Series(False, index=d.index)).astype(str).str.upper() == "FALSE"].copy()
 
-    # Scatter brotación ELP4 observada — incluidos
     if not incluidos.empty:
         fig.add_trace(go.Scatter(
-            x=incluidos["lat"],
-            y=incluidos["doy_brotacion"],
+            x=incluidos["doy_brotacion"],
+            y=incluidos["lat"],
             mode="markers+text",
             name="Brotación ELP4 observada",
             text=incluidos["Fundo"],
             textposition="top right",
             textfont=dict(size=10, color="#2d3748"),
             marker=dict(size=11, color=WINE_PALETTE[0], symbol="circle"),
+            hovertemplate="<b>%{text}</b><br>DOY Brotación: %{x:.1f}<br>Latitud: %{y:.2f}°<extra></extra>",
         ))
         fig.add_trace(go.Scatter(
-            x=incluidos["lat"],
-            y=incluidos["doy_t0_operativo"],
-            mode="markers+text",
+            x=incluidos["doy_t0_operativo"],
+            y=incluidos["lat"],
+            mode="markers",
             name="T0 operativo (biofix CS)",
-            text=incluidos["Fundo"],
-            textposition="bottom right",
-            textfont=dict(size=9, color="#805ad5"),
-            marker=dict(size=9, color=WINE_PALETTE[4], symbol="diamond"),
+            marker=dict(size=10, color=WINE_PALETTE[4], symbol="diamond"),
+            customdata=incluidos["Fundo"],
+            hovertemplate="<b>%{customdata}</b><br>DOY T0 Operativo: %{x:.1f}<br>Latitud: %{y:.2f}°<extra></extra>",
         ))
 
-    # Los Acacios / excluidos
     if not excluidos.empty:
         fig.add_trace(go.Scatter(
-            x=excluidos["lat"],
-            y=excluidos["doy_brotacion"],
+            x=excluidos["doy_brotacion"],
+            y=excluidos["lat"],
             mode="markers+text",
             name="Brotación ELP4 (excluido de regresión)",
             text=excluidos["Fundo"],
             textposition="top right",
             textfont=dict(size=10, color="#e53e3e"),
             marker=dict(size=12, color="#e53e3e", symbol="circle-open", line=dict(width=2)),
+            hovertemplate="<b>%{text} (EXCLUIDO)</b><br>DOY Brotación: %{x:.1f}<br>Latitud: %{y:.2f}°<extra></extra>",
         ))
         fig.add_trace(go.Scatter(
-            x=excluidos["lat"],
-            y=excluidos["doy_t0_operativo"],
+            x=excluidos["doy_t0_operativo"],
+            y=excluidos["lat"],
             mode="markers",
             name="T0 operativo (excluido)",
             marker=dict(size=10, color="#e53e3e", symbol="diamond-open", line=dict(width=2)),
+            customdata=excluidos["Fundo"],
+            hovertemplate="<b>%{customdata} (EXCLUIDO)</b><br>DOY T0: %{x:.1f}<br>Latitud: %{y:.2f}°<extra></extra>",
         ))
 
-    # --- Curvas de regresión ---
     import numpy as np
     lat_line = np.linspace(lat_range[0], lat_range[1], 100)
 
@@ -627,7 +630,6 @@ def latitudinal_regression_plot(
             r2 = float(row.get("r2", 0))
             mae = float(row.get("mae", 0))
             n = int(row.get("n", 0))
-            fundos_incl = str(row.get("fundos_incluidos", ""))
 
             doy_line = pendiente * lat_line + intercepto
             is_brotacion = "brotacion" in normalize_text(reg_name)
@@ -638,14 +640,16 @@ def latitudinal_regression_plot(
                 else f"Curva T0 ~ lat (R²={r2:.2f}, MAE={mae:.1f}d, n={n}) [exploratoria]"
             )
             fig.add_trace(go.Scatter(
-                x=lat_line,
-                y=doy_line,
+                x=doy_line,
+                y=lat_line,
                 mode="lines",
                 name=label,
                 line=dict(color=color, width=2, dash="solid" if is_brotacion else "dash"),
             ))
 
-    # Annotations
+    for _, r in d.iterrows():
+        fig.add_hline(y=r["lat"], line_dash="dot", line_color="rgba(160, 174, 192, 0.45)", line_width=1)
+
     fig.add_annotation(
         x=0.01, y=0.02, xref="paper", yref="paper",
         text=(
@@ -662,11 +666,18 @@ def latitudinal_regression_plot(
 
     fig.update_layout(
         title="Auditoría Latitudinal: Biofix T0 y Brotación ELP4 Cabernet Sauvignon 2025–2026",
-        xaxis_title="Latitud [grados decimales]",
-        yaxis_title="DOY (Día del Año)",
-        legend=dict(orientation="v", x=1.01, y=1),
+        xaxis_title="DOY (Día del año - Calendario Primavera)",
+        yaxis=dict(
+            title="Latitud Sur [grados decimales] (Norte arriba)",
+            tickmode="array",
+            tickvals=tick_vals,
+            ticktext=tick_text,
+            showgrid=False,
+        ),
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, bgcolor="rgba(255,255,255,0.9)"),
+        margin=dict(l=150, r=40, t=90, b=70),
     )
-    return apply_corporate_style(fig, height=520)
+    return apply_corporate_style(fig, height=560)
 
 
 def gdd_biofix_timeseries_plot(

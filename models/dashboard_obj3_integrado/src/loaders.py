@@ -400,58 +400,64 @@ def find_columns(df: pd.DataFrame, patterns: list[str]) -> list[str]:
 # Sprint 2.2 — loaders para series temporales climáticas y curva latitudinal
 # ---------------------------------------------------------------------------
 
-# Mapping de columnas Datavid a nombres canónicos del dashboard
-_DATAVID_COL_MAP = {
-    "tempMedia": "Temp. Media [°C]",
-    "tempMinima": "Temp. Mínima [°C]",
-    "tempMaxima": "Temp. Máxima [°C]",
-    "humedadRelativa": "Humedad Relativa [%]",
-    "radiacion": "Radiación Solar [MJ/m²]",
-    "precipitacion": "Precipitación [mm]",
-    "dpv": "VPD [kPa]",
-    "presion": "Presión [hPa]",
-    "velocidadPromedioViento": "Vel. Viento Promedio [m/s]",
-    "velocidadMaximaViento": "Vel. Viento Máxima [m/s]",
+CLIMATE_SOURCE_VAR_MAP = {
+    "Datavid": {
+        "tempMedia": "Temp. Media [°C]",
+        "tempMinima": "Temp. Mínima [°C]",
+        "tempMaxima": "Temp. Máxima [°C]",
+        "humedadRelativa": "Humedad Relativa [%]",
+        "radiacion": "Radiación Solar [MJ/m²]",
+        "precipitacion": "Precipitación [mm]",
+        "dpv": "VPD [kPa]",
+        "presion": "Presión [hPa]",
+        "velocidadPromedioViento": "Vel. Viento Promedio [m/s]",
+        "velocidadMaximaViento": "Vel. Viento Máxima [m/s]",
+    },
+    "INIA/Agromet": {
+        "Temperatura del Aire °C": "Temp. del Aire [°C]",
+        "Temperatura del Aire Mínima °C": "Temp. Mínima [°C]",
+        "Temperatura del Aire Máxima °C": "Temp. Máxima [°C]",
+        "Humedad Relativa %": "Humedad Relativa [%]",
+        "Precipitación Acumulada mm": "Precipitación [mm]",
+        "Radiación Solar Mj/m²": "Radiación Solar [MJ/m²]",
+        "Velocidad de Viento km/h": "Vel. del Viento [km/h]",
+    },
+    "Zentra": {
+        "Air Temperature": "Air Temperature [°C]",
+        "Min Air Temperature": "Min Air Temperature [°C]",
+        "Max Air Temperature": "Max Air Temperature [°C]",
+        "Relative Humidity": "Relative Humidity [%]",
+        "Solar Radiation": "Solar Radiation [W/m²]",
+        "Precipitation": "Precipitation [mm]",
+        "VPD": "VPD [kPa]",
+        "Wind Speed": "Wind Speed [m/s]",
+    },
 }
 
+_DATAVID_COL_MAP = CLIMATE_SOURCE_VAR_MAP["Datavid"]
 CLIMATE_VARS_DISPLAY = list(_DATAVID_COL_MAP.values())
 CLIMATE_VARS_RAW = list(_DATAVID_COL_MAP.keys())
 
 
 def load_climate_hourly_catalog() -> dict[str, object]:
-    """Construye catálogo de estaciones horarias disponibles por fuente.
-
-    Devuelve un dict con:
-      - 'stations': dict[source_name -> list[station_name]]
-      - 'col_map': mapeo nombre_raw -> nombre_display
-      - 'vars_display': lista de variables legibles disponibles
-    """
     catalog: dict[str, list[str]] = {}
 
-    # Datavid: subcarpetas con climate_hourly.parquet
     if CLIMATE_HOURLY_DATAVID.exists():
-        stations = sorted(
-            p.parent.name
-            for p in CLIMATE_HOURLY_DATAVID.glob("*/climate_hourly.parquet")
-        )
+        stations = sorted(p.parent.name for p in CLIMATE_HOURLY_DATAVID.glob("*/climate_hourly.parquet"))
         if stations:
             catalog["Datavid"] = stations
 
-    # INIA/Agromet: subcarpetas con archivos de datos
     if CLIMATE_HOURLY_INIA.exists():
         stations_inia = sorted(
-            p.name
-            for p in CLIMATE_HOURLY_INIA.iterdir()
+            p.name for p in CLIMATE_HOURLY_INIA.iterdir()
             if p.is_dir() and any(p.glob(f"*{ext}") for ext in [".xlsx", ".xls", ".csv"])
         )
         if stations_inia:
             catalog["INIA/Agromet"] = stations_inia
 
-    # Zentra: subcarpetas con archivos de datos
     if CLIMATE_HOURLY_ZENTRA.exists():
         stations_zen = sorted(
-            p.name
-            for p in CLIMATE_HOURLY_ZENTRA.iterdir()
+            p.name for p in CLIMATE_HOURLY_ZENTRA.iterdir()
             if p.is_dir() and any(p.glob(f"*{ext}") for ext in [".xlsx", ".xls", ".csv"])
         )
         if stations_zen:
@@ -460,24 +466,25 @@ def load_climate_hourly_catalog() -> dict[str, object]:
     return {
         "stations": catalog,
         "col_map": _DATAVID_COL_MAP,
+        "source_var_map": CLIMATE_SOURCE_VAR_MAP,
         "vars_display": CLIMATE_VARS_DISPLAY,
     }
 
 
-def load_climate_station_series(source: str, station: str, freq: str = "hourly") -> pd.DataFrame:
-    """Carga la serie temporal de una estación.
+_HOURLY_DF_CACHE: dict[tuple[str, str], pd.DataFrame] = {}
 
-    Args:
-        source: 'Datavid' | 'INIA/Agromet' | 'Zentra'
-        station: nombre de la subcarpeta de la estación
-        freq: 'hourly' | 'daily' (daily = agregación en memoria, sin guardar)
 
-    Returns:
-        DataFrame con columna 'fecha' y variables climáticas disponibles,
-        renombradas a nombres legibles. Puede estar vacío si no hay datos.
-    """
+def _clean_var_key(s: str) -> str:
+    n = normalize_text(s)
+    return re.sub(r"_[o]?c$", "", n).replace("_", "")
+
+
+def _load_raw_station_hourly(source: str, station: str) -> pd.DataFrame:
+    key = (source, station)
+    if key in _HOURLY_DF_CACHE:
+        return _HOURLY_DF_CACHE[key].copy()
+
     df = pd.DataFrame()
-
     try:
         if source == "Datavid":
             parquet = CLIMATE_HOURLY_DATAVID / station / "climate_hourly.parquet"
@@ -517,18 +524,16 @@ def load_climate_station_series(source: str, station: str, freq: str = "hourly")
         return pd.DataFrame()
 
     if df.empty:
+        _HOURLY_DF_CACHE[key] = df
         return df
 
-    # Clean raw column prefixes if any (e.g. Zentra "raw  Solar Radiation")
     df = df.rename(columns=lambda c: str(c).replace("raw  ", "").replace("raw ", "").strip())
 
-    # Normalize fecha column
     date_col = next(
         (c for c in df.columns if any(w in normalize_text(c) for w in ["fecha", "date", "tiempo", "timestamp"])),
         None,
     )
     if date_col is None:
-        # Try first datetime column
         date_col = next((c for c in df.columns if pd.api.types.is_datetime64_any_dtype(df[c])), None)
     if date_col is None:
         logging.warning("No se encontró columna de fecha en %s / %s", source, station)
@@ -538,19 +543,47 @@ def load_climate_station_series(source: str, station: str, freq: str = "hourly")
     df["fecha"] = pd.to_datetime(df["fecha"], errors="coerce")
     df = df.dropna(subset=["fecha"]).sort_values("fecha").reset_index(drop=True)
 
-    # Rename to display names (only for Datavid which has known column names)
-    if source == "Datavid":
-        df = df.rename(columns={k: v for k, v in _DATAVID_COL_MAP.items() if k in df.columns})
 
-    # Aggregate to daily if requested (memory only — NOT saved)
-    if freq == "daily":
-        num_cols = [c for c in df.columns if c != "fecha" and pd.api.types.is_numeric_dtype(df[c])]
-        df["_date"] = df["fecha"].dt.date
-        df = df.groupby("_date")[num_cols].mean().reset_index()
-        df = df.rename(columns={"_date": "fecha"})
-        df["fecha"] = pd.to_datetime(df["fecha"])
 
-    return df
+    if source in CLIMATE_SOURCE_VAR_MAP:
+        col_map = CLIMATE_SOURCE_VAR_MAP[source]
+        new_cols = {}
+        for c in df.columns:
+            c_clean = _clean_var_key(c)
+            for raw_k, vis_v in sorted(col_map.items(), key=lambda x: len(x[0]), reverse=True):
+                k_clean = _clean_var_key(raw_k)
+                if k_clean and k_clean == c_clean:
+                    new_cols[c] = vis_v
+                    break
+        df = df.rename(columns=new_cols)
+
+    _HOURLY_DF_CACHE[key] = df
+    return df.copy()
+
+
+def get_climate_station_variables(source: str, station: str) -> list[str]:
+    """Devuelve variables climáticas reales legibles disponibles para esa estación."""
+    df = _load_raw_station_hourly(source, station)
+    if df.empty:
+        return []
+    num_cols = [c for c in df.columns if c != "fecha" and pd.api.types.is_numeric_dtype(df[c])]
+    mapped_vis = set(CLIMATE_SOURCE_VAR_MAP.get(source, {}).values())
+    prio = [c for c in num_cols if c in mapped_vis]
+    others = [c for c in num_cols if c not in mapped_vis]
+    return prio + others
+
+
+def load_climate_station_series(source: str, station: str, freq: str = "hourly") -> pd.DataFrame:
+    df = _load_raw_station_hourly(source, station)
+    if df.empty or freq != "daily":
+        return df
+
+    num_cols = [c for c in df.columns if c != "fecha" and pd.api.types.is_numeric_dtype(df[c])]
+    df["_date"] = df["fecha"].dt.date
+    daily = df.groupby("_date")[num_cols].mean().reset_index()
+    daily = daily.rename(columns={"_date": "fecha"})
+    daily["fecha"] = pd.to_datetime(daily["fecha"])
+    return daily
 
 
 def load_gdd_latitudinal() -> dict[str, pd.DataFrame]:

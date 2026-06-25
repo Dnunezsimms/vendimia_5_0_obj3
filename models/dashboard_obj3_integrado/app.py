@@ -9,7 +9,7 @@ import pandas as pd
 
 try:
     from .src.config import HOST, LOG_DIR, PORT, REPO_ROOT
-    from .src.loaders import find_columns, load_climate_station_series, load_state, numeric_columns, setup_logging
+    from .src.loaders import find_columns, get_climate_station_variables, load_climate_station_series, load_state, numeric_columns, setup_logging
     from .src.plots import (
         baseline_comparison_plot,
         cabernet_diagnostic_table,
@@ -34,7 +34,7 @@ except ImportError:
     import sys
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from src.config import HOST, LOG_DIR, PORT, REPO_ROOT
-    from src.loaders import find_columns, load_climate_station_series, load_state, numeric_columns, setup_logging
+    from src.loaders import find_columns, get_climate_station_variables, load_climate_station_series, load_state, numeric_columns, setup_logging
     from src.plots import (
         baseline_comparison_plot,
         cabernet_diagnostic_table,
@@ -156,8 +156,8 @@ def build_app() -> gr.Blocks:
     _first_source = _sources[0]
     _first_stations = _catalog_stations.get(_first_source, [])
     _first_station = _first_stations[0] if _first_stations else ""
-    _vars_display = climate_catalog["vars_display"]
-    _first_var = _vars_display[0] if _vars_display else "Temp. Media [°C]"
+    _first_vars = get_climate_station_variables(_first_source, _first_station) if _first_station else []
+    _first_var = _first_vars[0] if _first_vars else "Temp. Media [°C]"
 
     fundos = ["Todos"] + sorted(climate["resumen"].get("fundo_normalizado", pd.Series(dtype=str)).dropna().astype(str).unique().tolist())
     gdd_var_col = "Variedad" if "Variedad" in gdd["resumen_t0"].columns else "variedad" if "variedad" in gdd["resumen_t0"].columns else None
@@ -192,28 +192,41 @@ def build_app() -> gr.Blocks:
             with gr.Row():
                 ts_source = gr.Dropdown(_sources, value=_first_source, label="Fuente", scale=1)
                 ts_station = gr.Dropdown(_first_stations or [""], value=_first_station, label="Estación / Fuente Climática", scale=2)
-                ts_var = gr.Dropdown(_vars_display or [_first_var], value=_first_var, label="Variable Climática", scale=2)
+                ts_var = gr.Dropdown(_first_vars or [_first_var], value=_first_var, label="Variable Climática", scale=2)
                 ts_freq = gr.Radio(["horaria", "diaria"], value="horaria", label="Frecuencia de visualización", scale=1)
 
             _init_df = load_climate_station_series(_first_source, _first_station, "hourly") if _first_station else pd.DataFrame()
             ts_plot = gr.Plot(value=climate_timeseries_plot(_init_df, _first_var, _first_station, _first_source, "horaria"))
 
-            def update_ts_station(source):
-                opts = _catalog_stations.get(source, [])
-                return gr.update(choices=opts, value=opts[0] if opts else "")
+            def on_ts_source_change(source, freq):
+                stations = _catalog_stations.get(source, [])
+                st = stations[0] if stations else ""
+                vars_avail = get_climate_station_variables(source, st) if st else []
+                var = vars_avail[0] if vars_avail else ""
+                freq_key = "daily" if freq == "diaria" else "hourly"
+                df = load_climate_station_series(source, st, freq_key) if st else pd.DataFrame()
+                fig = climate_timeseries_plot(df, var, st, source, freq)
+                return gr.update(choices=stations, value=st), gr.update(choices=vars_avail, value=var), fig
 
-            def update_ts_plot(source, station, var, freq):
+            def on_ts_station_change(source, station, freq):
+                vars_avail = get_climate_station_variables(source, station) if station else []
+                var = vars_avail[0] if vars_avail else ""
+                freq_key = "daily" if freq == "diaria" else "hourly"
+                df = load_climate_station_series(source, station, freq_key) if station else pd.DataFrame()
+                fig = climate_timeseries_plot(df, var, station, source, freq)
+                return gr.update(choices=vars_avail, value=var), fig
+
+            def on_ts_var_or_freq_change(source, station, var, freq):
                 if not station:
                     return empty_figure("Selecciona una estación.")
                 freq_key = "daily" if freq == "diaria" else "hourly"
                 df = load_climate_station_series(source, station, freq_key)
                 return climate_timeseries_plot(df, var, station, source, freq)
 
-            ts_source.change(update_ts_station, ts_source, ts_station)
-            ts_source.change(update_ts_plot, [ts_source, ts_station, ts_var, ts_freq], ts_plot)
-            ts_station.change(update_ts_plot, [ts_source, ts_station, ts_var, ts_freq], ts_plot)
-            ts_var.change(update_ts_plot, [ts_source, ts_station, ts_var, ts_freq], ts_plot)
-            ts_freq.change(update_ts_plot, [ts_source, ts_station, ts_var, ts_freq], ts_plot)
+            ts_source.change(on_ts_source_change, [ts_source, ts_freq], [ts_station, ts_var, ts_plot])
+            ts_station.change(on_ts_station_change, [ts_source, ts_station, ts_freq], [ts_var, ts_plot])
+            ts_var.change(on_ts_var_or_freq_change, [ts_source, ts_station, ts_var, ts_freq], ts_plot)
+            ts_freq.change(on_ts_var_or_freq_change, [ts_source, ts_station, ts_var, ts_freq], ts_plot)
 
             # --- Panel secundario: auditoría de cobertura ---
             gr.Markdown("### 🗂️ Auditoría de Cobertura Climática por Fundo")
@@ -283,7 +296,10 @@ def build_app() -> gr.Blocks:
                     gr.Markdown(
                         "**Evaluación fisiológica del inicio de conteo térmico (Biofix).** "
                         "Permite contrastar cómo cambia la curva de GDD acumulado y detectar posibles "
-                        "arrastres de calor invernal de la temporada anterior."
+                        "arrastres de calor invernal de la temporada anterior.\n\n"
+                        "> ℹ️ **Nota metodológica:** El selector de biofix audita acumulación GDD; "
+                        "no recalcula todavía el t0 operativo ni reconstruye el indicador biológico. "
+                        "*(Propuesta futura de análisis de sensibilidad: `t0_sensitivity_by_biofix.csv`)*."
                     )
                     bf_df = gdd.get("biofix_timeseries", pd.DataFrame())
                     bf_sum = gdd.get("biofix_summary", pd.DataFrame())
