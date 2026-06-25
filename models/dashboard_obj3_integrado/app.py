@@ -160,7 +160,9 @@ def build_app() -> gr.Blocks:
             """
             # 🍇 Vendimia 5.0 — Explorador Técnico Objetivo 3
             **Flujo Técnico de Análisis y Trazabilidad:** *Clima Fisiológico → Modelación Fenológica → Madurez Técnica/Fenólica → Modelos IA/RF/PySR → Referencia de Cosecha*
-            """
+
+            📬 Contacto técnico: **Diego Núñez** — Análisis de datos, modelamiento y trazabilidad del Objetivo 3.
+            """  
         )
 
         with gr.Tab("📊 Estado del sistema"):
@@ -304,23 +306,6 @@ def build_app() -> gr.Blocks:
             gr.Markdown("### 🗃️ Matriz Consolidada Multi-Origen")
             gr.Dataframe(value=_safe(climate["master"]), interactive=False, wrap=True)
 
-        with gr.Tab("📦 Export / INRIA"):
-            gr.Markdown("> **📥 MÓDULO DE DESCARGA DIRECTA:** Actualmente gestiona la trazabilidad de entregas al subcontrato de investigación INRIA. En el próximo sprint v2 se añadirán exportadores nativos `gr.File`.")
-            gr.Markdown(
-                """
-                ### 🚀 Estado de Trazabilidad e Intercambio INRIA
-
-                * **Último Paquete Oficial Emitido:** `exports/inria/paquete_luis_inria_fenologia_ELP_OBJ3_CLEAN_2.zip`
-                * **Estado Operacional:** 🟡 ENVIADO / EN REVISIÓN CIENTFICA
-
-                > [!WARNING]
-                > **Protocolo de Congelamiento:** No despachar nuevos *snapshots* de datos exploratorios hasta recibir la retroalimentación del paquete vigente para mantener sincronía en los modelos.
-
-                **Matrices Maestras Certificadas:**
-                - *Madurez:* `madurez_tecnica_2025_2026_train_test_CANONICO_V5_INDICES_ORIGINALES.csv`
-                - *Fenología:* `consolidado_fenologia_ELP_MODELABLE_FULL_v1.csv`
-                """
-            )
 
         with gr.Tab("📑 Trazabilidad CORFO"):
             gr.Markdown(
@@ -344,9 +329,10 @@ def build_app() -> gr.Blocks:
                 ### 📘 Manual Operativo del Repositorio Limpio
 
                 1. **Inmutabilidad de SharePoint (`data/all_project/`):** **🚫 INTOCABLE.** Directorio espejo en modo lectura estricta.
-                2. **Ejecución de Pipeline:** Para re-entrenar modelos base localmente, invoca `python src/modeling/internal_baseline_v2/run_pipeline_v2.py`.
-                3. **Lanzador Local de Consola:** Abre `ABRIR_DASHBOARD.bat` o navega a `ACCESO_DASHBOARD.html`.
-                4. **Marco Arquitectónico:** Consulta `docs/objetivo_3_vendimia_5_0.md` para especificaciones del subsidio CORFO.
+                2. **Ejecución de Pipeline:** Para re-entrenar modelos base, invoca `python src/modeling/internal_baseline_v2/run_pipeline_v2.py`.
+                3. **Lanzador Local:** Abre `ABRIR_DASHBOARD.bat` o navega a `ACCESO_DASHBOARD.html`.
+                4. **Marco Técnico del Proyecto (CORFO):** Consulta `docs/objetivo_3_vendimia_5_0.md` para entender el flujo científico completo del Objetivo 3.
+                5. **Contacto técnico:** Diego Núñez — análisis de datos, modelamiento y trazabilidad del Objetivo 3.
                 """
             )
 

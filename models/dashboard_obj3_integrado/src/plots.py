@@ -385,9 +385,6 @@ def maturity_curve_grouped(df: pd.DataFrame, variable: str, group_by_cuartel: bo
         },
     )
     
-    # Rango referencial de madurez soluble si es °Brix
-    if normalize_text(variable) == "brix":
-        fig.add_hrect(y0=23.0, y1=24.5, line_width=0, fillcolor="rgba(49, 151, 149, 0.15)", annotation_text="Rango referencial de madurez soluble tintas (23.0 - 24.5 °Brix)", annotation_position="top left", annotation_font=dict(color="#285e61", size=11))
 
     fig.update_layout(
         xaxis_title="Fecha de Control",
