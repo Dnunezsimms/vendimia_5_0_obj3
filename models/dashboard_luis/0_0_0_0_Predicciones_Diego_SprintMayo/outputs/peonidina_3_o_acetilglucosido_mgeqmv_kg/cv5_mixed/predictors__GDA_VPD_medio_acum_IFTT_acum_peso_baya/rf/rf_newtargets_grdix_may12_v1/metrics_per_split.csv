@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,22,6,1.6201891968856332,0.49793314251322174,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,22,6,1.681652508102144,0.43566094784198206,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,22,6,2.1800000224926133,0.31361625201064136,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,23,5,2.439319687398383,0.264042365539084,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,23,5,1.7592772281627187,0.28759006880721594,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,22,6,1.8096631901125926,0.5948399600718138,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,22,6,2.3994994089689055,0.15957232422897671,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,22,6,2.324253989965922,0.15467581313536727,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,23,5,2.047163259322689,0.2582232922134101,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,23,5,1.4897288803796027,0.22775637071651456,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,22,6,1.8598482308539939,0.07757228407688133,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,22,6,2.3708045133796873,0.33004739424498897,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,22,6,1.64138797765656,0.2829824786283214,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,23,5,3.2437526748051413,0.24834936554677423,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|peso_baya,4,23,5,1.7435931400390998,0.03647784432037615,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026

@@ -1,0 +1,19 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,80.28797565283367,-562.2811055108607,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,69.61143327454774,-13.061613291530175,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,20,8,45.775724959937456,-3.8125706275502917,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,29.651252609327734,-0.26857536658625225,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,32.88322613461594,-16.529364196868546,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,78.92015968467061,-13.286563924379696,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,81.91639046689826,-585.2535126794498,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,69.30263310797085,-12.80999046270342,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,20,8,46.177341552049,-3.9309379969683196,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,30.733107903469204,-0.35026070257945263,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,32.510920712631645,-16.168490069467605,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,77.28026535963207,-12.69736426039613,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,78.65078342635712,-540.3455082279561,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,70.3764983691587,-13.336819207098591,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,20,8,46.54802983998752,-4.026406103197748,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,29.640909991043234,-0.25915990269293654,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,34.21858169965273,-17.76213135853365,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,24,4,77.56685309786974,-12.831778701800808,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026

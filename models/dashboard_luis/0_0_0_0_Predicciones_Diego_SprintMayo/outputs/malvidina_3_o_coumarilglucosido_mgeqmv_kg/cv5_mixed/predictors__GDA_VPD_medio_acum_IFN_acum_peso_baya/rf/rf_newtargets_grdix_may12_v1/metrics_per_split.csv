@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,22,6,8.00299655353014,0.9458844438000726,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,22,6,32.411897949021615,0.5920937570195977,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,22,6,16.18729694908657,0.9138676640044029,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,23,5,19.788246711054022,0.2702624096880679,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,23,5,24.479906704635702,-0.057523165862753745,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,22,6,20.02120384737936,0.8109322121166629,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,22,6,25.485872579645175,0.6085837841478999,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,22,6,17.360714062258154,0.4093280597210692,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,23,5,42.16938078688289,-0.7636798536295564,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,23,5,16.519669537768113,0.91381256178369,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,22,6,30.37554602234525,0.5719343059786068,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,22,6,19.00161788054943,0.6625532538380725,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,22,6,36.92284134899542,0.376396917298506,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,23,5,11.876753990656557,0.8732307269012014,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,23,5,20.268272572104998,0.1792352840701945,,,malvidina_3_o_coumarilglucosido_mgeqmv_kg,Malvidina-3-O-coumarilglucósido(mgEqMv/Kg),2026

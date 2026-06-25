@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,109.42287116287827,0.5854813401030212,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,120.20721676671987,0.3865347268531043,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,217.64974742424076,0.3740132295804218,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,153.8894737535076,-0.8877756652745192,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,42.03744535111607,0.523899698301776,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,110.12218854213876,0.6247079932611859,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,95.46483344490888,0.738585968095353,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,103.01373959026326,0.07519023609127096,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,175.17143981799205,-1.4465222110644516,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,98.24046264064748,0.7971100391602981,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,154.29396884964027,0.48636147469803614,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,95.69294169389563,0.4685494464863891,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,196.5427098005922,-0.20686901684761394,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,185.03120593313787,0.22807030623727265,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,34.59468530905808,0.7822715648869809,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026

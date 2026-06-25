@@ -1,0 +1,91 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,GDA,0.09449567588954437,0.21481211067317096,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,VPD_medio_acum,-0.007146318863135192,0.009738791013355234,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,IFs_acum,0.10991302835203456,0.158421571844267,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,azucar_real_baya_g,-0.033503340258676316,0.0273553627708544,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,rendimiento(ton/ha),-1.4566126083082053e-14,1.0167218548854028e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,GDA,0.04805441429244155,0.04179228403416933,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,VPD_medio_acum,0.006311255980723018,0.006977356014655389,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,IFs_acum,-0.025623497091366687,0.03381138215185653,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,azucar_real_baya_g,-0.0032884904891773204,0.0027711811672902578,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,rendimiento(ton/ha),-7.105427357601002e-15,1.2306961192854808e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,GDA,3.0715582935672914,5.627106351388339,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,VPD_medio_acum,-0.0007084127183556888,0.0083412349651387,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,IFs_acum,0.731755420272647,1.7036805605193732,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,azucar_real_baya_g,3.184711046256603,1.2408788459384854,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,rendimiento(ton/ha),0.22547003444473113,0.053849999248669046,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,GDA,8.000264935682543,7.269848456537457,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,VPD_medio_acum,-3.552713678800501e-16,1.1561340397231119e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,IFs_acum,0.9480732938965943,2.1763351540195166,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,azucar_real_baya_g,0.9885483068520106,1.034159368608418,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,rendimiento(ton/ha),6.7501559897209515e-15,1.2404008664714247e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,GDA,-6.7501559897209515e-15,7.936161205069211e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,VPD_medio_acum,-0.029983780845799047,0.05996756169158122,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,IFs_acum,0.5721999548824375,2.035061804805758,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,azucar_real_baya_g,1.1583858659281745,1.124733169593459,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,rendimiento(ton/ha),-1.1723955140041652e-14,7.544812981164491e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,GDA,0.02905411527587738,0.02227436429469884,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,VPD_medio_acum,-0.04132702579139717,0.023860169465484537,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,IFs_acum,1.6697754290362355e-14,1.443556360947443e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,azucar_real_baya_g,-0.35088631447133983,0.21551517298270295,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),42,rendimiento(ton/ha),2.7355895326763858e-14,1.6245654940652337e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,GDA,0.017448359355278952,0.1776545314163512,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,VPD_medio_acum,-0.006584119728046289,0.020444981988151822,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,IFs_acum,0.09494912062181235,0.16560315510549942,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,azucar_real_baya_g,-0.07440543147095155,0.052044903819763066,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,rendimiento(ton/ha),-6.7501559897209515e-15,1.464390482334817e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,GDA,-0.020483197075242286,0.013409400153150019,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,VPD_medio_acum,1.2789769243681804e-14,1.3406493525361332e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,IFs_acum,-0.0021687055365099185,0.005162551790525392,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,azucar_real_baya_g,-0.024097706302764265,0.01680672710710603,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,rendimiento(ton/ha),1.4210854715202004e-14,1.2710574864626037e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,GDA,6.0165317519903825,5.894028852126406,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,VPD_medio_acum,-0.018897480233874477,0.028552277115423758,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,IFs_acum,-0.36698989911822294,1.2636789256279046,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,azucar_real_baya_g,1.8160526113308897,0.9651232283187462,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,rendimiento(ton/ha),0.08148587057119946,0.03627950567747088,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,GDA,7.204432200415899,6.963283515561891,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,VPD_medio_acum,3.730349362740526e-14,1.436544509598699e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,IFs_acum,0.0780398974294318,2.1186888370776504,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,azucar_real_baya_g,1.1815419989504754,1.8166678337859974,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,rendimiento(ton/ha),4.156675004196586e-14,1.315463903606941e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,GDA,1.7763568394002505e-15,5.891509130072236e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,VPD_medio_acum,-0.05222840351527367,0.09046224848666296,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,IFs_acum,-0.3982653970221602,2.1257235317175667,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,azucar_real_baya_g,-0.013958436114621619,0.72784429322773,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,rendimiento(ton/ha),7.105427357601002e-16,8.673279421411241e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,GDA,0.001617409470719977,0.009992167413229728,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,VPD_medio_acum,-0.039372769916580806,0.025775528351816283,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,IFs_acum,-1.9895196601282804e-14,1.0681799536181493e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,azucar_real_baya_g,-0.10076177452898386,0.06822839423652086,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),123,rendimiento(ton/ha),-1.9539925233402755e-14,1.0746591856228473e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,GDA,0.019847644689457766,0.1297974485680622,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,VPD_medio_acum,-0.0019145057892057337,0.004557435356526008,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,IFs_acum,0.07819184408915092,0.11898239590260086,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,azucar_real_baya_g,-0.05952745097482719,0.043219554079279104,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,rendimiento(ton/ha),-5.684341886080802e-15,1.3959949785934002e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,GDA,0.005386218147128119,0.03700856845164931,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,VPD_medio_acum,2.842170943040401e-15,1.0634429903501372e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,IFs_acum,0.0008408190339906696,0.019993263516163227,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,azucar_real_baya_g,-0.004013964893356814,0.03542165723665958,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,rendimiento(ton/ha),2.1316282072803005e-15,1.1257114009136773e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,GDA,7.515377611573075,7.035669661450757,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,VPD_medio_acum,-0.02239104435288546,0.07214943734725605,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,IFs_acum,-0.2742225380107506,1.3939839304793993,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,azucar_real_baya_g,2.0812278104330435,0.7702021676566195,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,rendimiento(ton/ha),0.3214749728947037,0.10680284386360746,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,GDA,6.699690234229711,6.485611082163133,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,VPD_medio_acum,-1.0658141036401502e-15,1.3718260004443879e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,IFs_acum,0.321085541017602,1.9811611755958425,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,azucar_real_baya_g,1.3898293047103363,1.620097651193222,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,rendimiento(ton/ha),-1.7763568394002505e-15,1.0509068785146553e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,GDA,-3.907985046680551e-15,7.611435139277685e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,VPD_medio_acum,-0.03193609232058421,0.05531493449444569,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,IFs_acum,0.07896923947760079,1.9722547859762112,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,azucar_real_baya_g,0.4445188412987342,0.9058811332877439,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,rendimiento(ton/ha),-4.973799150320701e-15,1.103058955909832e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,GDA,-0.017315268747393375,0.0204608078207865,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,VPD_medio_acum,-0.03613469334915109,0.024690275734612403,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,IFs_acum,1.5276668818842153e-14,7.544812981164491e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,azucar_real_baya_g,-0.10620247414899353,0.06173998852285816,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),2026,rendimiento(ton/ha),1.5987211554602254e-14,1.2685725232129475e-14,20

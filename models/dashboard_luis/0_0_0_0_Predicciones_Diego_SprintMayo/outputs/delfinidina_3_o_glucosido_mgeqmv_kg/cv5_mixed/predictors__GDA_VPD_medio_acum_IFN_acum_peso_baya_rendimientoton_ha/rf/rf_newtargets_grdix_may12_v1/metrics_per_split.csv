@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,22,6,14.080574735705156,0.8359963010999145,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,22,6,21.23510026127631,0.6836989131487693,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,22,6,46.054380773863045,-0.10843016769256453,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,23,5,35.00518707604064,0.07017676621494873,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,23,5,12.617457058256395,-0.1548457938698411,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,22,6,19.46450719765239,0.7128266261281783,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,22,6,22.48976004506605,0.402401393990079,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,22,6,29.049696682025,0.17751535981843647,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,23,5,32.596782898318395,-0.3471130093723771,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,23,5,20.621271906067925,0.5202054064597805,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,22,6,24.555607970167255,0.20051800905430228,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,22,6,14.450545701613771,0.6212132324972914,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,22,6,40.129363079315745,-0.33598982942871203,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,23,5,38.6356744577195,0.22069854320472548,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,23,5,30.7915315289236,-0.12902303725517816,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026

@@ -1,0 +1,55 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,GDA,0.43966023623893163,0.2553118873066038,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,VPD_medio_acum,-0.0896320588621208,0.0683467089130206,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,IFN_acum,0.3799791761193049,0.23190826442905318,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,GDA,0.140920114921035,0.0989395517908836,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,VPD_medio_acum,0.00675737043747624,0.011704108923301496,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,IFN_acum,0.17528519311389665,0.10655313655448088,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,42,GDA,-0.011589935374215089,0.020914943618915518,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,42,VPD_medio_acum,-6.7501559897209515e-15,6.541239599585669e-15,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,42,IFN_acum,-0.010811581457398845,0.017783259921817125,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,GDA,1.0696534564476967,1.1017676405347347,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,VPD_medio_acum,1.8474111129762605e-14,8.817603462312361e-15,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,IFN_acum,-0.30514760963007603,0.5751175586639342,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,42,GDA,5.329070518200751e-15,4.961094661755162e-15,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,42,VPD_medio_acum,-1.3574710337615332,1.5458574116908212,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,42,IFN_acum,-0.020666168055375068,0.021477816139235602,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,GDA,-0.026492689562415704,0.018315741869282136,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,VPD_medio_acum,-0.03898329433411938,0.021279404560963337,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,IFN_acum,0.007200698175834219,0.0050153188508076756,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,GDA,0.3813686829874257,0.28687480081550637,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,VPD_medio_acum,-0.036390725627156326,0.027466329942962064,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,IFN_acum,0.4369833847922802,0.3115146329997737,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,GDA,-0.005344765194729817,0.04764121989230252,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,VPD_medio_acum,-0.008711238168017488,0.007296111442864306,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,IFN_acum,0.09700868466804202,0.11675690276482234,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,123,GDA,0.004390730933303643,0.015187022115441729,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,123,VPD_medio_acum,0.011412571222382439,0.008096480361373459,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,123,IFN_acum,-0.0035749497864326686,0.01504933524423349,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,GDA,0.759873975493284,0.8639790784905929,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,VPD_medio_acum,1.3145040611561854e-14,6.060475538032499e-15,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,IFN_acum,-0.19483182800773485,0.44803535924798593,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,123,GDA,-1.0658141036401502e-15,6.060475538032499e-15,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,123,VPD_medio_acum,-1.6933504998098385,1.7021542826181544,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,123,IFN_acum,-2.842170943040401e-15,5.221401429160391e-15,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,GDA,-0.03734697306107684,0.024657006569232483,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,VPD_medio_acum,-0.8611082155524894,0.5605349335074956,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,IFN_acum,-0.14581640095697637,0.19193784851451945,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,GDA,0.3612369754898765,0.26174893355421663,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,VPD_medio_acum,-0.020546651077640733,0.02096797808856762,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,IFN_acum,0.37766887616831324,0.2592053573654002,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,GDA,0.03806916296326719,0.0992017276951429,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,VPD_medio_acum,0.0010179382631747558,0.0011253730928924776,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,IFN_acum,0.03339376128557241,0.09544239263439835,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,GDA,0.02498017680109079,0.02461480939994876,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,VPD_medio_acum,0.00795555150838929,0.008564187008849602,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,IFN_acum,0.01917168784935832,0.022172340458560116,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,GDA,0.9239755836459682,0.9268589498848986,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,VPD_medio_acum,4.263256414560601e-15,8.225126821621292e-15,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,IFN_acum,-0.15260755846605784,0.39732896112879523,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,GDA,3.907985046680551e-15,5.257536126261451e-15,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,VPD_medio_acum,-1.1428573014522594,1.389442587243869,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,IFN_acum,-3.552713678800501e-16,4.75320695168323e-15,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,GDA,-0.031140355540067333,0.014593291624660183,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,VPD_medio_acum,-0.00656496543161218,0.029265517545475735,20
+malvidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,IFN_acum,0.011559672721165981,0.02035457594180636,20

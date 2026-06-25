@@ -1,0 +1,34 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,lofo_mixed,mixed,IDAHUE,LOFO,VPD_medio_acum,1,65,6,1.4473257285688161,-87.67175966450125,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,KEULE,LOFO,VPD_medio_acum,1,65,6,1.0652404229382475,-19.57704509212968,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,LOURDES,LOFO,VPD_medio_acum,1,60,11,0.604906923943494,-1.5832756411020594,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,NILAHUE,LOFO,VPD_medio_acum,1,65,6,0.9377206977834619,-3.836070220191516,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,PALO SANTO,LOFO,VPD_medio_acum,1,65,6,0.9857872737451583,-7.235216012592973,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,PEUMO,LOFO,VPD_medio_acum,1,65,6,0.579626999089958,-0.5284572198277604,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,VPD_medio_acum,1,65,6,0.6686321691627723,-5.155896060504073,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,QUINTA MAIPO,LOFO,VPD_medio_acum,1,65,6,0.6149242750947198,-3.5502494864757654,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,RAUCO,LOFO,VPD_medio_acum,1,65,6,1.0571569007470991,-3.2326302320355307,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,SAN ADOLFO,LOFO,VPD_medio_acum,1,65,6,0.9372507763883341,-12.31433024664923,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,VPD_medio_acum,1,65,6,1.6897319101794153,-6.550683352318124,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,IDAHUE,LOFO,VPD_medio_acum,1,65,6,1.460149159984126,-89.24929732164095,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,KEULE,LOFO,VPD_medio_acum,1,65,6,1.040748593754677,-18.67772478655828,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,LOURDES,LOFO,VPD_medio_acum,1,60,11,0.6046192640261662,-1.5065916262107142,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,NILAHUE,LOFO,VPD_medio_acum,1,65,6,0.9317577892180134,-3.7760258768750097,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,PALO SANTO,LOFO,VPD_medio_acum,1,65,6,0.9685183037442373,-6.994944311897961,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,PEUMO,LOFO,VPD_medio_acum,1,65,6,0.5693434318828791,-0.47589779443004354,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,VPD_medio_acum,1,65,6,0.6367678071138781,-4.6493312331966825,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,QUINTA MAIPO,LOFO,VPD_medio_acum,1,65,6,0.6298001728829917,-3.7549089367226127,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,RAUCO,LOFO,VPD_medio_acum,1,65,6,1.0653498015905276,-3.2660666827947678,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,SAN ADOLFO,LOFO,VPD_medio_acum,1,65,6,0.914876112640417,-11.733396730996256,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,VPD_medio_acum,1,65,6,1.6879439934750928,-6.539507306335935,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,IDAHUE,LOFO,VPD_medio_acum,1,65,6,1.4532404092661666,-88.37908517376945,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,KEULE,LOFO,VPD_medio_acum,1,65,6,1.0427675218060324,-18.758393428145762,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,LOURDES,LOFO,VPD_medio_acum,1,60,11,0.6244278545339692,-1.676347307920135,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,NILAHUE,LOFO,VPD_medio_acum,1,65,6,0.905334924427965,-3.576558083717834,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,PALO SANTO,LOFO,VPD_medio_acum,1,65,6,0.9554644151023322,-6.789011449110938,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,PEUMO,LOFO,VPD_medio_acum,1,65,6,0.5863905161554859,-0.5717997170465217,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,VPD_medio_acum,1,65,6,0.6257110103415133,-4.659776897662523,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,QUINTA MAIPO,LOFO,VPD_medio_acum,1,65,6,0.6146150807520006,-3.541514813729366,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,RAUCO,LOFO,VPD_medio_acum,1,65,6,1.0350701973123055,-3.0878852477551852,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,SAN ADOLFO,LOFO,VPD_medio_acum,1,65,6,0.9438629722297023,-12.488695499682725,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,VPD_medio_acum,1,65,6,1.7014243019956454,-6.65038143020368,,,antocianinas_mg_baya,antocianinas(mg/baya),2026

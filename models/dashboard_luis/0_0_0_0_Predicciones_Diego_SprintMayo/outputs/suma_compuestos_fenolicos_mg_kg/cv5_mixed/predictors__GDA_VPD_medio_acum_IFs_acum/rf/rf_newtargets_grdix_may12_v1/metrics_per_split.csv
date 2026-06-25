@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,20.38250407838264,0.44628865830800746,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,33.88774652350731,-0.38342782024759314,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,40.49079390428058,-0.13922136294994014,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,56.28413716859792,-0.06013826667796485,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,28.059160945926703,0.4152509157040972,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,37.68162921235613,-0.01913926679367406,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,43.723028936350886,-1.1824971190947489,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,37.55843941128649,0.5711061209764325,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,52.083260095741636,-0.5179324558634837,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,21.828534558963913,-1.1869372232384774,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,24.27186837169908,-1.3614689748073872,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,46.40920103012339,-0.6104707072488575,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,54.54814062249883,-0.5581099285916675,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,30.824724054288616,0.49194277062482616,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,33.88246165475961,0.638420303573247,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026

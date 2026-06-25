@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,1.6287894277806154,0.27281378797789646,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,1.587201600947191,0.40552295029048335,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,2.3973831151236,0.12911010330488637,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,23,5,3.4556982727453516,-0.3921856404668296,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,23,5,2.4433942953105747,-0.09945757714271641,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,2.753528529466164,0.1322888642141581,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,2.42672778402473,-0.18000167397881595,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,2.454445011908408,-0.025439637647275637,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,23,5,2.8433897352220265,-0.3058442044779268,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,23,5,1.430946453817927,0.3602463328628819,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,1.7482454514164203,-0.06828703139376202,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,2.7067228890693493,0.16088335236162543,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,2.311245870974705,-0.5726108376110277,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,23,5,2.303337186210742,0.45232793501777724,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,23,5,2.114613749036798,-0.6214623533143562,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026

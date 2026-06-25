@@ -1,0 +1,19 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,386.98343882804363,-71.94185961338107,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,193.37131271511007,-5.809371080478775,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,20,8,330.42154607346185,-5.6839655017786725,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,193.31808171531054,-2.724673291738953,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,283.3329970654318,-20.64803510254484,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,497.6337388360863,-13.479606866864868,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,389.78817745375767,-73.0651259052562,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,194.7083784002366,-5.838647403233483,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,20,8,356.29392525943035,-6.579787377364117,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,195.91356900429187,-2.8220883023041816,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,298.72138192684116,-22.927408571769,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,492.2677406075662,-13.228352628748958,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,380.12227455865167,-69.3258342697773,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,207.38579282479685,-6.61449211290399,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,20,8,351.4634981258283,-6.473784142330686,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,208.47369742329897,-3.2131165291801524,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,283.51272637980543,-20.662572938979544,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,24,4,509.1274811715703,-14.07860599336358,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026

@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,22,6,15.070462987916613,0.7185354403248153,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,22,6,24.940505599213356,0.1830937399796253,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,22,6,41.27772297971098,-0.12044277558653071,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,23,5,59.90392792861654,-0.19025357634772622,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,23,5,35.71816042871289,0.32549365440481026,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,22,6,40.7787720235303,-0.07548097552207444,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,22,6,40.40163086937995,-0.49834166529186796,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,22,6,37.32678634429815,0.5060250543285751,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,23,5,46.74498102639902,-0.40866840892205913,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,23,5,21.387601585977514,-0.7194207070309728,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,22,6,26.33758865341167,-1.323124003341432,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,22,6,35.682728455645886,-0.023114041175242184,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,22,6,47.665912836455185,-0.19098315134873678,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,23,5,29.8437945200738,0.507871194050875,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|peso_baya,5,23,5,34.45829892207471,0.6246089188842741,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026

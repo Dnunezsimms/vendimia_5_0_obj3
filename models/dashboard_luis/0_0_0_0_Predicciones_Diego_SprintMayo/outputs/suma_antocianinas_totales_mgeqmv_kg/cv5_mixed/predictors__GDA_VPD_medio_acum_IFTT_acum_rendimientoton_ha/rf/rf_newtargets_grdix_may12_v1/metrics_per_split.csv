@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,91.500555142533,0.685955443128498,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,115.75705339785459,0.46525577249230965,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,257.5475767414968,0.08152790933094878,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,23,5,160.31016699537508,-0.7387299709539292,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,23,5,99.39751782346966,-1.627152678116687,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,123.93818052716193,0.5269539244445276,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,150.12441126345394,0.34461204144400426,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,158.81616710752894,-0.5256416330232576,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,23,5,148.18615232130392,-0.9041114015525493,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,23,5,130.69375137993512,0.5909061128595952,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,171.24964872341982,0.3018370833192966,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,89.93499130614309,0.4955173576734154,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,22,6,259.71371917672,-1.3439281877912892,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,23,5,234.60232304037999,-0.45269362314738393,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,23,5,125.91286165623721,-1.8980973511281687,,,suma_antocianinas_totales_mgeqmv_kg,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),2026

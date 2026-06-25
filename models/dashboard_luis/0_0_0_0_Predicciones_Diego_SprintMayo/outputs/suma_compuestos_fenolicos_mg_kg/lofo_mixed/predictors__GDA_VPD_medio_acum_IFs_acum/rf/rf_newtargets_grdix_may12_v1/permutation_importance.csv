@@ -1,0 +1,55 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,42,GDA,4.910357620721159,2.1699287025445786,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,42,VPD_medio_acum,-0.08946383150779873,0.15523301821989532,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,42,IFs_acum,-1.3841937482900355,0.9136108988155425,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum,42,GDA,0.09533367187635448,0.10044794571928761,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum,42,VPD_medio_acum,-0.01186438073292031,0.020549710229752688,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum,42,IFs_acum,0.09599591209083727,0.08967928732071774,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum,42,GDA,4.075681576979106,6.776161920318691,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum,42,VPD_medio_acum,-0.018925989430552903,0.01908502091857914,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum,42,IFs_acum,0.9004118648146345,1.9398189175632732,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,42,GDA,8.036362575679636,8.512327764535845,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,42,VPD_medio_acum,1.4566126083082053e-14,1.3192962901788365e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,42,IFs_acum,1.455440383960863,2.686919872005571,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum,42,GDA,1.0658141036401502e-15,8.489424733219067e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum,42,VPD_medio_acum,-0.33655772400568085,0.7400630746898311,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum,42,IFs_acum,1.0048680620991615,1.5208385106175912,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum,42,GDA,-0.0549492458115818,0.05494924581159673,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum,42,VPD_medio_acum,-0.08922597166698161,0.06924896652437441,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum,42,IFs_acum,1.4921397450962105e-14,1.3462863052990612e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,123,GDA,4.868831433435391,2.805417887160695,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,123,VPD_medio_acum,-0.060350823827967304,0.11346226546529599,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,123,IFs_acum,-0.1992873467933151,0.5903361104767382,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum,123,GDA,0.04119607781503554,0.0921314068275409,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum,123,VPD_medio_acum,0.03667428297333721,0.03471699914371644,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum,123,IFs_acum,0.00892492097453399,0.09230902729179534,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum,123,GDA,8.590593997610602,7.140765703301791,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum,123,VPD_medio_acum,-0.004022913078202706,0.004124207617568996,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum,123,IFs_acum,-0.5347454804334696,1.5350185513985344,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,123,GDA,8.828300744977959,8.8944321707197,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,123,VPD_medio_acum,-3.0553337637684307e-14,1.5420578175600995e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,123,IFs_acum,1.4815279063060394,2.751781777503372,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum,123,GDA,-3.552713678800501e-16,8.248112782101131e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum,123,VPD_medio_acum,-0.35513847690124295,0.6388310388875128,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum,123,IFs_acum,0.33175019373809284,1.701128971999968,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum,123,GDA,-0.009727917675130726,0.01651504680904072,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum,123,VPD_medio_acum,-0.1688308560680941,0.1105259890872957,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum,123,IFs_acum,-3.552713678800501e-16,1.2404008664714249e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,GDA,4.410647520497176,2.5153963002800808,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,VPD_medio_acum,-0.1589122431911676,0.12421453480843259,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,IFs_acum,-0.4106702689619386,0.856646310377905,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,GDA,0.13923175604208815,0.1691744123523936,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,VPD_medio_acum,2.1316282072803006e-14,1.507288760336424e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,IFs_acum,0.07413674576048095,0.16882712223260138,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,GDA,9.414180996631906,8.052781409623615,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,VPD_medio_acum,-0.0658103816023555,0.07888052575831359,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,IFs_acum,-0.41608433358140184,1.7021260120319552,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,GDA,9.907997782878663,8.558668674097461,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,VPD_medio_acum,-1.7408297026122456e-14,1.7617304974091663e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,IFs_acum,1.51197522974597,2.6626181393179515,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,GDA,-1.2079226507921703e-14,1.0562977157717417e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,VPD_medio_acum,-0.1592737328861638,0.4547289937910376,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,IFs_acum,-0.618794516101224,1.2500323733211687,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,GDA,0.012146804711187542,0.009271265586883053,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,VPD_medio_acum,-0.23818315222609102,0.14048741334169873,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum,2026,IFs_acum,1.2434497875801753e-14,1.1648350771590544e-14,20

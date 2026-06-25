@@ -1,0 +1,19 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,22.729371164462897,-0.2992663294713165,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,46.75708083111605,-9.916183262860425,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,20,8,38.823240462530755,-0.15528895336049553,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,36.244134934656884,-0.0948652258405267,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,28.28462036896168,-0.44765719913024227,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,37.699001223966775,-1.7827104212109837,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),42
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,24.15403297356076,-0.3794745585544692,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,42.03274508330758,-8.192904758500582,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,20,8,38.44776394546125,-0.14477346437831673,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,36.26148620637604,-0.1054647870026637,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,28.65064237023191,-0.4899489532642456,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,37.99547192592009,-1.8360128721599782,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),123
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,23.581728722539843,-0.34705434771588317,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,45.50200050169783,-9.408577803744677,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,20,8,38.74320714880482,-0.13996997769338848,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,35.40778271556929,-0.07051843709857852,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,28.92056038695792,-0.5215620154997658,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,35.80689935333242,-1.5808439802075296,,,suma_compuestos_fenolicos_mg_kg,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),2026

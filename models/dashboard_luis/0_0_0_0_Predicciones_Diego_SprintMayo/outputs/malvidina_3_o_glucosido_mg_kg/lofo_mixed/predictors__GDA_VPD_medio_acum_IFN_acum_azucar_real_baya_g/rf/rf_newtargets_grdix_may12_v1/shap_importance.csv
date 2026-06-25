@@ -1,0 +1,73 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,shap_mean_abs
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,GDA,8.385564953792445
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,VPD_medio_acum,16.33147762154321
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,IFN_acum,15.762608431526113
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,azucar_real_baya_g,5.543820905774176
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,GDA,4.549482606678096
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,VPD_medio_acum,2.978641243529882
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,IFN_acum,44.40720265516179
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,azucar_real_baya_g,23.208926359692292
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,GDA,8.25444439946639
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,VPD_medio_acum,11.756334814801223
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,IFN_acum,5.1695318333010025
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,azucar_real_baya_g,20.167381728803022
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,GDA,5.055857614838822
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,VPD_medio_acum,38.90699664996356
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,IFN_acum,14.942648863640741
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,azucar_real_baya_g,21.28588012710975
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,GDA,31.13760560081417
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,VPD_medio_acum,9.244035780110243
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,IFN_acum,78.99668973181448
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,azucar_real_baya_g,30.330854321332115
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,GDA,6.358342999807867
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,VPD_medio_acum,32.08691202063116
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,IFN_acum,5.489799121508264
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,42,azucar_real_baya_g,3.375569541951348
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,GDA,7.3649699304405685
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,VPD_medio_acum,16.503760412730777
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,IFN_acum,14.099397634973846
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,azucar_real_baya_g,7.518831358063114
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,GDA,4.915545659870441
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,VPD_medio_acum,1.1790654844720254
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,IFN_acum,43.26856985525947
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,azucar_real_baya_g,27.29325464030678
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,GDA,6.23402528264534
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,VPD_medio_acum,13.891855846053161
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,IFN_acum,5.266083253300124
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,azucar_real_baya_g,22.384857823859903
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,GDA,5.731052323918786
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,VPD_medio_acum,41.01377742736381
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,IFN_acum,16.2093944482445
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,azucar_real_baya_g,20.618381377551017
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,GDA,30.956866271440955
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,VPD_medio_acum,10.828112916125917
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,IFN_acum,82.16774876881982
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,azucar_real_baya_g,27.14015028769493
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,GDA,5.891456812671143
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,VPD_medio_acum,27.76789190845456
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,IFN_acum,5.5318094563867675
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,123,azucar_real_baya_g,4.383011038460405
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,GDA,8.080047512449504
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,VPD_medio_acum,16.5985506934712
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,IFN_acum,15.491164198669821
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,azucar_real_baya_g,7.438537209297835
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,GDA,2.4964553566200722
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,VPD_medio_acum,4.009953763678439
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,IFN_acum,46.08129178736918
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,azucar_real_baya_g,25.062177082955056
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,GDA,7.4775164817991575
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,VPD_medio_acum,8.482984034213398
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,IFN_acum,4.123579976402775
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,azucar_real_baya_g,24.17656578936422
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,GDA,5.7916506650000885
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,VPD_medio_acum,38.382342274669256
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,IFN_acum,23.223065468785418
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,azucar_real_baya_g,18.31657426402665
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,GDA,29.26523922790241
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,VPD_medio_acum,9.739717275775586
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,IFN_acum,80.98352833536144
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,azucar_real_baya_g,31.81268161011206
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,GDA,4.735238671864676
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,VPD_medio_acum,29.106339625849888
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,IFN_acum,5.662463153006591
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,2026,azucar_real_baya_g,3.629123839952678

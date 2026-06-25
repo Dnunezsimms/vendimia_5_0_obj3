@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,3.0424999533712493,0.37825104111566277,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,1.7048770990470297,0.7840944162099119,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,4.801960897251786,-0.6024548356400314,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,3.953337375799863,0.014377047501614726,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,1.3393319275048934,0.6367597983538231,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,2.6924928487472215,0.6236212229657379,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,2.0341507842236823,0.4133202031156272,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,2.0949695627494562,0.471951877927946,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,3.8135201377681027,-0.15719610433978026,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,2.275090474344739,0.46248325605650076,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,2.9045579630598772,-0.765027920781642,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,1.6844485845898003,0.5747083765566556,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum,3,22,6,3.989237773634819,-0.027650141023624064,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,3.856460811094023,0.41483811796333114,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum,3,23,5,1.6528043147793867,0.7567821222685668,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),2026

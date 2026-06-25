@@ -1,0 +1,19 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,1.4998661382807938,-4.008629030965931,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,3.1069390479030763,-9.995195935491877,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,20,8,2.520853551002582,-0.15806155007728062,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,2.952107448449823,-1.0154632397435557,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,3.875775362025736,-2.782086097520837,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,1.7061091378043445,-0.04886533191061049,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,1.5529474318157948,-4.332769949575158,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,3.122355154259245,-10.12111518983269,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,20,8,2.5064197759434617,-0.15667482349725192,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,2.94757809163014,-1.01388747415122,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,3.917879810168585,-2.807259927710491,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,1.691089908065762,-0.03216525033204731,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,1.4642956008063455,-3.8716650446804843,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,3.168346486369734,-10.06881985680187,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,20,8,2.4953353673880425,-0.13661453552237957,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,3.0157395070744264,-1.1560030555376568,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,4.177664132248623,-3.214075672092605,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,1.7146221254822223,-0.017688336792665016,,,peonidina_3_o_acetilglucosido_mgeqmv_kg,Peonidina-3-O-acetilglucósido(mgEqMv/Kg),2026

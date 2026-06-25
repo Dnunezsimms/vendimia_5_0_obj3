@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,56,15,0.37488652713194787,0.6550861097954143,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,57,14,0.6074539847964147,0.3402131585578876,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,57,14,0.47475461145913345,0.5214471128158755,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,57,14,0.46937535784530443,0.5124653021103689,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,57,14,0.38984018115410063,0.6401973459376135,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,56,15,0.4294741842834269,0.5206856995347835,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,57,14,0.3870220841797782,0.6477641787964752,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,57,14,0.46468367636851543,0.5600071976805524,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,57,14,0.42875495585042867,0.7014580360187355,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,57,14,0.37117071914716365,0.6387916557270089,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,56,15,0.26437794214950794,0.8072614564475955,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,57,14,0.4167869674211331,0.7758515063327537,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,57,14,0.5304892152129088,0.10762277329628422,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,57,14,0.43549218735901346,0.7062235117146397,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,4,57,14,0.44233788720804296,0.5919585740248947,,,antocianinas_mg_baya,antocianinas(mg/baya),2026

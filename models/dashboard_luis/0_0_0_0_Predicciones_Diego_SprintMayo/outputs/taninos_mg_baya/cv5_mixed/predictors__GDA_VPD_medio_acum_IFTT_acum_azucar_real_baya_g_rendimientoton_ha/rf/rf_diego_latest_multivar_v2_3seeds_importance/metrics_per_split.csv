@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,56,15,0.5348734969063398,0.6310325500035991,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.9292774436988268,0.41238369655276186,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.6119649198510653,0.3059089834399591,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.5315878247760281,0.5728666018016786,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.8289872369747388,0.5175979351685606,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,56,15,0.709422890582624,0.5930727682403518,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.8219428547944643,0.39809053207154743,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.6027835633923873,0.4235249794671927,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.7027519916958603,0.6224711634686688,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.6524381609414517,-0.11749375995600553,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,56,15,0.6980411826588636,0.4886089487451959,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.36064935990626135,0.7626290989348489,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.8499346702428442,0.21685249695967046,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.8196765565338167,0.467110506298564,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.6458501513540176,0.6040377838053634,,,taninos_mg_baya,taninos(mg/baya),2026

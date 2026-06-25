@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,22,6,14.336601597032,0.7990370259523063,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,22,6,20.725570741941105,0.6507141858729817,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,22,6,50.61681429369893,-0.4612946400656339,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,23,5,40.0208500916135,-0.30693276645735446,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,23,5,16.992365792090663,-0.7606107858274278,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,22,6,24.0555383279456,0.5282435434973091,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,22,6,26.30650644030045,0.25836941134051494,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,22,6,26.966799199446893,0.21883632111730078,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,23,5,33.165027899512964,-0.4607654908466934,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,23,5,17.43470918995306,0.4469077952665328,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,22,6,28.230260608746544,0.007647092230437802,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,22,6,15.450552120922337,0.3986692975878682,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,22,6,42.692242480125124,-0.5089806539290538,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,23,5,41.359467602300285,0.12901977526764252,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g,4,23,5,33.15249728556507,-0.35373995162033034,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026

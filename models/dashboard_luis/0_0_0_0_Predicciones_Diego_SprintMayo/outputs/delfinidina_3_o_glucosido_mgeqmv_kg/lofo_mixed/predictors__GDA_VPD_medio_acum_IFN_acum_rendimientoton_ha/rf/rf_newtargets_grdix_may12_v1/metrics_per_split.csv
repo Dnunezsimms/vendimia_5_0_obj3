@@ -1,0 +1,19 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,85.22967767947439,-633.6303290476427,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,75.39084148225899,-15.253683859554904,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,20,8,51.690103484597884,-5.2543334366594205,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,48.557034881387025,-3.1997303488360087,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,28.15631530842175,-12.178677175829598,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,74.34272048547332,-11.755510035915407,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,85.12898976400609,-632.2270018972332,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,74.75795829597203,-14.999497335716912,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,20,8,52.75262661658112,-5.473972609347377,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,44.20513585551003,-2.4282290958310426,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,29.03545769055702,-12.960725188659802,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,71.5231402055728,-10.86800967442015,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,83.41547391156321,-607.5270693681731,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,74.25675490460293,-14.795702842149637,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,20,8,52.05543118638576,-5.348878230425377,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,48.1214636314605,-3.1053125149193095,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,28.290510466233492,-12.319478977406806,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|rendimiento(ton/ha),4,24,4,72.18790750882033,-11.075174925000372,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026

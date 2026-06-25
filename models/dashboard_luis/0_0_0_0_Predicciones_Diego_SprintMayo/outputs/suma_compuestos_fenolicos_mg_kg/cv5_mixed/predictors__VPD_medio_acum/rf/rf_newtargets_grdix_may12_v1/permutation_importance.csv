@@ -1,0 +1,16 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,1,CV5,VPD_medio_acum,42,VPD_medio_acum,10.428729170508818,9.676612692120287,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,2,CV5,VPD_medio_acum,42,VPD_medio_acum,3.656304191579923,7.220030151993505,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,3,CV5,VPD_medio_acum,42,VPD_medio_acum,13.575795594432396,9.517739289647624,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,4,CV5,VPD_medio_acum,42,VPD_medio_acum,9.903601188205,6.192716934879186,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,5,CV5,VPD_medio_acum,42,VPD_medio_acum,6.018015074543538,13.34669122804796,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,1,CV5,VPD_medio_acum,123,VPD_medio_acum,6.0149624682194744,5.041247476959872,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,2,CV5,VPD_medio_acum,123,VPD_medio_acum,0.48517425010098697,5.731783287852968,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,3,CV5,VPD_medio_acum,123,VPD_medio_acum,4.33932359140695,12.304089033937435,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,4,CV5,VPD_medio_acum,123,VPD_medio_acum,19.530790265600217,14.30938006871789,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,5,CV5,VPD_medio_acum,123,VPD_medio_acum,12.434754307486656,9.330587867693959,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,1,CV5,VPD_medio_acum,2026,VPD_medio_acum,5.524775331969417,8.330890971796652,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,2,CV5,VPD_medio_acum,2026,VPD_medio_acum,-0.8464755078353237,10.007534983438783,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,3,CV5,VPD_medio_acum,2026,VPD_medio_acum,14.386473258860468,11.467304225966872,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,4,CV5,VPD_medio_acum,2026,VPD_medio_acum,2.967800613172597,4.754761092158787,20
+suma_compuestos_fenolicos_mg_kg,cv5_mixed,mixed,5,CV5,VPD_medio_acum,2026,VPD_medio_acum,30.19817275991005,9.200410222918851,20

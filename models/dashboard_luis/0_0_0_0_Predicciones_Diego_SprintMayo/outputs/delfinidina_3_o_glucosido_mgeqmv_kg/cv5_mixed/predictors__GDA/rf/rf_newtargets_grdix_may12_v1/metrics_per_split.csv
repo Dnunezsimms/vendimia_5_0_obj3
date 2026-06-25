@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA,1,22,6,32.539052112759926,0.16080570496989954,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA,1,22,6,32.30987419476343,-0.05248949157322613,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA,1,22,6,50.164912165120654,-0.6599570053324932,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA,1,23,5,45.98185444296216,-1.1085935359227164,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA,1,23,5,21.956435107444985,-1.373061429367723,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA,1,22,6,51.006952919507405,-0.46943685320364703,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA,1,22,6,38.42193040878337,-1.0418885256950352,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA,1,22,6,34.380254235244244,-0.09825492497768407,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA,1,23,5,37.13114209584237,-0.5822804432137252,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA,1,23,5,41.345384449046364,-0.7922087618387514,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA,1,22,6,47.63317520662191,-1.4333595746395584,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA,1,22,6,33.08371938961443,-0.7079301628257315,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA,1,22,6,47.843671541025365,-0.8460877581166919,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA,1,23,5,50.641172184028406,-0.20970866483894834,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA,1,23,5,39.36805319360153,-0.8190521600372691,,,delfinidina_3_o_glucosido_mgeqmv_kg,Delfinidina-3-O-glucósido(mgEqMv/Kg),2026

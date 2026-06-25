@@ -1,0 +1,91 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,0.008561765525981712,0.02940753320192045,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,-0.01437094968639272,0.006037006390317339,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.004293396098805857,0.023090688024745783,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,0.029464950934369228,0.013264846031593513,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-2.7000623958883806e-14,1.2630883954494137e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,-0.03529820913443018,0.06275465790317825,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,0.006311255980705255,0.006977356014655747,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.10120087300726155,0.06470852052544308,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,-0.02410800470567338,0.08183798053275738,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-2.842170943040401e-14,1.1889654083092801e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,3.028603955500122,2.595898011682272,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,-0.004150645043471002,0.10601974393239998,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,0.25159297709909295,0.7824993825598358,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,1.580286401776973,1.3734826532910254,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),7.815970093361103e-15,7.751106149552608e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,5.508302095933862,7.831958676304455,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,9.237055564881303e-15,1.3869240899526243e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.2934151804614501,0.22917867480220694,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,0.6976123529427956,0.6076894119955483,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),7.105427357601002e-15,1.1007680729470101e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,-4.973799150320701e-15,6.778145699236017e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,-0.04877508912492985,0.08889988083744688,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.0044745913569322225,0.007750219573313534,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,-1.1270037365223293,1.9385501927493871,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-7.105427357601002e-16,8.377175307253706e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,-5.5067062021407764e-14,1.724073052649676e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,-6.430411758628907e-14,1.1116077194488138e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.0022391572733322816,0.001292778054480201,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,-0.002239157273334058,0.0012927780544886105,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-5.861977570020827e-14,1.0509068785146553e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,0.02432646604110573,0.03980606120828511,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-2.6290081223123708e-14,1.8129285908476437e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,-0.03688099807059046,0.04676441227737787,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,0.055876231240866756,0.03230906143806225,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-2.7000623958883806e-14,1.734655884282248e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,-0.09844202307326952,0.07969414789148754,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-1.4210854715202005e-15,4.263256414560602e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,-0.08273871148987837,0.07288691808061536,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,0.0025081246349415664,0.06554473756118605,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),7.105427357601002e-16,5.457782313462622e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,2.765459319520963,2.7692913158303245,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-0.01862110916665678,0.101422222721938,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,0.10575447957175399,0.2438611157957173,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,0.47198911598869453,0.9167366293173839,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),0.030061538138177822,0.01843338613188942,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,6.3526838680053626,8.099769591726115,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-5.684341886080802e-15,1.3216858887502009e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,-0.16243436161925934,0.12416185512789253,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,1.321629092786737,1.629040817281265,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-1.4210854715202005e-15,1.582453808973134e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,-4.973799150320701e-15,1.3686019630837778e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-0.04032191677574417,0.060792860535945084,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,-5.684341886080802e-15,1.3024463484486661e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,-2.115939750162468,2.457973794069524,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-9.947598300641402e-15,1.014858018570358e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,-0.004179760243450658,0.0027362953860581183,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,0.0014376564982967466,0.0009411671038387708,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,0.001437656498296036,0.0009411671038297778,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,-0.004179760243448172,0.0027362953860526136,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-3.552713678800501e-16,1.4294982647364456e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,0.04685715262653005,0.031239179324184702,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,0.021362513291416363,0.021362513291429866,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,-0.015536399353699437,0.018066237827597607,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,0.029995065854502557,0.019137991191019568,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),-1.7408297026122456e-14,1.3755013613523161e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,-0.05189532815169571,0.04622001604702594,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,-7.105427357601002e-15,1.3851027837303268e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,-0.03294355707424188,0.036522909627395704,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,-0.00962691680603669,0.02965254914527899,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),-9.237055564881303e-15,1.3686019630837778e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,3.25456151440898,2.733758239895856,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,-0.09604858045674262,0.0917169732115361,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,-0.027440691702109277,0.4833614080175715,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,1.1391146171386257,1.1250478868567326,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),0.21813028933746176,0.06947659217137124,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,7.210199448650911,7.9018055788288475,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,1.7763568394002505e-15,1.2883180292866389e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,-0.14444399104900613,0.08690562293182598,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,1.2432116540313554,1.155306728375665,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),-5.684341886080802e-15,1.1804422488975882e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,-4.263256414560601e-15,7.91226904486567e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,-0.03589129205565413,0.06216554138967305,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,0.010469064822172669,0.039171653724520375,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,-2.3284716790371482,1.8289592291824275,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),-5.684341886080802e-15,6.9618685722138544e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,2.4868995751603505e-15,1.0363942341353168e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,0.001598103231080472,0.0031962064621431805,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,0.007465376605453144,0.010971897348600422,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,0.0051922878092774735,0.009597707813611725,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),6.394884621840902e-15,1.9052617514307602e-14,20

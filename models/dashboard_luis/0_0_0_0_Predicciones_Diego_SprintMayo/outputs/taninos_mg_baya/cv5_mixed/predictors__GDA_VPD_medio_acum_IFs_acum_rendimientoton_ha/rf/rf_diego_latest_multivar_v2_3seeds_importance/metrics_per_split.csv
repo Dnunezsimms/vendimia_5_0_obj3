@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,56,15,0.5161642326706761,0.6480483322501709,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,57,14,0.9070495072099867,0.3972323435256051,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,57,14,0.5842097037443946,0.36321127253587804,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,57,14,0.5363670728799127,0.5800600084542724,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,57,14,0.825143241623883,0.5056563776157867,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,56,15,0.812170727588897,0.48808816664451893,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,57,14,0.708721980922727,0.5473148761281534,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,57,14,0.6170652012355939,0.4272863237681108,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,57,14,0.7352149209487534,0.5933965057474487,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,57,14,0.629649486158452,0.06838584636444911,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,56,15,0.7148383085583935,0.45716018737925135,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,57,14,0.3641547999190025,0.7336845055921242,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,57,14,0.7407737196954669,0.38351401274816765,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,57,14,0.8223368615115982,0.4558148816733003,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),4,57,14,0.7077250714241802,0.510777602093299,,,taninos_mg_baya,taninos(mg/baya),2026

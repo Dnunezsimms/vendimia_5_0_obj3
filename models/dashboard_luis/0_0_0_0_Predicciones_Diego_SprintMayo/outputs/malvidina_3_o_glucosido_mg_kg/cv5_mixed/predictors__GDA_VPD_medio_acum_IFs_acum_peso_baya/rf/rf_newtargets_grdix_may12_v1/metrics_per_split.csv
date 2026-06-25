@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,22,6,48.88668122729609,0.653779248474688,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,22,6,49.91051697686268,0.44095751999730604,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,22,6,96.14558567067189,0.41802431721950994,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,23,5,67.09253141733673,-0.6139215546703436,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,23,5,16.597114701158283,0.3673083083417733,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,22,6,43.735065458302444,0.7241408470671191,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,22,6,46.212821649444635,0.7479082396369685,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,22,6,50.472194958234475,-0.15747369331888827,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,23,5,75.87733334467092,-1.2537711846520225,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,23,5,46.58894297204139,0.7632785620468662,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,22,6,61.58608842114494,0.614136887719952,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,22,6,49.96004379294547,0.38129175669901516,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,22,6,84.53094463266409,-0.10156139970198952,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,23,5,89.97496394410233,-0.006479045353119828,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|peso_baya,4,23,5,13.424048364136116,0.8012667802038749,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026

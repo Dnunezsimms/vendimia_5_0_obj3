@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,1.6628297495457252,0.8504520128351609,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,2.027616391941059,0.7390517058058936,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,4.3531154860994095,-0.27345396205714767,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,23,5,3.7365462430757304,0.18703472444227665,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,23,5,1.0708700090994094,0.7195387717387816,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,2.0921086217342597,0.7579280282392494,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,1.9491984581976245,0.4948850434847404,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,2.5763370780175747,0.2729202250485627,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,23,5,3.0098795225449364,0.20227262334059293,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,23,5,2.496075538127293,0.45743172488375394,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,2.4520087622400775,-0.5716749382703481,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,1.5621734300521288,0.6843167678394813,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,3.377611924779911,0.2560108833071546,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,23,5,2.916602384894714,0.6237063458100858,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,23,5,2.4792593685022983,0.4900896582311435,,,cianidina_3_o_glucosido_mgeqmv_kg,Cianidina-3-O-glucósido(mgEqMv/Kg),2026

@@ -1,0 +1,19 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,110.03934133955478,-22.828674845580398,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,86.55386310781506,-4.79703761043479,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,20,8,75.89438325185029,-1.1196575104874946,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,72.08124824672852,-0.9125244248284154,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,46.6279034889298,-5.423563788437907,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,225.95946679286047,-16.95513252862035,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,113.77845934929002,-24.41737475349839,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,83.74896316458309,-4.420552129867473,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,20,8,75.16163626490822,-1.063481010063955,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,73.0661948160497,-1.0026156704850226,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,53.121667714399706,-7.343607093810574,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,226.8249771290295,-17.06589465340715,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,112.15099900807377,-23.69497586700726,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,86.19567559242843,-4.679779828487768,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,20,8,76.18378296733908,-1.1397516033568889,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,76.34041114733584,-1.2250270814404893,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,44.5969573244066,-6.2531904880203,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,24,4,226.1733670096306,-16.979275878936395,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026

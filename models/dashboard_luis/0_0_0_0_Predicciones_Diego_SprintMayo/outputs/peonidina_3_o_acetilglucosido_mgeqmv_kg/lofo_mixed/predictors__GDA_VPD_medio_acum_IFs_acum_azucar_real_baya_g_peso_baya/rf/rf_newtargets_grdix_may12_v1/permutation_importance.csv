@@ -1,0 +1,91 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,GDA,-0.0017585991405141056,0.0013549678283840303,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,VPD_medio_acum,-6.661338147750939e-16,1.1190695630917482e-15,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,IFs_acum,-0.004701462411272672,0.00240893715175621,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,azucar_real_baya_g,-0.0028286148187689707,0.002155816205314345,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,peso_baya,-0.004146709300731332,0.0032399848246049594,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,GDA,-0.004150530847220457,0.00317029650008672,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,VPD_medio_acum,-0.0020539540997717154,0.0015004565113485558,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,IFs_acum,-0.013081446158472999,0.012511857555336533,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,azucar_real_baya_g,0.004050575823341873,0.03132145528277239,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,peso_baya,-0.00029795231538285447,0.0005160685484765053,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,GDA,0.1234195936226506,0.151167600559697,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,VPD_medio_acum,-0.019051954037445952,0.013136302665088992,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,IFs_acum,0.024266184196762474,0.024430058495230823,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,azucar_real_baya_g,0.1275198367204558,0.048193060800362855,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,peso_baya,0.15917804438612132,0.06378093956709499,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,GDA,0.01869508362245782,0.0615601107780716,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,VPD_medio_acum,1.3322676295501878e-15,1.1408858372399359e-15,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,IFs_acum,0.07425634106642143,0.03272047345378912,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,azucar_real_baya_g,0.3977663632257492,0.16888887356238472,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,peso_baya,0.40790998615711915,0.17703119636326042,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,GDA,4.2188474935755947e-16,6.036183650278997e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,VPD_medio_acum,0.00046181343841071864,0.0009236268768204935,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,IFs_acum,0.023213494712113626,0.017147994486842913,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,azucar_real_baya_g,0.062585905313263,0.11971472523389037,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,peso_baya,0.01162567477015497,0.009843046567708229,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,GDA,-0.03687136503868216,0.03197451708245672,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,VPD_medio_acum,0.012108177887615956,0.008098279638707984,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,IFs_acum,2.2204460492503132e-17,1.0553544383565723e-15,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,azucar_real_baya_g,-0.2934674234414169,0.2371132223495376,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,42,peso_baya,-0.21680196553484893,0.18909335173394487,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,GDA,0.0026700292382402235,0.0018151863045905846,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,VPD_medio_acum,-0.00019747224179886836,0.0003420319558804742,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,IFs_acum,0.0009495366265264594,0.001683886952445493,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,azucar_real_baya_g,0.00195514126733074,0.0026038236354657468,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,peso_baya,0.00033047315263021735,0.0012766827216680468,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,GDA,-0.011287337348996118,0.017917548656000752,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,VPD_medio_acum,0.017535154725197975,0.029013165524525982,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,IFs_acum,0.021383668673996502,0.041740668865663376,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,azucar_real_baya_g,0.024766551252514903,0.08266282078659204,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,peso_baya,0.0010594604211951798,0.017332806778402095,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,GDA,0.16298489860573648,0.21227027993282144,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,VPD_medio_acum,-0.019832176057650107,0.02102199256646473,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,IFs_acum,0.02524776002640048,0.021912583750496997,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,azucar_real_baya_g,0.11323785485272528,0.0665235748695015,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,peso_baya,0.08513496877233788,0.05410617522418399,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,GDA,0.014466138138425877,0.042991125691084965,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,VPD_medio_acum,4.884981308350689e-16,9.920201506336514e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,IFs_acum,0.048606143877096164,0.027776042428066763,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,azucar_real_baya_g,0.3415954871158794,0.1953309089903216,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,peso_baya,0.5719682104663152,0.33010212113018483,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,GDA,7.771561172376096e-16,7.414428119052019e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,VPD_medio_acum,0.00047672535691560823,0.0005270397123115514,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,IFs_acum,0.024254580308609185,0.020069894620297204,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,azucar_real_baya_g,0.047506216325887404,0.07781211835946927,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,peso_baya,0.0190068347525874,0.019955541450979674,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,GDA,-0.02355501106711244,0.026738801385293037,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,VPD_medio_acum,0.017173226183475186,0.013132794937685793,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,IFs_acum,5.10702591327572e-16,1.090281971122568e-15,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,azucar_real_baya_g,-0.30842879913364274,0.2389922828069085,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,123,peso_baya,-0.2506181659447448,0.2026675297894358,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,GDA,-7.246228739896666e-05,0.0009461027338662816,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,VPD_medio_acum,-0.002741492773875631,0.001583420121308705,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,IFs_acum,-0.005083771954038951,0.0032268415902697825,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,azucar_real_baya_g,-0.0012897853323087017,0.001615172320768595,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,peso_baya,-0.0005815054042299205,0.001164867206608178,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,GDA,0.0091331352192062,0.006276813819005711,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,VPD_medio_acum,-0.004277643977575085,0.003476756097896573,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,IFs_acum,-0.01064489454858899,0.011011715018063624,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,azucar_real_baya_g,-0.00644544344618434,0.017940233423528018,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,peso_baya,-0.001962729445130762,0.0017047070373008336,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,GDA,0.20340355251546022,0.21334423164807564,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,VPD_medio_acum,-0.009296389514716253,0.02060962819460272,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,IFs_acum,0.03109203475988449,0.015302382076669068,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,azucar_real_baya_g,0.16609820312757323,0.06577890006775845,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,peso_baya,0.11182402313821468,0.046374880470282306,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,GDA,-0.005146020871287638,0.03799267832640502,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,VPD_medio_acum,5.773159728050814e-16,8.079495027972895e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,IFs_acum,0.024721438533560836,0.015536922774584579,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,azucar_real_baya_g,0.42300624194654735,0.24289509656488026,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,peso_baya,0.4457680271711726,0.25714362761229925,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,GDA,-4.2188474935755947e-16,6.197391816155246e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,VPD_medio_acum,0.0018567648533447834,0.0025224114225413314,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,IFs_acum,0.03225912687849049,0.021546606295623816,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,azucar_real_baya_g,0.14643889585010117,0.16203633600034548,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,peso_baya,0.02465474230438649,0.013163887416884967,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,GDA,-0.027786682574141918,0.027129866328775173,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,VPD_medio_acum,0.028443176581564922,0.01773583436172729,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,IFs_acum,4.662936703425658e-16,1.3504620710178521e-15,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,azucar_real_baya_g,-0.2559034841955104,0.19017558156789152,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,2026,peso_baya,-0.2719094332844474,0.23397043829800246,20

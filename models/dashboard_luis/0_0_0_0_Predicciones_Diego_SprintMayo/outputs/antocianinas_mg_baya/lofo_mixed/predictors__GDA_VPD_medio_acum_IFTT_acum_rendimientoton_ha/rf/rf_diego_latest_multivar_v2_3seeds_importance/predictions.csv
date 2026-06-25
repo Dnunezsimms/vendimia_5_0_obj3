@@ -1,0 +1,214 @@
+fecha,variedad,fundo,antocianinas(mg/baya),prediction,subset,split_id,method,predictors,n_predictors,seed
+2025-02-24,Cabernet Sauvignon,IDAHUE,1.6072245,2.684572926392549,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-17,Cabernet Sauvignon,IDAHUE,1.74895,2.7436456786976606,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-21,Cabernet Sauvignon,IDAHUE,1.7799993749999998,2.7524211045538785,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-28,Cabernet Sauvignon,IDAHUE,1.4793975,2.9806555896861036,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-04,Cabernet Sauvignon,IDAHUE,1.3630925,2.974543756965834,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-11,Cabernet Sauvignon,IDAHUE,1.743721875,3.1137101560810483,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-02-27,Cabernet Sauvignon,KEULE,2.12333275,2.1651859040858095,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-10,Cabernet Sauvignon,KEULE,2.545767,2.1708059172277014,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-19,Cabernet Sauvignon,KEULE,2.50231275,2.1751417799360344,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-26,Cabernet Sauvignon,KEULE,1.99232075,2.1747795604031013,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-02,Cabernet Sauvignon,KEULE,2.392560625,2.1895449819351542,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-10,Cabernet Sauvignon,KEULE,2.677460625,2.1698427360507244,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-11,Cabernet Sauvignon,LOURDES,2.2381852500000003,2.836465467281816,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-17,Cabernet Sauvignon,LOURDES,2.086401625,2.824679814945623,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-24,Cabernet Sauvignon,LOURDES,2.21774875,2.8363486394144672,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-31,Cabernet Sauvignon,LOURDES,2.2092262500000004,2.8461280419839445,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-07,Cabernet Sauvignon,LOURDES,2.29845,2.870147376556599,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-04,Carmenere,LOURDES,2.9536290000000003,2.8311357231965664,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-11,Carmenere,LOURDES,3.1210410000000004,2.836465467281816,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-18,Carmenere,LOURDES,3.59898,2.802015823842085,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-25,Carmenere,LOURDES,2.9711535,2.8363486394144672,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-01,Carmenere,LOURDES,3.011736,2.8515543288015595,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-15,Carmenere,LOURDES,2.263086,2.894516312030273,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-18,Cabernet Sauvignon,NILAHUE,3.744678,3.6134474278763986,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-26,Cabernet Sauvignon,NILAHUE,3.0842805,3.6027650767851416,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-01,Cabernet Sauvignon,NILAHUE,3.3433741249999995,3.6027650767851416,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-08,Cabernet Sauvignon,NILAHUE,2.61576875,3.601269743201809,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-15,Cabernet Sauvignon,NILAHUE,2.464182,3.601238643222642,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-30,Cabernet Sauvignon,NILAHUE,2.486019375,3.5929206441753405,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-11,Carmenere,PALO SANTO,3.171672,2.7914773071245973,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-19,Carmenere,PALO SANTO,4.07652,2.7738610274033415,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-01,Carmenere,PALO SANTO,4.044547499999999,2.751377978529233,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-15,Carmenere,PALO SANTO,3.920361375,2.833340924899856,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-30,Carmenere,PALO SANTO,4.08499,3.0435860548288813,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-05-13,Carmenere,PALO SANTO,3.38773575,3.0253943863204307,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-17,Carmenere,PEUMO,2.606373,2.816073013106163,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-25,Carmenere,PEUMO,2.605603,2.771191568720079,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-03,Carmenere,PEUMO,3.3828375000000004,2.717402372705621,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-17,Carmenere,PEUMO,2.44161225,2.8594449091419123,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-30,Carmenere,PEUMO,2.3923243749999994,2.881656184240291,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-05-06,Carmenere,PEUMO,3.641127,2.893063196600613,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-05,Cabernet Sauvignon,QUEBRADA DE AGUA,2.79048,2.730825229789271,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-12,Cabernet Sauvignon,QUEBRADA DE AGUA,2.6010425,2.7731227421406817,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-19,Cabernet Sauvignon,QUEBRADA DE AGUA,3.1299975,2.8486253679975917,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-27,Cabernet Sauvignon,QUEBRADA DE AGUA,2.641786875,2.9806586159836552,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-03,Cabernet Sauvignon,QUEBRADA DE AGUA,2.113097,2.9777501493550527,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-10,Cabernet Sauvignon,QUEBRADA DE AGUA,2.502038,3.0953946933870893,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-10,Carmenere,QUINTA MAIPO,2.46619975,3.467738129414573,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-17,Carmenere,QUINTA MAIPO,3.156531,3.4889945193939926,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-07,Carmenere,QUINTA MAIPO,3.520391875,3.6485709431498927,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-14,Carmenere,QUINTA MAIPO,2.9872885,3.5380340581655347,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-22,Carmenere,QUINTA MAIPO,3.0813037500000005,3.5514717474757194,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-05-05,Carmenere,QUINTA MAIPO,3.05628225,3.5480054392722407,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-12,Carmenere,RAUCO,2.496032,1.6728797101183308,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-18,Carmenere,RAUCO,2.838980375,1.6665606121322194,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-02,Carmenere,RAUCO,4.27631575,1.6529194609659248,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-17,Carmenere,RAUCO,3.1461814999999995,1.7659279235975134,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-25,Carmenere,RAUCO,3.818784375,1.9667385162630213,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-05-05,Carmenere,RAUCO,3.42311725,2.213718974173583,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-02-27,Cabernet Sauvignon,SAN ADOLFO,1.50448375,3.7032787330699635,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-10,Cabernet Sauvignon,SAN ADOLFO,1.847832,3.7902968325895556,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-17,Cabernet Sauvignon,SAN ADOLFO,2.138346,3.7735628770860643,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-24,Cabernet Sauvignon,SAN ADOLFO,1.46993,3.7013721999350158,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-31,Cabernet Sauvignon,SAN ADOLFO,2.1408345,3.6503871706545588,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-07,Cabernet Sauvignon,SAN ADOLFO,1.7882445,3.430761450235954,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-02-27,Carmenere,VILLA ALEGRE,4.027289000000001,2.6180281860217147,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-10,Carmenere,VILLA ALEGRE,5.3456445,2.6066205487151373,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-17,Carmenere,VILLA ALEGRE,4.90439775,2.6023354699948333,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-24,Carmenere,VILLA ALEGRE,4.65295075,2.8906377682589808,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-03-31,Carmenere,VILLA ALEGRE,3.801364875,2.8593121496856213,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-04-04,Carmenere,VILLA ALEGRE,3.446898,2.882581018924796,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,42
+2025-02-24,Cabernet Sauvignon,IDAHUE,1.6072245,2.6960226599470265,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-17,Cabernet Sauvignon,IDAHUE,1.74895,2.7583090478032077,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-21,Cabernet Sauvignon,IDAHUE,1.7799993749999998,2.762830846949608,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-28,Cabernet Sauvignon,IDAHUE,1.4793975,3.0275589375335428,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-04,Cabernet Sauvignon,IDAHUE,1.3630925,2.9894741724212044,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-11,Cabernet Sauvignon,IDAHUE,1.743721875,3.1094950285781326,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-02-27,Cabernet Sauvignon,KEULE,2.12333275,2.0997578193824675,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-10,Cabernet Sauvignon,KEULE,2.545767,2.111980842900986,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-19,Cabernet Sauvignon,KEULE,2.50231275,2.105293273156733,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-26,Cabernet Sauvignon,KEULE,1.99232075,2.093865699252982,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-02,Cabernet Sauvignon,KEULE,2.392560625,2.0791795488436726,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-10,Cabernet Sauvignon,KEULE,2.677460625,2.0702012653833095,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-11,Cabernet Sauvignon,LOURDES,2.2381852500000003,2.8268387234938794,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-17,Cabernet Sauvignon,LOURDES,2.086401625,2.826535055010815,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-24,Cabernet Sauvignon,LOURDES,2.21774875,2.8270366184830378,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-31,Cabernet Sauvignon,LOURDES,2.2092262500000004,2.841886490043751,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-07,Cabernet Sauvignon,LOURDES,2.29845,2.8783888897491763,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-04,Carmenere,LOURDES,2.9536290000000003,2.8268387234938794,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-11,Carmenere,LOURDES,3.1210410000000004,2.8268387234938794,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-18,Carmenere,LOURDES,3.59898,2.8111421461307473,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-25,Carmenere,LOURDES,2.9711535,2.8340662718163707,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-01,Carmenere,LOURDES,3.011736,2.8439480226369156,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-15,Carmenere,LOURDES,2.263086,2.882404000539945,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-18,Cabernet Sauvignon,NILAHUE,3.744678,3.626522751159329,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-26,Cabernet Sauvignon,NILAHUE,3.0842805,3.6183680018732662,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-01,Cabernet Sauvignon,NILAHUE,3.3433741249999995,3.6183680018732662,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-08,Cabernet Sauvignon,NILAHUE,2.61576875,3.6200818057396873,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-15,Cabernet Sauvignon,NILAHUE,2.464182,3.6172886071146877,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-30,Cabernet Sauvignon,NILAHUE,2.486019375,3.6000344031752403,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-11,Carmenere,PALO SANTO,3.171672,2.7891111934237425,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-19,Carmenere,PALO SANTO,4.07652,2.7802128429060318,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-01,Carmenere,PALO SANTO,4.044547499999999,2.7708798832434067,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-15,Carmenere,PALO SANTO,3.920361375,2.8418026945786927,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-30,Carmenere,PALO SANTO,4.08499,3.049692366607882,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-05-13,Carmenere,PALO SANTO,3.38773575,3.0191647307736185,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-17,Carmenere,PEUMO,2.606373,2.7636589035491697,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-25,Carmenere,PEUMO,2.605603,2.752529146254163,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-03,Carmenere,PEUMO,3.3828375000000004,2.7547422650454694,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-17,Carmenere,PEUMO,2.44161225,2.850725688084694,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-30,Carmenere,PEUMO,2.3923243749999994,2.8940654896844973,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-05-06,Carmenere,PEUMO,3.641127,2.894138861119683,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-05,Cabernet Sauvignon,QUEBRADA DE AGUA,2.79048,2.7179400911909837,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-12,Cabernet Sauvignon,QUEBRADA DE AGUA,2.6010425,2.7362673412226775,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-19,Cabernet Sauvignon,QUEBRADA DE AGUA,3.1299975,2.9212063569888254,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-27,Cabernet Sauvignon,QUEBRADA DE AGUA,2.641786875,3.0551514626575518,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-03,Cabernet Sauvignon,QUEBRADA DE AGUA,2.113097,2.9768817461580013,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-10,Cabernet Sauvignon,QUEBRADA DE AGUA,2.502038,3.0732381132733324,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-10,Carmenere,QUINTA MAIPO,2.46619975,3.474466026342092,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-17,Carmenere,QUINTA MAIPO,3.156531,3.500229154630631,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-07,Carmenere,QUINTA MAIPO,3.520391875,3.6039871666108136,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-14,Carmenere,QUINTA MAIPO,2.9872885,3.5003651047456,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-22,Carmenere,QUINTA MAIPO,3.0813037500000005,3.500273195639416,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-05-05,Carmenere,QUINTA MAIPO,3.05628225,3.512260150622397,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-12,Carmenere,RAUCO,2.496032,1.6695474656314948,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-18,Carmenere,RAUCO,2.838980375,1.664908165217879,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-02,Carmenere,RAUCO,4.27631575,1.66715305877702,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-17,Carmenere,RAUCO,3.1461814999999995,1.7584724521046504,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-25,Carmenere,RAUCO,3.818784375,1.9333385178257159,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-05-05,Carmenere,RAUCO,3.42311725,2.209855314842687,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-02-27,Cabernet Sauvignon,SAN ADOLFO,1.50448375,3.7507786798912646,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-10,Cabernet Sauvignon,SAN ADOLFO,1.847832,3.8694134009377255,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-17,Cabernet Sauvignon,SAN ADOLFO,2.138346,3.8880064282824742,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-24,Cabernet Sauvignon,SAN ADOLFO,1.46993,3.729925917171003,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-31,Cabernet Sauvignon,SAN ADOLFO,2.1408345,3.6608372218516845,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-07,Cabernet Sauvignon,SAN ADOLFO,1.7882445,3.4869685682115192,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-02-27,Carmenere,VILLA ALEGRE,4.027289000000001,2.62697389612435,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-10,Carmenere,VILLA ALEGRE,5.3456445,2.6234928120331316,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-17,Carmenere,VILLA ALEGRE,4.90439775,2.6346889672176963,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-24,Carmenere,VILLA ALEGRE,4.65295075,2.86055181899557,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-03-31,Carmenere,VILLA ALEGRE,3.801364875,2.8355397325131406,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-04-04,Carmenere,VILLA ALEGRE,3.446898,2.862919088999169,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,123
+2025-02-24,Cabernet Sauvignon,IDAHUE,1.6072245,2.702661417242594,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-17,Cabernet Sauvignon,IDAHUE,1.74895,2.770583131702381,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-21,Cabernet Sauvignon,IDAHUE,1.7799993749999998,2.770028042536016,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-28,Cabernet Sauvignon,IDAHUE,1.4793975,2.968664051595166,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-04,Cabernet Sauvignon,IDAHUE,1.3630925,2.953591786745696,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-11,Cabernet Sauvignon,IDAHUE,1.743721875,3.1082530228734875,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-02-27,Cabernet Sauvignon,KEULE,2.12333275,2.1077455486619874,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-10,Cabernet Sauvignon,KEULE,2.545767,2.1042577703865244,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-19,Cabernet Sauvignon,KEULE,2.50231275,2.109289651972871,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-26,Cabernet Sauvignon,KEULE,1.99232075,2.0948603853704406,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-02,Cabernet Sauvignon,KEULE,2.392560625,2.1037393182074857,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-10,Cabernet Sauvignon,KEULE,2.677460625,2.0928377854462576,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-11,Cabernet Sauvignon,LOURDES,2.2381852500000003,2.845110860668995,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-17,Cabernet Sauvignon,LOURDES,2.086401625,2.8380711338886093,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-24,Cabernet Sauvignon,LOURDES,2.21774875,2.836924420135558,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-31,Cabernet Sauvignon,LOURDES,2.2092262500000004,2.8362547459432803,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-07,Cabernet Sauvignon,LOURDES,2.29845,2.8616232954752943,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-04,Carmenere,LOURDES,2.9536290000000003,2.8473916951398284,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-11,Carmenere,LOURDES,3.1210410000000004,2.845110860668995,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-18,Carmenere,LOURDES,3.59898,2.815392412731627,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-25,Carmenere,LOURDES,2.9711535,2.845549353468892,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-01,Carmenere,LOURDES,3.011736,2.839317344674123,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-15,Carmenere,LOURDES,2.263086,2.870944979903523,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-18,Cabernet Sauvignon,NILAHUE,3.744678,3.5730564861463745,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-26,Cabernet Sauvignon,NILAHUE,3.0842805,3.5673073453335657,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-01,Cabernet Sauvignon,NILAHUE,3.3433741249999995,3.5570231582820497,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-08,Cabernet Sauvignon,NILAHUE,2.61576875,3.5479533915343646,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-15,Cabernet Sauvignon,NILAHUE,2.464182,3.5474709262218638,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-30,Cabernet Sauvignon,NILAHUE,2.486019375,3.5335879766687244,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-11,Carmenere,PALO SANTO,3.171672,2.8107983795287415,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-19,Carmenere,PALO SANTO,4.07652,2.7835567707376687,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-01,Carmenere,PALO SANTO,4.044547499999999,2.7560301584753932,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-15,Carmenere,PALO SANTO,3.920361375,2.7980812644112842,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-30,Carmenere,PALO SANTO,4.08499,3.0654240876858427,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-05-13,Carmenere,PALO SANTO,3.38773575,3.0437633428442554,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-17,Carmenere,PEUMO,2.606373,2.6851320011096727,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-25,Carmenere,PEUMO,2.605603,2.662232408118767,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-03,Carmenere,PEUMO,3.3828375000000004,2.69043670565364,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-17,Carmenere,PEUMO,2.44161225,2.826246549368359,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-30,Carmenere,PEUMO,2.3923243749999994,2.863192561393296,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-05-06,Carmenere,PEUMO,3.641127,2.8831550698920245,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-05,Cabernet Sauvignon,QUEBRADA DE AGUA,2.79048,2.725982986025493,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-12,Cabernet Sauvignon,QUEBRADA DE AGUA,2.6010425,2.7543424678865436,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-19,Cabernet Sauvignon,QUEBRADA DE AGUA,3.1299975,2.8970176100087732,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-27,Cabernet Sauvignon,QUEBRADA DE AGUA,2.641786875,3.0307098069222507,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-03,Cabernet Sauvignon,QUEBRADA DE AGUA,2.113097,2.9929337876223996,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-10,Cabernet Sauvignon,QUEBRADA DE AGUA,2.502038,3.1253412365185564,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-10,Carmenere,QUINTA MAIPO,2.46619975,3.450175009067554,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-17,Carmenere,QUINTA MAIPO,3.156531,3.49192891608505,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-07,Carmenere,QUINTA MAIPO,3.520391875,3.6368625622875737,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-14,Carmenere,QUINTA MAIPO,2.9872885,3.529252426017425,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-22,Carmenere,QUINTA MAIPO,3.0813037500000005,3.541100414532381,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-05-05,Carmenere,QUINTA MAIPO,3.05628225,3.541570654125438,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-12,Carmenere,RAUCO,2.496032,1.6786993991870822,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-18,Carmenere,RAUCO,2.838980375,1.6735556761673176,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-02,Carmenere,RAUCO,4.27631575,1.672392244501638,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-17,Carmenere,RAUCO,3.1461814999999995,1.7715182407690429,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-25,Carmenere,RAUCO,3.818784375,1.9568022441859727,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-05-05,Carmenere,RAUCO,3.42311725,2.2161681617646773,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-02-27,Cabernet Sauvignon,SAN ADOLFO,1.50448375,3.649592504680945,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-10,Cabernet Sauvignon,SAN ADOLFO,1.847832,3.7316653921606484,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-17,Cabernet Sauvignon,SAN ADOLFO,2.138346,3.7896686065777545,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-24,Cabernet Sauvignon,SAN ADOLFO,1.46993,3.6562636224574163,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-31,Cabernet Sauvignon,SAN ADOLFO,2.1408345,3.660217110458324,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-07,Cabernet Sauvignon,SAN ADOLFO,1.7882445,3.5122251744006183,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-02-27,Carmenere,VILLA ALEGRE,4.027289000000001,2.6346964683701652,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-10,Carmenere,VILLA ALEGRE,5.3456445,2.6118393510392846,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-17,Carmenere,VILLA ALEGRE,4.90439775,2.611143874426468,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-24,Carmenere,VILLA ALEGRE,4.65295075,2.85434759481974,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-03-31,Carmenere,VILLA ALEGRE,3.801364875,2.831247500403106,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026
+2025-04-04,Carmenere,VILLA ALEGRE,3.446898,2.853296569131065,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|rendimiento(ton/ha),4,2026

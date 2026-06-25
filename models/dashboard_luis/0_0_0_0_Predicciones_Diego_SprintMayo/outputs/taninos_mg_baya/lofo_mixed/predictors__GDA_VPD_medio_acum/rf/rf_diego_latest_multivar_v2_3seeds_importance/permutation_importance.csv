@@ -1,0 +1,67 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum,42,GDA,0.019943094214730107,0.1442149125386411,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum,42,VPD_medio_acum,0.001050234684489737,0.0028371274052840976,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum,42,GDA,-0.00725240781222688,0.0034994455326618074,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum,42,VPD_medio_acum,-0.007648132464799407,0.00412636608386638,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum,42,GDA,0.02218242984902253,0.0497416921345539,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum,42,VPD_medio_acum,0.008120032599987791,0.005679346055116277,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum,42,GDA,0.02448903801361225,0.02134506595475858,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum,42,VPD_medio_acum,2.2204460492503132e-17,3.32325934484418e-16,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum,42,GDA,-0.013241844649051015,0.005822737662281652,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum,42,VPD_medio_acum,-0.013771043086972879,0.0057908854259928096,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum,42,GDA,-0.03024101624891997,0.008107657410809276,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum,42,VPD_medio_acum,-0.030090105119242316,0.00807809054112182,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum,42,GDA,-0.053663225955467464,0.0777940258762365,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum,42,VPD_medio_acum,0.20646989934685242,0.12001612169393959,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum,42,GDA,0.10177719451246756,0.04778294049990006,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum,42,VPD_medio_acum,0.09750469726571646,0.04894821183987586,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum,42,GDA,0.019495959606245523,0.03151035026843328,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum,42,VPD_medio_acum,-0.005345803341330257,0.01763002782812694,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum,42,GDA,1.554312234475219e-16,2.1181705310112554e-16,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum,42,VPD_medio_acum,1.3322676295501878e-16,3.9968028886505636e-16,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum,42,GDA,-0.06675639339331413,0.041705300102605196,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum,42,VPD_medio_acum,-0.2217846822272052,0.11664201629440919,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum,123,GDA,-0.049649116968908835,0.1595198810913152,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum,123,VPD_medio_acum,0.0029963068007790084,0.0060586438360354,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum,123,GDA,-0.011263627000378706,0.004517313399486319,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum,123,VPD_medio_acum,-0.009686280763452071,0.003908229929227108,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum,123,GDA,0.021711343244870444,0.02565359669173758,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum,123,VPD_medio_acum,0.007881052158829028,0.008081418631127768,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum,123,GDA,0.04873996879210307,0.043738057058789394,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum,123,VPD_medio_acum,0.0004272382145444786,0.0002136191072722532,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum,123,GDA,-0.01618714738142386,0.003756798649163882,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum,123,VPD_medio_acum,-0.014418127183811835,0.004627489787433519,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum,123,GDA,-0.011829613154228901,0.0007727949631932739,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum,123,VPD_medio_acum,-0.012261580491834689,0.00099506006601719,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum,123,GDA,-0.10649109211099037,0.0912741355986707,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum,123,VPD_medio_acum,0.21002801986148664,0.14353291244088587,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum,123,GDA,0.12579185272601728,0.029422316735568665,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum,123,VPD_medio_acum,0.11890799202061471,0.04574959533867133,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum,123,GDA,0.008228780915033434,0.03708853473390847,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum,123,VPD_medio_acum,0.005872676667578025,0.01943750292710412,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum,123,GDA,1.7763568394002506e-16,2.589462819655575e-16,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum,123,VPD_medio_acum,-2.2204460492503132e-17,9.678699938266252e-17,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum,123,GDA,-0.08132946962275622,0.04591204213720751,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum,123,VPD_medio_acum,-0.26251641765110295,0.092321806774828,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum,2026,GDA,0.0924853310447381,0.11450215544368791,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum,2026,VPD_medio_acum,-0.00031899079741169457,0.000883824172405939,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum,2026,GDA,-0.008747195342676406,0.0038328087772807507,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum,2026,VPD_medio_acum,-0.007400441489553533,0.003912421826561737,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum,2026,GDA,0.016227568207771402,0.056611631316196134,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum,2026,VPD_medio_acum,0.01010722300777322,0.0055055082489256875,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum,2026,GDA,0.0549800481005714,0.03742125447215055,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum,2026,VPD_medio_acum,0.00040597953249565943,0.00033148090020930856,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum,2026,GDA,-0.012427423266615412,0.005343382571350635,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum,2026,VPD_medio_acum,-0.011907875652075706,0.004632278367184017,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum,2026,GDA,-0.02521146205573187,0.0112372554957361,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum,2026,VPD_medio_acum,-0.02489094331700433,0.010710602884410407,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum,2026,GDA,-0.0766769957332367,0.1079149711509911,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum,2026,VPD_medio_acum,0.17199402054846413,0.14796763041590635,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum,2026,GDA,0.07710187484814565,0.04618876226382445,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum,2026,VPD_medio_acum,0.07574518674763478,0.04480567757456626,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum,2026,GDA,0.028066300382592446,0.018273540031676406,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum,2026,VPD_medio_acum,-0.01409551551615012,0.025505248375564286,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum,2026,GDA,-2.220446049250313e-16,2.220446049250313e-16,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum,2026,VPD_medio_acum,0.0,0.0,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum,2026,GDA,-0.08318519580805583,0.04210682251672085,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum,2026,VPD_medio_acum,-0.17256209245706833,0.12196300250791622,20

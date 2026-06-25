@@ -1,0 +1,55 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,GDA,-0.03679026909678744,0.018493325652277216,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,VPD_medio_acum,0.0022881321695722876,0.002529625292403218,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,IFN_acum,-0.033740668072955324,0.017201275176587903,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,GDA,0.0022976770363446254,0.011673114763207476,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,VPD_medio_acum,0.01060040131204385,0.014484515659529434,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,IFN_acum,-0.006237282201754235,0.005666937067231696,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,42,GDA,0.07127373762359648,0.14199439300240163,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,42,VPD_medio_acum,-0.03495353668822998,0.029688878674684654,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,42,IFN_acum,0.09188234593034375,0.09106326666222511,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,GDA,-0.06020877413913177,0.16173397134195813,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,VPD_medio_acum,1.7763568394002505e-15,6.280369834735101e-16,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,IFN_acum,-0.009031712412456327,0.02040766084249832,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,42,GDA,-1.3322676295501878e-15,9.20882985570147e-16,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,42,VPD_medio_acum,-1.0880185641326535e-15,1.3209321385808301e-15,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,42,IFN_acum,-1.0436096431476472e-15,1.2582309919746129e-15,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,GDA,-4.4408920985006264e-17,8.645494246698154e-16,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,VPD_medio_acum,0.0018057935397149283,0.0010885267667198825,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,42,IFN_acum,0.0019325830564790093,0.0011740748357115837,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,GDA,-0.03585352796751016,0.022015485168925045,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,VPD_medio_acum,0.001637935335652152,0.0016379353356529513,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,IFN_acum,-0.0372360494484766,0.022804786893162503,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,GDA,-0.006951553211490991,0.010271364274308272,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,VPD_medio_acum,0.010914560255889683,0.014308013192029744,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,IFN_acum,-0.00018740969418677976,0.003224803233477163,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,123,GDA,0.07566177719677385,0.1173689641326042,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,123,VPD_medio_acum,-0.03681658177002545,0.03346876003595598,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,123,IFN_acum,0.061002304199724675,0.059468957280501215,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,GDA,-0.06712194097096633,0.14523806620838123,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,VPD_medio_acum,-1.2434497875801752e-15,9.890336306082088e-16,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,IFN_acum,0.00681152214775933,0.013356517092762704,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,123,GDA,7.105427357601002e-16,1.2824878117884043e-15,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,123,VPD_medio_acum,6.217248937900876e-16,1.0262208867831773e-15,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,123,IFN_acum,7.549516567451064e-16,1.2006845148878198e-15,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,GDA,9.325873406851315e-16,6.571920157826812e-16,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,VPD_medio_acum,0.0019854287900776145,0.002229312762335285,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,123,IFN_acum,0.001868496491472893,0.002098535339659775,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,GDA,-0.03897493604634241,0.01868307015979354,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,VPD_medio_acum,0.0036360304372974996,0.004019782895610385,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,IFN_acum,-0.03529378573152311,0.017287844696971963,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,GDA,-0.0071450259308071026,0.011001994788066388,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,VPD_medio_acum,0.008351169097887023,0.013043600840844286,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,IFN_acum,-0.007413264504838102,0.004233686001798634,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,GDA,0.09907527668921765,0.11909614328368673,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,VPD_medio_acum,-0.03887718551940127,0.03201771593307925,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,IFN_acum,0.06589739034026942,0.07219047384862101,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,GDA,-0.048860960266598544,0.13977404761064285,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,VPD_medio_acum,9.325873406851315e-16,8.176549499482086e-16,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,IFN_acum,0.021547423970624657,0.01671258975854547,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,GDA,-1.7097434579227411e-15,9.553080444168562e-16,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,VPD_medio_acum,-1.5099033134902129e-15,7.993605777301127e-16,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,IFN_acum,-1.7541523789077474e-15,1.476053932824706e-15,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,GDA,0.0,8.426000324584082e-16,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,VPD_medio_acum,2.6645352591003756e-16,6.936895214610187e-16,20
+cianidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum,2026,IFN_acum,5.329070518200751e-16,8.140289677804161e-16,20

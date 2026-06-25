@@ -1,0 +1,19 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,140.37643343146595,-38.22124420726639,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,78.7686206561857,-4.050849439664277,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,20,8,103.99247604287831,-2.7324576666572415,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,60.812181022858596,-0.38658994883412157,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,160.42994731494514,-53.96984644182736,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,237.72696658215793,-18.819267897320845,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,138.4938324768516,-36.79159785447187,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,83.35254485328157,-4.455071038665754,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,20,8,105.48191522339184,-2.8154478028326877,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,55.301297051412334,-0.21530686896714069,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,160.5039948374112,-54.20255827460227,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,232.3533735468519,-17.935570750219114,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,137.04544422655647,-36.23805918699624,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,84.75130700098134,-4.647676981392636,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,20,8,99.72933316297858,-2.4119142214523484,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,53.13287864897255,-0.29131921842854447,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,161.7433512574687,-54.97048385218617,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,24,4,231.93267277771764,-17.93892676185063,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026

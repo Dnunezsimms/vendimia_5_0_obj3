@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum,3,22,6,16.40299161511582,-0.2732556404052471,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum,3,22,6,12.872725357685487,-0.12159685194223346,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum,3,22,6,21.38166131610937,0.20412799192502118,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum,3,23,5,23.962664887069888,-0.14313951500989686,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum,3,23,5,23.341283256193712,-0.04223165836135245,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum,3,22,6,17.091173456433165,-0.46162464637872325,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum,3,22,6,26.87962433918602,-0.6563975956493879,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum,3,22,6,26.404584920477834,-0.03464487475808142,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum,3,23,5,26.84548833886486,-0.59636662118279,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum,3,23,5,12.607377195034616,-0.17850902328800133,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum,3,22,6,24.77680291451107,-1.5632591341906368,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum,3,22,6,18.21706767624369,0.04491268003166027,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum,3,22,6,26.10908389040223,-0.7988443498700277,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum,3,23,5,25.273217551577808,-0.14630660105063886,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum,3,23,5,16.567660605960636,0.12222996998277191,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),2026

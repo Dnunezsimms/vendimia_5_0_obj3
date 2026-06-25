@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,47.916509899732425,0.6705905894158749,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,47.45320022289422,0.500752272089779,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,97.60779106901411,0.38172286367187525,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,23,5,64.84426168938606,-0.5357452399725624,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,23,5,14.893412581843108,0.4524784053618527,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,40.82152919211263,0.742369867435489,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,46.29429868309987,0.7543950555181764,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,46.7578636430101,0.017118020661621935,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,23,5,72.5055162776491,-1.1179977348497552,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,23,5,49.226365457170274,0.7511611575584527,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,63.5720310532021,0.6166581575166853,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,47.464629894883224,0.4302437414327903,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,22,6,83.22812288658268,-0.06725224622864201,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,23,5,96.32689866130104,-0.149205573667629,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|rendimiento(ton/ha),5,23,5,12.819086929159539,0.7832780946650307,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026

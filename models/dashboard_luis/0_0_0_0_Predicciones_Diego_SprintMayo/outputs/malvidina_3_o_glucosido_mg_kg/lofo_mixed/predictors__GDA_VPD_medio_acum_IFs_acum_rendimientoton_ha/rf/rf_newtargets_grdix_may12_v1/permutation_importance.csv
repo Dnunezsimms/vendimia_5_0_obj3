@@ -1,0 +1,73 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,GDA,0.23013064989467366,0.18021235766598762,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,VPD_medio_acum,3.2684965844964606e-14,2.8457214390443804e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,IFs_acum,0.20271771158638288,0.16820543704040938,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,rendimiento(ton/ha),3.197442310920451e-14,2.0034281334164468e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,GDA,-0.12187085908353552,0.05372275383889367,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,VPD_medio_acum,-0.049207073505300514,0.032342974286987014,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,IFs_acum,-0.07084201919608546,0.029759600577792474,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,rendimiento(ton/ha),-6.394884621840902e-15,1.7097376905206782e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,GDA,-0.0005787989819403094,0.17134477894696376,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,VPD_medio_acum,-0.2647928276415271,0.30735852392834523,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,IFs_acum,0.06556499301548016,1.4782206812488743,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,rendimiento(ton/ha),-0.5531521926403151,0.3126383917813207,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,GDA,-1.762675799654076,3.1031172625012347,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,VPD_medio_acum,-5.684341886080802e-15,1.9793430222398624e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,IFs_acum,0.06310233963683701,1.5128726396116465,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,rendimiento(ton/ha),-1.4921397450962105e-14,2.2681788464513443e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,GDA,6.394884621840902e-15,1.649622556420226e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,VPD_medio_acum,-0.023359615131076338,0.04046004025228714,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,IFs_acum,5.860522534075818,5.333254227625226,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,rendimiento(ton/ha),4.973799150320701e-15,1.440492875752376e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,GDA,-3.694822225952521e-14,2.9944128962292604e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,VPD_medio_acum,-4.689582056016661e-14,4.336057572343281e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,IFs_acum,-6.110667527536861e-14,3.7355901634142914e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,rendimiento(ton/ha),-5.2580162446247416e-14,3.512697928246176e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,GDA,0.11965003701263868,0.13227809297435858,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,VPD_medio_acum,-0.06566079682697464,0.11372783616980363,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,IFs_acum,0.08025355891644778,0.1474904157062072,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,rendimiento(ton/ha),7.815970093361103e-15,2.0825085143986893e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,GDA,-0.09196593683263501,0.053096558386588104,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,VPD_medio_acum,7.105427357601002e-15,1.879919374704706e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,IFs_acum,-0.09196593683263714,0.05309655838659097,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,rendimiento(ton/ha),-4.973799150320701e-15,2.1209432868260052e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,GDA,-0.013635291656751036,0.10401040648859267,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,VPD_medio_acum,-0.08228641504757235,0.22836333068094794,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,IFs_acum,0.7949086226145156,1.3453360613760355,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,rendimiento(ton/ha),-0.5564834252249987,0.3747304220626965,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,GDA,-1.1633816704655715,1.8530722255161172,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,VPD_medio_acum,-1.2079226507921703e-14,1.8677950817071454e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,IFs_acum,-0.12833277937427567,1.004331467988647,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,rendimiento(ton/ha),7.105427357601002e-15,2.0346847496847932e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,GDA,1.7763568394002505e-14,1.7332000251216283e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,VPD_medio_acum,2.4868995751603507e-14,2.372616998096646e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,IFs_acum,3.577213426553829,3.9554544275570667,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,rendimiento(ton/ha),1.9895196601282804e-14,2.352315015805125e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,GDA,1.4210854715202005e-15,1.675435061450741e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,VPD_medio_acum,8.526512829121202e-15,1.8198773652309367e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,IFs_acum,-2.842170943040401e-15,2.1831129253850487e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,rendimiento(ton/ha),-2.842170943040401e-15,1.23887359209808e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,GDA,0.019217254506088466,0.026188703452761353,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,VPD_medio_acum,-0.032739340602525854,0.036194702887445925,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,IFs_acum,-0.008923824390993929,0.03574961678501352,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,rendimiento(ton/ha),5.2580162446247416e-14,2.424190215213e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,GDA,0.07882907710746281,0.04345274372953217,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,VPD_medio_acum,-0.013105089238662515,0.014488221282965471,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,IFs_acum,0.09339028737270069,0.04890640141239779,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,rendimiento(ton/ha),4.831690603168681e-14,1.5173040782245993e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,GDA,-0.0312617559960394,0.11273760141608932,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,VPD_medio_acum,-0.11488399767317645,0.23732118336743896,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,IFs_acum,0.3431159480480538,1.142369198946089,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,rendimiento(ton/ha),-0.17921843155347333,0.10189500416889177,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,GDA,-1.370348189555773,2.001739398806144,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,VPD_medio_acum,5.684341886080802e-15,1.8198773652309367e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,IFs_acum,-0.08938346437676614,1.4070614130116914,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,rendimiento(ton/ha),1.2789769243681804e-14,1.6140428288623168e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,GDA,1.1368683772161604e-14,1.5951644855252062e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,VPD_medio_acum,1.5631940186722205e-14,1.6140428288623168e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,IFs_acum,6.798164766412844,6.799135416093921,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,rendimiento(ton/ha),1.7763568394002505e-14,2.195795494282385e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,GDA,-4.263256414560601e-15,3.842190447641023e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,VPD_medio_acum,-9.947598300641402e-15,2.7372039261675556e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,IFs_acum,-1.4210854715202005e-15,2.6164958398342672e-14,20
+malvidina_3_o_glucosido_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,rendimiento(ton/ha),-4.263256414560601e-15,2.064245883038602e-14,20

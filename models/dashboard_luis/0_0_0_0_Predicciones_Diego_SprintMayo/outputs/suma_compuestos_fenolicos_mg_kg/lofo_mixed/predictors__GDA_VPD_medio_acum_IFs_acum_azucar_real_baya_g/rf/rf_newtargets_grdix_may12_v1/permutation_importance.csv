@@ -1,0 +1,73 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,GDA,0.15009836768127371,0.2622450793174621,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,VPD_medio_acum,-0.003492372578241998,0.00549036044964335,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,IFs_acum,0.1213713804645515,0.21656526906910176,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,azucar_real_baya_g,-0.041078363389092945,0.028804443959624268,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,GDA,0.1953242018247682,0.13085143501252333,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,VPD_medio_acum,0.006311255980737585,0.006977356014654355,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,IFs_acum,0.06348013416309044,0.07944874648926407,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,azucar_real_baya_g,0.024763495793128244,0.037322409560843046,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,GDA,3.568606268937363,6.014490260472325,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,VPD_medio_acum,0.008022039865472763,0.0068397730551271,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,IFs_acum,0.6808545668901651,1.6009911436297655,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,azucar_real_baya_g,3.5625633250497004,1.3393603429118783,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,GDA,8.370089400829169,8.210841017668029,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,VPD_medio_acum,-2.5579538487363607e-14,1.6265066651413345e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,IFs_acum,1.0629974149701185,2.5888830787012136,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,azucar_real_baya_g,2.069986245777772,1.6341343026924058,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,GDA,-2.4868995751603505e-15,9.064642954238218e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,VPD_medio_acum,-0.059196829969917174,0.11839365993982635,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,IFs_acum,0.4195432855621135,1.3427433439962426,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,azucar_real_baya_g,1.308932759452097,1.0157349496122765,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,GDA,0.07152167756394015,0.06850671442764537,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,VPD_medio_acum,-0.03612970835212685,0.03471722358246634,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,IFs_acum,-3.907985046680551e-15,2.1372459347468058e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,42,azucar_real_baya_g,-0.09889892312611756,0.1021588378586751,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,GDA,0.05268250656939699,0.16144052718858926,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,VPD_medio_acum,-3.552713678800501e-15,1.5485919901226005e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,IFs_acum,0.14296792534026892,0.1748384176667531,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,azucar_real_baya_g,-0.06557883017202712,0.051766867617419325,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,GDA,0.10475433204542987,0.08337167028462547,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,VPD_medio_acum,-8.171241461241152e-15,1.0840143930858202e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,IFs_acum,-0.007313323977017205,0.08677599599106743,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,azucar_real_baya_g,-0.061635862344963856,0.05652061089597924,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,GDA,6.701482776446913,6.178650029997784,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,VPD_medio_acum,0.006491028623324624,0.019897763486739772,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,IFs_acum,-0.4626859204376476,1.5496049857474379,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,azucar_real_baya_g,2.070644189547687,1.0682202957787121,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,GDA,8.847552969692067,8.63144414074751,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,VPD_medio_acum,2.7355895326763858e-14,1.443556360947443e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,IFs_acum,1.1360391857983234,2.370001112744181,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,azucar_real_baya_g,1.8925862330433687,2.2320666217587926,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,GDA,1.7763568394002505e-15,1.2281294926768002e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,VPD_medio_acum,-0.08109382176900119,0.140458619483841,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,IFs_acum,-0.07773760066926343,1.391643668560502,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,azucar_real_baya_g,0.25563421440705164,0.5724555643112345,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,GDA,-0.03341309728630115,0.055067178973899504,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,VPD_medio_acum,-0.06816585003552297,0.04530733891512939,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,IFs_acum,-7.815970093361103e-15,1.2690699051270651e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,123,azucar_real_baya_g,-0.4822581738134801,0.31885245273612167,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,GDA,0.048226294114709134,0.13005862076391805,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,VPD_medio_acum,-0.006247721373899395,0.008788072307006295,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,IFs_acum,0.09082722380837183,0.1140037909206558,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,azucar_real_baya_g,-0.03215305755481666,0.0291025088582898,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,GDA,0.16485146392249597,0.11830574323981755,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,VPD_medio_acum,0.007931483131154948,0.007591464096834306,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,IFs_acum,0.056072969591772194,0.12108087478572105,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,azucar_real_baya_g,-0.06710240360394124,0.045242166954040396,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,GDA,7.419104944341646,6.648653347224462,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,VPD_medio_acum,0.003568215567879207,0.004925871803636584,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,IFs_acum,-0.3874693338858469,1.7498914855923546,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,azucar_real_baya_g,2.2779016970373585,0.8552675122879605,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,GDA,9.46754577809227,8.020477293776375,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,VPD_medio_acum,8.171241461241152e-15,1.1517588715610804e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,IFs_acum,0.9006844166935682,2.2668059321216565,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,azucar_real_baya_g,1.7682244320035643,1.7823448812465568,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,GDA,1.4210854715202004e-14,8.987733679556355e-15,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,VPD_medio_acum,-0.04511197317360853,0.12974238374798644,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,IFs_acum,-0.17424165211203474,0.956037083055922,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,azucar_real_baya_g,1.0941747131597541,0.8177146099293253,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,GDA,-0.015823226185600347,0.021984497938795693,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,VPD_medio_acum,-0.15692734480078913,0.0914440411466954,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,IFs_acum,3.552713678800501e-16,1.6120866497059335e-14,20
+suma_compuestos_fenolicos_mg_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g,2026,azucar_real_baya_g,-0.383165521990087,0.22287959928073744,20

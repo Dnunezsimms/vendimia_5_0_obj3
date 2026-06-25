@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,56,15,0.7971367129970958,0.31177653113312964,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,57,14,0.9129415215193337,0.2841542474964619,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,57,14,0.6205670420725538,0.24454381128920644,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,57,14,0.6673624967311674,0.4127545356709479,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,57,14,0.9276461550988094,0.41159668485581247,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,56,15,1.0607950878525851,0.06726153933773804,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,57,14,0.8759252463985033,0.30666725677327433,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,57,14,0.7277306477896962,0.34124841378041415,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,57,14,0.9717778650178672,0.3315114143783807,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,57,14,0.7670657781178346,-0.7763808277379205,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,56,15,0.8604968511826044,0.180777906715617,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,57,14,0.45546587049211723,0.443380782621968,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,57,14,0.9812164283299476,0.10291061053777917,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,57,14,0.9319799785162174,0.3354757827107335,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,57,14,0.7997139674469509,0.3397803736281815,,,taninos_mg_baya,taninos(mg/baya),2026

@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,VPD_medio_acum,1,56,15,0.9137353485369776,0.041343203472530066,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,2,CV5,VPD_medio_acum,1,57,14,1.0225947048807953,0.18897083229095968,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,3,CV5,VPD_medio_acum,1,57,14,0.6952018181328761,0.17471735882986283,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,4,CV5,VPD_medio_acum,1,57,14,0.6697405679487299,0.3168164357032631,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,5,CV5,VPD_medio_acum,1,57,14,0.7975859683586997,0.5762469546588501,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,1,CV5,VPD_medio_acum,1,56,15,0.834057229476917,0.4107860064633988,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,2,CV5,VPD_medio_acum,1,57,14,0.8809935847602672,0.381952694994947,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,3,CV5,VPD_medio_acum,1,57,14,0.6660323871910341,0.3779825601700997,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,4,CV5,VPD_medio_acum,1,57,14,0.9938486856993721,0.32649081048605944,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,5,CV5,VPD_medio_acum,1,57,14,0.7631770770581674,-0.8266654461067326,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,1,CV5,VPD_medio_acum,1,56,15,0.8325830294151715,0.1676977794207839,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,2,CV5,VPD_medio_acum,1,57,14,0.5920833851926529,0.25605045337066734,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,3,CV5,VPD_medio_acum,1,57,14,1.2657941493374583,-0.43916599813618395,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,4,CV5,VPD_medio_acum,1,57,14,0.7996577573670025,0.450176514590259,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,5,CV5,VPD_medio_acum,1,57,14,0.7095694860673236,0.49690488895436136,,,taninos_mg_baya,taninos(mg/baya),2026

@@ -1,0 +1,19 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA,1,24,4,102.87779091558728,-25.251983749504376,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA,1,24,4,48.23674893352208,-0.9812443242629985,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA,1,20,8,77.92731715821975,-1.3699565731352474,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA,1,24,4,86.89340162596365,-2.0485337356583617,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA,1,24,4,134.30262311367773,-37.77125795275791,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA,1,24,4,234.98339067803545,-19.505212874300817,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),42
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA,1,24,4,104.44671349702722,-25.4833415149562,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA,1,24,4,48.065133339936835,-0.8103825903758244,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA,1,20,8,76.0339308315519,-1.310003700979467,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA,1,24,4,87.47067664193283,-2.1121118459337556,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA,1,24,4,135.29214992694568,-38.329897263707025,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA,1,24,4,234.7208985993577,-19.406475420811898,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),123
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA,1,24,4,107.76694448468905,-28.273939134419084,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA,1,24,4,46.657488209546244,-0.748998364758855,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA,1,20,8,80.10230034544408,-1.4577692000817613,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA,1,24,4,88.02837651260101,-2.133044610109453,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA,1,24,4,137.00667624118643,-39.307544963826565,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA,1,24,4,233.54370822509898,-19.231045850427837,,,malvidina_3_o_glucosido_mg_kg,Malvidina-3-O-glucósido(mg/Kg),2026

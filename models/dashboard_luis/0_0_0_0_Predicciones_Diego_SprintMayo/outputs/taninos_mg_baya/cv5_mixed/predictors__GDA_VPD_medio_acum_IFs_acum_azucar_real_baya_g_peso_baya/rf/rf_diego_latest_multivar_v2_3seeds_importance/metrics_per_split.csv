@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,56,15,0.7859221724304031,0.3708564468288519,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,57,14,0.9243948951892553,0.37691143553746664,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,57,14,0.5691420044794673,0.38159808524084804,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,57,14,0.6627506662525734,0.40976025237255065,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,57,14,0.9584414884714254,0.349618303108131,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,56,15,1.0518234113268712,0.1669833162427804,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,57,14,0.9955400465686185,0.15601492924121385,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,57,14,0.6677771683924932,0.433184487779522,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,57,14,0.8838301936591024,0.46089548519164325,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,57,14,0.8239534018012458,-0.7571908248839267,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,56,15,0.8717089626578224,0.22095237815395385,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,57,14,0.515310113547135,0.4105550764819522,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,57,14,0.9085525040277334,0.18042075057482188,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,57,14,0.9159379407029343,0.35413352229100603,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,57,14,0.8620830830790099,0.38679740975372734,,,taninos_mg_baya,taninos(mg/baya),2026

@@ -1,0 +1,19 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,32.64097986701639,-6.289246867376592,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,14.886878400275116,-2.781572132217165,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,20,8,31.925158369561128,-2.3213881592353185,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,18.132192386469782,-0.08005064764749537,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,18.317626768739796,-0.15933474789339264,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,30.39798749304888,-3.198725195771683,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),42
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,33.033079924881676,-6.597499272394043,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,14.381232346781516,-2.5065589448979266,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,20,8,31.723775713215424,-2.3364171017483977,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,18.348213401378402,-0.06952461114697184,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,19.297222263002478,-0.23907835478483408,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,29.05507449849526,-2.8825769004825745,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),123
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,32.484503976908044,-6.334839785179321,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,15.24900203635692,-3.219876698388412,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,20,8,31.882825696129004,-2.355385981354088,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,17.974570434170865,-0.07931740777175511,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,18.19369887790521,-0.12502903119880115,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),2026
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum,3,24,4,30.26534690929416,-3.201846482692428,,,malvidina_3_o_acetilglucosido_mgeqmv_kg,Malvidina-3-O-acetilglucósido(mgEqMv/Kg),2026

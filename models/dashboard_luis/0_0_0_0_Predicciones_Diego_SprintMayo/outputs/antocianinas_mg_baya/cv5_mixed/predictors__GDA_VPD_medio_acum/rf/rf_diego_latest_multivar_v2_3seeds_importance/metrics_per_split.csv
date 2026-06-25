@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum,2,56,15,0.5064983981425504,0.30823122532280045,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum,2,57,14,0.614566157400512,0.22732138404229574,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum,2,57,14,0.7177263168594769,0.17151318093450485,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum,2,57,14,0.5876758648604188,0.14973059413349055,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum,2,57,14,0.6230935400142922,-0.24007492560258403,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum,2,56,15,0.4500749687005579,0.42013462465687246,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum,2,57,14,0.46763169675912764,0.22586116232653597,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum,2,57,14,0.6001332170408659,0.25657356399868125,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum,2,57,14,0.6434395060041503,0.16814702865860498,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum,2,57,14,0.6029339210657773,0.28870877885443424,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum,2,56,15,0.4524830439846697,0.43278506186801935,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum,2,57,14,0.6832558209827678,0.2887141305166194,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum,2,57,14,0.5593680523150872,0.06444721865314917,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum,2,57,14,0.6590135738176336,0.16473407774583104,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum,2,57,14,0.5533657816564286,0.28257934001533225,,,antocianinas_mg_baya,antocianinas(mg/baya),2026

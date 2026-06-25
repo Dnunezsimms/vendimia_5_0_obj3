@@ -1,0 +1,91 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,GDA,-0.006699758222197083,0.003426078804305795,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,0.0007029661313552538,0.0007029661313566747,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,IFs_acum,-0.004200583235419231,0.004491778705680357,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,-0.0079357580898765,0.0053985522755156555,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-1.865174681370263e-15,7.894302471558835e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,GDA,-0.0007515020204416301,0.001999783818540089,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,0.0,9.627624648035926e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,IFs_acum,-0.000235997057629711,0.0024026977243645597,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,0.0009079835050592955,0.002687947279261788,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),6.661338147750939e-17,1.0153534337907713e-15,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,GDA,0.14169135146010997,0.1507268573801788,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,-0.016512206224720827,0.0191941743669505,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,IFs_acum,0.010040981640955881,0.01755299368473232,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,0.3829864000149443,0.13527195725814423,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),0.002801772262203217,0.0033344941456926423,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,GDA,0.020741457165913958,0.033277942967854114,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,-1.5099033134902129e-15,1.016566665713334e-15,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,IFs_acum,0.038034424574489245,0.026465581555376313,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,1.0862633538134716,0.4598728314210619,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-1.8207657603852566e-15,1.1741100595232622e-15,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,GDA,-1.3988810110276972e-15,8.100825053849325e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,0.000946550510638966,0.0018931010212799304,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,IFs_acum,0.00722999059781333,0.018366824692655895,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,0.06560775566290047,0.1251801492396358,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-1.3322676295501878e-15,5.617333549722722e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,GDA,-0.03450130636950601,0.031843308767996965,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,0.011775723556788954,0.008651839123841409,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,IFs_acum,-1.2212453270876722e-15,1.148423626505646e-15,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,-0.3291206116166049,0.3694747794496348,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-1.1102230246251565e-15,1.3136335981433192e-15,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,GDA,-0.002534543767177677,0.0015510536446914627,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,0.000756389179126149,0.000587766829857555,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,IFs_acum,0.0032836292891774478,0.001804260039329599,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,-0.004721480862357375,0.0028623215696058097,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-1.3766765505351941e-15,7.146939457772154e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,GDA,0.013655144796298525,0.009706504877839549,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-1.84297022087776e-15,9.757338289659782e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,IFs_acum,0.012572065162553204,0.00953686190312315,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,-0.0008546649722499077,0.001164712030150598,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-2.242650509742816e-15,9.877865822864972e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,GDA,0.20092602196815684,0.2020186851957413,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-0.01166767927713055,0.01759459277814168,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,IFs_acum,0.02598400655220734,0.02256450883065344,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,0.28664265235675324,0.1362659992903055,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),0.012196429891481753,0.006828834713763389,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,GDA,0.0006849398941317197,0.03808561354578569,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,2.264854970235319e-15,8.176549499482085e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,IFs_acum,-0.01764511964767763,0.05608807126509651,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,0.9755508922398606,0.5632880748592868,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),2.176037128265307e-15,1.0310140977626414e-15,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,GDA,-8.881784197001252e-16,7.160723346098896e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,0.0015750695461300035,0.001928495221939884,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,IFs_acum,0.022528348228850924,0.021289774091895364,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,0.08079386158585447,0.125314952065375,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-9.547918011776346e-16,7.598339127787256e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,GDA,-0.025742685080190886,0.03223190277261591,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,0.013824241054738628,0.009891439977435376,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,IFs_acum,1.2434497875801752e-15,6.526751786450487e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,-0.38391080058409466,0.38561775374643575,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),1.1546319456101628e-15,9.035878689445467e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,GDA,-0.0024870524296921825,0.0020774167945318694,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,-0.0026390663509911596,0.001531216489153385,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,IFs_acum,-0.0023611978266027565,0.004242288939176829,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,-0.0032395386300669406,0.002434998240429319,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),-4.4408920985006264e-17,9.090279413851974e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,GDA,0.00869347440201591,0.005655972780906552,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,-0.0022591527103023703,0.0014132489213955998,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,IFs_acum,0.009482495831082738,0.006161981128002942,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,0.0010737853079306747,0.001461173471756794,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),2.264854970235319e-15,9.920201506336512e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,GDA,0.23472583484981313,0.20892419543292035,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,-0.006972473413346813,0.017601832822439656,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,IFs_acum,0.029883868396486914,0.01707845787326576,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,0.3363831023139957,0.12179449183227692,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),0.018017439307113324,0.008201811344361676,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,GDA,0.005935507441296006,0.04352829162838454,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,3.9968028886505636e-16,5.941508689604037e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,IFs_acum,-0.0006722600590967076,0.03255849526319974,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,0.911714839817153,0.5265225491945794,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),4.4408920985006264e-17,7.679020293323272e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,GDA,4.440892098500626e-16,4.213000162292041e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,0.0017062590903735187,0.0022663756702865586,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,IFs_acum,0.022941018145698776,0.021317043371481634,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,0.14839235937723533,0.16276024109327403,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),2.886579864025407e-16,5.665401846398886e-16,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,GDA,-0.023446435445546986,0.024989269581324875,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,0.01815735401873253,0.01173590224231885,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,IFs_acum,-1.4432899320127035e-15,1.2937790511775318e-15,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,-0.3805177882461013,0.3901841943554226,20
+peonidina_3_o_acetilglucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),-1.5099033134902129e-15,1.5974870980355283e-15,20

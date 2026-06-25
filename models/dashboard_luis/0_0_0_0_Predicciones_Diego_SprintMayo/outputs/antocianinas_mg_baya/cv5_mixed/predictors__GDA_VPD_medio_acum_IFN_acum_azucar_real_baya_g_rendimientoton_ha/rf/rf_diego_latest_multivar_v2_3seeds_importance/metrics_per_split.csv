@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,56,15,0.4377423439545447,0.5633507545365193,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.5467354630066088,0.42104690458324423,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.5491409546836069,0.3676802349911752,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.3959594879890677,0.6325277508537062,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.3996654163501532,0.5619401126776887,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,56,15,0.36342614154611247,0.6630308144595369,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.3372546081425991,0.7299458354675399,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.5011991618555595,0.47522150346013026,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.41777589295069834,0.6704887494343491,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.38409804033529854,0.588712362739332,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,56,15,0.2501968934282278,0.8351661521724465,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.43084770119413146,0.7760370875130935,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.5175209390431125,0.038523999022260225,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.45146180517969353,0.6212746892466028,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|azucar_real_baya_g|rendimiento(ton/ha),5,57,14,0.3596055056664146,0.7086530095780275,,,antocianinas_mg_baya,antocianinas(mg/baya),2026

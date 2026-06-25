@@ -1,0 +1,34 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.7062800549930509,-20.172537454483233,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.43241351664881916,-3.0612130050289297,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,60,11,1.0257942076607447,-4.473044257358439,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.36711100219302245,0.15056549655684803,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.9029942107472743,-5.8141179907117895,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.2595599994102255,0.5598427741573233,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.18953820155881282,0.49950813050928455,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.3469042862425325,-0.37231192123018775,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.2142118065896664,0.7946963729905671,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.2632863801752749,-0.23759484449915114,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,1.3145016476633573,-3.766171812936288,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.7223747609559835,-21.184545323383393,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.4556128896073625,-3.472675407474422,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,60,11,0.9926281438587696,-4.205535009078348,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.37047272410144605,0.1570739367206494,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.8751358348674794,-5.368654911710497,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.2336188335195013,0.6028185857791052,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.17892728637748104,0.5527020772233634,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.36727982851234514,-0.4940843156870294,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.2279991831546193,0.7815925015897058,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.27631082329835205,-0.36066737526002735,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,1.315903727022218,-3.7586610590241607,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.723977080109512,-21.321513127185483,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.43290887954036844,-2.9465548037565017,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,60,11,1.0169446318073172,-4.449404077716471,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.37829092655614954,0.11582617790164929,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.8816045037133038,-5.488104502805286,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.2246161312691343,0.6596486325795015,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.19381979897355484,0.46352120461839674,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.30079504029036525,-0.04656506244202063,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.2163488832944415,0.7836262095438871,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,0.26498611985104614,-0.2387600849990883,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFTT_acum|peso_baya|azucar_real_baya_g,5,65,6,1.3320496899946423,-3.8530736547464635,,,antocianinas_mg_baya,antocianinas(mg/baya),2026

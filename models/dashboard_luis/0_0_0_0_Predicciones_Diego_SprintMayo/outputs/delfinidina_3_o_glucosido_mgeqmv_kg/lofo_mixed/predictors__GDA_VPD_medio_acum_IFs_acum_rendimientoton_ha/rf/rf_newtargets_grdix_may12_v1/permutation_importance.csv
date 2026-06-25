@@ -1,0 +1,73 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,GDA,0.018155357748972277,0.024761157063696998,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,VPD_medio_acum,-0.08806931474627362,0.09245485785745229,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,IFs_acum,-0.0808923825030476,0.08974690656218212,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,rendimiento(ton/ha),5.684341886080802e-15,1.3024463484486661e-14,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,GDA,-0.07596138133034955,0.03415740646246454,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,VPD_medio_acum,0.0007163817875039058,0.004253242929227157,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,IFs_acum,-0.06839127055130731,0.0299484241518396,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,rendimiento(ton/ha),0.0,0.0,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,GDA,-0.02809388540748401,0.009591001837738361,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,VPD_medio_acum,0.007555419546077502,0.006168974226833739,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,IFs_acum,0.09870753130726584,0.12982535579277885,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,rendimiento(ton/ha),-0.0004988738399880788,0.0031154661322704657,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,GDA,0.2742432504259703,1.0233472281022182,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,VPD_medio_acum,1.0658141036401502e-15,2.537145046425895e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,IFs_acum,-0.08743571301595168,0.6179524766786575,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,rendimiento(ton/ha),3.552713678800501e-16,1.5485919901226e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,GDA,-3.3750779948604757e-15,4.9579134529241964e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,VPD_medio_acum,0.10945489206964787,0.20036521486949815,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,IFs_acum,4.8684252947881665,2.5892278409952514,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,rendimiento(ton/ha),-4.263256414560601e-15,3.9879112138130155e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,GDA,-0.005348875070668413,0.010543422678251365,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,VPD_medio_acum,-0.00440406069624828,0.010363436936038431,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,IFs_acum,7.105427357601002e-15,7.105427357601002e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),42,rendimiento(ton/ha),8.526512829121202e-15,9.42641460811558e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,GDA,0.020437272658795535,0.02259425504913796,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,VPD_medio_acum,-0.02443453506122779,0.024434535061232054,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,IFs_acum,0.0033330981159330974,0.02941359898611997,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,rendimiento(ton/ha),-1.4210854715202005e-15,4.263256414560602e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,GDA,-0.06787143381360963,0.0360160509718951,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,VPD_medio_acum,-0.010996510461722408,0.013153596875163303,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,IFs_acum,-0.06294748298474744,0.03894570657143598,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,rendimiento(ton/ha),0.0,0.0,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,GDA,0.025367504028098863,0.039698893427072134,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,VPD_medio_acum,0.022048735410628593,0.03007632201483812,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,IFs_acum,0.11468607375908882,0.1021453432863432,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,rendimiento(ton/ha),-0.0029270965540604266,0.009926267361088962,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,GDA,0.3934858070277361,0.6945067796667076,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,VPD_medio_acum,-7.105427357601002e-16,3.8263897345803626e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,IFs_acum,0.20562777286687392,0.5696191564961872,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,rendimiento(ton/ha),-1.4210854715202005e-15,5.317214951750687e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,GDA,3.0198066269804257e-15,2.5803073537982524e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,VPD_medio_acum,0.15202746534120043,0.16545591364442697,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,IFs_acum,3.7023364827900354,2.5267790758708126,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,rendimiento(ton/ha),4.440892098500626e-15,3.152720635543966e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,GDA,-2.842170943040401e-14,7.78360568894479e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,VPD_medio_acum,-2.5579538487363607e-14,7.246142549764706e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,IFs_acum,-2.1316282072803006e-14,9.532931148469528e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),123,rendimiento(ton/ha),-2.4868995751603507e-14,6.153480596427404e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,GDA,0.031262794932284524,0.018009017957122956,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,VPD_medio_acum,-0.04834613958470726,0.029769936676398736,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,IFs_acum,-0.019218283908885782,0.02845542041987271,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,rendimiento(ton/ha),-2.2026824808563106e-14,1.6496225564202262e-14,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,GDA,-0.14824067742091102,0.07728830326642959,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,VPD_medio_acum,-0.03216914410260543,0.03402122302150352,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,IFs_acum,-0.10726055937145489,0.06787959599937235,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,rendimiento(ton/ha),-1.2789769243681804e-14,4.263256414560602e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,GDA,-0.02076726269910125,0.006634004147090804,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,VPD_medio_acum,0.010724965281840327,0.00811649966772969,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,IFs_acum,-0.013105050659189033,0.006529527656452985,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,rendimiento(ton/ha),-1.0658141036401503e-14,6.153480596427404e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,GDA,0.20189284307978744,0.9972379555278557,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,VPD_medio_acum,-7.105427357601002e-15,6.355287432313019e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,IFs_acum,-0.07939566379899077,0.3172908510942861,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,rendimiento(ton/ha),-7.460698725481052e-15,6.143216234658618e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,GDA,-5.5067062021407766e-15,4.696440238093049e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,VPD_medio_acum,0.23377562238342833,0.23377562238343402,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,IFs_acum,4.855312344794131,2.5671650747615,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,rendimiento(ton/ha),-5.329070518200751e-15,3.462756959325817e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,GDA,0.008755106155392411,0.00875510615539099,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,VPD_medio_acum,0.007879595539854022,0.008711220635146948,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,IFs_acum,-2.1316282072803005e-15,6.778145699236018e-15,20
+delfinidina_3_o_glucosido_mgeqmv_kg,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|rendimiento(ton/ha),2026,rendimiento(ton/ha),0.0,4.4938668397781774e-15,20

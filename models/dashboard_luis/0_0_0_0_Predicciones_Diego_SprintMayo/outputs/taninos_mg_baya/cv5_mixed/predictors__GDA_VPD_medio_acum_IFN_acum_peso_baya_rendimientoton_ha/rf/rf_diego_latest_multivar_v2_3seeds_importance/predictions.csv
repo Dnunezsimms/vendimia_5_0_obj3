@@ -1,0 +1,214 @@
+fecha,variedad,fundo,taninos(mg/baya),prediction,subset,split_id,method,predictors,n_predictors,seed
+2025-03-11,Cabernet Sauvignon,LOURDES,7.756400398942485,6.526184658754031,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-17,Cabernet Sauvignon,LOURDES,6.601213871072863,6.496972929622384,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-07,Cabernet Sauvignon,LOURDES,6.805965272943777,6.465186567021349,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-26,Cabernet Sauvignon,NILAHUE,6.425671570269413,6.399298862419925,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-01,Cabernet Sauvignon,NILAHUE,6.722119792779382,6.399306727385027,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-15,Cabernet Sauvignon,NILAHUE,5.597233847037879,6.4070022336920776,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-02-27,Cabernet Sauvignon,SAN ADOLFO,3.998694530779405,5.076538221934155,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-18,Carmenere,LOURDES,5.886940354085751,6.493403575211767,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-19,Carmenere,PALO SANTO,5.20843681035984,5.102931068671738,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-25,Carmenere,PEUMO,8.118347917597655,6.616398139996835,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-05-06,Carmenere,PEUMO,7.061196157223969,6.736147226542756,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-22,Carmenere,QUINTA MAIPO,4.6899590414659125,4.790559934433902,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-05-05,Carmenere,RAUCO,4.436783492195058,4.79414986878478,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-31,Carmenere,VILLA ALEGRE,6.483715496576969,6.3108498906835,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-04,Carmenere,VILLA ALEGRE,6.561830372952919,6.264759765725245,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-17,Cabernet Sauvignon,IDAHUE,5.710086327504946,5.225460852436555,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-10,Cabernet Sauvignon,KEULE,7.613754935330157,6.095302355635146,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-19,Cabernet Sauvignon,KEULE,7.044850370078248,6.353005781773186,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-02,Cabernet Sauvignon,KEULE,6.979247598735211,6.185544928274973,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-18,Cabernet Sauvignon,NILAHUE,6.388546680361831,6.336303794995809,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-19,Cabernet Sauvignon,QUEBRADA DE AGUA,7.366666038649397,6.448982987599115,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-24,Cabernet Sauvignon,SAN ADOLFO,3.987794435213149,4.99483653697168,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-25,Carmenere,LOURDES,5.317043395418744,6.5410819834078735,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-11,Carmenere,PALO SANTO,4.325923338527278,5.5757989676395425,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-15,Carmenere,PALO SANTO,4.147995079834737,5.147143172746562,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-10,Carmenere,QUINTA MAIPO,3.0224821971994102,5.314454744978595,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-07,Carmenere,QUINTA MAIPO,4.769676607051526,4.926548340054983,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-02,Carmenere,RAUCO,5.518859241423061,4.454459785527321,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-17,Carmenere,VILLA ALEGRE,6.91130037726492,6.761502454181258,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-04,Cabernet Sauvignon,IDAHUE,4.816424929234419,5.03818683301432,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-02-27,Cabernet Sauvignon,KEULE,6.922546112011426,5.714505900809052,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-26,Cabernet Sauvignon,KEULE,6.375069942994112,6.692188149626188,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-24,Cabernet Sauvignon,LOURDES,6.546068044678676,6.592462309128501,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-03,Cabernet Sauvignon,QUEBRADA DE AGUA,5.718552570453271,6.521887388210353,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-10,Cabernet Sauvignon,SAN ADOLFO,4.7465146793812485,4.847146110268286,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-31,Cabernet Sauvignon,SAN ADOLFO,5.853761679357894,4.900785616006214,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-04,Carmenere,LOURDES,6.4933138819351575,6.762586790712009,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-11,Carmenere,LOURDES,6.4566937160288775,6.7551272527466475,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-15,Carmenere,LOURDES,4.649487851706,6.662002053789657,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-01,Carmenere,PALO SANTO,5.382300381810468,4.57735163387501,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-14,Carmenere,QUINTA MAIPO,4.413932787940565,4.513178779463605,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-02-27,Carmenere,VILLA ALEGRE,5.740787015152512,6.645624815096124,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-24,Carmenere,VILLA ALEGRE,7.763541373511392,6.7194452427574625,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-02-24,Cabernet Sauvignon,IDAHUE,4.714598614673315,5.285012426601442,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-21,Cabernet Sauvignon,IDAHUE,5.938808147567967,5.413921368869553,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-28,Cabernet Sauvignon,IDAHUE,5.250774660349503,5.137294701739054,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-31,Cabernet Sauvignon,LOURDES,6.707852003811366,6.591244635586027,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-05,Cabernet Sauvignon,QUEBRADA DE AGUA,6.862364617945799,6.605359012366857,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-27,Cabernet Sauvignon,QUEBRADA DE AGUA,6.782502156863146,6.565608855591881,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-10,Cabernet Sauvignon,QUEBRADA DE AGUA,5.957212903654575,6.443456519502178,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-01,Carmenere,LOURDES,5.102127349676726,6.602103037131002,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-30,Carmenere,PALO SANTO,5.550670108953682,4.949193177045481,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-05-13,Carmenere,PALO SANTO,4.270143716475594,4.514233647941563,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-03,Carmenere,PEUMO,6.463288882040958,6.827991096251026,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-30,Carmenere,PEUMO,7.292660339157542,6.8176423517931966,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-17,Carmenere,RAUCO,3.936715587017724,4.9028475938626555,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-25,Carmenere,RAUCO,4.656765141028805,4.950860049435129,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-11,Cabernet Sauvignon,IDAHUE,5.436864500466862,5.395557671518002,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-10,Cabernet Sauvignon,KEULE,7.574136351118293,6.291752996913388,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-08,Cabernet Sauvignon,NILAHUE,6.15030347811326,6.346519358409458,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-30,Cabernet Sauvignon,NILAHUE,6.647400293140909,6.18852609257384,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-12,Cabernet Sauvignon,QUEBRADA DE AGUA,5.904663332323386,6.471072341107618,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-17,Cabernet Sauvignon,SAN ADOLFO,4.708659858896746,5.535953913405269,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-07,Cabernet Sauvignon,SAN ADOLFO,4.981088489148755,5.981218292559945,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-17,Carmenere,PEUMO,7.696397476624513,6.624184870249483,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-04-17,Carmenere,PEUMO,7.67944065417038,6.623878625536109,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-17,Carmenere,QUINTA MAIPO,4.75645117366867,4.695470890281051,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-05-05,Carmenere,QUINTA MAIPO,4.514718045689668,4.823477554737676,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-12,Carmenere,RAUCO,3.751088569087726,5.2910173483955605,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-18,Carmenere,RAUCO,3.815805000323675,5.2269278115776245,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-03-10,Carmenere,VILLA ALEGRE,7.525377232158603,6.507094708378071,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,42
+2025-02-24,Cabernet Sauvignon,IDAHUE,4.714598614673315,5.677717424129618,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-21,Cabernet Sauvignon,IDAHUE,5.938808147567967,5.42177173649188,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-02,Cabernet Sauvignon,KEULE,6.979247598735211,6.27293787733946,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-07,Cabernet Sauvignon,LOURDES,6.805965272943777,6.284027555102255,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-19,Cabernet Sauvignon,QUEBRADA DE AGUA,7.366666038649397,6.281493807006757,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-27,Cabernet Sauvignon,QUEBRADA DE AGUA,6.782502156863146,6.2855951485406445,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-07,Cabernet Sauvignon,SAN ADOLFO,4.981088489148755,6.021659675900479,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-11,Carmenere,PALO SANTO,4.325923338527278,4.852557845808864,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-30,Carmenere,PALO SANTO,5.550670108953682,4.7922180054605965,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-30,Carmenere,PEUMO,7.292660339157542,6.775605372033539,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-14,Carmenere,QUINTA MAIPO,4.413932787940565,4.605088201885046,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-22,Carmenere,QUINTA MAIPO,4.6899590414659125,4.751885557664099,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-12,Carmenere,RAUCO,3.751088569087726,5.109488510646308,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-17,Carmenere,RAUCO,3.936715587017724,5.207968212172998,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-25,Carmenere,RAUCO,4.656765141028805,5.2723609887855245,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-28,Cabernet Sauvignon,IDAHUE,5.250774660349503,5.038208933929623,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-11,Cabernet Sauvignon,IDAHUE,5.436864500466862,5.139187870011856,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-10,Cabernet Sauvignon,KEULE,7.613754935330157,6.093002282878176,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-19,Cabernet Sauvignon,KEULE,7.044850370078248,6.142399389003654,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-10,Cabernet Sauvignon,KEULE,7.574136351118293,6.078216643149914,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-30,Cabernet Sauvignon,NILAHUE,6.647400293140909,6.060981550064871,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-10,Cabernet Sauvignon,SAN ADOLFO,4.7465146793812485,4.795545880949354,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-01,Carmenere,LOURDES,5.102127349676726,6.663539267572987,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-25,Carmenere,PEUMO,8.118347917597655,6.856896619016616,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-05-06,Carmenere,PEUMO,7.061196157223969,6.735138705057291,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-07,Carmenere,QUINTA MAIPO,4.769676607051526,4.905015516471017,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-05-05,Carmenere,QUINTA MAIPO,4.514718045689668,4.886109566921316,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-18,Carmenere,RAUCO,3.815805000323675,4.692393477978851,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-02,Carmenere,RAUCO,5.518859241423061,4.735295483179166,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-17,Cabernet Sauvignon,LOURDES,6.601213871072863,6.556116936780186,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-24,Cabernet Sauvignon,LOURDES,6.546068044678676,6.540564308333576,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-18,Cabernet Sauvignon,NILAHUE,6.388546680361831,6.526187697256415,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-08,Cabernet Sauvignon,NILAHUE,6.15030347811326,6.492484107354421,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-05,Cabernet Sauvignon,QUEBRADA DE AGUA,6.862364617945799,6.552809690752299,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-17,Cabernet Sauvignon,SAN ADOLFO,4.708659858896746,5.369432341865895,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-24,Cabernet Sauvignon,SAN ADOLFO,3.987794435213149,5.061939452762665,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-25,Carmenere,LOURDES,5.317043395418744,6.718365887669388,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-15,Carmenere,LOURDES,4.649487851706,6.747757815965591,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-19,Carmenere,PALO SANTO,5.20843681035984,5.0643033945963225,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-05-13,Carmenere,PALO SANTO,4.270143716475594,4.901577094294034,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-03,Carmenere,PEUMO,6.463288882040958,6.847964748084717,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-17,Carmenere,PEUMO,7.67944065417038,6.665208497847529,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-17,Carmenere,VILLA ALEGRE,6.91130037726492,6.824365622214662,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-04,Cabernet Sauvignon,IDAHUE,4.816424929234419,5.388665784082434,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-11,Cabernet Sauvignon,LOURDES,7.756400398942485,6.46507619174224,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-26,Cabernet Sauvignon,NILAHUE,6.425671570269413,6.3453571441800145,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-01,Cabernet Sauvignon,NILAHUE,6.722119792779382,6.332985081301774,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-03,Cabernet Sauvignon,QUEBRADA DE AGUA,5.718552570453271,6.34765743910246,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-10,Cabernet Sauvignon,QUEBRADA DE AGUA,5.957212903654575,6.309475218842299,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-02-27,Cabernet Sauvignon,SAN ADOLFO,3.998694530779405,5.065164489143044,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-04,Carmenere,LOURDES,6.4933138819351575,6.423287286119207,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-15,Carmenere,PALO SANTO,4.147995079834737,5.106256793530001,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-17,Carmenere,PEUMO,7.696397476624513,6.519869830632786,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-10,Carmenere,QUINTA MAIPO,3.0224821971994102,4.954698073442655,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-05-05,Carmenere,RAUCO,4.436783492195058,4.774319225641938,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-10,Carmenere,VILLA ALEGRE,7.525377232158603,6.470166942795225,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-31,Carmenere,VILLA ALEGRE,6.483715496576969,6.452845129871463,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-17,Cabernet Sauvignon,IDAHUE,5.710086327504946,5.48363693940564,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-02-27,Cabernet Sauvignon,KEULE,6.922546112011426,5.804552183740296,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-26,Cabernet Sauvignon,KEULE,6.375069942994112,6.691631142852348,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-31,Cabernet Sauvignon,LOURDES,6.707852003811366,6.573543834974791,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-15,Cabernet Sauvignon,NILAHUE,5.597233847037879,6.55589706643007,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-12,Cabernet Sauvignon,QUEBRADA DE AGUA,5.904663332323386,6.662675499859302,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-31,Cabernet Sauvignon,SAN ADOLFO,5.853761679357894,4.851250413753059,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-11,Carmenere,LOURDES,6.4566937160288775,6.743675805284322,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-18,Carmenere,LOURDES,5.886940354085751,6.70544017365489,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-01,Carmenere,PALO SANTO,5.382300381810468,4.630971291252647,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-17,Carmenere,QUINTA MAIPO,4.75645117366867,4.584695479893859,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-02-27,Carmenere,VILLA ALEGRE,5.740787015152512,6.685231863708652,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-03-24,Carmenere,VILLA ALEGRE,7.763541373511392,6.43842935128815,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-04,Carmenere,VILLA ALEGRE,6.561830372952919,6.31198329428255,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,123
+2025-04-10,Cabernet Sauvignon,KEULE,7.574136351118293,6.391224829795797,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-11,Cabernet Sauvignon,LOURDES,7.756400398942485,6.494849869536456,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-15,Cabernet Sauvignon,NILAHUE,5.597233847037879,6.434174439445444,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-12,Cabernet Sauvignon,QUEBRADA DE AGUA,5.904663332323386,6.5070375374380225,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-27,Cabernet Sauvignon,QUEBRADA DE AGUA,6.782502156863146,6.4590036937155695,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-31,Cabernet Sauvignon,SAN ADOLFO,5.853761679357894,5.266415622578328,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-07,Cabernet Sauvignon,SAN ADOLFO,4.981088489148755,5.299325261447986,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-25,Carmenere,LOURDES,5.317043395418744,6.46474251806854,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-01,Carmenere,PALO SANTO,5.382300381810468,4.601685007704867,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-17,Carmenere,PEUMO,7.696397476624513,6.596645478824049,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-17,Carmenere,QUINTA MAIPO,4.75645117366867,4.486509574358869,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-22,Carmenere,QUINTA MAIPO,4.6899590414659125,4.795045843751793,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-25,Carmenere,RAUCO,4.656765141028805,4.843683707743546,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-24,Carmenere,VILLA ALEGRE,7.763541373511392,6.37255861289311,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-04,Carmenere,VILLA ALEGRE,6.561830372952919,6.356516434789612,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-17,Cabernet Sauvignon,IDAHUE,5.710086327504946,5.355894057592684,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-28,Cabernet Sauvignon,IDAHUE,5.250774660349503,5.015743638747126,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-11,Cabernet Sauvignon,IDAHUE,5.436864500466862,5.219714137476869,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-17,Cabernet Sauvignon,LOURDES,6.601213871072863,6.508387521157387,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-08,Cabernet Sauvignon,NILAHUE,6.15030347811326,6.502512467524535,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-19,Cabernet Sauvignon,QUEBRADA DE AGUA,7.366666038649397,6.469121815036175,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-10,Cabernet Sauvignon,SAN ADOLFO,4.7465146793812485,5.037597064046765,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-04,Carmenere,LOURDES,6.4933138819351575,6.61364504764203,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-11,Carmenere,PALO SANTO,4.325923338527278,4.852012367690864,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-30,Carmenere,PALO SANTO,5.550670108953682,4.750785670276813,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-03,Carmenere,PEUMO,6.463288882040958,6.756266989923566,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-05-06,Carmenere,PEUMO,7.061196157223969,6.691162073581447,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-07,Carmenere,QUINTA MAIPO,4.769676607051526,4.6526379746946525,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-17,Carmenere,VILLA ALEGRE,6.91130037726492,6.592944030292634,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-21,Cabernet Sauvignon,IDAHUE,5.938808147567967,5.074561094957855,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-10,Cabernet Sauvignon,KEULE,7.613754935330157,6.385172455736443,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-26,Cabernet Sauvignon,KEULE,6.375069942994112,6.409194455163106,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-02,Cabernet Sauvignon,KEULE,6.979247598735211,6.289568674131497,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-18,Cabernet Sauvignon,NILAHUE,6.388546680361831,6.34383784744534,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-03,Cabernet Sauvignon,QUEBRADA DE AGUA,5.718552570453271,6.12326960181441,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-10,Cabernet Sauvignon,QUEBRADA DE AGUA,5.957212903654575,6.24345066747761,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-15,Carmenere,LOURDES,4.649487851706,6.832002216887574,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-05-13,Carmenere,PALO SANTO,4.270143716475594,4.90228297639983,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-25,Carmenere,PEUMO,8.118347917597655,6.836012823802503,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-17,Carmenere,PEUMO,7.67944065417038,6.846924043356439,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-05-05,Carmenere,RAUCO,4.436783492195058,5.369845164834223,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-02-27,Carmenere,VILLA ALEGRE,5.740787015152512,6.573476566467964,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-31,Carmenere,VILLA ALEGRE,6.483715496576969,6.289615150093545,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-04,Cabernet Sauvignon,IDAHUE,4.816424929234419,5.4497330381526625,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-19,Cabernet Sauvignon,KEULE,7.044850370078248,6.5391574570491136,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-31,Cabernet Sauvignon,LOURDES,6.707852003811366,6.615570250372684,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-01,Cabernet Sauvignon,NILAHUE,6.722119792779382,6.305939959385751,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-05,Cabernet Sauvignon,QUEBRADA DE AGUA,6.862364617945799,6.579673438957395,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-17,Cabernet Sauvignon,SAN ADOLFO,4.708659858896746,5.4375339766573765,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-24,Cabernet Sauvignon,SAN ADOLFO,3.987794435213149,5.085560801166668,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-11,Carmenere,LOURDES,6.4566937160288775,6.671850901843296,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-18,Carmenere,LOURDES,5.886940354085751,6.63247560145281,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-01,Carmenere,LOURDES,5.102127349676726,6.643697669140281,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-15,Carmenere,PALO SANTO,4.147995079834737,5.258582993146582,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-12,Carmenere,RAUCO,3.751088569087726,5.277573644443911,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-18,Carmenere,RAUCO,3.815805000323675,5.248779735751014,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-10,Carmenere,VILLA ALEGRE,7.525377232158603,6.5886411133023906,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-02-24,Cabernet Sauvignon,IDAHUE,4.714598614673315,5.635185940768468,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-02-27,Cabernet Sauvignon,KEULE,6.922546112011426,5.898923997379423,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-24,Cabernet Sauvignon,LOURDES,6.546068044678676,6.469563161248295,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-07,Cabernet Sauvignon,LOURDES,6.805965272943777,6.410325148195341,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-26,Cabernet Sauvignon,NILAHUE,6.425671570269413,6.4318814802713185,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-30,Cabernet Sauvignon,NILAHUE,6.647400293140909,6.25274742954469,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-02-27,Cabernet Sauvignon,SAN ADOLFO,3.998694530779405,5.093986494924787,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-19,Carmenere,PALO SANTO,5.20843681035984,5.172166080073175,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-30,Carmenere,PEUMO,7.292660339157542,6.781474539790555,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-03-10,Carmenere,QUINTA MAIPO,3.0224821971994102,4.914363143863027,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-14,Carmenere,QUINTA MAIPO,4.413932787940565,4.764043224016362,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-05-05,Carmenere,QUINTA MAIPO,4.514718045689668,4.9601393477037155,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-02,Carmenere,RAUCO,5.518859241423061,4.664689852624622,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026
+2025-04-17,Carmenere,RAUCO,3.936715587017724,4.745144879992263,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),5,2026

@@ -1,0 +1,34 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.7016468098698025,-19.93792823658252,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.5474534253842319,-5.2399711671418405,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,60,11,0.6693223170166355,-1.3675289717190648,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.3721103325543737,0.2027537747834074,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.999077980857422,-7.282687645029911,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.4218241030817575,0.16860373486096525,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.28665217630293055,-0.17956326642513898,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.2700473850447978,-0.08307554863730204,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.31955459351468346,0.6074069919792053,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.47313294585770044,-3.4315648063720277,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,1.3200859502604196,-3.743853983507937,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.7240164390623006,-21.263482198175694,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.5504862428168092,-5.290918236476785,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,60,11,0.6388130622913912,-1.170568494653708,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.374334172772472,0.18006900014391247,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.9694548705514427,-6.791557002158494,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.4169157899725666,0.17536428484455124,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.2912297873856024,-0.1823188000263023,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.2759220101876098,-0.073742619503957,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.3490558627453894,0.5553759332223498,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.46661680949802076,-3.4400135174800486,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,1.3611510945855816,-4.006996303663827,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.7191224425236525,-21.03104490242302,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.5162479586574769,-4.661683778538784,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,60,11,0.6365778215497276,-1.1350254915582516,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.37132116567070367,0.20227010349475993,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.9725159020712386,-6.889832694179175,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.41602510499187034,0.1899528860027243,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.30657863721817424,-0.34234246515913935,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.2703538022421086,-0.07622177921483875,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.3037994252519036,0.6221268169999601,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,0.5063316475841746,-3.9628891074193584,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|peso_baya|rendimiento(ton/ha),5,65,6,1.354148446595856,-3.962704750876876,,,antocianinas_mg_baya,antocianinas(mg/baya),2026

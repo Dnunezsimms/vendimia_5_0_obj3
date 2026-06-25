@@ -1,0 +1,166 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,-0.0014239797371648987,0.0019952950719087413,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,1.4432899320127036e-16,2.434909185329438e-16,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.0019108599538437687,0.0016202938484142552,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,0.010721230729731312,0.01901820313082333,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),8.881784197001253e-17,1.0877919644084148e-16,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,0.0037927264240769976,0.0015631676528810076,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,-2.2204460492503132e-17,9.67869993826625e-17,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,0.004515617464775024,0.0023449095678964305,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,0.0008632281564805666,0.0007422511506610535,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-6.661338147750939e-17,1.5857156540161843e-16,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,0.0035538777887576477,0.0036940888562960314,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,0.0002724474048323766,0.001362993439192897,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,0.001750545530547265,0.003564542868968336,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,-0.017240715810305663,0.011599403144410003,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-1.0547118733938987e-16,1.7368870616387718e-16,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,0.0010605847376663814,0.0007038595852639238,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,-0.0010678708073295073,0.0007002519439779071,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.0019191841686058253,0.0013874120188397615,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,-0.0015835769504896845,0.0018399135630344935,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),4.4408920985006264e-17,8.881784197001254e-17,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,-0.004073511543381758,0.0027485308087080666,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,-0.0009824491098902933,0.0004547222660229534,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.004345115158627344,0.0023254308871205305,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,0.0008865416471764865,0.0003028048350055902,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),4.4408920985006264e-17,1.332267629550188e-16,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,-0.0036364854808469405,0.0012807772674083774,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,-0.0019574612978170867,0.0008844654856102101,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.004238774267944734,0.002435694205766219,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,-0.0023792671635650352,0.001993207035001347,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),0.0,7.021666937153402e-17,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,-0.0016593511533122608,0.014545696761163891,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,0.059737182369017185,0.0261849934419943,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.008465212224612384,0.008595223297677045,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,-5.0443359881852114e-05,0.0011479829856549876,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-3.3306690738754695e-17,1.0590852655056278e-16,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,-0.0025570193464864556,0.0011709176695409282,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,0.0032082201935511477,0.002003828701673726,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.0035284745213323863,0.0015224917973023545,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,-0.00258101746406586,0.0006478355798398559,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),5.551115123125783e-17,1.1905815549843722e-16,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,-0.0011411557289281228,0.0005211254767475916,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,-6.54714286056235e-05,0.00045983166108719866,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.002216525339992015,0.001179104266039213,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,-0.0014094281744130078,0.0006735327352670163,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-2.2204460492503132e-17,9.67869993826625e-17,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,-0.00424802206635475,0.0013739828770968768,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,1.5543122344752192e-15,3.8459253727671276e-16,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,-0.004079225871797254,0.0013936291696887947,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,1.4876988529977098e-15,6.627947771331266e-16,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),1.5543122344752192e-15,5.528866075183428e-16,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,GDA,-0.03700521665470881,0.013550538466726788,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,VPD_medio_acum,-0.08786409646091457,0.04509464704974976,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,IFN_acum,0.00803114664630119,0.004713413262132148,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,peso_baya,-0.00786523767201897,0.0038238734565768156,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),42,rendimiento(ton/ha),-3.3306690738754695e-17,1.4518049907399379e-16,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,-0.001253562207163672,0.0012511407887475247,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-2.2759572004815707e-16,2.988851527601489e-16,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,-0.0015523810050199426,0.0009857827956279456,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,0.004767563845915157,0.010102054963819369,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-7.771561172376095e-17,1.7589240639276205e-16,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,-0.003431649375773427,0.0014269724592152638,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-1.3322676295501878e-16,2.0350724194510403e-16,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,-0.0025770636215293407,0.001604220137437294,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,0.0003331813758679969,0.0004947402807317001,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-1.7763568394002506e-16,3.2633758932252446e-16,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,0.0019473371264742078,0.002496330399843982,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,0.0001326520777293061,0.0021375375382203126,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,0.000662526542475439,0.004075033813607427,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,-0.018043662155600104,0.007868006905726865,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),4.4408920985006264e-17,1.076401158743041e-16,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,0.0009933135215453137,0.0006635374572948138,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-0.0004128376511684517,0.00035930509753422763,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,0.00037792190707141015,0.0012731024337063054,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,-0.0001773049533330906,0.0010327799089511148,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),0.0,0.0,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,-0.008544718660245398,0.003298992194859515,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,0.000171060136579948,0.00020950502497563212,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,-0.007229485182856543,0.0034480274954194557,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,0.0004055089375567422,0.0007081313306028913,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-2.2204460492503132e-17,9.67869993826625e-17,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,-0.0012889169174494675,0.001287643050007437,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-0.0013950081107530598,0.0003830795449817022,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,-0.0049058718984107295,0.002236582916704491,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,-0.0013053192980684303,0.0010652030354305997,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-2.2204460492503132e-17,6.66133814775094e-17,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,0.01691774644927769,0.02250313502306805,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,0.11687173386151702,0.05861735973409947,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,-0.017790662550203083,0.01208519662735827,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,0.0034668217046064957,0.0028058886202411556,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),0.0,1.458158653440533e-16,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,0.005198598980627783,0.0014521357025327048,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,0.007184668479100237,0.002632368870988993,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,0.0020165430524417384,0.0007930793857639899,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,0.0030412081488819962,0.0013316750917766003,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-1.9984014443252818e-16,2.2093159237770884e-16,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,-2.2204460492503132e-17,2.2093159237770887e-16,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,0.00015293627530474919,0.0003058725506093318,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,-6.661338147750939e-17,2.9036099814798757e-16,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,0.0003058725506093651,0.00037461583765823885,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),0.0,0.0,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,-0.004317106981858454,0.0003450816232474505,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-6.661338147750939e-17,2.1181705310112557e-16,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,-0.004304578999061582,0.00037895002899103393,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,-1.3322676295501878e-16,2.8435583831733386e-16,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),8.881784197001253e-17,3.607797795906347e-16,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,GDA,-0.04127020531265749,0.011547003743290879,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,VPD_medio_acum,-0.07768011430535203,0.029684022750536856,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,IFN_acum,0.01329282769478885,0.0031896544886890654,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,peso_baya,-0.009074585567700943,0.004235556575985494,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),123,rendimiento(ton/ha),-4.4408920985006264e-17,1.5059797815742442e-16,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,-0.002430283655381288,0.001718867522236949,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,0.0006857487323802036,0.000373040807315676,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,3.847954192469083e-05,0.0020608273138806596,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,0.02655322297654633,0.023216156866926303,20
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),1.1102230246251566e-17,7.771561172376097e-17,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,0.004096379846244935,0.00282332611303322,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,-2.220446049250313e-16,3.8459253727671276e-16,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,0.003915122830294782,0.002958676453808384,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,0.0009381338852241017,0.0005398195530649573,20
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),-2.220446049250313e-16,3.8459253727671276e-16,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,0.0015835876934042036,0.0030081804727669476,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,9.682393933936884e-05,0.0017312405840473348,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,-5.277085164294704e-05,0.005645974880835632,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,-0.014409068917207007,0.01090916351895523,20
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),-1.1102230246251566e-17,3.33066907387547e-17,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,0.001261506332167117,0.0019582052203586937,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,6.925782427469329e-05,0.00012110425395519688,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,0.002134993339934099,0.001778995790411598,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,-0.0003826609644659529,0.0025516017204714686,20
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),1.1102230246251566e-17,4.839349969133125e-17,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,-0.003882129212634089,0.002397110102746761,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,0.00022043456267500927,0.00024755640910273976,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,-0.0036567471947326568,0.0016402203287838948,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,0.000615371368250861,0.00026486226174616997,20
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),3.3306690738754695e-17,2.5583354594356043e-16,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,-0.0013277149497775253,0.0006203805683660926,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,-0.003241419269820178,0.0011601718698612436,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,0.00012643568629103764,0.0013991566221779946,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,-0.002029012905773364,0.0018884469881418084,20
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),2.2204460492503132e-17,2.318213734067276e-16,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,0.006301801369264765,0.013536068886137268,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,0.06019606343276679,0.04497443411317418,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,-0.010701343179057788,0.007675841956637076,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,0.0023028158298320778,0.0014334982286908682,20
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),2.1094237467877973e-16,7.771561172376097e-17,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,-0.001397325205321953,0.0006789295048909183,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,0.0014082463053549598,0.0012198595022208884,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,-0.004478079578570221,0.0017695703754614762,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,-0.001723411564933075,0.0009848842564459098,20
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),-3.164135620181696e-16,2.538383584476928e-16,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,0.0032413599665418015,0.0017184814419879124,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,0.00022129585451113876,0.0002710309628730084,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,0.0026791251856160604,0.001488300253938502,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,2.092998721738848e-05,0.0006816453914381928,20
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),-4.440892098500626e-16,0.0,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,-0.00552601655011511,0.0028967846298817773,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,4.4408920985006264e-17,3.4111139459141386e-16,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,-0.00575320582628025,0.003071093209704236,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,0.0,2.808666774861361e-16,20
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),-1.3322676295501878e-16,3.1714313080323685e-16,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,GDA,-0.043979263315199885,0.02229044497854515,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,VPD_medio_acum,-0.06471988832134341,0.043862806013929,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,IFN_acum,0.008970454360644758,0.006023728855845088,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,peso_baya,-0.00853773109449461,0.004809807810932387,20
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|rendimiento(ton/ha),2026,rendimiento(ton/ha),-9.992007221626409e-17,2.4800503765841285e-16,20

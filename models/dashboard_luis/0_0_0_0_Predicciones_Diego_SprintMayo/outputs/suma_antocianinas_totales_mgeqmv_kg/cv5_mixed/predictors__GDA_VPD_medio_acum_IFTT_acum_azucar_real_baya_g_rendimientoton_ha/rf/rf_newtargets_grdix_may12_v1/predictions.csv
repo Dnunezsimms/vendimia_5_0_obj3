@@ -1,0 +1,85 @@
+fecha,variedad,fundo,SUMA_ANTOCIANINAS_TOTALES(mgEqMv/Kg),prediction,subset,split_id,method,predictors,n_predictors,seed
+2025-03-21,Cabernet Sauvignon,IDAHUE,657.4224037701597,855.1694343890566,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-03-28,Cabernet Sauvignon,IDAHUE,735.5641258136247,737.4333473714237,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-03-17,Cabernet Sauvignon,LOURDES,821.480153163646,837.4356642819619,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-15,Cabernet Sauvignon,NILAHUE,1085.275430984602,1038.9341268885073,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-03,Carmenere,PEUMO,993.0984661310986,970.4185725724346,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-03-31,Carmenere,VILLA ALEGRE,1290.874054641833,1189.0391530091426,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-04,Cabernet Sauvignon,IDAHUE,616.9931550506474,758.1686306223168,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-03-31,Cabernet Sauvignon,LOURDES,666.8168263019196,896.1374017167727,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-30,Cabernet Sauvignon,NILAHUE,1047.957713162254,1026.4939111765432,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-03-25,Carmenere,LOURDES,964.381337416364,893.0758410481715,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-30,Carmenere,PEUMO,828.329690885678,904.5280154910942,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-04,Carmenere,VILLA ALEGRE,1091.234564864252,1035.2390793855602,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-02,Cabernet Sauvignon,KEULE,1093.808172458523,902.128353738891,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-10,Cabernet Sauvignon,KEULE,985.1079282473172,927.0551503895229,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-07,Cabernet Sauvignon,LOURDES,707.2645692330344,920.076627609706,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-15,Carmenere,LOURDES,684.6868570235135,990.4539788078288,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-03-17,Carmenere,VILLA ALEGRE,1378.232724678032,1005.550499987042,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-03-24,Carmenere,VILLA ALEGRE,1455.388872786469,1029.5264655649896,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-03-26,Cabernet Sauvignon,KEULE,884.7987844354057,961.2397976754003,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-01,Cabernet Sauvignon,NILAHUE,854.2077821493255,1010.1595804886223,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-08,Cabernet Sauvignon,NILAHUE,1173.685487780124,1020.4272320715887,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-03-18,Carmenere,LOURDES,810.4224214171898,1091.0005776325916,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-01,Carmenere,LOURDES,1099.845494075163,744.7522155696538,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-11,Cabernet Sauvignon,IDAHUE,708.2571943650612,925.160758993517,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-03-19,Cabernet Sauvignon,KEULE,906.3977880229704,939.8708813418978,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-03-24,Cabernet Sauvignon,LOURDES,766.0107632059209,874.5304163143551,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-17,Carmenere,PEUMO,908.9687535870124,930.8056388416801,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-05-06,Carmenere,PEUMO,858.6874757604259,1034.5550126946582,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,42
+2025-04-11,Cabernet Sauvignon,IDAHUE,708.2571943650612,844.9270468311747,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-17,Cabernet Sauvignon,LOURDES,821.480153163646,854.1025833107122,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-24,Cabernet Sauvignon,LOURDES,766.0107632059209,838.3355414208986,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-08,Cabernet Sauvignon,NILAHUE,1173.685487780124,985.5936047486375,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-25,Carmenere,LOURDES,964.381337416364,841.5566149235306,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-31,Carmenere,VILLA ALEGRE,1290.874054641833,1137.5509442773982,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-04,Cabernet Sauvignon,IDAHUE,616.9931550506474,748.7841401511906,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-19,Cabernet Sauvignon,KEULE,906.3977880229704,929.6931349842664,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-31,Cabernet Sauvignon,LOURDES,666.8168263019196,914.9316135867132,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-18,Carmenere,LOURDES,810.4224214171898,1019.7565848299004,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-17,Carmenere,PEUMO,908.9687535870124,883.2718431566976,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-17,Carmenere,VILLA ALEGRE,1378.232724678032,1143.5159821518562,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-21,Cabernet Sauvignon,IDAHUE,657.4224037701597,797.316937860689,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-26,Cabernet Sauvignon,KEULE,884.7987844354057,898.9874416158975,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-02,Cabernet Sauvignon,KEULE,1093.808172458523,937.431724243964,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-15,Carmenere,LOURDES,684.6868570235135,1030.8054288161738,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-30,Carmenere,PEUMO,828.329690885678,968.9036516511323,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-05-06,Carmenere,PEUMO,858.6874757604259,1072.2681962381257,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-28,Cabernet Sauvignon,IDAHUE,735.5641258136247,704.2374277385173,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-10,Cabernet Sauvignon,KEULE,985.1079282473172,996.2856914282758,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-01,Cabernet Sauvignon,NILAHUE,854.2077821493255,1109.0537221559161,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-01,Carmenere,LOURDES,1099.845494075163,746.1400407751604,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-04,Carmenere,VILLA ALEGRE,1091.234564864252,975.4014866386117,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-07,Cabernet Sauvignon,LOURDES,707.2645692330344,864.144994755559,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-15,Cabernet Sauvignon,NILAHUE,1085.275430984602,1010.9664453422101,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-30,Cabernet Sauvignon,NILAHUE,1047.957713162254,979.3557704098911,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-04-03,Carmenere,PEUMO,993.0984661310986,956.2340169180095,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-24,Carmenere,VILLA ALEGRE,1455.388872786469,1171.6841879999465,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,123
+2025-03-19,Cabernet Sauvignon,KEULE,906.3977880229704,950.0692141250606,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-03-17,Cabernet Sauvignon,LOURDES,821.480153163646,867.7744860248572,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-03-31,Cabernet Sauvignon,LOURDES,666.8168263019196,908.235746865206,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-30,Cabernet Sauvignon,NILAHUE,1047.957713162254,1014.0743287048211,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-03-24,Carmenere,VILLA ALEGRE,1455.388872786469,1083.9727846588025,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-03-31,Carmenere,VILLA ALEGRE,1290.874054641833,1060.165554143807,mixed,1,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-03-24,Cabernet Sauvignon,LOURDES,766.0107632059209,908.5699409286133,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-07,Cabernet Sauvignon,LOURDES,707.2645692330344,862.108456710039,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-15,Cabernet Sauvignon,NILAHUE,1085.275430984602,1049.1858854168022,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-03-18,Carmenere,LOURDES,810.4224214171898,1095.583763841896,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-17,Carmenere,PEUMO,908.9687535870124,867.5234563490753,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-04,Carmenere,VILLA ALEGRE,1091.234564864252,907.4054269069497,mixed,2,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-03-28,Cabernet Sauvignon,IDAHUE,735.5641258136247,718.8119209593003,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-02,Cabernet Sauvignon,KEULE,1093.808172458523,879.0616293780756,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-01,Cabernet Sauvignon,NILAHUE,854.2077821493255,1061.0074176131527,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-03-25,Carmenere,LOURDES,964.381337416364,794.451683882889,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-01,Carmenere,LOURDES,1099.845494075163,717.2021655410135,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-03-17,Carmenere,VILLA ALEGRE,1378.232724678032,964.7926568667616,mixed,3,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-03-21,Cabernet Sauvignon,IDAHUE,657.4224037701597,857.6797124569291,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-04,Cabernet Sauvignon,IDAHUE,616.9931550506474,812.9825584335248,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-08,Cabernet Sauvignon,NILAHUE,1173.685487780124,977.5212237838442,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-15,Carmenere,LOURDES,684.6868570235135,1054.707456637137,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-03,Carmenere,PEUMO,993.0984661310986,993.5379928242099,mixed,4,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-11,Cabernet Sauvignon,IDAHUE,708.2571943650612,954.8516597364168,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-03-26,Cabernet Sauvignon,KEULE,884.7987844354057,939.779728712136,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-10,Cabernet Sauvignon,KEULE,985.1079282473172,965.3698454464469,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-04-30,Carmenere,PEUMO,828.329690885678,959.4255602655604,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026
+2025-05-06,Carmenere,PEUMO,858.6874757604259,1051.323849813989,mixed,5,CV5,GDA|VPD_medio_acum|IFTT_acum|azucar_real_baya_g|rendimiento(ton/ha),5,2026

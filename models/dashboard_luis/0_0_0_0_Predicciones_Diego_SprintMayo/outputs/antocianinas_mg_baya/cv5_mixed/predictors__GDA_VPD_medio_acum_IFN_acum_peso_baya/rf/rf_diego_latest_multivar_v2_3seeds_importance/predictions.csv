@@ -1,0 +1,214 @@
+fecha,variedad,fundo,antocianinas(mg/baya),prediction,subset,split_id,method,predictors,n_predictors,seed
+2025-03-11,Cabernet Sauvignon,LOURDES,2.2381852500000003,2.902357078104629,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-17,Cabernet Sauvignon,LOURDES,2.086401625,2.8630725774839503,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-07,Cabernet Sauvignon,LOURDES,2.29845,2.6710839383572185,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-26,Cabernet Sauvignon,NILAHUE,3.0842805,3.089837446245542,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-01,Cabernet Sauvignon,NILAHUE,3.3433741249999995,3.4291433720315014,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-15,Cabernet Sauvignon,NILAHUE,2.464182,2.4762502286247723,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-02-27,Cabernet Sauvignon,SAN ADOLFO,1.50448375,1.8447147428628337,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-18,Carmenere,LOURDES,3.59898,3.162284932364189,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-19,Carmenere,PALO SANTO,4.07652,3.503818122943945,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-25,Carmenere,PEUMO,2.605603,2.827776686838278,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-05-06,Carmenere,PEUMO,3.641127,3.2839266390509456,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-22,Carmenere,QUINTA MAIPO,3.0813037500000005,3.152972809805352,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-05-05,Carmenere,RAUCO,3.42311725,3.2219713113024815,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-31,Carmenere,VILLA ALEGRE,3.801364875,4.027057052168839,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-04,Carmenere,VILLA ALEGRE,3.446898,3.1348775883778695,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-17,Cabernet Sauvignon,IDAHUE,1.74895,1.7692271396562322,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-10,Cabernet Sauvignon,KEULE,2.545767,1.863676116535125,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-19,Cabernet Sauvignon,KEULE,2.50231275,2.294037052620384,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-02,Cabernet Sauvignon,KEULE,2.392560625,1.9585430747254375,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-18,Cabernet Sauvignon,NILAHUE,3.744678,2.7386233992364883,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-19,Cabernet Sauvignon,QUEBRADA DE AGUA,3.1299975,2.765176019704847,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-24,Cabernet Sauvignon,SAN ADOLFO,1.46993,1.8031514767092995,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-25,Carmenere,LOURDES,2.9711535,3.462359555615845,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-11,Carmenere,PALO SANTO,3.171672,2.619568336377453,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-15,Carmenere,PALO SANTO,3.920361375,3.1739759492409805,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-10,Carmenere,QUINTA MAIPO,2.46619975,2.218094761751901,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-07,Carmenere,QUINTA MAIPO,3.520391875,4.00739341459115,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-02,Carmenere,RAUCO,4.27631575,3.6311952417059303,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-17,Carmenere,VILLA ALEGRE,4.90439775,4.042285910115869,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-04,Cabernet Sauvignon,IDAHUE,1.3630925,1.7623799951929384,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-02-27,Cabernet Sauvignon,KEULE,2.12333275,2.0355582940478247,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-26,Cabernet Sauvignon,KEULE,1.99232075,2.516886476949244,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-24,Cabernet Sauvignon,LOURDES,2.21774875,2.5465824497321368,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-03,Cabernet Sauvignon,QUEBRADA DE AGUA,2.113097,2.4552349230153006,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-10,Cabernet Sauvignon,SAN ADOLFO,1.847832,1.7147918374972073,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-31,Cabernet Sauvignon,SAN ADOLFO,2.1408345,1.7563120418158087,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-04,Carmenere,LOURDES,2.9536290000000003,3.6374262752942514,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-11,Carmenere,LOURDES,3.1210410000000004,3.630594351773661,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-15,Carmenere,LOURDES,2.263086,4.0286888038532345,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-01,Carmenere,PALO SANTO,4.044547499999999,3.2911506004711475,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-14,Carmenere,QUINTA MAIPO,2.9872885,2.7360362198750336,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-02-27,Carmenere,VILLA ALEGRE,4.027289000000001,2.6270046590733425,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-24,Carmenere,VILLA ALEGRE,4.65295075,4.202104936283139,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-02-24,Cabernet Sauvignon,IDAHUE,1.6072245,1.9553207229464677,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-21,Cabernet Sauvignon,IDAHUE,1.7799993749999998,2.4753509806074394,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-28,Cabernet Sauvignon,IDAHUE,1.4793975,1.7891005845857426,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-31,Cabernet Sauvignon,LOURDES,2.2092262500000004,3.2320490256869783,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-05,Cabernet Sauvignon,QUEBRADA DE AGUA,2.79048,2.833498604474503,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-27,Cabernet Sauvignon,QUEBRADA DE AGUA,2.641786875,2.6895084143705326,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-10,Cabernet Sauvignon,QUEBRADA DE AGUA,2.502038,2.676064640759377,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-01,Carmenere,LOURDES,3.011736,2.771636101873629,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-30,Carmenere,PALO SANTO,4.08499,3.419999322649685,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-05-13,Carmenere,PALO SANTO,3.38773575,2.76574918571911,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-03,Carmenere,PEUMO,3.3828375000000004,3.3522171349051,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-30,Carmenere,PEUMO,2.3923243749999994,2.8203220505736137,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-17,Carmenere,RAUCO,3.1461814999999995,3.2849760687620915,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-25,Carmenere,RAUCO,3.818784375,4.1417714347951895,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-11,Cabernet Sauvignon,IDAHUE,1.743721875,1.9910636665417731,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-10,Cabernet Sauvignon,KEULE,2.677460625,2.2741352618251685,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-08,Cabernet Sauvignon,NILAHUE,2.61576875,3.1668024931026375,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-30,Cabernet Sauvignon,NILAHUE,2.486019375,3.1449861784185043,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-12,Cabernet Sauvignon,QUEBRADA DE AGUA,2.6010425,2.5702680576709462,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-17,Cabernet Sauvignon,SAN ADOLFO,2.138346,1.7043937077673539,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-07,Cabernet Sauvignon,SAN ADOLFO,1.7882445,1.8830173252185778,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-17,Carmenere,PEUMO,2.606373,2.6483154814908074,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-04-17,Carmenere,PEUMO,2.44161225,2.6050376861454354,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-17,Carmenere,QUINTA MAIPO,3.156531,3.4287575386948554,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-05-05,Carmenere,QUINTA MAIPO,3.05628225,3.445966969890085,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-12,Carmenere,RAUCO,2.496032,2.962260902846823,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-18,Carmenere,RAUCO,2.838980375,3.39541777848424,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-03-10,Carmenere,VILLA ALEGRE,5.3456445,3.8071187195292335,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,42
+2025-02-24,Cabernet Sauvignon,IDAHUE,1.6072245,1.9499623829463326,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-21,Cabernet Sauvignon,IDAHUE,1.7799993749999998,2.4941648890305497,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-02,Cabernet Sauvignon,KEULE,2.392560625,2.1034311765403664,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-07,Cabernet Sauvignon,LOURDES,2.29845,2.6366993463786104,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-19,Cabernet Sauvignon,QUEBRADA DE AGUA,3.1299975,2.8343038493192587,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-27,Cabernet Sauvignon,QUEBRADA DE AGUA,2.641786875,2.761076534939535,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-07,Cabernet Sauvignon,SAN ADOLFO,1.7882445,1.897281137435283,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-11,Carmenere,PALO SANTO,3.171672,2.874547173146385,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-30,Carmenere,PALO SANTO,4.08499,3.4276051609524005,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-30,Carmenere,PEUMO,2.3923243749999994,2.7335364450074406,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-14,Carmenere,QUINTA MAIPO,2.9872885,3.027819254568722,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-22,Carmenere,QUINTA MAIPO,3.0813037500000005,3.2865408369343303,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-12,Carmenere,RAUCO,2.496032,2.8447380075094566,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-17,Carmenere,RAUCO,3.1461814999999995,3.295796695699061,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-25,Carmenere,RAUCO,3.818784375,4.046610449875922,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-28,Cabernet Sauvignon,IDAHUE,1.4793975,1.7569346719219834,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-11,Cabernet Sauvignon,IDAHUE,1.743721875,1.8444103283290156,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-10,Cabernet Sauvignon,KEULE,2.545767,1.9853205610057754,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-19,Cabernet Sauvignon,KEULE,2.50231275,2.254242641529676,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-10,Cabernet Sauvignon,KEULE,2.677460625,2.2261860218275453,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-30,Cabernet Sauvignon,NILAHUE,2.486019375,3.0236182279406703,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-10,Cabernet Sauvignon,SAN ADOLFO,1.847832,1.7785727767400605,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-01,Carmenere,LOURDES,3.011736,2.499371143617972,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-25,Carmenere,PEUMO,2.605603,2.720543615989303,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-05-06,Carmenere,PEUMO,3.641127,3.277975633555036,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-07,Carmenere,QUINTA MAIPO,3.520391875,3.950957264713541,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-05-05,Carmenere,QUINTA MAIPO,3.05628225,3.415915749987488,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-18,Carmenere,RAUCO,2.838980375,3.267408113352254,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-02,Carmenere,RAUCO,4.27631575,3.775557469420434,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-17,Cabernet Sauvignon,LOURDES,2.086401625,2.6789837008170068,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-24,Cabernet Sauvignon,LOURDES,2.21774875,2.7407724075173934,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-18,Cabernet Sauvignon,NILAHUE,3.744678,2.8060120788382066,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-08,Cabernet Sauvignon,NILAHUE,2.61576875,2.7471261837606242,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-05,Cabernet Sauvignon,QUEBRADA DE AGUA,2.79048,2.8377834102630617,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-17,Cabernet Sauvignon,SAN ADOLFO,2.138346,1.7380673336007333,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-24,Cabernet Sauvignon,SAN ADOLFO,1.46993,1.7553000194585358,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-25,Carmenere,LOURDES,2.9711535,3.3343345561657483,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-15,Carmenere,LOURDES,2.263086,3.7038791386647123,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-19,Carmenere,PALO SANTO,4.07652,3.5465837277731262,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-05-13,Carmenere,PALO SANTO,3.38773575,2.70713830007079,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-03,Carmenere,PEUMO,3.3828375000000004,3.2790859453355203,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-17,Carmenere,PEUMO,2.44161225,2.604705001855905,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-17,Carmenere,VILLA ALEGRE,4.90439775,4.081502624354886,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-04,Cabernet Sauvignon,IDAHUE,1.3630925,1.826269855231491,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-11,Cabernet Sauvignon,LOURDES,2.2381852500000003,2.760660121893704,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-26,Cabernet Sauvignon,NILAHUE,3.0842805,2.988462881395833,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-01,Cabernet Sauvignon,NILAHUE,3.3433741249999995,3.5749220734306513,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-03,Cabernet Sauvignon,QUEBRADA DE AGUA,2.113097,2.2679679454477677,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-10,Cabernet Sauvignon,QUEBRADA DE AGUA,2.502038,2.7595909967868826,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-02-27,Cabernet Sauvignon,SAN ADOLFO,1.50448375,1.7306381518301832,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-04,Carmenere,LOURDES,2.9536290000000003,3.428537260694903,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-15,Carmenere,PALO SANTO,3.920361375,3.3067659200223285,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-17,Carmenere,PEUMO,2.606373,2.645854410355157,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-10,Carmenere,QUINTA MAIPO,2.46619975,2.250407911056433,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-05-05,Carmenere,RAUCO,3.42311725,3.3292549976176775,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-10,Carmenere,VILLA ALEGRE,5.3456445,3.9480121163116078,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-31,Carmenere,VILLA ALEGRE,3.801364875,3.8439020600840283,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-17,Cabernet Sauvignon,IDAHUE,1.74895,2.007200234400867,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-02-27,Cabernet Sauvignon,KEULE,2.12333275,2.0105678334895183,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-26,Cabernet Sauvignon,KEULE,1.99232075,2.503382157589257,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-31,Cabernet Sauvignon,LOURDES,2.2092262500000004,3.0273536002451524,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-15,Cabernet Sauvignon,NILAHUE,2.464182,2.7082945910090794,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-12,Cabernet Sauvignon,QUEBRADA DE AGUA,2.6010425,2.545823652333658,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-31,Cabernet Sauvignon,SAN ADOLFO,2.1408345,1.733162807009116,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-11,Carmenere,LOURDES,3.1210410000000004,3.3471352822410334,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-18,Carmenere,LOURDES,3.59898,3.35137858098814,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-01,Carmenere,PALO SANTO,4.044547499999999,3.357398941911051,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-17,Carmenere,QUINTA MAIPO,3.156531,3.4435831802862276,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-02-27,Carmenere,VILLA ALEGRE,4.027289000000001,2.570338539027391,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-03-24,Carmenere,VILLA ALEGRE,4.65295075,3.9721778486987525,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-04,Carmenere,VILLA ALEGRE,3.446898,3.0410396383635128,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,123
+2025-04-10,Cabernet Sauvignon,KEULE,2.677460625,2.243741381201005,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-11,Cabernet Sauvignon,LOURDES,2.2381852500000003,2.698568815654148,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-15,Cabernet Sauvignon,NILAHUE,2.464182,2.3561187387996365,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-12,Cabernet Sauvignon,QUEBRADA DE AGUA,2.6010425,2.584635023985959,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-27,Cabernet Sauvignon,QUEBRADA DE AGUA,2.641786875,2.7171619396291864,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-31,Cabernet Sauvignon,SAN ADOLFO,2.1408345,1.7735532892629615,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-07,Cabernet Sauvignon,SAN ADOLFO,1.7882445,1.7735532892629615,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-25,Carmenere,LOURDES,2.9711535,3.7084939059780946,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-01,Carmenere,PALO SANTO,4.044547499999999,3.384157534876549,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-17,Carmenere,PEUMO,2.606373,2.6416895095736006,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-17,Carmenere,QUINTA MAIPO,3.156531,3.52059501935134,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-22,Carmenere,QUINTA MAIPO,3.0813037500000005,3.1440953983656965,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-25,Carmenere,RAUCO,3.818784375,3.9581026118115807,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-24,Carmenere,VILLA ALEGRE,4.65295075,4.046046118680759,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-04,Carmenere,VILLA ALEGRE,3.446898,3.0544428953352636,mixed,1,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-17,Cabernet Sauvignon,IDAHUE,1.74895,2.1660595574344423,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-28,Cabernet Sauvignon,IDAHUE,1.4793975,1.7857597207226745,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-11,Cabernet Sauvignon,IDAHUE,1.743721875,2.164014198061985,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-17,Cabernet Sauvignon,LOURDES,2.086401625,2.65515555282873,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-08,Cabernet Sauvignon,NILAHUE,2.61576875,2.9652714527280764,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-19,Cabernet Sauvignon,QUEBRADA DE AGUA,3.1299975,2.8610449699136,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-10,Cabernet Sauvignon,SAN ADOLFO,1.847832,1.7813866931040911,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-04,Carmenere,LOURDES,2.9536290000000003,3.3768016789484863,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-11,Carmenere,PALO SANTO,3.171672,2.936281203506257,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-30,Carmenere,PALO SANTO,4.08499,3.3305053654279506,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-03,Carmenere,PEUMO,3.3828375000000004,3.430312686855579,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-05-06,Carmenere,PEUMO,3.641127,3.4502147562062397,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-07,Carmenere,QUINTA MAIPO,3.520391875,4.0982822522893105,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-17,Carmenere,VILLA ALEGRE,4.90439775,4.013585864786909,mixed,2,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-21,Cabernet Sauvignon,IDAHUE,1.7799993749999998,2.668113433710351,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-10,Cabernet Sauvignon,KEULE,2.545767,1.8127091609979937,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-26,Cabernet Sauvignon,KEULE,1.99232075,2.603869331654031,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-02,Cabernet Sauvignon,KEULE,2.392560625,1.8889488505582324,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-18,Cabernet Sauvignon,NILAHUE,3.744678,2.7913223286112445,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-03,Cabernet Sauvignon,QUEBRADA DE AGUA,2.113097,2.699060336175012,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-10,Cabernet Sauvignon,QUEBRADA DE AGUA,2.502038,2.7196818674165346,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-15,Carmenere,LOURDES,2.263086,3.936259581113221,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-05-13,Carmenere,PALO SANTO,3.38773575,2.788856967862726,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-25,Carmenere,PEUMO,2.605603,2.909140634811897,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-17,Carmenere,PEUMO,2.44161225,2.5562154047245556,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-05-05,Carmenere,RAUCO,3.42311725,3.4802977719474173,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-02-27,Carmenere,VILLA ALEGRE,4.027289000000001,2.643310812656245,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-31,Carmenere,VILLA ALEGRE,3.801364875,3.967489245873932,mixed,3,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-04,Cabernet Sauvignon,IDAHUE,1.3630925,1.833057688708697,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-19,Cabernet Sauvignon,KEULE,2.50231275,2.36728442737472,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-31,Cabernet Sauvignon,LOURDES,2.2092262500000004,2.999466203644886,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-01,Cabernet Sauvignon,NILAHUE,3.3433741249999995,3.6114448709473876,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-05,Cabernet Sauvignon,QUEBRADA DE AGUA,2.79048,2.7446305181614346,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-17,Cabernet Sauvignon,SAN ADOLFO,2.138346,1.8341215190600852,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-24,Cabernet Sauvignon,SAN ADOLFO,1.46993,1.7698901191132457,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-11,Carmenere,LOURDES,3.1210410000000004,3.2515628479635925,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-18,Carmenere,LOURDES,3.59898,3.254842240533037,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-01,Carmenere,LOURDES,3.011736,2.689339301357267,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-15,Carmenere,PALO SANTO,3.920361375,3.2914862336382793,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-12,Carmenere,RAUCO,2.496032,2.820427600953559,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-18,Carmenere,RAUCO,2.838980375,3.138499147124239,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-10,Carmenere,VILLA ALEGRE,5.3456445,3.8687070202105502,mixed,4,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-02-24,Cabernet Sauvignon,IDAHUE,1.6072245,1.9657947473493258,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-02-27,Cabernet Sauvignon,KEULE,2.12333275,2.1597922523201447,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-24,Cabernet Sauvignon,LOURDES,2.21774875,2.65271751681869,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-07,Cabernet Sauvignon,LOURDES,2.29845,2.620366969816317,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-26,Cabernet Sauvignon,NILAHUE,3.0842805,3.0926520771985713,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-30,Cabernet Sauvignon,NILAHUE,2.486019375,3.0122720984456666,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-02-27,Cabernet Sauvignon,SAN ADOLFO,1.50448375,1.8602044981304509,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-19,Carmenere,PALO SANTO,4.07652,3.4174272351227613,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-30,Carmenere,PEUMO,2.3923243749999994,2.832277498651556,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-03-10,Carmenere,QUINTA MAIPO,2.46619975,2.21473452651244,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-14,Carmenere,QUINTA MAIPO,2.9872885,3.1131127276627937,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-05-05,Carmenere,QUINTA MAIPO,3.05628225,3.3081270526804953,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-02,Carmenere,RAUCO,4.27631575,3.7550327447209004,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026
+2025-04-17,Carmenere,RAUCO,3.1461814999999995,3.372599746714757,mixed,5,CV5,GDA|VPD_medio_acum|IFN_acum|peso_baya,4,2026

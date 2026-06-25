@@ -1,0 +1,166 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,shap_mean_abs
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,GDA,0.3147144190282047
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,VPD_medio_acum,0.2549987508228107
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,IFN_acum,0.03967496757196861
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,peso_baya,0.21866856693845574
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,azucar_real_baya_g,0.39989500513992376
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,GDA,0.18757922002490776
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,VPD_medio_acum,0.37582492720515037
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,IFN_acum,0.1458808643618413
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,peso_baya,0.0253060225645185
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,azucar_real_baya_g,0.2696613252752599
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,GDA,0.0992613559921545
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,VPD_medio_acum,0.6633247525718883
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,IFN_acum,0.05779798437981029
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,peso_baya,0.03574811242863603
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,azucar_real_baya_g,0.36022061159754143
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,GDA,0.22375539101812136
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,VPD_medio_acum,0.42606761894890033
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,IFN_acum,0.02588321129759355
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,peso_baya,0.24777240182172908
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,azucar_real_baya_g,0.06368906944660162
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,GDA,0.1606992298514578
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,VPD_medio_acum,0.17540813510322287
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,IFN_acum,0.018671681541603848
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,peso_baya,0.027159729667375416
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,azucar_real_baya_g,0.1116295006503209
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,GDA,0.47801632811686806
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,VPD_medio_acum,0.29876676710298566
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,IFN_acum,0.028270205598594247
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,peso_baya,0.014998218727930598
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,azucar_real_baya_g,0.23269030877742977
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,GDA,0.20209567648918192
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,VPD_medio_acum,0.37006202707981667
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,IFN_acum,0.04809760331640602
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,peso_baya,0.01475228648224444
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,azucar_real_baya_g,0.14763589099226535
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,GDA,0.20622863714593476
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,VPD_medio_acum,0.3996053743912698
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,IFN_acum,0.051031963695000314
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,peso_baya,0.0351624799086643
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,azucar_real_baya_g,0.18297415462140543
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,GDA,0.21512993643517464
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,VPD_medio_acum,0.41769508985387693
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,IFN_acum,0.02937671788850955
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,peso_baya,0.035479466391251574
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,azucar_real_baya_g,0.188852370793686
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,GDA,0.07774744205245239
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,VPD_medio_acum,1.1874095863350072
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,IFN_acum,0.10240971419903276
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,peso_baya,0.049743300370442056
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,azucar_real_baya_g,0.07225903478877187
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,GDA,0.24530729764685846
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,VPD_medio_acum,0.3356576584675422
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,IFN_acum,0.02077091164494959
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,peso_baya,0.06868311530554433
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,42,azucar_real_baya_g,0.12536379049467936
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,GDA,0.2915745750722972
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,VPD_medio_acum,0.28342737674985624
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,IFN_acum,0.029664765701584325
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,peso_baya,0.2296564269056337
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,azucar_real_baya_g,0.38294398657124756
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,GDA,0.16409923544314664
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,VPD_medio_acum,0.36362748889365376
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,IFN_acum,0.14193869614444363
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,peso_baya,0.044671020925270886
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,azucar_real_baya_g,0.23566006155795802
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,GDA,0.11093413212351763
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,VPD_medio_acum,0.6157132591899303
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,IFN_acum,0.07510414952511314
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,peso_baya,0.01925147999852631
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,azucar_real_baya_g,0.38527047600398673
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,GDA,0.2556735803290459
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,VPD_medio_acum,0.360622233586993
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,IFN_acum,0.023527908300953384
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,peso_baya,0.26605909417670676
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,azucar_real_baya_g,0.0621591665742936
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,GDA,0.17363013394493557
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,VPD_medio_acum,0.1736213076072212
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,IFN_acum,0.03411670449884644
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,peso_baya,0.04157300181033537
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,azucar_real_baya_g,0.1264881054599349
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,GDA,0.458544022636247
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,VPD_medio_acum,0.2904182777145759
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,IFN_acum,0.019280006569702357
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,peso_baya,0.022613032268402902
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,azucar_real_baya_g,0.22748789444255044
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,GDA,0.2181242280830651
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,VPD_medio_acum,0.41390256889762167
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,IFN_acum,0.05037417442350356
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,peso_baya,0.016440567614216705
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,azucar_real_baya_g,0.13551034905878742
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,GDA,0.23654864497567876
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,VPD_medio_acum,0.42441578888622383
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,IFN_acum,0.037706165235133426
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,peso_baya,0.0650658742710623
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,azucar_real_baya_g,0.19409252011081257
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,GDA,0.2214380689000741
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,VPD_medio_acum,0.4241442812625062
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,IFN_acum,0.03655809083944978
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,peso_baya,0.05035796985312064
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,azucar_real_baya_g,0.20543223222656357
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,GDA,0.07006916166425146
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,VPD_medio_acum,1.172390548917437
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,IFN_acum,0.10582449027108498
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,peso_baya,0.04492169301655701
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,azucar_real_baya_g,0.07275788610846115
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,GDA,0.23477425212333056
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,VPD_medio_acum,0.3492730160949244
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,IFN_acum,0.02015961375326852
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,peso_baya,0.07671000566580251
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,123,azucar_real_baya_g,0.13419532864112174
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,GDA,0.26150950402751666
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,VPD_medio_acum,0.26116409246089883
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,IFN_acum,0.028457033144179644
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,peso_baya,0.24713682559196756
+taninos_mg_baya,lofo_mixed,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,azucar_real_baya_g,0.4146826161512129
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,GDA,0.17244734801345926
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,VPD_medio_acum,0.35046570646448694
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,IFN_acum,0.17095236937738548
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,peso_baya,0.041992326513243174
+taninos_mg_baya,lofo_mixed,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,azucar_real_baya_g,0.24818581559907493
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,GDA,0.09249827417432202
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,VPD_medio_acum,0.6672466597226548
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,IFN_acum,0.0732604891146436
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,peso_baya,0.031160303948142398
+taninos_mg_baya,lofo_mixed,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,azucar_real_baya_g,0.36844224846026513
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,GDA,0.2835030342744254
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,VPD_medio_acum,0.3442433202378859
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,IFN_acum,0.039536587694050225
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,peso_baya,0.22044993493520768
+taninos_mg_baya,lofo_mixed,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,azucar_real_baya_g,0.06641134606318484
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,GDA,0.14405697629730244
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,VPD_medio_acum,0.17363334121384014
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,IFN_acum,0.01889280302976772
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,peso_baya,0.023807884703874935
+taninos_mg_baya,lofo_mixed,mixed,PALO SANTO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,azucar_real_baya_g,0.11456578181942649
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,GDA,0.4790808042277592
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,VPD_medio_acum,0.27295577036369906
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,IFN_acum,0.024494798608617443
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,peso_baya,0.01491573982950683
+taninos_mg_baya,lofo_mixed,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,azucar_real_baya_g,0.23578126373926941
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,GDA,0.2386530285701001
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,VPD_medio_acum,0.37817965455173813
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,IFN_acum,0.05894897559822182
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,peso_baya,0.01541589240903441
+taninos_mg_baya,lofo_mixed,mixed,QUEBRADA DE AGUA,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,azucar_real_baya_g,0.12982454232049942
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,GDA,0.23856527924752727
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,VPD_medio_acum,0.4269340813243179
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,IFN_acum,0.05303067602261887
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,peso_baya,0.0402869880732673
+taninos_mg_baya,lofo_mixed,mixed,QUINTA MAIPO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,azucar_real_baya_g,0.17817011236400795
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,GDA,0.24320087496067058
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,VPD_medio_acum,0.4431513854512568
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,IFN_acum,0.04102853769588343
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,peso_baya,0.03163388624452899
+taninos_mg_baya,lofo_mixed,mixed,RAUCO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,azucar_real_baya_g,0.20142290753324502
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,GDA,0.0626512614822458
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,VPD_medio_acum,1.1837929670369773
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,IFN_acum,0.11904425384575877
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,peso_baya,0.06770841189069121
+taninos_mg_baya,lofo_mixed,mixed,SAN ADOLFO,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,azucar_real_baya_g,0.07041632429277772
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,GDA,0.24465448120022418
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,VPD_medio_acum,0.329938694988681
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,IFN_acum,0.012237216388976055
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,peso_baya,0.05584036905219477
+taninos_mg_baya,lofo_mixed,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFN_acum|peso_baya|azucar_real_baya_g,2026,azucar_real_baya_g,0.12884649616268032

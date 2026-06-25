@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA,1,56,15,0.6159468955953291,0.030750171530250836,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,2,CV5,GDA,1,57,14,0.8043958940954258,-0.29434910866051855,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,3,CV5,GDA,1,57,14,0.8260828470641266,-0.025886049621475227,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,4,CV5,GDA,1,57,14,0.6371271709311509,-0.15902398124813977,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,5,CV5,GDA,1,57,14,0.637544115857145,-0.4819470420512677,,,antocianinas_mg_baya,antocianinas(mg/baya),42
+rf,cv5_mixed,mixed,1,CV5,GDA,1,56,15,0.593462188507856,-0.042134763354943816,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,2,CV5,GDA,1,57,14,0.5393695953550993,-0.18715868312547146,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,3,CV5,GDA,1,57,14,0.6828297633528393,-0.08794667672902623,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,4,CV5,GDA,1,57,14,0.6764934801672461,0.07136900971254556,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,5,CV5,GDA,1,57,14,0.7621678083645634,-0.12384582128065014,,,antocianinas_mg_baya,antocianinas(mg/baya),123
+rf,cv5_mixed,mixed,1,CV5,GDA,1,56,15,0.5761685228835198,-0.1471483166907741,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,2,CV5,GDA,1,57,14,0.8147602082372153,-0.12224804624520269,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,3,CV5,GDA,1,57,14,0.5934547355427934,0.010962925330372908,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,4,CV5,GDA,1,57,14,0.7600385921274315,-0.05553316154273036,,,antocianinas_mg_baya,antocianinas(mg/baya),2026
+rf,cv5_mixed,mixed,5,CV5,GDA,1,57,14,0.5865391607224499,0.12913162033427095,,,antocianinas_mg_baya,antocianinas(mg/baya),2026

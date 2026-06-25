@@ -1,0 +1,16 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+antocianinas_mg_baya,cv5_mixed,mixed,1,CV5,GDA,42,GDA,0.040527902651784624,0.04614997980452522,20
+antocianinas_mg_baya,cv5_mixed,mixed,2,CV5,GDA,42,GDA,0.05346826700618075,0.09344967062475372,20
+antocianinas_mg_baya,cv5_mixed,mixed,3,CV5,GDA,42,GDA,0.008214584530758401,0.051721220379767556,20
+antocianinas_mg_baya,cv5_mixed,mixed,4,CV5,GDA,42,GDA,0.039977567919457384,0.060177829765956474,20
+antocianinas_mg_baya,cv5_mixed,mixed,5,CV5,GDA,42,GDA,-0.029298701941074583,0.048325072441376876,20
+antocianinas_mg_baya,cv5_mixed,mixed,1,CV5,GDA,123,GDA,0.03208636780864915,0.06524501491960814,20
+antocianinas_mg_baya,cv5_mixed,mixed,2,CV5,GDA,123,GDA,0.1309106865662637,0.0663284706853765,20
+antocianinas_mg_baya,cv5_mixed,mixed,3,CV5,GDA,123,GDA,0.06544319267045985,0.07382760632818779,20
+antocianinas_mg_baya,cv5_mixed,mixed,4,CV5,GDA,123,GDA,0.11749283361613809,0.08152978583134744,20
+antocianinas_mg_baya,cv5_mixed,mixed,5,CV5,GDA,123,GDA,0.03953259168336022,0.0852949083145058,20
+antocianinas_mg_baya,cv5_mixed,mixed,1,CV5,GDA,2026,GDA,0.10755871473924053,0.08723731691356876,20
+antocianinas_mg_baya,cv5_mixed,mixed,2,CV5,GDA,2026,GDA,0.029033783170235045,0.08114845854469785,20
+antocianinas_mg_baya,cv5_mixed,mixed,3,CV5,GDA,2026,GDA,0.0519096450453145,0.06712358417488484,20
+antocianinas_mg_baya,cv5_mixed,mixed,4,CV5,GDA,2026,GDA,0.007732143797314045,0.05040199409246178,20
+antocianinas_mg_baya,cv5_mixed,mixed,5,CV5,GDA,2026,GDA,0.10002820575344465,0.05817249507835907,20

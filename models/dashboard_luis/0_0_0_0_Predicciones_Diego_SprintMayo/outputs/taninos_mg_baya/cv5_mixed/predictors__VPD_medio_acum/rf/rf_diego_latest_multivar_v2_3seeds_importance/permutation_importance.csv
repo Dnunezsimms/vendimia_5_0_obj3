@@ -1,0 +1,16 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+taninos_mg_baya,cv5_mixed,mixed,1,CV5,VPD_medio_acum,42,VPD_medio_acum,0.24140132731554725,0.1946538700763915,20
+taninos_mg_baya,cv5_mixed,mixed,2,CV5,VPD_medio_acum,42,VPD_medio_acum,0.36637399098640333,0.18111219137471124,20
+taninos_mg_baya,cv5_mixed,mixed,3,CV5,VPD_medio_acum,42,VPD_medio_acum,0.39594516579767547,0.17243320417102834,20
+taninos_mg_baya,cv5_mixed,mixed,4,CV5,VPD_medio_acum,42,VPD_medio_acum,0.42166617904458825,0.14801232680667295,20
+taninos_mg_baya,cv5_mixed,mixed,5,CV5,VPD_medio_acum,42,VPD_medio_acum,0.49530978383292756,0.20700692731476333,20
+taninos_mg_baya,cv5_mixed,mixed,1,CV5,VPD_medio_acum,123,VPD_medio_acum,0.3889776526668796,0.13619377584129594,20
+taninos_mg_baya,cv5_mixed,mixed,2,CV5,VPD_medio_acum,123,VPD_medio_acum,0.3973047740538437,0.1529082537056654,20
+taninos_mg_baya,cv5_mixed,mixed,3,CV5,VPD_medio_acum,123,VPD_medio_acum,0.3889094368388667,0.179768879758966,20
+taninos_mg_baya,cv5_mixed,mixed,4,CV5,VPD_medio_acum,123,VPD_medio_acum,0.27145226949056755,0.1821850465463473,20
+taninos_mg_baya,cv5_mixed,mixed,5,CV5,VPD_medio_acum,123,VPD_medio_acum,0.07154779121285562,0.1165581335325839,20
+taninos_mg_baya,cv5_mixed,mixed,1,CV5,VPD_medio_acum,2026,VPD_medio_acum,0.40918689729120405,0.15075940742120242,20
+taninos_mg_baya,cv5_mixed,mixed,2,CV5,VPD_medio_acum,2026,VPD_medio_acum,0.4850670309018767,0.17479657660053477,20
+taninos_mg_baya,cv5_mixed,mixed,3,CV5,VPD_medio_acum,2026,VPD_medio_acum,-0.053335322557149976,0.15621044413288257,20
+taninos_mg_baya,cv5_mixed,mixed,4,CV5,VPD_medio_acum,2026,VPD_medio_acum,0.5003773606171836,0.21745746363471102,20
+taninos_mg_baya,cv5_mixed,mixed,5,CV5,VPD_medio_acum,2026,VPD_medio_acum,0.5249578396365762,0.14539903528284187,20

@@ -1,0 +1,85 @@
+fecha,variedad,fundo,SUMA_COMPUESTOS_FENOLICOS(mg/Kg),prediction,subset,split_id,method,predictors,n_predictors,seed
+2025-03-21,Cabernet Sauvignon,IDAHUE,192.3104533564517,224.6679466423698,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-03-28,Cabernet Sauvignon,IDAHUE,142.2366381486103,217.79560662389412,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-04,Cabernet Sauvignon,IDAHUE,131.2710712639733,216.33657922489894,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-11,Cabernet Sauvignon,IDAHUE,148.1700685734982,219.23140701695874,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-03-19,Cabernet Sauvignon,KEULE,224.0206599576962,215.91080786062662,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-03-26,Cabernet Sauvignon,KEULE,254.3014979513199,215.3945332593827,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-02,Cabernet Sauvignon,KEULE,263.369793685814,203.9552251356236,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-10,Cabernet Sauvignon,KEULE,256.2403824308656,208.45675776707765,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-03-17,Cabernet Sauvignon,LOURDES,236.2714922944679,203.24491107368354,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-03-24,Cabernet Sauvignon,LOURDES,261.1004253179083,195.00687438073416,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-03-31,Cabernet Sauvignon,LOURDES,205.4753601268426,179.44428209651406,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-07,Cabernet Sauvignon,LOURDES,195.1430659326359,169.47866401587686,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-03-18,Carmenere,LOURDES,144.3956889002626,189.74487308186679,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-03-25,Carmenere,LOURDES,166.358902028041,187.45765637920812,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-01,Carmenere,LOURDES,125.2006494105782,169.07367459003467,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-15,Carmenere,LOURDES,137.2066234174759,165.79767884405317,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-01,Cabernet Sauvignon,NILAHUE,161.2087996746199,232.29677938817753,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-08,Cabernet Sauvignon,NILAHUE,272.51354737397,238.5957931527964,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-15,Cabernet Sauvignon,NILAHUE,217.8902320040803,237.51871218619243,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-30,Cabernet Sauvignon,NILAHUE,204.1312469831269,196.7591481730096,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-03,Carmenere,PEUMO,162.4208858865337,173.11782963416582,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-17,Carmenere,PEUMO,188.2091588353958,173.7564465987885,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-30,Carmenere,PEUMO,121.6179977733325,163.5295226775745,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-05-06,Carmenere,PEUMO,123.1087946268683,166.94702534716922,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-03-17,Carmenere,VILLA ALEGRE,216.0339547942473,151.97576833680534,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-03-24,Carmenere,VILLA ALEGRE,206.0610103562061,151.97576833680534,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-03-31,Carmenere,VILLA ALEGRE,172.1411916165949,151.3286787901259,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-04-04,Carmenere,VILLA ALEGRE,149.660076067499,151.79105114615643,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,42
+2025-03-21,Cabernet Sauvignon,IDAHUE,192.3104533564517,224.7637414962206,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-03-28,Cabernet Sauvignon,IDAHUE,142.2366381486103,216.81900942184237,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-04,Cabernet Sauvignon,IDAHUE,131.2710712639733,215.52500908024294,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-11,Cabernet Sauvignon,IDAHUE,148.1700685734982,218.71250908393966,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-03-19,Cabernet Sauvignon,KEULE,224.0206599576962,220.41743030956238,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-03-26,Cabernet Sauvignon,KEULE,254.3014979513199,221.49867924034552,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-02,Cabernet Sauvignon,KEULE,263.369793685814,205.44986502330372,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-10,Cabernet Sauvignon,KEULE,256.2403824308656,208.75231397588053,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-03-17,Cabernet Sauvignon,LOURDES,236.2714922944679,201.0183503127353,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-03-24,Cabernet Sauvignon,LOURDES,261.1004253179083,190.8479319771712,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-03-31,Cabernet Sauvignon,LOURDES,205.4753601268426,175.95801217049276,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-07,Cabernet Sauvignon,LOURDES,195.1430659326359,161.34529017391944,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-03-18,Carmenere,LOURDES,144.3956889002626,190.87893407901072,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-03-25,Carmenere,LOURDES,166.358902028041,185.31953615876043,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-01,Carmenere,LOURDES,125.2006494105782,164.02541264846496,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-15,Carmenere,LOURDES,137.2066234174759,158.8303305258024,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-01,Cabernet Sauvignon,NILAHUE,161.2087996746199,229.42764533930298,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-08,Cabernet Sauvignon,NILAHUE,272.51354737397,239.4455819969697,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-15,Cabernet Sauvignon,NILAHUE,217.8902320040803,238.21499956178891,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-30,Cabernet Sauvignon,NILAHUE,204.1312469831269,198.81893144989397,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-03,Carmenere,PEUMO,162.4208858865337,172.98476762040505,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-17,Carmenere,PEUMO,188.2091588353958,170.74011376883945,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-30,Carmenere,PEUMO,121.6179977733325,162.99009627759386,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-05-06,Carmenere,PEUMO,123.1087946268683,167.23009419213716,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-03-17,Carmenere,VILLA ALEGRE,216.0339547942473,152.74941705317187,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-03-24,Carmenere,VILLA ALEGRE,206.0610103562061,152.62136887421062,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-03-31,Carmenere,VILLA ALEGRE,172.1411916165949,152.74154365702807,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-04-04,Carmenere,VILLA ALEGRE,149.660076067499,153.72131839279447,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,123
+2025-03-21,Cabernet Sauvignon,IDAHUE,192.3104533564517,223.7172455650732,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-03-28,Cabernet Sauvignon,IDAHUE,142.2366381486103,217.1129770356694,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-04,Cabernet Sauvignon,IDAHUE,131.2710712639733,215.24229620420786,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-11,Cabernet Sauvignon,IDAHUE,148.1700685734982,218.9825493001105,mixed,IDAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-03-19,Cabernet Sauvignon,KEULE,224.0206599576962,220.9225945640595,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-03-26,Cabernet Sauvignon,KEULE,254.3014979513199,220.9620132169321,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-02,Cabernet Sauvignon,KEULE,263.369793685814,206.93817652847156,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-10,Cabernet Sauvignon,KEULE,256.2403824308656,209.66223690277093,mixed,KEULE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-03-17,Cabernet Sauvignon,LOURDES,236.2714922944679,202.22853860970187,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-03-24,Cabernet Sauvignon,LOURDES,261.1004253179083,198.78913499832188,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-03-31,Cabernet Sauvignon,LOURDES,205.4753601268426,183.29383734296945,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-07,Cabernet Sauvignon,LOURDES,195.1430659326359,163.70052294612867,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-03-18,Carmenere,LOURDES,144.3956889002626,194.94247496588852,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-03-25,Carmenere,LOURDES,166.358902028041,193.27238628864546,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-01,Carmenere,LOURDES,125.2006494105782,167.42354678947092,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-15,Carmenere,LOURDES,137.2066234174759,161.06005515352552,mixed,LOURDES,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-01,Cabernet Sauvignon,NILAHUE,161.2087996746199,232.3693715090166,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-08,Cabernet Sauvignon,NILAHUE,272.51354737397,240.88469470789278,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-15,Cabernet Sauvignon,NILAHUE,217.8902320040803,239.65933525325,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-30,Cabernet Sauvignon,NILAHUE,204.1312469831269,204.57439735951885,mixed,NILAHUE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-03,Carmenere,PEUMO,162.4208858865337,170.575165489318,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-17,Carmenere,PEUMO,188.2091588353958,170.13414107691807,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-30,Carmenere,PEUMO,121.6179977733325,163.47988502630676,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-05-06,Carmenere,PEUMO,123.1087946268683,166.30292529502773,mixed,PEUMO,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-03-17,Carmenere,VILLA ALEGRE,216.0339547942473,149.38882189593153,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-03-24,Carmenere,VILLA ALEGRE,206.0610103562061,149.24083376136142,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-03-31,Carmenere,VILLA ALEGRE,172.1411916165949,149.91373436278093,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026
+2025-04-04,Carmenere,VILLA ALEGRE,149.660076067499,149.69268765903897,mixed,VILLA ALEGRE,LOFO,GDA|VPD_medio_acum|IFs_acum|azucar_real_baya_g|peso_baya,5,2026

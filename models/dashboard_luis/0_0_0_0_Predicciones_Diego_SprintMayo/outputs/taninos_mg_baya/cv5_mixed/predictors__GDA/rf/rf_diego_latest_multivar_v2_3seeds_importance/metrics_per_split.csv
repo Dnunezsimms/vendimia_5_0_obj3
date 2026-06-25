@@ -1,0 +1,16 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column,seed
+rf,cv5_mixed,mixed,1,CV5,GDA,1,56,15,1.0257737337616781,-0.33744941611652557,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,2,CV5,GDA,1,57,14,1.3436055721172007,-0.21445762654199374,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,3,CV5,GDA,1,57,14,0.7149411918755153,0.014682446765516999,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,4,CV5,GDA,1,57,14,0.9440314440456871,-0.1302287701489857,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,5,CV5,GDA,1,57,14,1.1149274709122003,0.09339941616906133,,,taninos_mg_baya,taninos(mg/baya),42
+rf,cv5_mixed,mixed,1,CV5,GDA,1,56,15,1.4308120966638769,-0.6181286663073737,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,2,CV5,GDA,1,57,14,1.1513229001321992,-0.10126921535761091,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,3,CV5,GDA,1,57,14,0.9684593368463924,-0.08197685462410598,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,4,CV5,GDA,1,57,14,1.1395614225923667,-0.031162656751265727,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,5,CV5,GDA,1,57,14,0.6223864108023661,-0.510532534986613,,,taninos_mg_baya,taninos(mg/baya),123
+rf,cv5_mixed,mixed,1,CV5,GDA,1,56,15,0.9709428162190272,-0.24762959146810548,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,2,CV5,GDA,1,57,14,0.8442034615396443,-0.4593745946802228,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,3,CV5,GDA,1,57,14,0.9706497208495849,-0.1926733028415668,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,4,CV5,GDA,1,57,14,1.1660259353590685,-0.06577650965923021,,,taninos_mg_baya,taninos(mg/baya),2026
+rf,cv5_mixed,mixed,5,CV5,GDA,1,57,14,1.2386848061624112,-0.30577987118568517,,,taninos_mg_baya,taninos(mg/baya),2026

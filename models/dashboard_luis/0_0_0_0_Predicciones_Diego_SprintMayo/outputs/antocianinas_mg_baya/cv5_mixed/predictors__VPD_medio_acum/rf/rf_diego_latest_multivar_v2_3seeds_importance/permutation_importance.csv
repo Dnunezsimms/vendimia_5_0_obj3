@@ -1,0 +1,16 @@
+target_key,scheme,subset,split_id,method,predictors,seed,feature,perm_importance_mean,perm_importance_std,n_repeats
+antocianinas_mg_baya,cv5_mixed,mixed,1,CV5,VPD_medio_acum,42,VPD_medio_acum,0.007770689919971247,0.08412575209402881,20
+antocianinas_mg_baya,cv5_mixed,mixed,2,CV5,VPD_medio_acum,42,VPD_medio_acum,0.17963499952161244,0.09929486040672093,20
+antocianinas_mg_baya,cv5_mixed,mixed,3,CV5,VPD_medio_acum,42,VPD_medio_acum,0.06765856474444457,0.09648563684455375,20
+antocianinas_mg_baya,cv5_mixed,mixed,4,CV5,VPD_medio_acum,42,VPD_medio_acum,-0.03305252901342475,0.038157177018391136,20
+antocianinas_mg_baya,cv5_mixed,mixed,5,CV5,VPD_medio_acum,42,VPD_medio_acum,0.08845746843587171,0.08301239802126409,20
+antocianinas_mg_baya,cv5_mixed,mixed,1,CV5,VPD_medio_acum,123,VPD_medio_acum,0.03158380903922934,0.09136867432136468,20
+antocianinas_mg_baya,cv5_mixed,mixed,2,CV5,VPD_medio_acum,123,VPD_medio_acum,0.03146488576586538,0.049050819919061496,20
+antocianinas_mg_baya,cv5_mixed,mixed,3,CV5,VPD_medio_acum,123,VPD_medio_acum,0.28342011761383357,0.10506669098201603,20
+antocianinas_mg_baya,cv5_mixed,mixed,4,CV5,VPD_medio_acum,123,VPD_medio_acum,0.1342515856050032,0.06369332411419662,20
+antocianinas_mg_baya,cv5_mixed,mixed,5,CV5,VPD_medio_acum,123,VPD_medio_acum,0.10471887766678116,0.06999463270520818,20
+antocianinas_mg_baya,cv5_mixed,mixed,1,CV5,VPD_medio_acum,2026,VPD_medio_acum,0.12554298463485575,0.09504599904805124,20
+antocianinas_mg_baya,cv5_mixed,mixed,2,CV5,VPD_medio_acum,2026,VPD_medio_acum,0.15625233552793089,0.06722835708795794,20
+antocianinas_mg_baya,cv5_mixed,mixed,3,CV5,VPD_medio_acum,2026,VPD_medio_acum,0.0869083367333315,0.05916640329675689,20
+antocianinas_mg_baya,cv5_mixed,mixed,4,CV5,VPD_medio_acum,2026,VPD_medio_acum,0.18993950215682212,0.08525419865204545,20
+antocianinas_mg_baya,cv5_mixed,mixed,5,CV5,VPD_medio_acum,2026,VPD_medio_acum,-0.002670392333587834,0.10655410952799965,20

@@ -1,0 +1,6 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column
+pysr,cv5_mixed,mixed,1,CV5,GDA,1,56,15,0.6443017077606202,-0.17116940236523526,exp(((GDA + (0.00032241302 - GDA)) * GDA) + 0.3789448),10,antocianinas_mg_baya,antocianinas(mg/baya)
+pysr,cv5_mixed,mixed,2,CV5,GDA,1,57,14,0.8540294322596959,-0.3159501422538977,exp((GDA * (GDA + (0.00058536924 - GDA))) + -0.08683573),10,antocianinas_mg_baya,antocianinas(mg/baya)
+pysr,cv5_mixed,mixed,3,CV5,GDA,1,57,14,0.7598423992505755,0.1331667951922484,exp((GDA / 1713.0189) - (2.8207104 / (1873.5712 - GDA))),10,antocianinas_mg_baya,antocianinas(mg/baya)
+pysr,cv5_mixed,mixed,4,CV5,GDA,1,57,14,0.6203600922306606,0.09676848849748343,exp(((GDA + 0.0069003985) / 208.31934) + -10.465323) + 2.518023,10,antocianinas_mg_baya,antocianinas(mg/baya)
+pysr,cv5_mixed,mixed,5,CV5,GDA,1,57,14,0.6725911676897322,-0.40765108261373895,exp((-2.9198084 / (1873.2028 - GDA)) + (GDA / 1705.7429)),10,antocianinas_mg_baya,antocianinas(mg/baya)

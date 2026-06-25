@@ -1,0 +1,22 @@
+﻿fundo_normalizado,fuente_original,fuente_detectada,estacion_original,estacion_detectada,motivo_equivalencia,confianza,decision
+Lourdes,CITRA,INIA/AGROMET,Pencahue - CITRA,"Pencahue, Pencahue",Misma localidad Pencahue; archivo operacional detectado en data/raw/climate/inia/lourdes con cobertura y calidad altas.,85.0,aceptada_para_diagnostico
+Mariposas,INIA,Meteovid/datavid,San Clemente / INIA-135,San Clemente La Higuera,Rechazada por regla manual: San Clemente La Higuera es otra estacion y no debe reemplazar INIA-135.,0.0,rechazada
+Quebrada de Agua,INIA,Meteovid/datavid,San Clemente / INIA-135,San Clemente La Higuera,Rechazada por regla manual: San Clemente La Higuera es otra estacion y Quebrada de Agua usa INIA-135.,0.0,rechazada
+Rauco,AGROMET,Meteovid/datavid,Curico/Rauco,Curico Cerrillo,Aceptada por regla manual: Curico/Rauco se considera asignacion valida para Rauco en este diagnostico.,100.0,aceptada_para_diagnostico
+Idahue,ZENTRA,Meteovid/datavid,ZENTRA Idahue- Zentra (),San Vicente Idahue,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",100.0,candidata_no_seleccionada
+Keule,ZENTRA,Meteovid/datavid,ZENTRA Keule (),Cauquenes Keule,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",100.0,candidata_no_seleccionada
+Lourdes,CITRA,Meteovid/datavid,CITRA Pencahue - CITRA (),Pencahue Norte,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",98.82,candidata_no_seleccionada
+Lourdes,CITRA,ZENTRA,CITRA Pencahue - CITRA (),Pencahue,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",98.45,candidata_no_seleccionada
+Lourdes,CITRA,Meteovid/datavid,CITRA Pencahue - CITRA (),Pencahue Sur,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",88.86,candidata_no_seleccionada
+Lourdes,CITRA,ZENTRA,CITRA Pencahue - CITRA (),San Pedro - Pencahue,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",87.05,candidata_no_seleccionada
+Nilahue,Meteovid,ZENTRA,Meteovid Lolol - Nilahue (66),Nilahue,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",100.0,candidata_no_seleccionada
+Palo Santo,Meteovid,ZENTRA,Meteovid Ventisquero - Peralillo (31),Ventisquero-Trinidad,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",78.02,candidata_no_seleccionada
+Quinta Maipo,AGROMET,Meteovid/datavid,AGROMET Buin - INIA (),Buin Alto Jahuel,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",82.22,candidata_no_seleccionada
+Quinta Maipo,Meteovid,ZENTRA,Meteovid San Pedro - Tarapacá (15),San Pedro - Pencahue,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",70.4,candidata_no_seleccionada
+Ucuquer,ZENTRA,Meteovid/datavid,ZENTRA Ucuquer-Zentra (),Navidad Ucuquer,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",100.0,candidata_no_seleccionada
+Ucuquer,AGROMET,Meteovid/datavid,AGROMET San Pedro de Melipilla (),San Pedro Trinidad,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",94.55,candidata_no_seleccionada
+Ucuquer,AGROMET,ZENTRA,AGROMET San Pedro de Melipilla (),San Pedro-Tarapaca,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",72.07,candidata_no_seleccionada
+Ucuquer,AGROMET,ZENTRA,AGROMET San Pedro de Melipilla (),San Pedro - Pencahue,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",70.4,candidata_no_seleccionada
+Ucuquer,AGROMET,Meteovid/datavid,AGROMET San Pedro de Melipilla (),Maule San Pedro,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",45.96,candidata_no_seleccionada
+Villa Alegre,AGROMET,Meteovid/datavid,AGROMET Maule (),Maule Santa Margarita,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",96.58,candidata_no_seleccionada
+Villa Alegre,AGROMET,Meteovid/datavid,AGROMET Maule (),Maule San Pedro,"Candidata por similitud historica, no aceptada automaticamente; requiere respaldo documental si se usa.",60.25,candidata_no_seleccionada

@@ -1,0 +1,6 @@
+model,scheme,subset,split_id,method,predictors,n_predictors,n_train,n_test,mae,r2,equation,complexity,target_key,target_column
+pysr,cv5_mixed,mixed,1,CV5,GDA,1,56,15,0.569977325,0.06046404261753491,(GDA * (GDA + 0.0015731584)) - (GDA * GDA),9,antocianinas_mg_baya,antocianinas(mg/baya)
+pysr,cv5_mixed,mixed,2,CV5,GDA,1,57,14,0.8246210428989956,-0.23723276552842587,exp((GDA * (GDA + (0.0005998638 - GDA))) + -0.087322615),10,antocianinas_mg_baya,antocianinas(mg/baya)
+pysr,cv5_mixed,mixed,3,CV5,GDA,1,57,14,0.8110348191201346,-0.07491930376008438,(-2.789444 / (1748.8257 - GDA)) + exp(GDA / 1748.869),10,antocianinas_mg_baya,antocianinas(mg/baya)
+pysr,cv5_mixed,mixed,4,CV5,GDA,1,57,14,0.6409652050051008,0.09936012633042313,exp((3.2809727 / (GDA + -1874.6675)) - -0.9744679),8,antocianinas_mg_baya,antocianinas(mg/baya)
+pysr,cv5_mixed,mixed,5,CV5,GDA,1,57,14,0.6829547018923078,-0.41811066890378035,(10.089127 / (GDA + -1875.4185)) + (GDA * 0.0016397985),9,antocianinas_mg_baya,antocianinas(mg/baya)

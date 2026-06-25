@@ -17,13 +17,13 @@ def find_repo_root(start: Path | None = None) -> Path:
 
 
 REPO_ROOT = find_repo_root()
-CLIMATE_COVERAGE_DIR = REPO_ROOT / "reports" / "climate" / "coverage"
+CLIMATE_COVERAGE_DIR = REPO_ROOT / "data" / "metadata" / "climate_coverage"
 CLIMATE_MASTER_PATH = CLIMATE_COVERAGE_DIR / "tabla_maestra_clima_obj3_2025_2026.csv"
 GDD_DIR = REPO_ROOT / "models" / "indicador_biologico" / "outputs_multisite_gdd"
 LUIS_DASHBOARD_DIR = REPO_ROOT / "models" / "dashboard_luis" / "0_0_0_0_Predicciones_Diego_SprintMayo"
 MATURITY_RAW_DIR = REPO_ROOT / "data" / "raw" / "maturity"
 PHENOLOGY_RAW_DIR = REPO_ROOT / "data" / "raw" / "phenology"
-PHENOLOGY_PREPARED_DIR = REPO_ROOT / "data" / "prepared" / "phenology_climate"
+PHENOLOGY_PREPARED_DIR = REPO_ROOT / "data" / "processed" / "phenology_climate"
 LOG_DIR = DASHBOARD_DIR / "logs"
 
 HOST = "127.0.0.1"
