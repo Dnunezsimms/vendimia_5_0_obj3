@@ -9,15 +9,17 @@ import pandas as pd
 
 try:
     from .src.config import HOST, LOG_DIR, PORT, REPO_ROOT
-    from .src.loaders import find_columns, load_state, numeric_columns, setup_logging
+    from .src.loaders import find_columns, load_climate_station_series, load_state, numeric_columns, setup_logging
     from .src.plots import (
         baseline_comparison_plot,
         cabernet_diagnostic_table,
         climate_status_bar,
+        climate_timeseries_plot,
         coverage_bar,
         empty_figure,
         gdd_progress_bar,
         importance_bar,
+        latitudinal_regression_plot,
         maturity_curve,
         maturity_curve_grouped,
         metric_ranking,
@@ -31,15 +33,17 @@ except ImportError:
     import sys
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     from src.config import HOST, LOG_DIR, PORT, REPO_ROOT
-    from src.loaders import find_columns, load_state, numeric_columns, setup_logging
+    from src.loaders import find_columns, load_climate_station_series, load_state, numeric_columns, setup_logging
     from src.plots import (
         baseline_comparison_plot,
         cabernet_diagnostic_table,
         climate_status_bar,
+        climate_timeseries_plot,
         coverage_bar,
         empty_figure,
         gdd_progress_bar,
         importance_bar,
+        latitudinal_regression_plot,
         maturity_curve,
         maturity_curve_grouped,
         metric_ranking,
@@ -141,6 +145,18 @@ def build_app() -> gr.Blocks:
     phenology = state["phenology"]
     maturity = state["maturity"]
     luis = state["luis"]
+    climate_catalog = state["climate_catalog"]
+    gdd_latitudinal = state["gdd_latitudinal"]
+
+    # Selectores de clima
+    _catalog_stations = climate_catalog["stations"]  # dict source->list
+    _sources = list(_catalog_stations.keys()) or ["Datavid"]
+    _first_source = _sources[0]
+    _first_stations = _catalog_stations.get(_first_source, [])
+    _first_station = _first_stations[0] if _first_stations else ""
+    _vars_display = climate_catalog["vars_display"]
+    _first_var = _vars_display[0] if _vars_display else "Temp. Media [°C]"
+
     fundos = ["Todos"] + sorted(climate["resumen"].get("fundo_normalizado", pd.Series(dtype=str)).dropna().astype(str).unique().tolist())
     gdd_var_col = "Variedad" if "Variedad" in gdd["resumen_t0"].columns else "variedad" if "variedad" in gdd["resumen_t0"].columns else None
     variedades = ["Todas"] + sorted(gdd["resumen_t0"].get(gdd_var_col, pd.Series(dtype=str)).dropna().astype(str).unique().tolist()) if gdd_var_col else ["Todas"]
@@ -166,8 +182,40 @@ def build_app() -> gr.Blocks:
         )
 
         with gr.Tab("📊 Estado del sistema"):
-            gr.Markdown("> **📌 ESTADO DE COBERTURA CLIMÁTICA:** Ingesta climática diaria operacional consolidada hasta Octubre 2025. *Los sensores horarios de frío invernal cortan en Junio 2025.*")
             gr.Markdown(_markdown_status(state))
+
+            # --- Panel principal: series temporales climáticas ---
+            gr.Markdown("### 🌡️ Series Temporales Climáticas — Explorador Horario/Diario")
+            gr.Markdown("> Selecciona fuente, estación y variable. La frecuencia diaria se calcula como promedio en memoria (sin guardar archivos nuevos).")
+            with gr.Row():
+                ts_source = gr.Dropdown(_sources, value=_first_source, label="Fuente", scale=1)
+                ts_station = gr.Dropdown(_first_stations or [""], value=_first_station, label="Estación / Fuente Climática", scale=2)
+                ts_var = gr.Dropdown(_vars_display or [_first_var], value=_first_var, label="Variable Climática", scale=2)
+                ts_freq = gr.Radio(["horaria", "diaria"], value="horaria", label="Frecuencia de visualización", scale=1)
+
+            _init_df = load_climate_station_series(_first_source, _first_station, "hourly") if _first_station else pd.DataFrame()
+            ts_plot = gr.Plot(value=climate_timeseries_plot(_init_df, _first_var, _first_station, _first_source, "horaria"))
+
+            def update_ts_station(source):
+                opts = _catalog_stations.get(source, [])
+                return gr.update(choices=opts, value=opts[0] if opts else "")
+
+            def update_ts_plot(source, station, var, freq):
+                if not station:
+                    return empty_figure("Selecciona una estación.")
+                freq_key = "daily" if freq == "diaria" else "hourly"
+                df = load_climate_station_series(source, station, freq_key)
+                return climate_timeseries_plot(df, var, station, source, freq)
+
+            ts_source.change(update_ts_station, ts_source, ts_station)
+            ts_source.change(update_ts_plot, [ts_source, ts_station, ts_var, ts_freq], ts_plot)
+            ts_station.change(update_ts_plot, [ts_source, ts_station, ts_var, ts_freq], ts_plot)
+            ts_var.change(update_ts_plot, [ts_source, ts_station, ts_var, ts_freq], ts_plot)
+            ts_freq.change(update_ts_plot, [ts_source, ts_station, ts_var, ts_freq], ts_plot)
+
+            # --- Panel secundario: auditoría de cobertura ---
+            gr.Markdown("### 🗂️ Auditoría de Cobertura Climática por Fundo")
+            gr.Markdown("> **📌 COBERTURA:** Ingesta climática operacional consolidada hasta Octubre 2025. *Los sensores horarios de frío invernal cortan en Junio 2025.*")
             with gr.Row():
                 gr.Plot(value=climate_status_bar(climate["resumen"]))
                 gr.Plot(value=coverage_bar(climate["resumen"]))
@@ -175,7 +223,7 @@ def build_app() -> gr.Blocks:
             gr.Dataframe(value=_safe(climate["master"]), interactive=False, wrap=True)
             gr.Markdown("### 🕳️ Detección de Gaps Horarios por Fundo")
             gr.Dataframe(value=_safe(climate["gaps"]), interactive=False, wrap=True)
-            gr.Markdown("### 🔄 Equivalencias Homologadas e Verificación de Hash")
+            gr.Markdown("### 🔄 Equivalencias Homologadas")
             with gr.Row():
                 gr.Dataframe(value=_safe(climate["equivalencias"]), interactive=False, wrap=True)
                 gr.Dataframe(value=_safe(state["audit"]), interactive=False, wrap=True)
@@ -183,18 +231,37 @@ def build_app() -> gr.Blocks:
         with gr.Tab("🌱 Fenología & GDD"):
             gr.Markdown("> **⚠️ CRITERIO METODOLÓGICO:** El **T0 Cerrado** es un indicador de diagnóstico retrospectivo (*leakage* histórico); el **T0 Latitudinal** es el biofix predictivo operacional candidato a producción.")
             with gr.Tabs():
-                with gr.Tab("A. Evaluación Operacional (T0 Latitudinal)"):
+                with gr.Tab("A. Curva Latitudinal T0 / Brotación"):
+                    gr.Markdown(
+                        "**Auditoría espacial del gradiente fenológico.** "
+                        "Muestra cómo el DOY de brotación y T0 (biofix Cabernet) varían con la latitud en los fundos monitoreados. "
+                        "Los Acacios se excluye de la regresión por inconsistencias en la cobertura de datos."
+                    )
+                    gr.Plot(value=latitudinal_regression_plot(
+                        gdd_latitudinal["diagnostico"],
+                        gdd_latitudinal["regresiones"],
+                    ))
+                    gr.Markdown("### 📋 Tabla de Diagnóstico por Fundo (Cabernet Sauvignon 2025–2026)")
+                    gr.Dataframe(value=_safe(gdd_latitudinal["diagnostico"][[c for c in [
+                        "Fundo", "lat", "t0_operativo", "doy_t0_operativo",
+                        "fecha_brotacion", "doy_brotacion",
+                        "doy_brotacion_pred_reg_lat", "residuo_brotacion_latitud",
+                        "doy_t0_pred_reg_lat", "residuo_t0_latitud",
+                        "incluido_en_regresion", "motivo_exclusion",
+                    ] if c in gdd_latitudinal["diagnostico"].columns]]), interactive=False, wrap=True)
+
+                with gr.Tab("B. Evaluación Operacional (Residuo T0 Latitudinal)"):
                     f_lat_error_plot = gr.Plot(value=panel_a_operativo_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
-                    
-                with gr.Tab("B. Diagnóstico de Leakage (T0 Cerrado vs Latitudinal)"):
-                    gr.Markdown("Análisis comparativo de discrepancia retrospectiva en el hito de brotación fisiológica.")
+
+                with gr.Tab("C. Diagnóstico de Leakage (T0 Cerrado vs Latitudinal)"):
+                    gr.Markdown("> ⚠️ El T0 cerrado es retrospectivo. No usar como predictor operativo.")
                     with gr.Row():
                         f_t0_comparison_plot = gr.Plot(value=panel_b_diagnostico_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
                         f_baseline_plot = gr.Plot(value=baseline_comparison_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
                     gr.Markdown("### 📋 Matriz de Diagnóstico y Alertas de Leakage (Cabernet Sauvignon)")
                     f_alert_table = gr.Dataframe(value=_safe(cabernet_diagnostic_table(gdd.get("diagnostico_cs_reg", pd.DataFrame()))), interactive=False, wrap=True)
-                    
-                with gr.Tab("C. Auditoría Varietal Heredada"):
+
+                with gr.Tab("D. Auditoría Varietal"):
                     gr.Markdown("### 📂 Comportamiento por Variedad en Pipeline Histórico\n*(Nota: Módulo configurado sobre T0 retrospectivo de referencia).*")
                     with gr.Row():
                         f_fundo = gr.Dropdown(fundos, value="Todos", label="Fundo / Viñedo")
@@ -210,7 +277,42 @@ def build_app() -> gr.Blocks:
                     f_fundo.change(update_fenologia, [f_fundo, f_var], [f_table])
                     f_var.change(update_fenologia, [f_fundo, f_var], [f_table])
 
-                with gr.Tab("D. Plausibilidad Fisiológica (Frío Invernal + Calor)"):
+                with gr.Tab("E. Panel GDD por Biofix [PENDIENTE]"):
+                    gr.Markdown(
+                        """
+                        ### ⏳ Panel GDD Acumulado por Biofix — Pendiente
+
+                        > Este panel requiere un CSV canónico exportado desde el notebook:
+                        > `models/indicador_biologico/multisite_multivariety_gdd_analysis_v2_t0_latitudinal.ipynb`
+
+                        **Columnas requeridas del CSV (`gdd_acumulado_por_biofix.csv`):**
+
+                        | Columna | Descripción |
+                        |---|---|
+                        | `fundo` | Identificador del fundo |
+                        | `Fundo` | Nombre legible del fundo |
+                        | `temporada` | Ej: `2025_2026` |
+                        | `variedad` | Variedad indicadora |
+                        | `fecha` | Fecha de registro |
+                        | `biofix_tipo` | `1-Jul`, `1-Ago`, `15-Ago`, `1-Sep`, `t0_operativo`, `t0_latitudinal` |
+                        | `biofix_fecha` | Fecha de inicio de conteo de GDD |
+                        | `t0_operativo` | Fecha T0 operativo |
+                        | `t0_latitudinal` | Fecha T0 latitudinal estimado |
+                        | `fecha_brotacion_ELP4` | Fecha de brotación observada |
+                        | `gdd_diario` | GDD acumulado en ese día |
+                        | `gdd_acumulado` | GDD acumulado desde el biofix |
+                        | `gdd_acumulado_previo_t0` | GDD acumulado justo antes del T0 |
+                        | `threshold_GDD_usado` | Umbral de GDD utilizado (Ej: 70 GDD) |
+                        | `fuente_clima` | Fuente de datos climáticos usada |
+                        | `archivo_origen` | Archivo fuente |
+                        | `alerta_temporada_anterior` | `SI`/`NO` — si el biofix podría estar contando calor de temporada previa |
+
+                        **Una vez exportado, depositar en:**
+                        `models/indicador_biologico/outputs_multisite_gdd/gdd_acumulado_por_biofix.csv`
+                        """
+                    )
+
+                with gr.Tab("F. Plausibilidad Fisiológica (Frío Invernal)"):
                     gr.Markdown("> **🧪 NOTA DE INVESTIGACIÓN:** Evaluación exploratoria de balance bioclimático previo a brotación.")
                     gr.Markdown("> **💡 DESGLOSE HORARIO VS DIARIO:** El cálculo de **Frío Invernal (Chill Portions)** requiere integración horaria continua (disponible hasta Junio 2025). La **Acumulación Térmica (GDD)** se integra desde registros diarios completos con alta precisión operacional.")
                     

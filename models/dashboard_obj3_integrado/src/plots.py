@@ -479,3 +479,190 @@ def importance_bar(df: pd.DataFrame, value_col: str) -> go.Figure:
     )
     fig.update_layout(yaxis_title="Variable Ambientales y Productivas", xaxis_title=metric_name)
     return apply_corporate_style(fig, height=560)
+
+
+# ---------------------------------------------------------------------------
+# Sprint 2.2 — Serie temporal climática horaria/diaria
+# ---------------------------------------------------------------------------
+
+def climate_timeseries_plot(
+    df: pd.DataFrame,
+    variable: str,
+    station_name: str,
+    source: str,
+    freq: str = "horaria",
+) -> go.Figure:
+    """Serie temporal de una variable climática para una estación dada.
+
+    Args:
+        df: DataFrame con columna 'fecha' y variable climática.
+        variable: nombre de la columna a graficar (nombre display).
+        station_name: nombre legible de la estación.
+        source: fuente ('Datavid', 'INIA/Agromet', 'Zentra').
+        freq: 'horaria' | 'diaria (agregada en memoria)'.
+    """
+    if df.empty or variable not in df.columns:
+        msg = f"Sin datos disponibles para {variable} en {station_name}."
+        if not df.empty:
+            available = [c for c in df.columns if c != "fecha"]
+            msg += f"\nVariables disponibles en esta fuente: {', '.join(available[:8]) or 'ninguna'}."
+        return empty_figure(msg)
+
+    d = df[["fecha", variable]].dropna(subset=[variable]).copy()
+    if d.empty:
+        return empty_figure(f"Todos los registros de {variable} son nulos para {station_name}.")
+
+    freq_label = "agregación diaria en memoria (no guardada)" if freq == "diaria" else "horaria"
+    title = f"Serie Temporal — {variable} | {station_name.replace('_', ' ').title()} ({source})"
+    subtitle = f"<span style='font-size:11px;color:#718096'>Frecuencia: {freq_label} · Fuente: {source}</span>"
+
+    fig = px.line(
+        d,
+        x="fecha",
+        y=variable,
+        title=f"{title}<br>{subtitle}",
+        color_discrete_sequence=[WINE_PALETTE[0]],
+    )
+    fig.update_traces(line_width=1.2, opacity=0.9)
+    fig.update_layout(
+        xaxis_title="Fecha",
+        yaxis_title=variable,
+        hovermode="x unified",
+    )
+    return apply_corporate_style(fig, height=420)
+
+
+# ---------------------------------------------------------------------------
+# Sprint 2.2 — Curva latitudinal T0/Brotación (Fenología — Panel A/nuevo)
+# ---------------------------------------------------------------------------
+
+def latitudinal_regression_plot(
+    diagnostico: pd.DataFrame,
+    regresiones: pd.DataFrame,
+) -> go.Figure:
+    """Scatter latitud × DOY con curvas de regresión brotación y T0.
+
+    Usa los outputs canónicos de method_pipeline_summary.xlsx:
+    - sheet diagnostico_cs_reg: datos por fundo (lat, DOY brotación, DOY T0, incluido/excluido)
+    - sheet regresiones_cs: parámetros de regresión (pendiente, intercepto, R², fundos)
+
+    Nota metodológica: El T0 cerrado retrospectivo NO es un predictor operacional.
+    La curva T0 ~ latitud es exploratoria; la curva brotación ~ latitud (R²=0.86) es la de referencia.
+    Los Acacios se marca como caso diagnóstico excluido de la regresión.
+    """
+    if diagnostico.empty:
+        return empty_figure(
+            "Sin datos de diagnóstico latitudinal.\n"
+            "Fuente esperada: models/indicador_biologico/outputs_multisite_gdd/method_pipeline_summary.xlsx\n"
+            "Sheet: diagnostico_cs_reg"
+        )
+
+    d = diagnostico.copy()
+    required = {"lat", "doy_brotacion", "doy_t0_operativo", "Fundo"}
+    missing = required - set(d.columns)
+    if missing:
+        return empty_figure(f"Columnas faltantes en diagnostico_cs_reg: {', '.join(sorted(missing))}")
+
+    lat_range = [d["lat"].min() - 0.5, d["lat"].max() + 0.5]
+
+    fig = go.Figure()
+
+    # --- Datos por fundo ---
+    incluidos = d[d.get("incluido_en_regresion", pd.Series(True, index=d.index)).astype(str).str.upper() != "FALSE"].copy()
+    excluidos = d[d.get("incluido_en_regresion", pd.Series(False, index=d.index)).astype(str).str.upper() == "FALSE"].copy()
+
+    # Scatter brotación ELP4 observada — incluidos
+    if not incluidos.empty:
+        fig.add_trace(go.Scatter(
+            x=incluidos["lat"],
+            y=incluidos["doy_brotacion"],
+            mode="markers+text",
+            name="Brotación ELP4 observada",
+            text=incluidos["Fundo"],
+            textposition="top right",
+            textfont=dict(size=10, color="#2d3748"),
+            marker=dict(size=11, color=WINE_PALETTE[0], symbol="circle"),
+        ))
+        fig.add_trace(go.Scatter(
+            x=incluidos["lat"],
+            y=incluidos["doy_t0_operativo"],
+            mode="markers+text",
+            name="T0 operativo (biofix CS)",
+            text=incluidos["Fundo"],
+            textposition="bottom right",
+            textfont=dict(size=9, color="#805ad5"),
+            marker=dict(size=9, color=WINE_PALETTE[4], symbol="diamond"),
+        ))
+
+    # Los Acacios / excluidos
+    if not excluidos.empty:
+        fig.add_trace(go.Scatter(
+            x=excluidos["lat"],
+            y=excluidos["doy_brotacion"],
+            mode="markers+text",
+            name="Brotación ELP4 (excluido de regresión)",
+            text=excluidos["Fundo"],
+            textposition="top right",
+            textfont=dict(size=10, color="#e53e3e"),
+            marker=dict(size=12, color="#e53e3e", symbol="circle-open", line=dict(width=2)),
+        ))
+        fig.add_trace(go.Scatter(
+            x=excluidos["lat"],
+            y=excluidos["doy_t0_operativo"],
+            mode="markers",
+            name="T0 operativo (excluido)",
+            marker=dict(size=10, color="#e53e3e", symbol="diamond-open", line=dict(width=2)),
+        ))
+
+    # --- Curvas de regresión ---
+    import numpy as np
+    lat_line = np.linspace(lat_range[0], lat_range[1], 100)
+
+    if not regresiones.empty:
+        for _, row in regresiones.iterrows():
+            reg_name = str(row.get("regresion", ""))
+            pendiente = float(row.get("pendiente", 0))
+            intercepto = float(row.get("intercepto", 0))
+            r2 = float(row.get("r2", 0))
+            mae = float(row.get("mae", 0))
+            n = int(row.get("n", 0))
+            fundos_incl = str(row.get("fundos_incluidos", ""))
+
+            doy_line = pendiente * lat_line + intercepto
+            is_brotacion = "brotacion" in normalize_text(reg_name)
+            color = WINE_PALETTE[0] if is_brotacion else WINE_PALETTE[4]
+            label = (
+                f"Curva brotación ~ lat (R²={r2:.2f}, MAE={mae:.1f}d, n={n})"
+                if is_brotacion
+                else f"Curva T0 ~ lat (R²={r2:.2f}, MAE={mae:.1f}d, n={n}) [exploratoria]"
+            )
+            fig.add_trace(go.Scatter(
+                x=lat_line,
+                y=doy_line,
+                mode="lines",
+                name=label,
+                line=dict(color=color, width=2, dash="solid" if is_brotacion else "dash"),
+            ))
+
+    # Annotations
+    fig.add_annotation(
+        x=0.01, y=0.02, xref="paper", yref="paper",
+        text=(
+            "⚠️ <b>Nota metodológica:</b> Curva brotación ~ latitud es la referencia operacional (R²=0.86). "
+            "Curva T0 ~ latitud es exploratoria. "
+            "Los Acacios excluido de la regresión (diagnóstico fisiológico pendiente)."
+        ),
+        showarrow=False,
+        font=dict(size=10, color="#718096"),
+        align="left",
+        bgcolor="rgba(237,242,247,0.85)",
+        borderpad=6,
+    )
+
+    fig.update_layout(
+        title="Auditoría Latitudinal: Biofix T0 y Brotación ELP4 Cabernet Sauvignon 2025–2026",
+        xaxis_title="Latitud [grados decimales]",
+        yaxis_title="DOY (Día del Año)",
+        legend=dict(orientation="v", x=1.01, y=1),
+    )
+    return apply_corporate_style(fig, height=520)

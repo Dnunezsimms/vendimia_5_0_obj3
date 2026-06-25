@@ -11,6 +11,9 @@ import pandas as pd
 
 from .config import (
     CLIMATE_COVERAGE_DIR,
+    CLIMATE_HOURLY_DATAVID,
+    CLIMATE_HOURLY_INIA,
+    CLIMATE_HOURLY_ZENTRA,
     CLIMATE_MASTER_PATH,
     GDD_DIR,
     LUIS_DASHBOARD_DIR,
@@ -391,6 +394,184 @@ def find_columns(df: pd.DataFrame, patterns: list[str]) -> list[str]:
     return cols
 
 
+# ---------------------------------------------------------------------------
+# Sprint 2.2 — loaders para series temporales climáticas y curva latitudinal
+# ---------------------------------------------------------------------------
+
+# Mapping de columnas Datavid a nombres canónicos del dashboard
+_DATAVID_COL_MAP = {
+    "tempMedia": "Temp. Media [°C]",
+    "tempMinima": "Temp. Mínima [°C]",
+    "tempMaxima": "Temp. Máxima [°C]",
+    "humedadRelativa": "Humedad Relativa [%]",
+    "radiacion": "Radiación Solar [MJ/m²]",
+    "precipitacion": "Precipitación [mm]",
+    "dpv": "VPD [kPa]",
+    "presion": "Presión [hPa]",
+    "velocidadPromedioViento": "Vel. Viento Promedio [m/s]",
+    "velocidadMaximaViento": "Vel. Viento Máxima [m/s]",
+}
+
+CLIMATE_VARS_DISPLAY = list(_DATAVID_COL_MAP.values())
+CLIMATE_VARS_RAW = list(_DATAVID_COL_MAP.keys())
+
+
+def load_climate_hourly_catalog() -> dict[str, object]:
+    """Construye catálogo de estaciones horarias disponibles por fuente.
+
+    Devuelve un dict con:
+      - 'stations': dict[source_name -> list[station_name]]
+      - 'col_map': mapeo nombre_raw -> nombre_display
+      - 'vars_display': lista de variables legibles disponibles
+    """
+    catalog: dict[str, list[str]] = {}
+
+    # Datavid: subcarpetas con climate_hourly.parquet
+    if CLIMATE_HOURLY_DATAVID.exists():
+        stations = sorted(
+            p.parent.name
+            for p in CLIMATE_HOURLY_DATAVID.glob("*/climate_hourly.parquet")
+        )
+        if stations:
+            catalog["Datavid"] = stations
+
+    # INIA/Agromet: subcarpetas con archivos de datos
+    if CLIMATE_HOURLY_INIA.exists():
+        stations_inia = sorted(
+            p.name
+            for p in CLIMATE_HOURLY_INIA.iterdir()
+            if p.is_dir() and any(p.glob(f"*{ext}") for ext in [".xlsx", ".xls", ".csv"])
+        )
+        if stations_inia:
+            catalog["INIA/Agromet"] = stations_inia
+
+    # Zentra: subcarpetas con archivos de datos
+    if CLIMATE_HOURLY_ZENTRA.exists():
+        stations_zen = sorted(
+            p.name
+            for p in CLIMATE_HOURLY_ZENTRA.iterdir()
+            if p.is_dir() and any(p.glob(f"*{ext}") for ext in [".xlsx", ".xls", ".csv"])
+        )
+        if stations_zen:
+            catalog["Zentra"] = stations_zen
+
+    return {
+        "stations": catalog,
+        "col_map": _DATAVID_COL_MAP,
+        "vars_display": CLIMATE_VARS_DISPLAY,
+    }
+
+
+def load_climate_station_series(source: str, station: str, freq: str = "hourly") -> pd.DataFrame:
+    """Carga la serie temporal de una estación.
+
+    Args:
+        source: 'Datavid' | 'INIA/Agromet' | 'Zentra'
+        station: nombre de la subcarpeta de la estación
+        freq: 'hourly' | 'daily' (daily = agregación en memoria, sin guardar)
+
+    Returns:
+        DataFrame con columna 'fecha' y variables climáticas disponibles,
+        renombradas a nombres legibles. Puede estar vacío si no hay datos.
+    """
+    df = pd.DataFrame()
+
+    try:
+        if source == "Datavid":
+            parquet = CLIMATE_HOURLY_DATAVID / station / "climate_hourly.parquet"
+            csv_fallback = CLIMATE_HOURLY_DATAVID / station / "climate_hourly.csv"
+            if parquet.exists():
+                df = pd.read_parquet(parquet)
+            elif csv_fallback.exists():
+                df = read_table(csv_fallback)
+
+        elif source in ("INIA/Agromet", "Zentra"):
+            base = CLIMATE_HOURLY_INIA if source == "INIA/Agromet" else CLIMATE_HOURLY_ZENTRA
+            station_dir = base / station
+            files = list(station_dir.glob("*.*")) if station_dir.exists() else []
+            files = [f for f in files if f.suffix.lower() in {".xlsx", ".xls", ".csv"} and "metadata" not in f.name.lower()]
+            if files:
+                biggest = max(files, key=lambda p: p.stat().st_size)
+                if biggest.suffix.lower() in {".xlsx", ".xls"}:
+                    tmp = pd.read_excel(biggest, header=None, nrows=15)
+                    h_idx = 0
+                    for idx, row in tmp.iterrows():
+                        row_str = " ".join([str(x) for x in row]).lower()
+                        if any(w in row_str for w in ["tiempo", "fecha", "date", "datetime", "timestamp"]):
+                            h_idx = idx
+                            break
+                    df = pd.read_excel(biggest, header=h_idx)
+                else:
+                    tmp = pd.read_csv(biggest, header=None, nrows=15, sep=None, engine="python")
+                    h_idx = 0
+                    for idx, row in tmp.iterrows():
+                        row_str = " ".join([str(x) for x in row]).lower()
+                        if any(w in row_str for w in ["tiempo", "fecha", "date", "datetime", "timestamp"]):
+                            h_idx = idx
+                            break
+                    df = pd.read_csv(biggest, header=h_idx, sep=None, engine="python")
+    except Exception as exc:
+        logging.warning("No se pudo cargar serie climática %s / %s: %s", source, station, exc)
+        return pd.DataFrame()
+
+    if df.empty:
+        return df
+
+    # Clean raw column prefixes if any (e.g. Zentra "raw  Solar Radiation")
+    df = df.rename(columns=lambda c: str(c).replace("raw  ", "").replace("raw ", "").strip())
+
+    # Normalize fecha column
+    date_col = next(
+        (c for c in df.columns if any(w in normalize_text(c) for w in ["fecha", "date", "tiempo", "timestamp"])),
+        None,
+    )
+    if date_col is None:
+        # Try first datetime column
+        date_col = next((c for c in df.columns if pd.api.types.is_datetime64_any_dtype(df[c])), None)
+    if date_col is None:
+        logging.warning("No se encontró columna de fecha en %s / %s", source, station)
+        return pd.DataFrame()
+
+    df = df.rename(columns={date_col: "fecha"})
+    df["fecha"] = pd.to_datetime(df["fecha"], errors="coerce")
+    df = df.dropna(subset=["fecha"]).sort_values("fecha").reset_index(drop=True)
+
+    # Rename to display names (only for Datavid which has known column names)
+    if source == "Datavid":
+        df = df.rename(columns={k: v for k, v in _DATAVID_COL_MAP.items() if k in df.columns})
+
+    # Aggregate to daily if requested (memory only — NOT saved)
+    if freq == "daily":
+        num_cols = [c for c in df.columns if c != "fecha" and pd.api.types.is_numeric_dtype(df[c])]
+        df["_date"] = df["fecha"].dt.date
+        df = df.groupby("_date")[num_cols].mean().reset_index()
+        df = df.rename(columns={"_date": "fecha"})
+        df["fecha"] = pd.to_datetime(df["fecha"])
+
+    return df
+
+
+def load_gdd_latitudinal() -> dict[str, pd.DataFrame]:
+    """Carga datos canónicos de la regresión latitudinal T0/Brotación.
+
+    Fuente: method_pipeline_summary.xlsx (sheets diagnostico_cs_reg y regresiones_cs).
+    No recalcula nada; solo lee los outputs ya generados por el pipeline.
+    """
+    xlsx = GDD_DIR / "method_pipeline_summary.xlsx"
+    diagnostico = pd.DataFrame()
+    regresiones = pd.DataFrame()
+    if xlsx.exists():
+        try:
+            diagnostico = pd.read_excel(xlsx, sheet_name="diagnostico_cs_reg")
+        except Exception as exc:
+            logging.warning("No se pudo leer diagnostico_cs_reg: %s", exc)
+        try:
+            regresiones = pd.read_excel(xlsx, sheet_name="regresiones_cs")
+        except Exception as exc:
+            logging.warning("No se pudo leer regresiones_cs: %s", exc)
+    return {"diagnostico": diagnostico, "regresiones": regresiones}
+
+
 def load_state() -> dict[str, object]:
     climate = load_climate_bundle()
     gdd = load_gdd_outputs()
@@ -398,6 +579,8 @@ def load_state() -> dict[str, object]:
     maturity = load_maturity_tables()
     luis = load_luis_artifacts()
     audit = audit_artifacts()
+    climate_catalog = load_climate_hourly_catalog()
+    gdd_latitudinal = load_gdd_latitudinal()
     return {
         "climate": climate,
         "gdd": gdd,
@@ -405,4 +588,6 @@ def load_state() -> dict[str, object]:
         "maturity": maturity,
         "luis": luis,
         "audit": audit,
+        "climate_catalog": climate_catalog,
+        "gdd_latitudinal": gdd_latitudinal,
     }
