@@ -22,6 +22,7 @@ try:
         latitudinal_regression_plot,
         maturity_curve,
         maturity_curve_grouped,
+        prepare_maturity_traceability_table,
         metric_ranking,
         observed_vs_pred,
         panel_a_operativo_plot,
@@ -47,6 +48,7 @@ except ImportError:
         latitudinal_regression_plot,
         maturity_curve,
         maturity_curve_grouped,
+        prepare_maturity_traceability_table,
         metric_ranking,
         observed_vs_pred,
         panel_a_operativo_plot,
@@ -109,16 +111,15 @@ def _choices(df: pd.DataFrame, col: str, all_label: str) -> list[str]:
     return [all_label] + values
 
 
-def _filter_maturity(df: pd.DataFrame, variedad: str, fundo: str, temporada: str, cuartel: str) -> pd.DataFrame:
+def _filter_maturity(df: pd.DataFrame, variedad: str, fundo: str, temporada: str) -> pd.DataFrame:
     d = df.copy()
     filters = {
         "variedad": variedad,
         "fundo": fundo,
         "temporada": temporada,
-        "cuartel": cuartel,
     }
     for col, value in filters.items():
-        if value not in {"Todas", "Todos", "Todas las temporadas", "Todos los cuarteles"} and col in d.columns:
+        if value not in {"Todas", "Todos", "Todas las temporadas"} and col in d.columns:
             d = d[d[col].astype(str) == str(value)]
     return d
 
@@ -355,27 +356,44 @@ def build_app() -> gr.Blocks:
                     f_chill_full_table = gr.Dataframe(value=_safe(gdd.get("chill_dynamic", pd.DataFrame())), interactive=False, wrap=True)
 
         with gr.Tab("📈 Madurez técnica"):
-            with gr.Row():
-                m_var = gr.Dropdown(maturity_vars or [""], value=(maturity_vars[0] if maturity_vars else ""), label="Parámetro Enológico")
-                m_variedad = gr.Dropdown(_choices(maturity_technical, "variedad", "Todas"), value="Todas", label="Variedad")
-                m_fundo = gr.Dropdown(_choices(maturity_technical, "fundo", "Todos"), value="Todos", label="Viñedo / Fundo")
-            with gr.Row():
-                m_temporada = gr.Dropdown(_choices(maturity_technical, "temporada", "Todas las temporadas"), value="Todas las temporadas", label="Temporada")
-                m_cuartel = gr.Dropdown(_choices(maturity_technical, "cuartel", "Todos los cuarteles"), value="Todos los cuarteles", label="Cuartel")
-                m_group_cuartel = gr.Checkbox(value=False, label="Desglosar curvas por cuartel")
-            initial_m = _filter_maturity(maturity_technical, "Todas", "Todos", "Todas las temporadas", "Todos los cuarteles")
-            m_plot = gr.Plot(value=maturity_curve_grouped(initial_m, maturity_vars[0] if maturity_vars else "", False))
-            gr.Markdown("### 📑 Matriz Numérica de Controles de Cosecha")
-            m_table = gr.Dataframe(value=_safe(initial_m), interactive=False, wrap=True)
+            gr.Markdown(
+                "> **🍇 SEGUIMIENTO ENOLÓGICO TEMPORAL:** Curvas de madurez técnica por viñedo, variedad y temporada. "
+                "Los registros por cuartel y muestra se integran espacialmente como promedio simple por fecha/fundo/variedad/temporada "
+                "en el gráfico principal y se detallan explícitamente en la tabla secundaria."
+            )
+            maturity_vars_choices = [
+                (label, col)
+                for label, col in [
+                    ("Brix [°Bx]", "brix"),
+                    ("pH", "pH"),
+                    ("Acidez Sulfúrica [g/L eq.]", "acidez_sulfurica"),
+                    ("Acidez Tartárica [g/L eq.]", "acidez_tartarica"),
+                    ("Peso de Baya [g]", "peso_baya"),
+                    ("Azúcar Real en Baya [g/baya]", "azucar_real_baya_g"),
+                ]
+                if col in maturity_technical.columns
+            ]
+            init_var = maturity_vars_choices[0][1] if maturity_vars_choices else "brix"
 
-            def update_maturity(var, variedad, fundo, temporada, cuartel, group_cuartel):
-                d = _filter_maturity(maturity_technical, variedad, fundo, temporada, cuartel)
-                return maturity_curve_grouped(d, var, bool(group_cuartel)), _safe(d)
+            with gr.Row():
+                m_var = gr.Dropdown(maturity_vars_choices or [("Brix", "brix")], value=init_var, label="Parámetro Enológico / Target", scale=2)
+                m_fundo = gr.Dropdown(_choices(maturity_technical, "fundo", "Todos"), value="Todos", label="Viñedo / Fundo", scale=2)
+                m_variedad = gr.Dropdown(_choices(maturity_technical, "variedad", "Todas"), value="Todas", label="Variedad", scale=2)
+                m_temporada = gr.Dropdown(_choices(maturity_technical, "temporada", "Todas las temporadas"), value="Todas las temporadas", label="Temporada", scale=2)
 
-            for control in [m_var, m_variedad, m_fundo, m_temporada, m_cuartel, m_group_cuartel]:
+            initial_m = _filter_maturity(maturity_technical, "Todas", "Todos", "Todas las temporadas")
+            m_plot = gr.Plot(value=maturity_curve_grouped(initial_m, init_var))
+            gr.Markdown("### 📑 Trazabilidad Analítica de Controles (Cuartel y Muestras)")
+            m_table = gr.Dataframe(value=_safe(prepare_maturity_traceability_table(initial_m, init_var)), interactive=False, wrap=True)
+
+            def update_maturity(var, fundo, variedad, temporada):
+                d = _filter_maturity(maturity_technical, variedad, fundo, temporada)
+                return maturity_curve_grouped(d, var), _safe(prepare_maturity_traceability_table(d, var))
+
+            for control in [m_var, m_fundo, m_variedad, m_temporada]:
                 control.change(
                     update_maturity,
-                    [m_var, m_variedad, m_fundo, m_temporada, m_cuartel, m_group_cuartel],
+                    [m_var, m_fundo, m_variedad, m_temporada],
                     [m_plot, m_table],
                 )
 

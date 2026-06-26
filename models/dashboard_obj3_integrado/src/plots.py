@@ -336,61 +336,86 @@ def maturity_curve(df: pd.DataFrame, variable: str, title: str) -> go.Figure:
     return apply_corporate_style(fig, height=460)
 
 
-def maturity_curve_grouped(df: pd.DataFrame, variable: str, group_by_cuartel: bool = False) -> go.Figure:
+def prepare_maturity_traceability_table(df: pd.DataFrame, variable: str) -> pd.DataFrame:
     if df.empty or not variable or variable not in df.columns:
-        return empty_figure("Sin datos de madurez técnica para los filtros seleccionados")
+        return pd.DataFrame()
     d = df.copy()
     d["fecha"] = pd.to_datetime(d["fecha"], errors="coerce")
     d[variable] = pd.to_numeric(d[variable], errors="coerce")
     d = d.dropna(subset=["fecha", "fundo", "variedad", variable])
     if d.empty:
-        return empty_figure("Sin registros numéricos válidos en el rango seleccionado")
+        return pd.DataFrame()
+
+    group_cols = ["fecha", "fundo", "variedad", "temporada"]
+    agg = (
+        d.groupby(group_cols, dropna=False)
+        .agg(
+            cuartel=("cuartel", lambda s: ", ".join(sorted({str(x) for x in s.dropna().unique() if str(x).strip() and str(x) != "<NA>"}))),
+            muestra=("muestra", lambda s: ", ".join(sorted({str(x) for x in s.dropna().unique() if str(x).strip() and str(x) != "<NA>"}))),
+            valor=(variable, "mean"),
+            n=(variable, "count"),
+        )
+        .reset_index()
+    )
+    agg["valor"] = agg["valor"].round(3)
+    agg["fecha"] = agg["fecha"].dt.strftime("%Y-%m-%d")
+    agg = agg.rename(columns={"valor": variable})
+    agg = agg.sort_values("fecha", ascending=False).reset_index(drop=True)
+    cols = ["fecha", "fundo", "variedad", "temporada", "cuartel", "muestra", variable, "n"]
+    return agg[cols]
+
+
+def maturity_curve_grouped(df: pd.DataFrame, variable: str) -> go.Figure:
+    if df.empty or not variable or variable not in df.columns:
+        return empty_figure("No hay datos para esta combinación de filtros.")
+    d = df.copy()
+    d["fecha"] = pd.to_datetime(d["fecha"], errors="coerce")
+    d[variable] = pd.to_numeric(d[variable], errors="coerce")
+    d = d.dropna(subset=["fecha", "fundo", "variedad", variable])
+    if d.empty:
+        return empty_figure("No hay datos para esta combinación de filtros.")
 
     group_cols = ["fecha", "temporada", "fundo", "variedad"]
-    if group_by_cuartel and "cuartel" in d.columns:
-        group_cols.append("cuartel")
-
     agg = (
         d.groupby(group_cols, dropna=False)
         .agg(
             valor=(variable, "mean"),
-            n_muestras=(variable, "count"),
-            cuarteles=("cuartel", lambda s: ", ".join(sorted({str(x) for x in s.dropna().unique()})[:5])),
-            muestras=("muestra", lambda s: ", ".join(sorted({str(x) for x in s.dropna().unique()})[:5])),
+            n=(variable, "count"),
+            cuartel=("cuartel", lambda s: ", ".join(sorted({str(x) for x in s.dropna().unique() if str(x).strip() and str(x) != "<NA>"}))),
+            muestra=("muestra", lambda s: ", ".join(sorted({str(x) for x in s.dropna().unique() if str(x).strip() and str(x) != "<NA>"}))),
         )
         .reset_index()
     )
-    agg["serie"] = agg["fundo"].astype(str).str.title() + " - " + agg["variedad"].astype(str).str.title()
-    if group_by_cuartel and "cuartel" in agg.columns:
-        agg["serie"] = agg["serie"] + " - C" + agg["cuartel"].astype(str)
+    agg["serie"] = agg["fundo"].astype(str).str.title() + " (" + agg["temporada"].astype(str) + ")"
 
-    var_clean = translate_text(variable)
+    var_label = translate_text(variable)
+
     fig = px.line(
         agg.sort_values("fecha"),
         x="fecha",
         y="valor",
         color="serie",
+        line_dash="variedad",
         markers=True,
         color_discrete_sequence=WINE_PALETTE,
-        title=f"Evolución Enológica Temporal: {var_clean}",
+        title=f"Evolución Temporal de Madurez Técnica: {translate_text(variable)}",
         hover_data={
             "serie": False,
             "fundo": True,
             "variedad": True,
-            "cuarteles": True,
-            "muestras": True,
             "temporada": True,
+            "cuartel": True,
+            "muestra": True,
             "fecha": "|%Y-%m-%d",
             "valor": ":.3f",
-            "n_muestras": True,
+            "n": True,
         },
     )
-    
 
     fig.update_layout(
         xaxis_title="Fecha de Control",
-        yaxis_title=var_clean,
-        legend_title_text="Viñedo — Variedad" + (" — Cuartel" if group_by_cuartel else ""),
+        yaxis_title=var_label,
+        legend_title_text="Viñedo (Temporada) — Variedad",
     )
     return apply_corporate_style(fig, height=520)
 
