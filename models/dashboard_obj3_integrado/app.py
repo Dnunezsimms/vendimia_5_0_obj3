@@ -194,38 +194,56 @@ def build_app() -> gr.Blocks:
                 ts_source = gr.Dropdown(_sources, value=_first_source, label="Fuente", scale=1)
                 ts_station = gr.Dropdown(_first_stations or [""], value=_first_station, label="Estación / Fuente Climática", scale=2)
                 ts_var = gr.Dropdown(_first_vars or [_first_var], value=_first_var, label="Variable Climática", scale=2)
-                ts_freq = gr.Radio(["horaria", "diaria"], value="horaria", label="Frecuencia de visualización", scale=1)
+                _init_freq_choices = ["diaria"] if _first_source == "INIA/Agromet" else ["horaria", "diaria"]
+                _init_freq_val = "diaria" if _first_source == "INIA/Agromet" else "horaria"
+                ts_freq = gr.Radio(_init_freq_choices, value=_init_freq_val, label="Frecuencia de visualización", scale=1)
 
-            _init_df = load_climate_station_series(_first_source, _first_station, "hourly") if _first_station else pd.DataFrame()
-            ts_plot = gr.Plot(value=climate_timeseries_plot(_init_df, _first_var, _first_station, _first_source, "horaria"))
+            _init_df = load_climate_station_series(_first_source, _first_station, "hourly" if _init_freq_val == "horaria" else "daily") if _first_station else pd.DataFrame()
+            ts_plot = gr.Plot(value=climate_timeseries_plot(_init_df, _first_var, _first_station, _first_source, _init_freq_val))
 
             def on_ts_source_change(source, freq):
                 stations = _catalog_stations.get(source, [])
                 st = stations[0] if stations else ""
                 vars_avail = get_climate_station_variables(source, st) if st else []
                 var = vars_avail[0] if vars_avail else ""
+                if source == "INIA/Agromet":
+                    freq_choices = ["diaria"]
+                    freq = "diaria"
+                else:
+                    freq_choices = ["horaria", "diaria"]
+                    if freq not in freq_choices:
+                        freq = "horaria"
                 freq_key = "daily" if freq == "diaria" else "hourly"
                 df = load_climate_station_series(source, st, freq_key) if st else pd.DataFrame()
                 fig = climate_timeseries_plot(df, var, st, source, freq)
-                return gr.update(choices=stations, value=st), gr.update(choices=vars_avail, value=var), fig
+                return gr.update(choices=stations, value=st), gr.update(choices=vars_avail, value=var), gr.update(choices=freq_choices, value=freq), fig
 
             def on_ts_station_change(source, station, freq):
                 vars_avail = get_climate_station_variables(source, station) if station else []
                 var = vars_avail[0] if vars_avail else ""
+                if source == "INIA/Agromet":
+                    freq_choices = ["diaria"]
+                    freq = "diaria"
+                else:
+                    freq_choices = ["horaria", "diaria"]
+                    if freq not in freq_choices:
+                        freq = "horaria"
                 freq_key = "daily" if freq == "diaria" else "hourly"
                 df = load_climate_station_series(source, station, freq_key) if station else pd.DataFrame()
                 fig = climate_timeseries_plot(df, var, station, source, freq)
-                return gr.update(choices=vars_avail, value=var), fig
+                return gr.update(choices=vars_avail, value=var), gr.update(choices=freq_choices, value=freq), fig
 
             def on_ts_var_or_freq_change(source, station, var, freq):
                 if not station:
                     return empty_figure("Selecciona una estación.")
+                if source == "INIA/Agromet":
+                    freq = "diaria"
                 freq_key = "daily" if freq == "diaria" else "hourly"
                 df = load_climate_station_series(source, station, freq_key)
                 return climate_timeseries_plot(df, var, station, source, freq)
 
-            ts_source.change(on_ts_source_change, [ts_source, ts_freq], [ts_station, ts_var, ts_plot])
-            ts_station.change(on_ts_station_change, [ts_source, ts_station, ts_freq], [ts_var, ts_plot])
+            ts_source.change(on_ts_source_change, [ts_source, ts_freq], [ts_station, ts_var, ts_freq, ts_plot])
+            ts_station.change(on_ts_station_change, [ts_source, ts_station, ts_freq], [ts_var, ts_freq, ts_plot])
             ts_var.change(on_ts_var_or_freq_change, [ts_source, ts_station, ts_var, ts_freq], ts_plot)
             ts_freq.change(on_ts_var_or_freq_change, [ts_source, ts_station, ts_var, ts_freq], ts_plot)
 

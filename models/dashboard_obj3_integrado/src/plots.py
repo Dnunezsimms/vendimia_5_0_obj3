@@ -538,7 +538,10 @@ def climate_timeseries_plot(
     if d.empty:
         return empty_figure(f"Todos los registros de {variable} son nulos para {station_name}.")
 
-    freq_label = "agregación diaria en memoria (no guardada)" if freq == "diaria" else "horaria"
+    if source == "INIA/Agromet":
+        freq_label = "resolución diaria nativa (la fuente INIA disponible tiene resolución diaria)"
+    else:
+        freq_label = "agregación diaria en memoria (no guardada)" if freq == "diaria" else "horaria"
     title = f"Serie Temporal — {variable} | {station_name.replace('_', ' ').title()} ({source})"
     subtitle = f"<span style='font-size:11px;color:#718096'>Frecuencia: {freq_label} · Fuente: {source}</span>"
 
