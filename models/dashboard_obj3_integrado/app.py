@@ -284,44 +284,17 @@ def build_app() -> gr.Blocks:
                         "incluido_en_regresion", "motivo_exclusion",
                     ] if c in gdd_latitudinal["diagnostico"].columns]]), interactive=False, wrap=True)
 
-                with gr.Tab("B. Evaluación Operacional (Residuo T0 Latitudinal)"):
-                    f_lat_error_plot = gr.Plot(value=panel_a_operativo_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
-
-                with gr.Tab("C. Diagnóstico de Leakage (T0 Cerrado vs Latitudinal)"):
-                    gr.Markdown("> ⚠️ El T0 cerrado es retrospectivo. No usar como predictor operativo.")
-                    with gr.Row():
-                        f_t0_comparison_plot = gr.Plot(value=panel_b_diagnostico_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
-                        f_baseline_plot = gr.Plot(value=baseline_comparison_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
-                    gr.Markdown("### 📋 Matriz de Diagnóstico y Alertas de Leakage (Cabernet Sauvignon)")
-                    f_alert_table = gr.Dataframe(value=_safe(cabernet_diagnostic_table(gdd.get("diagnostico_cs_reg", pd.DataFrame()))), interactive=False, wrap=True)
-
-                with gr.Tab("D. Auditoría Varietal"):
-                    gr.Markdown("### 📂 Comportamiento por Variedad en Pipeline Histórico\n*(Nota: Módulo configurado sobre T0 retrospectivo de referencia).*")
-                    with gr.Row():
-                        f_fundo = gr.Dropdown(fundos, value="Todos", label="Fundo / Viñedo")
-                        f_var = gr.Dropdown(variedades, value="Todas", label="Variedad")
-                    f_table = gr.Dataframe(value=_safe(gdd["resumen_t0"]), interactive=False, wrap=True)
-                    gr.Markdown("### 🧬 Registro de Matrices Emparejadas (Fenología + Clima)")
-                    gr.Dataframe(value=_safe(phenology["prepared_manifest"]), interactive=False, wrap=True)
-
-                    def update_fenologia(fundo, variedad):
-                        d = _filter_table(gdd["resumen_t0"], fundo, variedad)
-                        return _safe(d)
-
-                    f_fundo.change(update_fenologia, [f_fundo, f_var], [f_table])
-                    f_var.change(update_fenologia, [f_fundo, f_var], [f_table])
-
-                with gr.Tab("E. Auditoría GDD por Biofix"):
+                with gr.Tab("B. Valle Térmico y Auditoría de Fecha de Inicio"):
                     gr.Markdown(
-                        "**Evaluación fisiológica del inicio de conteo térmico (Biofix).** "
-                        "Permite contrastar cómo cambia la curva de GDD acumulado y detectar posibles "
-                        "arrastres de calor invernal de la temporada anterior.\n\n"
-                        "> ℹ️ **Nota metodológica:** El selector de biofix audita acumulación GDD; "
-                        "no recalcula todavía el t0 operativo ni reconstruye el indicador biológico. "
-                        "*(Propuesta futura de análisis de sensibilidad: `t0_sensitivity_by_biofix.csv`)*."
+                        "**Auditoría fisiológica de inicio de conteo térmico (Biofix vs Fondo del Valle).**\n\n"
+                        "- 📈 **Metodología:** La curva acumulada no sirve para encontrar el valle porque siempre aumenta. El fondo del valle se estima canónicamente con la **temperatura media móvil 14 días**.\n"
+                        "- 📊 **Diagnóstico:** El GDD diario y la carga acumulada se usan como apoyo diagnóstico complementario.\n"
+                        "- 🎯 **Objetivo:** Auditar si la fecha de biofix seleccionada cae cerca del mínimo térmico invernal o si queda antes/después de ese reposo fisiológico.\n\n"
+                        "> ❓ **Pregunta clave que resuelve este panel:** *¿La fecha de inicio de conteo cae cerca del fondo térmico o está incorporando calor residual de otra temporada?*"
                     )
                     bf_df = gdd.get("biofix_timeseries", pd.DataFrame())
                     bf_sum = gdd.get("biofix_summary", pd.DataFrame())
+                    tv_df = gdd.get("thermal_valley", pd.DataFrame())
 
                     bf_fundos = sorted(bf_df["fundo"].dropna().unique().tolist()) if not bf_df.empty else ["qba_seca"]
                     bf_temps = sorted(bf_df["temporada"].dropna().unique().tolist()) if not bf_df.empty else ["2025_2026"]
@@ -343,8 +316,11 @@ def build_app() -> gr.Blocks:
                     )
                     bf_plot = gr.Plot(value=init_bf_fig)
 
-                    gr.Markdown("### 📋 Resumen Comparativo de Acumulación y Alertas por Biofix")
+                    gr.Markdown("### 📋 Resumen Canónico de Valle Térmico y Alertas por Biofix")
                     bf_table = gr.Dataframe(value=_safe(bf_sum), interactive=False, wrap=True)
+
+                    gr.Markdown("### 🏔️ Matriz de Diagnóstico Detallado de Valle Térmico (`thermal_valley_diagnostics_by_biofix.csv`)")
+                    tv_table = gr.Dataframe(value=_safe(tv_df), interactive=False, wrap=True)
 
                     def update_bf_panel(f, t, v, b):
                         fig = gdd_biofix_timeseries_plot(bf_df, f, t, v, b)
@@ -355,10 +331,47 @@ def build_app() -> gr.Blocks:
                                 & (bf_sum["temporada"].astype(str) == str(t))
                                 & (bf_sum["variedad"].astype(str).str.strip().str.lower() == str(v).strip().lower())
                             ].copy()
-                        return fig, _safe(sub_sum)
+                        sub_tv = pd.DataFrame()
+                        if not tv_df.empty:
+                            sub_tv = tv_df[
+                                (tv_df["fundo"].astype(str).str.strip().str.lower() == str(f).strip().lower())
+                                & (tv_df["temporada"].astype(str) == str(t))
+                                & (tv_df["variedad"].astype(str).str.strip().str.lower() == str(v).strip().lower())
+                            ].copy()
+                        return fig, _safe(sub_sum), _safe(sub_tv)
 
                     for dd in [bf_fundo_dd, bf_temp_dd, bf_var_dd, bf_tipo_dd]:
-                        dd.change(update_bf_panel, [bf_fundo_dd, bf_temp_dd, bf_var_dd, bf_tipo_dd], [bf_plot, bf_table])
+                        dd.change(update_bf_panel, [bf_fundo_dd, bf_temp_dd, bf_var_dd, bf_tipo_dd], [bf_plot, bf_table, tv_table])
+
+                with gr.Tab("C. Evaluación Operacional (Residuo T0 Latitudinal)"):
+                    f_lat_error_plot = gr.Plot(value=panel_a_operativo_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
+
+                with gr.Tab("D. Diagnóstico de Leakage (T0 Cerrado vs Latitudinal)"):
+                    gr.Markdown(
+                        "> **🔍 EVALUACIÓN METODOLÓGICA DE LEAKAGE:** El **T0 Cerrado** se infirió retrospectivamente ajustando el umbral a la fecha de brotación observada (*data leakage*). "
+                        "El **T0 Latitudinal** es un candidato predictivo operacional legítimo, ciego a brotación observada."
+                    )
+                    with gr.Row():
+                        f_t0_comparison_plot = gr.Plot(value=panel_b_diagnostico_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
+                        f_baseline_plot = gr.Plot(value=baseline_comparison_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
+                    gr.Markdown("### 📋 Matriz de Diagnóstico y Alertas de Leakage (Cabernet Sauvignon)")
+                    f_alert_table = gr.Dataframe(value=_safe(cabernet_diagnostic_table(gdd.get("diagnostico_cs_reg", pd.DataFrame()))), interactive=False, wrap=True)
+
+                with gr.Tab("E. Auditoría Varietal"):
+                    gr.Markdown("### 📂 Comportamiento por Variedad en Pipeline Histórico\n*(Nota: Módulo configurado sobre T0 retrospectivo de referencia).*")
+                    with gr.Row():
+                        f_fundo = gr.Dropdown(fundos, value="Todos", label="Fundo / Viñedo")
+                        f_var = gr.Dropdown(variedades, value="Todas", label="Variedad")
+                    f_table = gr.Dataframe(value=_safe(gdd["resumen_t0"]), interactive=False, wrap=True)
+                    gr.Markdown("### 🧬 Registro de Matrices Emparejadas (Fenología + Clima)")
+                    gr.Dataframe(value=_safe(phenology["prepared_manifest"]), interactive=False, wrap=True)
+
+                    def update_fenologia(fundo, variedad):
+                        d = _filter_table(gdd["resumen_t0"], fundo, variedad)
+                        return _safe(d)
+
+                    f_fundo.change(update_fenologia, [f_fundo, f_var], [f_table])
+                    f_var.change(update_fenologia, [f_fundo, f_var], [f_table])
 
                 with gr.Tab("F. Plausibilidad Fisiológica (Frío Invernal)"):
                     gr.Markdown("> **🧪 NOTA DE INVESTIGACIÓN:** Evaluación exploratoria de balance bioclimático previo a brotación.")

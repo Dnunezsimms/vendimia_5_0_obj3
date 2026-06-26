@@ -711,7 +711,7 @@ def latitudinal_regression_plot(
 def gdd_biofix_timeseries_plot(
     df: pd.DataFrame, fundo: str, temporada: str, variedad: str, biofix_tipo: str
 ) -> go.Figure:
-    """Auditoría temporal de acumulación térmica GDD según candidato de biofix."""
+    """Auditoría temporal de acumulación térmica GDD y diagnóstico de Valle Térmico según candidato de biofix."""
     if df.empty:
         return empty_figure("Sin datos de series temporales GDD por biofix.")
 
@@ -736,91 +736,114 @@ def gdd_biofix_timeseries_plot(
     gdd_previo = sub.iloc[0].get("gdd_acumulado_previo_t0", 0.0)
     alerta = sub.iloc[0].get("alerta_temporada_anterior", "NO")
     diag_bf = sub.iloc[0].get("diagnostico_biofix", "OK")
+    
+    fecha_valle = sub.iloc[0].get("fecha_fondo_valle", np.nan)
+    val_min = sub.iloc[0].get("valor_minimo_valle", np.nan)
+    dias_valle = sub.iloc[0].get("dias_biofix_vs_valle", np.nan)
+    diag_valle = sub.iloc[0].get("diagnostico_valle", "revisar")
+    comentario = sub.iloc[0].get("comentario_metodologico", "")
 
-    # Limitar ventana visual por defecto a brotación + 10 días
     if pd.notna(brot_elp4) and str(brot_elp4).strip().lower() != "nan":
         end_plot_dt = max(
-            pd.Timestamp(brot_elp4) + pd.Timedelta(days=10),
-            sub["fecha"].min() + pd.Timedelta(days=10),
+            pd.Timestamp(brot_elp4) + pd.Timedelta(days=15),
+            sub["fecha"].min() + pd.Timedelta(days=15),
         )
         sub = sub[sub["fecha"] <= end_plot_dt]
-    else:
-        sub = sub[sub["fecha"] <= sub["fecha"].min() + pd.Timedelta(days=45)]
 
     fig = go.Figure()
 
-    # Curva principal GDD acumulado
+    # Curva temperatura móvil (Eje Y1)
+    if "rolling_tmean_14" in sub.columns and not sub["rolling_tmean_14"].isna().all():
+        fig.add_trace(go.Scatter(
+            x=sub["fecha"],
+            y=sub["rolling_tmean_14"],
+            mode="lines",
+            name="Temp. Media Promedio Móvil 14d",
+            line=dict(color="#319795", width=2.5),
+            yaxis="y1",
+        ))
+
+    # Curva principal GDD acumulado (Eje Y2)
     fig.add_trace(go.Scatter(
         x=sub["fecha"],
         y=sub["gdd_acumulado"],
         mode="lines",
         name=f"GDD Acumulado ({biofix_tipo})",
-        line=dict(color=WINE_PALETTE[0], width=3.5),
+        line=dict(color="#805ad5", width=3.5),
+        yaxis="y2",
     ))
 
-    # Curva secundaria GDD diario
+    # Barras GDD diario (Eje Y2)
     fig.add_trace(go.Bar(
         x=sub["fecha"],
         y=sub["gdd_diario"],
         name="GDD Diario",
-        marker=dict(color="rgba(113, 128, 150, 0.22)"),
+        marker=dict(color="rgba(160, 174, 192, 0.35)"),
         yaxis="y2",
     ))
 
-    # Línea horizontal threshold
     if pd.notna(threshold) and float(threshold) > 0:
         fig.add_hline(
             y=float(threshold),
             line_dash="dash",
             line_color="#d69e2e",
             annotation_text=f"Umbral Varietal ({float(threshold):.1f} GDD)",
-            annotation_position="top left",
+            annotation_position="top right",
+            yref="y2",
         )
 
-    # Líneas verticales de hitos
     hitos = [
+        (fecha_valle, "#00a3c4", "dash", f"Fondo Valle ({fecha_valle})"),
         (b_fecha, "#3182ce", "solid", f"Biofix ({b_fecha})"),
         (t0_op, "#805ad5", "dot", f"T0 Operativo ({t0_op})"),
         (t0_lat if str(t0_lat) != str(t0_op) else np.nan, "#dd6b20", "dot", f"T0 Latitudinal ({t0_lat})"),
         (brot_elp4, "#38a169", "solid", f"Brotación ELP4 ({brot_elp4})"),
     ]
     for val, color, dash, label in hitos:
-        if pd.notna(val) and str(val) != "nan":
+        if pd.notna(val) and str(val).strip().lower() != "nan":
             fig.add_vline(x=val, line_dash=dash, line_color=color, line_width=2)
             fig.add_annotation(
-                x=val, y=1.01, yref="paper",
+                x=val, y=0.98, yref="paper",
                 text=f"<b>{label}</b>", showarrow=False,
                 font=dict(size=10, color=color),
-                yanchor="bottom", textangle=-90,
+                yanchor="top", textangle=-90,
             )
 
-    alerta_color = "#2b6cb0" if diag_bf == "OK" else "#e53e3e"
+    alerta_color = "#3182ce" if diag_valle == "cercano_al_valle" else "#dd6b20" if diag_valle == "anterior_al_valle" else "#e53e3e"
+    dias_str = f"{int(dias_valle):+}d vs Fondo Valle" if pd.notna(dias_valle) else "NA"
+    val_min_str = f"{float(val_min):.1f} °C" if pd.notna(val_min) else "NA"
+    gdd_bf_t0 = sub.iloc[0].get("gdd_entre_biofix_y_t0", 0.0)
+    gdd_bf_t0_str = f"{float(gdd_bf_t0 or 0):.1f} GDD" if pd.notna(gdd_bf_t0) else "0.0 GDD"
+
     fig.add_annotation(
         x=0.01,
         y=0.98,
         xref="paper",
         yref="paper",
         text=(
-            f"🏷️ <b>Diagnóstico Biofix:</b> <b style='color:{alerta_color}'>{diag_bf.upper()}</b><br>"
-            f"🔍 <b>Calor previo a T0:</b> {float(gdd_previo or 0):.1f} GDD | "
-            f"⚠️ <b>Alerta:</b> {alerta}"
+            f"🏔️ <b>Fondo Valle Térmico:</b> {fecha_valle} ({val_min_str}) | "
+            f"🏷️ <b>Diagnóstico Valle:</b> <b style='color:{alerta_color}'>{str(diag_valle).upper()}</b> ({dias_str})<br>"
+            f"🎯 <b>GDD acumulado entre Biofix seleccionado y T0 operativo:</b> <b>{gdd_bf_t0_str}</b><br>"
+            f"🔍 <b>Carga térmica desde inicio de ventana hasta T0:</b> {float(gdd_previo or 0):.1f} GDD | "
+            f"⚠️ <b>Alerta arrastre:</b> {alerta}<br>"
+            f"💬 <b>Evaluación Fisiológica:</b> {comentario}"
         ),
         showarrow=False,
         font=dict(size=11, color="#1a202c"),
         align="left",
-        bgcolor="rgba(237,242,247,0.92)",
+        bgcolor="rgba(237,242,247,0.94)",
         bordercolor=alerta_color,
         borderwidth=1,
         borderpad=6,
     )
 
     fig.update_layout(
-        title=f"Auditoría GDD: {fundo_name} | {variedad} ({temporada}) — Biofix {biofix_tipo}",
+        title=f"Auditoría Valle Térmico y GDD: {fundo_name} | {variedad} ({temporada}) — Biofix {biofix_tipo}",
         xaxis_title="Fecha",
-        yaxis=dict(title="GDD Acumulado"),
-        yaxis2=dict(title="GDD Diario", overlaying="y", side="right", showgrid=False, range=[0, 25]),
+        yaxis=dict(title="Temp. Media Móvil [°C]", side="left", range=[0, 30], showgrid=True),
+        yaxis2=dict(title="GDD Diario / Acumulado", overlaying="y", side="right", showgrid=False),
         legend=dict(orientation="h", y=-0.18, x=0.5, xanchor="center"),
         barmode="overlay",
     )
-    return apply_corporate_style(fig, height=520)
+    return apply_corporate_style(fig, height=550)
 

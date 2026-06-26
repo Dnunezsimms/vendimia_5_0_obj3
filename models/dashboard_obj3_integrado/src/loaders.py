@@ -179,6 +179,7 @@ def load_gdd_outputs() -> dict[str, pd.DataFrame]:
         "biofix_summary": read_table(GDD_DIR / "gdd_acumulado_por_biofix_summary.csv"),
         "inferencia_t0": read_table(GDD_DIR / "inferencia_t0_multisitio.csv"),
         "inferencia_t0_spatial": read_table(GDD_DIR / "inferencia_t0_multisitio_spatial.csv"),
+        "thermal_valley": read_table(GDD_DIR / "thermal_valley_diagnostics_by_biofix.csv"),
         "qa_brotacion": read_table(GDD_DIR / "qa_brotacion.csv"),
         "qa_file_audit": read_table(GDD_DIR / "qa_file_audit.csv"),
     }
