@@ -752,33 +752,44 @@ def gdd_biofix_timeseries_plot(
 
     fig = go.Figure()
 
-    # Curva temperatura móvil (Eje Y1)
+    # Barras GDD diario (Eje Y1)
+    fig.add_trace(go.Bar(
+        x=sub["fecha"],
+        y=sub["gdd_diario"],
+        name="GDD Diario",
+        marker=dict(color="rgba(160, 174, 192, 0.4)"),
+        yaxis="y1",
+    ))
+
+    # Curva principal: Actividad Térmica (GDD Móvil 14d) (Eje Y1)
+    if "rolling_gdd_14" in sub.columns and not sub["rolling_gdd_14"].isna().all():
+        fig.add_trace(go.Scatter(
+            x=sub["fecha"],
+            y=sub["rolling_gdd_14"],
+            mode="lines",
+            name="Actividad Térmica (GDD Móvil 14d)",
+            line=dict(color="#00A3C4", width=3.5),
+            yaxis="y1",
+        ))
+
+    # Curva apoyo: Temp. Media Móvil (Eje Y1)
     if "rolling_tmean_14" in sub.columns and not sub["rolling_tmean_14"].isna().all():
         fig.add_trace(go.Scatter(
             x=sub["fecha"],
             y=sub["rolling_tmean_14"],
             mode="lines",
-            name="Temp. Media Promedio Móvil 14d",
-            line=dict(color="#319795", width=2.5),
+            name="Temp. Media Móvil 14d [apoyo]",
+            line=dict(color="#A0AEC0", width=1.5, dash="dot"),
             yaxis="y1",
         ))
 
-    # Curva principal GDD acumulado (Eje Y2)
+    # Curva GDD acumulado (Eje Y2)
     fig.add_trace(go.Scatter(
         x=sub["fecha"],
         y=sub["gdd_acumulado"],
         mode="lines",
-        name=f"GDD Acumulado ({biofix_tipo})",
+        name=f"GDD Acumulado (desde {biofix_tipo})",
         line=dict(color="#805ad5", width=3.5),
-        yaxis="y2",
-    ))
-
-    # Barras GDD diario (Eje Y2)
-    fig.add_trace(go.Bar(
-        x=sub["fecha"],
-        y=sub["gdd_diario"],
-        name="GDD Diario",
-        marker=dict(color="rgba(160, 174, 192, 0.35)"),
         yaxis="y2",
     ))
 
@@ -794,7 +805,7 @@ def gdd_biofix_timeseries_plot(
 
     hitos = [
         (fecha_valle, "#00a3c4", "dash", f"Fondo Valle ({fecha_valle})"),
-        (b_fecha, "#3182ce", "solid", f"Biofix ({b_fecha})"),
+        (b_fecha, "#3182ce", "solid", f"Fecha candidata ({b_fecha})"),
         (t0_op, "#805ad5", "dot", f"T0 Operativo ({t0_op})"),
         (t0_lat if str(t0_lat) != str(t0_op) else np.nan, "#dd6b20", "dot", f"T0 Latitudinal ({t0_lat})"),
         (brot_elp4, "#38a169", "solid", f"Brotación ELP4 ({brot_elp4})"),
@@ -823,7 +834,7 @@ def gdd_biofix_timeseries_plot(
         text=(
             f"🏔️ <b>Fondo Valle Térmico:</b> {fecha_valle} ({val_min_str}) | "
             f"🏷️ <b>Diagnóstico Valle:</b> <b style='color:{alerta_color}'>{str(diag_valle).upper()}</b> ({dias_str})<br>"
-            f"🎯 <b>GDD acumulado entre Biofix seleccionado y T0 operativo:</b> <b>{gdd_bf_t0_str}</b><br>"
+            f"🎯 <b>GDD acumulado entre Fecha candidata auditada y T0 operativo:</b> <b>{gdd_bf_t0_str}</b><br>"
             f"🔍 <b>Carga térmica desde inicio de ventana hasta T0:</b> {float(gdd_previo or 0):.1f} GDD | "
             f"⚠️ <b>Alerta arrastre:</b> {alerta}<br>"
             f"💬 <b>Evaluación Fisiológica:</b> {comentario}"
@@ -838,10 +849,10 @@ def gdd_biofix_timeseries_plot(
     )
 
     fig.update_layout(
-        title=f"Auditoría Valle Térmico y GDD: {fundo_name} | {variedad} ({temporada}) — Biofix {biofix_tipo}",
+        title=f"Auditoría Valle Térmico y GDD: {fundo_name} | {variedad} ({temporada}) — Fecha candidata {biofix_tipo}",
         xaxis_title="Fecha",
-        yaxis=dict(title="Temp. Media Móvil [°C]", side="left", range=[0, 30], showgrid=True),
-        yaxis2=dict(title="GDD Diario / Acumulado", overlaying="y", side="right", showgrid=False),
+        yaxis=dict(title="Actividad Térmica [GDD/día] / Temp [°C]", side="left", range=[0, 28], showgrid=True),
+        yaxis2=dict(title="GDD Acumulado desde Fecha candidata [GDD]", overlaying="y", side="right", showgrid=False),
         legend=dict(orientation="h", y=-0.18, x=0.5, xanchor="center"),
         barmode="overlay",
     )

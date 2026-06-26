@@ -286,11 +286,11 @@ def build_app() -> gr.Blocks:
 
                 with gr.Tab("B. Valle Térmico y Auditoría de Fecha de Inicio"):
                     gr.Markdown(
-                        "**Auditoría fisiológica de inicio de conteo térmico (Biofix vs Fondo del Valle).**\n\n"
-                        "- 📈 **Metodología:** La curva acumulada no sirve para encontrar el valle porque siempre aumenta. El fondo del valle se estima canónicamente con la **temperatura media móvil 14 días**.\n"
-                        "- 📊 **Diagnóstico:** El GDD diario y la carga acumulada se usan como apoyo diagnóstico complementario.\n"
-                        "- 🎯 **Objetivo:** Auditar si la fecha de biofix seleccionada cae cerca del mínimo térmico invernal o si queda antes/después de ese reposo fisiológico.\n\n"
-                        "> ❓ **Pregunta clave que resuelve este panel:** *¿La fecha de inicio de conteo cae cerca del fondo térmico o está incorporando calor residual de otra temporada?*"
+                        "**Auditoría fisiológica de inicio de conteo térmico (Fecha candidata vs Fondo del Valle).**\n\n"
+                        "El valle térmico se audita con GDD diario y una curva móvil de actividad térmica. La temperatura media puede mostrarse solo como apoyo. "
+                        "El GDD acumulado no sirve para encontrar el valle porque siempre aumenta; se usa solo para evaluar cuánto se acumula desde la fecha candidata auditada.\n\n"
+                        "Este panel audita térmicamente la fecha candidata de inicio. No reconstruye todavía el indicador biológico completo Lourdes → umbral GDD → T0 → latitud. Esa sensibilidad queda pendiente para Sprint 2.5C.\n\n"
+                        "> ❓ **Pregunta clave que resuelve este panel:** *¿La fecha de inicio de acumulación cae cerca del valle de actividad térmica diaria, o está metida en el monte térmico anterior/posterior?*"
                     )
                     bf_df = gdd.get("biofix_timeseries", pd.DataFrame())
                     bf_sum = gdd.get("biofix_summary", pd.DataFrame())
@@ -299,24 +299,24 @@ def build_app() -> gr.Blocks:
                     bf_fundos = sorted(bf_df["fundo"].dropna().unique().tolist()) if not bf_df.empty else ["qba_seca"]
                     bf_temps = sorted(bf_df["temporada"].dropna().unique().tolist()) if not bf_df.empty else ["2025_2026"]
                     bf_vars = sorted(bf_df["variedad"].dropna().unique().tolist()) if not bf_df.empty else ["cabernet_sauvignon"]
-                    bf_tipos = sorted(bf_df["biofix_tipo"].dropna().unique().tolist()) if not bf_df.empty else ["t0_operativo"]
+                    bf_tipos = sorted(bf_df["biofix_tipo"].dropna().unique().tolist()) if not bf_df.empty else ["1_agosto"]
 
                     with gr.Row():
                         bf_fundo_dd = gr.Dropdown(bf_fundos, value=bf_fundos[0] if bf_fundos else "", label="Fundo / Viñedo")
                         bf_temp_dd = gr.Dropdown(bf_temps, value=bf_temps[0] if bf_temps else "", label="Temporada")
                         bf_var_dd = gr.Dropdown(bf_vars, value=bf_vars[0] if bf_vars else "", label="Variedad")
-                        bf_tipo_dd = gr.Dropdown(bf_tipos, value="t0_operativo" if "t0_operativo" in bf_tipos else (bf_tipos[0] if bf_tipos else ""), label="Candidato Biofix")
+                        bf_tipo_dd = gr.Dropdown(bf_tipos, value="1_agosto" if "1_agosto" in bf_tipos else (bf_tipos[0] if bf_tipos else ""), label="Fecha candidata auditada")
 
                     init_bf_fig = gdd_biofix_timeseries_plot(
                         bf_df,
                         bf_fundos[0] if bf_fundos else "",
                         bf_temps[0] if bf_temps else "",
                         bf_vars[0] if bf_vars else "",
-                        "t0_operativo" if "t0_operativo" in bf_tipos else (bf_tipos[0] if bf_tipos else ""),
+                        "1_agosto" if "1_agosto" in bf_tipos else (bf_tipos[0] if bf_tipos else ""),
                     )
                     bf_plot = gr.Plot(value=init_bf_fig)
 
-                    gr.Markdown("### 📋 Resumen Canónico de Valle Térmico y Alertas por Biofix")
+                    gr.Markdown("### 📋 Resumen Canónico de Valle Térmico y Alertas por Fecha candidata")
                     bf_table = gr.Dataframe(value=_safe(bf_sum), interactive=False, wrap=True)
 
                     gr.Markdown("### 🏔️ Matriz de Diagnóstico Detallado de Valle Térmico (`thermal_valley_diagnostics_by_biofix.csv`)")

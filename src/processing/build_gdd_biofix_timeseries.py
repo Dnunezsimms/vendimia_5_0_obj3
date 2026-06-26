@@ -135,11 +135,7 @@ def build_canonical_outputs():
     diag_rows = []
 
     fixed_biofixes = [
-        ("1_mayo", "2025-05-01"),
-        ("15_mayo", "2025-05-15"),
-        ("1_junio", "2025-06-01"),
-        ("solsticio_invierno", "2025-06-21"),
-        ("1_julio", "2025-07-01"),
+        ("15_julio", "2025-07-15"),
         ("1_agosto", "2025-08-01"),
         ("15_agosto", "2025-08-15"),
         ("1_septiembre", "2025-09-01"),
@@ -171,8 +167,6 @@ def build_canonical_outputs():
                 print(f"Advertencia: Error leyendo {archivo_origen}: {e}")
 
         case_biofixes = list(fixed_biofixes)
-        case_biofixes.append(("t0_operativo", t0_op))
-        case_biofixes.append(("t0_latitudinal", t0_lat))
 
         t0_ref = t0_op if pd.notna(t0_op) and str(t0_op) != "nan" else t0_lat
 
@@ -188,16 +182,23 @@ def build_canonical_outputs():
             clima_df["temp_media"] = (clima_df["temp_max_grado_c"] + clima_df["temp_min_grado_c"]) / 2.0
             clima_df["gdd_diario_real"] = [gdd_seno_simple(r["temp_max_grado_c"], r["temp_min_grado_c"]) for _, r in clima_df.iterrows()]
             clima_df["rolling_tmean_14"] = clima_df["temp_media"].rolling(14, center=True, min_periods=7).mean()
+            clima_df["rolling_gdd_14"] = clima_df["gdd_diario_real"].rolling(14, center=True, min_periods=7).mean()
             
             start_win_str = clima_df["Fecha"].min().strftime("%Y-%m-%d")
             end_win_str = clima_df["Fecha"].max().strftime("%Y-%m-%d")
 
             winter_sub = clima_df[(clima_df["Fecha"] >= "2025-05-01") & (clima_df["Fecha"] <= "2025-08-31")]
-            if not winter_sub.empty and not winter_sub["rolling_tmean_14"].isna().all():
-                min_idx = winter_sub["rolling_tmean_14"].idxmin()
-                valle_row = winter_sub.loc[min_idx]
+            if not winter_sub.empty and not winter_sub["rolling_gdd_14"].isna().all():
+                min_val = float(winter_sub["rolling_gdd_14"].min())
+                flat_rows = winter_sub[winter_sub["rolling_gdd_14"] <= min_val + 0.05]
+                mid_idx = flat_rows.index[len(flat_rows) // 2]
+                valle_row = clima_df.loc[mid_idx]
                 fecha_fondo_valle = valle_row["Fecha"].strftime("%Y-%m-%d")
-                valor_minimo_valle = float(valle_row["rolling_tmean_14"])
+                valor_minimo_valle = float(valle_row["rolling_gdd_14"])
+                if len(flat_rows) > 7:
+                    metrica_valle = f"valle_termico_extendido_{len(flat_rows)}d"
+                else:
+                    metrica_valle = "promedio_movil_14d_gdd_diario"
 
             if pd.notna(t0_ref) and str(t0_ref) != "nan":
                 t0_dt_ref = pd.Timestamp(t0_ref)
@@ -216,7 +217,7 @@ def build_canonical_outputs():
                     "t0_operativo": t0_op, "t0_latitudinal": t0_lat, "fecha_brotacion_ELP4": brot_elp4,
                     "gdd_diario": np.nan, "gdd_acumulado": np.nan, "gdd_acumulado_previo_t0": np.nan,
                     "gdd_entre_biofix_y_t0": np.nan,
-                    "temp_media": np.nan, "rolling_tmean_14": np.nan, "fecha_fondo_valle": np.nan,
+                    "temp_media": np.nan, "rolling_tmean_14": np.nan, "rolling_gdd_14": np.nan, "fecha_fondo_valle": np.nan,
                     "valor_minimo_valle": np.nan, "dias_biofix_vs_valle": np.nan, "diagnostico_valle": "revisar",
                     "comentario_metodologico": alerta_msg, "threshold_GDD_usado": threshold,
                     "fuente_clima": fuente_clima, "archivo_origen": archivo_origen,
@@ -247,7 +248,7 @@ def build_canonical_outputs():
             sub_clima = clima_df[clima_df["Fecha"] <= end_plot_dt].copy()
             
             sub_clima["post_mask"] = sub_clima["Fecha"] >= b_dt
-            sub_clima["gdd_diario"] = sub_clima["gdd_diario_real"].where(sub_clima["post_mask"], np.nan)
+            sub_clima["gdd_diario"] = sub_clima["gdd_diario_real"]
             sub_clima["gdd_acumulado"] = sub_clima["gdd_diario_real"].where(sub_clima["post_mask"], 0.0).cumsum()
             sub_clima["gdd_acumulado"] = sub_clima["gdd_acumulado"].where(sub_clima["post_mask"], np.nan)
 
@@ -342,6 +343,7 @@ def build_canonical_outputs():
                     "gdd_entre_biofix_y_t0": gdd_entre_bf_y_t0,
                     "temp_media": float(cr["temp_media"]) if pd.notna(cr["temp_media"]) else np.nan,
                     "rolling_tmean_14": float(cr["rolling_tmean_14"]) if pd.notna(cr["rolling_tmean_14"]) else np.nan,
+                    "rolling_gdd_14": float(cr["rolling_gdd_14"]) if pd.notna(cr["rolling_gdd_14"]) else np.nan,
                     "fecha_fondo_valle": fecha_fondo_valle, "valor_minimo_valle": valor_minimo_valle,
                     "dias_biofix_vs_valle": dias_bf_valle, "diagnostico_valle": diag_valle,
                     "comentario_metodologico": comentario, "threshold_GDD_usado": threshold,
