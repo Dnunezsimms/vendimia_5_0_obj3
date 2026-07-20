@@ -57,6 +57,35 @@ except ImportError:
         panel_d_chill_table,
         gdd_biofix_timeseries_plot,
     )
+try:
+    from .src.luis_config import BASE_DIR as LUIS_BASE_DIR, CACHE_DIR as LUIS_CACHE_DIR
+    from .src.luis_data_loader import (
+        available_combos, available_schemes, available_targets, detect_predictor_columns,
+        discover_artifacts, load_experiment_config, load_importance, load_metrics,
+        load_original_data, load_predictions
+    )
+    from .src.luis_metrics import aggregate_metrics, attach_deltas, combine_shap_mae, executive_summary, lofo_fundo_table
+    from .src.luis_plots import (
+        box_target_by_fundo, box_target_by_variety, combo_compare_bars,
+        importance_bar as luis_importance_bar, lofo_ranking_bar, observed_vs_pred as luis_observed_vs_pred,
+        performance_scatter as luis_performance_scatter, predictor_timeseries, residual_plots, timeseries_target
+    )
+    from .src.luis_utils import setup_logging as luis_setup_logging
+except ImportError:
+    from src.luis_config import BASE_DIR as LUIS_BASE_DIR, CACHE_DIR as LUIS_CACHE_DIR
+    from src.luis_data_loader import (
+        available_combos, available_schemes, available_targets, detect_predictor_columns,
+        discover_artifacts, load_experiment_config, load_importance, load_metrics,
+        load_original_data, load_predictions
+    )
+    from src.luis_metrics import aggregate_metrics, attach_deltas, combine_shap_mae, executive_summary, lofo_fundo_table
+    from src.luis_plots import (
+        box_target_by_fundo, box_target_by_variety, combo_compare_bars,
+        importance_bar as luis_importance_bar, lofo_ranking_bar, observed_vs_pred as luis_observed_vs_pred,
+        performance_scatter as luis_performance_scatter, predictor_timeseries, residual_plots, timeseries_target
+    )
+    from src.luis_utils import setup_logging as luis_setup_logging
+
 
 
 def _safe(df: pd.DataFrame | None) -> pd.DataFrame:
@@ -138,6 +167,328 @@ h1, h2, h3 {
     color: #2d3748 !important;
 }
 """
+
+def _safe_dropdown_value(default_value, choices):
+    choices = list(choices or [])
+    if default_value in choices:
+        return default_value
+    return choices[0] if choices else None
+
+
+def _load_or_empty(label: str, loader, *args) -> pd.DataFrame:
+    try:
+        return loader(*args)
+    except Exception as e:
+        logging.exception("%s failed; using an empty table: %s", label, e)
+        return pd.DataFrame()
+
+
+def _export_csv(df: pd.DataFrame, prefix: str) -> str:
+    LUIS_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    p = LUIS_CACHE_DIR / f"{prefix}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+    df.to_csv(p, index=False)
+    return str(p)
+
+
+def _export_md(text: str, prefix: str) -> str:
+    LUIS_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    p = LUIS_CACHE_DIR / f"{prefix}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
+    p.write_text(text, encoding="utf-8")
+    return str(p)
+
+
+def build_state() -> dict:
+    logging.info("Loading artifacts from %s", LUIS_BASE_DIR)
+    logging.info("Artifacts directory exists: %s", LUIS_BASE_DIR.exists())
+    logging.info("Outputs directory: %s | exists=%s", LUIS_BASE_DIR / "outputs", (LUIS_BASE_DIR / "outputs").exists())
+    logging.info("Prepared data directory: %s | exists=%s", LUIS_BASE_DIR / "data" / "prepared", (LUIS_BASE_DIR / "data" / "prepared").exists())
+    logging.info("Config file: %s | exists=%s", LUIS_BASE_DIR / "config" / "experiment_config.json", (LUIS_BASE_DIR / "config" / "experiment_config.json").exists())
+    try:
+        artifacts = discover_artifacts(LUIS_BASE_DIR)
+    except Exception as e:
+        logging.exception("discover_artifacts failed, using empty table: %s", e)
+        artifacts = pd.DataFrame()
+    metrics = _load_or_empty("load_metrics", load_metrics, LUIS_BASE_DIR)
+    preds = _load_or_empty("load_predictions", load_predictions, LUIS_BASE_DIR)
+    try:
+        perm_df, shap_df = load_importance(LUIS_BASE_DIR)
+    except Exception as e:
+        logging.exception("load_importance failed; using empty tables: %s", e)
+        perm_df, shap_df = pd.DataFrame(), pd.DataFrame()
+    summary = attach_deltas(aggregate_metrics(metrics))
+    lofo_table = lofo_fundo_table(metrics)
+    try:
+        cfg = load_experiment_config(LUIS_BASE_DIR)
+    except Exception as e:
+        logging.exception("load_experiment_config failed; using empty config: %s", e)
+        cfg = {}
+    ratios = combine_shap_mae(shap_df, metrics)
+    logging.info(
+        "Loaded dashboard tables: artifacts=%s metrics_rows=%s predictions_rows=%s permutation_rows=%s shap_rows=%s summary_rows=%s",
+        len(artifacts),
+        len(metrics),
+        len(preds),
+        len(perm_df),
+        len(shap_df),
+        len(summary),
+    )
+
+    return {
+        "artifacts": artifacts,
+        "metrics": metrics,
+        "predictions": preds,
+        "perm": perm_df,
+        "shap": shap_df,
+        "summary": summary,
+        "lofo": lofo_table,
+        "cfg": cfg,
+        "ratios": ratios,
+    }
+
+
+def filtered_summary(state: dict, target: str, scheme: str) -> pd.DataFrame:
+    s = state["summary"]
+    if s.empty or not {"target_key", "scheme"}.issubset(s.columns) or not target or not scheme:
+        return s
+    return s[(s["target_key"] == target) & (s["scheme"] == scheme)].copy()
+
+
+def filtered_metrics(state: dict, target: str, scheme: str, combo: str | None) -> pd.DataFrame:
+    m = state["metrics"]
+    if m.empty or not {"target_key", "scheme"}.issubset(m.columns) or not target or not scheme:
+        return m
+    d = m[(m["target_key"] == target) & (m["scheme"] == scheme)].copy()
+    if combo and combo != "Todos":
+        d = d[d["predictors"] == combo]
+    return d
+
+
+def filtered_predictions(state: dict, target: str, scheme: str, combo: str | None, variedad: str, fundo: str) -> pd.DataFrame:
+    p = state["predictions"]
+    if p.empty or not target or not scheme:
+        return p
+    d = p[(p["target_key"] == target) & (p["scheme"] == scheme)].copy() if "target_key" in p.columns else p.copy()
+    if combo and combo != "Todos" and "predictors" in d.columns:
+        d = d[d["predictors"] == combo]
+    if variedad != "Todas" and "variedad" in d.columns:
+        d = d[d["variedad"] == variedad]
+    if fundo != "Todos" and "fundo" in d.columns:
+        d = d[d["fundo"] == fundo]
+    return d
+
+
+def filtered_importance(df: pd.DataFrame, target: str, scheme: str, combo: str | None) -> pd.DataFrame:
+    if df.empty or not {"target_key", "scheme"}.issubset(df.columns) or not target or not scheme:
+        return df
+    d = df[(df["target_key"] == target) & (df["scheme"] == scheme)].copy()
+    if combo and combo != "Todos":
+        d = d[d["predictors"] == combo]
+    return d
+
+
+def _performance_boxplot_image(target: str, scheme: str) -> tuple[str | None, str]:
+    """Return path + status for precomputed RF boxplot image in monitoring."""
+    box_dir = LUIS_BASE_DIR / "monitoring" / "rf_diego_latest_target_combo_boxplots"
+    cand = [
+        box_dir / f"rf_boxplot_wanted_combos_{target}_{scheme}_version2.png",
+        box_dir / f"rf_boxplot_wanted_combos_{target}_{scheme}.png",
+    ]
+    for c in cand:
+        if c.exists():
+            return str(c), f"Mostrando boxplot precomputado: `{c.name}`"
+    return None, "No hay boxplot precomputado para este target/esquema en monitoring."
+
+
+def refresh_options(state: dict, target: str, scheme: str):
+    targets = available_targets(state["metrics"], LUIS_BASE_DIR)
+    target = _safe_dropdown_value(target, targets)
+
+    schemes = available_schemes(state["metrics"], target)
+    scheme = _safe_dropdown_value(scheme, schemes)
+
+    combos_df = available_combos(state["metrics"], target, scheme)
+    combos = ["Todos"] + combos_df["predictors"].tolist() if not combos_df.empty else ["Todos"]
+    combos_h = ["Todos"] + combos_df["combo_human"].tolist() if not combos_df.empty else ["Todos"]
+
+    orig = load_original_data(target, LUIS_BASE_DIR)
+    variedades = ["Todas"] + sorted(orig["variedad"].dropna().astype(str).unique().tolist()) if "variedad" in orig.columns else ["Todas"]
+    fundos = ["Todos"] + sorted(orig["fundo"].dropna().astype(str).unique().tolist()) if "fundo" in orig.columns else ["Todos"]
+
+    return (
+        gr.update(choices=targets, value=target),
+        gr.update(choices=schemes, value=scheme),
+        gr.update(choices=combos, value=_safe_dropdown_value("Todos", combos)),
+        gr.update(choices=variedades, value=_safe_dropdown_value("Todas", variedades)),
+        gr.update(choices=fundos, value=_safe_dropdown_value("Todos", fundos)),
+        gr.update(choices=combos_h, value=_safe_dropdown_value("Todos", combos_h)),
+    )
+
+
+def update_resumen(state: dict, target: str, scheme: str):
+    if not target or not scheme:
+        md = (
+            "### Estado de carga\n"
+            "No hay targets/esquemas disponibles. Revisa que existan archivos bajo "
+            f"`{LUIS_BASE_DIR / 'outputs'}` con el patron "
+            "`outputs/<target>/<scheme>/predictors__*/rf/<run>/metrics_per_split.csv` "
+            f"o datos originales en `{LUIS_BASE_DIR / 'data' / 'prepared'}`."
+        )
+        return md, pd.DataFrame(), luis_performance_scatter(pd.DataFrame())
+
+    orig = load_original_data(target, LUIS_BASE_DIR)
+    fs = filtered_summary(state, target, scheme)
+    ex = executive_summary(target, scheme, fs, orig)
+
+    md = f"""
+### Resumen ejecutivo
+- **Target:** `{target}`
+- **Validación:** `{scheme}`
+- **Mejor combinación (MAE):** {ex.get('best_mae', 'N/A')}
+- **Mejor combinación (R2):** {ex.get('best_r2', 'N/A')}
+- **Delta MAE (best vs base):** `{ex.get('delta_mae_best', float('nan')):.4f}`
+- **Mejora MAE % (best vs base):** `{ex.get('mejora_mae_pct_best', float('nan')):.2f}`
+- **Delta R2 (best vs base):** `{ex.get('delta_r2_best', float('nan')):.4f}`
+- **N combinaciones:** `{ex.get('n_combos', 0)}`
+- **N fundos:** `{ex.get('n_fundos', 0)}`
+- **N variedades:** `{ex.get('n_variedades', 0)}`
+- **N observaciones:** `{ex.get('n_obs', 0)}`
+
+Fórmulas:
+`deltaMAE = MAE_modelo - MAE_base`
+`mejora_MAE_% = (MAE_base - MAE_modelo) / MAE_base * 100`
+`deltaR2 = R2_modelo - R2_base`
+"""
+    return md, fs, luis_performance_scatter(fs)
+
+
+def update_datos_originales(target: str, variedad: str, fundo: str, predictor: str):
+    orig = load_original_data(target, LUIS_BASE_DIR)
+    if orig.empty:
+        return "No se encontró información suficiente para esta visualización con los filtros actuales.", None, None, None, None, gr.update(choices=[""], value="")
+
+    target_col = None
+    cfg = load_experiment_config(LUIS_BASE_DIR)
+    if target in cfg.get("targets", {}):
+        target_col = cfg["targets"][target].get("column")
+    if target_col not in orig.columns:
+        cands = [c for c in orig.columns if "mg/baya" in c or "mgEqMv" in c or "mg/Kg" in c]
+        target_col = cands[-1] if cands else None
+    if target_col is None:
+        return "No se encontró información suficiente para esta visualización con los filtros actuales.", None, None, None, None, gr.update(choices=[""], value="")
+
+    d = orig.copy()
+    if variedad != "Todas" and "variedad" in d.columns:
+        d = d[d["variedad"] == variedad]
+    if fundo != "Todos" and "fundo" in d.columns:
+        d = d[d["fundo"] == fundo]
+
+    pred_cols = detect_predictor_columns(orig, target_col)
+    if predictor not in pred_cols:
+        predictor = pred_cols[0] if pred_cols else ""
+
+    msg = f"Target original: `{target_col}` | Filas: {len(d)}"
+    return (
+        msg,
+        box_target_by_variety(d, target_col),
+        timeseries_target(d, target_col),
+        box_target_by_fundo(d, target_col),
+        predictor_timeseries(d, predictor) if predictor else predictor_timeseries(pd.DataFrame(), ""),
+        gr.update(choices=pred_cols, value=predictor),
+    )
+
+
+def update_lofo(state: dict, target: str, combo: str):
+    lo = state["lofo"]
+    if lo.empty:
+        return lo, lofo_ranking_bar(lo)
+    d = lo[lo["target_key"] == target].copy()
+    if combo != "Todos":
+        d = d[d["predictors"] == combo]
+    return d, lofo_ranking_bar(d)
+
+
+def update_predicciones(state: dict, target: str, scheme: str, combo: str, variedad: str, fundo: str):
+    d = filtered_predictions(state, target, scheme, combo, variedad, fundo)
+    fig_obs_pred = luis_observed_vs_pred(d)
+    h, rvp = residual_plots(d)
+    if d.empty or "fecha" not in d.columns:
+        ts = timeseries_target(pd.DataFrame(), "")
+    else:
+        y_col = [c for c in d.columns if c not in ["prediction", "subset", "split_id", "method", "predictors", "n_predictors", "seed", "file_path", "output_tag", "fecha", "variedad", "fundo"] and pd.api.types.is_numeric_dtype(d[c])]
+        y = y_col[0] if y_col else None
+        if y:
+            long = d[["fecha", y, "prediction"]].copy().rename(columns={y: "observed"})
+            long = long.melt(id_vars=["fecha"], value_vars=["observed", "prediction"], var_name="serie", value_name="valor")
+            ts = px.line(long.sort_values("fecha"), x="fecha", y="valor", color="serie", template="plotly_white")
+        else:
+            ts = timeseries_target(pd.DataFrame(), "")
+    return d, fig_obs_pred, ts, h, rvp
+
+
+def update_importancia(state: dict, target: str, scheme: str, combo: str, tipo: str):
+    perm = filtered_importance(state["perm"], target, scheme, combo)
+    shap = filtered_importance(state["shap"], target, scheme, combo)
+    ratio = state["ratios"]
+    ratio = filtered_importance(ratio, target, scheme, combo) if not ratio.empty else ratio
+
+    if tipo == "permutation":
+        fig = luis_importance_bar(perm, "perm_importance_mean", "Importancia por permutación")
+        table = perm
+    elif tipo == "shap":
+        fig = luis_importance_bar(shap, "shap_mean_abs", "Importancia SHAP")
+        table = shap
+    else:
+        fig = luis_importance_bar(ratio, "shap_over_mae", "Cociente SHAP/MAE")
+        table = ratio
+
+    if table.empty:
+        msg = "No se encontraron archivos SHAP/permutation para esta combinación."
+    else:
+        msg = f"Filas disponibles: {len(table)}"
+    return msg, fig, table
+
+
+def update_comparador(state: dict, target: str, scheme: str, combos: list[str]):
+    fs = filtered_summary(state, target, scheme)
+    if combos:
+        fs = fs[fs["predictors"].isin(combos)]
+    a, b, c = combo_compare_bars(fs)
+    return fs, a, b, c
+
+
+def update_explorer(state: dict):
+    art = state["artifacts"]
+    if art.empty:
+        return art
+    return art.sort_values(["kind", "target", "scheme"]).reset_index(drop=True)
+
+
+def export_tables(state: dict, target: str, scheme: str, combo: str, variedad: str, fundo: str):
+    fs = filtered_summary(state, target, scheme)
+    fm = filtered_metrics(state, target, scheme, combo)
+    fp = filtered_predictions(state, target, scheme, combo, variedad, fundo)
+
+    metrics_csv = _export_csv(fm if not fm.empty else fs, "metrics_filtered")
+    preds_csv = _export_csv(fp, "predictions_filtered")
+
+    imp = filtered_importance(state["perm"], target, scheme, combo)
+    if imp.empty:
+        imp = filtered_importance(state["shap"], target, scheme, combo)
+    imp_csv = _export_csv(imp, "importance_filtered") if not imp.empty else _export_csv(pd.DataFrame(), "importance_filtered_empty")
+
+    md = (
+        f"# Resumen ejecutivo\n\n"
+        f"- Target: `{target}`\n"
+        f"- Validación: `{scheme}`\n"
+        f"- Combinación: `{combo}`\n"
+        f"- Variedad: `{variedad}`\n"
+        f"- Fundo: `{fundo}`\n"
+        f"- Fecha generación: `{datetime.now().isoformat()}`\n"
+    )
+    md_file = _export_md(md, "resumen_ejecutivo")
+    return metrics_csv, preds_csv, imp_csv, md_file
+
+
 
 def build_app() -> gr.Blocks:
     state = load_state()
@@ -428,48 +779,259 @@ def build_app() -> gr.Blocks:
                     [m_plot, m_table],
                 )
 
-        with gr.Tab("🍷 Madurez fenólica"):
-            gr.Markdown("> **🔬 RECEPCIÓN DE MUESTRAS 2026:** Las curvas desplegadas representan las temporadas históricas consolidadas. Las muestras analíticas 2026 están pendientes de titulación en laboratorio de especialidad.")
-            p_var = gr.Dropdown(phenolic_vars or [""], value=(phenolic_vars[0] if phenolic_vars else ""), label="Compuesto Fenólico")
-            p_plot = gr.Plot(value=maturity_curve(phenolic_df, phenolic_vars[0] if phenolic_vars else "", "Curva de Madurez Fenólica"))
-            gr.Markdown("### 🧪 Base de Mediciones de HPLC y Espectrofotometría")
-            gr.Dataframe(value=_safe(phenolic_df), interactive=False, wrap=True)
-            p_var.change(lambda v: maturity_curve(phenolic_df, v, "Curva de Madurez Fenólica"), p_var, p_plot)
 
-        with gr.Tab("🤖 Modelos IA / RF / PySR"):
-            gr.Markdown("> **📌 REFERENCIA PREDICTIVA:** Evaluación técnica de modelos Random Forest (RF) y fórmulas explícitas obtenidas por Regresión Simbólica (PySR).")
-            with gr.Row():
-                target = gr.Dropdown(model_targets, value=model_targets[0], label="Variable Objetivo (Target)")
-                scheme = gr.Dropdown(schemes, value=schemes[0], label="Esquema de Validación")
-            model_plot = gr.Plot(value=metric_ranking(model_metrics))
-            pred_plot = gr.Plot(value=observed_vs_pred(luis["predictions_rf"]))
-            gr.Markdown("### 📊 Tabla de Desempeño Multimodelo (MAE / R²)")
-            model_table = gr.Dataframe(value=_safe(model_metrics), interactive=False, wrap=True)
-
-            def update_models(t, s):
-                d = model_metrics.copy()
-                if t != "Todos" and "target_key" in d.columns:
-                    d = d[d["target_key"] == t]
-                if s != "Todos" and "scheme" in d.columns:
-                    d = d[d["scheme"] == s]
-                preds = luis["predictions_rf"].copy()
-                if t != "Todos" and "target_key" in preds.columns:
-                    preds = preds[preds["target_key"] == t]
-                return _safe(d), metric_ranking(d), observed_vs_pred(preds)
-
-            target.change(update_models, [target, scheme], [model_table, model_plot, pred_plot])
-            scheme.change(update_models, [target, scheme], [model_table, model_plot, pred_plot])
-
-        with gr.Tab("💡 Interpretabilidad agronómica"):
-            gr.Markdown(
-                "> **🌱 GUÍA AGRONÓMICA SHAP:** Los sólidos solubles (°Brix) acoplan su evolución a la acumulación térmica (GDD). El pH y la acidez total responden a temperaturas máximas e índices nocturnos de degradación del ácido málico. La síntesis de antocianinas y taninos actúa como respuesta multivariada no lineal a estrés térmico y déficit de presión de vapor (VPD)."
+        state = build_state()
+        targets = available_targets(state["metrics"], LUIS_BASE_DIR)
+        target0 = _safe_dropdown_value("antocianinas_mg_baya", targets)
+        schemes0 = available_schemes(state["metrics"], target0)
+        scheme0 = _safe_dropdown_value("cv5_mixed", schemes0)
+        combos_df = available_combos(state["metrics"], target0, scheme0)
+        combo_opts = ["Todos"] + combos_df["predictors"].tolist() if not combos_df.empty else ["Todos"]
+        combo_h_opts = ["Todos"] + combos_df["combo_human"].tolist() if not combos_df.empty else ["Todos"]
+        logging.info("Dropdown target choices: %s", targets)
+        logging.info("Dropdown target value: %s", target0)
+        logging.info("Dropdown scheme choices for target '%s': %s", target0, schemes0)
+        logging.info("Dropdown scheme value: %s", scheme0)
+        logging.info("Dropdown combo choices count: %s", len(combo_opts))
+        logging.info("Dropdown readable combo choices count: %s", len(combo_h_opts))
+    
+        orig0 = load_original_data(target0, LUIS_BASE_DIR)
+        var_opts = ["Todas"] + sorted(orig0["variedad"].dropna().astype(str).unique().tolist()) if "variedad" in orig0.columns else ["Todas"]
+        fundo_opts = ["Todos"] + sorted(orig0["fundo"].dropna().astype(str).unique().tolist()) if "fundo" in orig0.columns else ["Todos"]
+        logging.info("Dropdown variedad choices count: %s", len(var_opts))
+        logging.info("Dropdown fundo choices count: %s", len(fundo_opts))
+    
+        startup_status = (
+            "### Estado de carga\n"
+            f"- Directorio de artefactos: `{LUIS_BASE_DIR}`\n"
+            f"- Archivos detectados: `{len(state['artifacts'])}`\n"
+            f"- Filas de metricas: `{len(state['metrics'])}`\n"
+            f"- Filas de predicciones: `{len(state['predictions'])}`\n"
+            f"- Targets detectados: `{len(targets)}`\n"
+            f"- Esquemas para target inicial: `{', '.join(schemes0) if schemes0 else 'ninguno'}`"
+        )
+        if not targets or not schemes0:
+            startup_status += (
+                "\n\nNo se encontraron artefactos suficientes para poblar todos los filtros. "
+                f"Verifica `{LUIS_BASE_DIR / 'outputs'}` y `{LUIS_BASE_DIR / 'data' / 'prepared'}`."
             )
+    
+    
+        with gr.Tab("🤖 Modelos de Madurez Fenólica (IA/RF)"):
             with gr.Row():
-                gr.Plot(value=importance_bar(luis["shap"], "shap_mean_abs"))
-                gr.Plot(value=importance_bar(luis["permutation"], "perm_importance_mean"))
-            gr.Markdown("### 📜 Ecuaciones Explícitas Descubiertas por Regresión Simbólica (PySR)")
-            gr.Dataframe(value=_safe(luis["metrics_pysr"]), interactive=False, wrap=True)
-
+                with gr.Column(scale=1):
+                    target_dd = gr.Dropdown(label="Target", choices=targets, value=target0)
+                    scheme_dd = gr.Dropdown(label="Estrategia de validación", choices=schemes0, value=scheme0)
+                    variedad_dd = gr.Dropdown(label="Variedad", choices=var_opts, value="Todas", visible=False, interactive=False)
+                    fundo_dd = gr.Dropdown(label="Fundo", choices=fundo_opts, value="Todos")
+                    combo_dd = gr.Dropdown(label="Combinación (raw)", choices=combo_opts, value="Todos")
+                    combo_h_dd = gr.Dropdown(label="Combinación legible", choices=combo_h_opts, value="Todos")
+                    viz_type_dd = gr.Dropdown(
+                        label="Tipo de visualización",
+                        choices=[
+                            "resumen general",
+                            "distribución por variedad",
+                            "series temporales",
+                            "boxplots por fundo",
+                            "predicho vs observado",
+                            "residuos",
+                            "ranking de fundos por MAE",
+                            "importancia por permutación",
+                            "importancia SHAP",
+                            "comparación MAE/SHAP",
+                            "tabla de métricas",
+                            "tabla de mejores combinaciones",
+                        ],
+                        value="resumen general",
+                    )
+                    refresh_btn = gr.Button("Recargar y actualizar filtros")
+    
+                with gr.Column(scale=3):
+                    with gr.Tabs():
+                        with gr.Tab("Resumen general"):
+                            resumen_md = gr.Markdown()
+                            resumen_table = gr.Dataframe(label="Tabla de métricas agregadas")
+                            resumen_scatter = gr.Plot(label="MAE vs R2")
+    
+                        with gr.Tab("Datos originales"):
+                            orig_msg = gr.Markdown()
+                            fig_box_var = gr.Plot(label="Boxplot target por variedad")
+                            fig_ts_target = gr.Plot(label="Serie temporal target")
+                            fig_box_fundo = gr.Plot(label="Boxplot target por fundo")
+                            predictor_dd = gr.Dropdown(label="Variable original / predictor", choices=[], value=None)
+                            fig_ts_pred = gr.Plot(label="Serie temporal predictor")
+    
+                        with gr.Tab("Desempeño modelos"):
+                            perf_table = gr.Dataframe(label="Métricas por combinación")
+                            perf_scatter = gr.Plot(label="Scatter MAE vs R2")
+                            perf_boxplot_msg = gr.Markdown()
+                            perf_boxplot_img = gr.Image(label="Boxplot global por combinación (precomputado)", type="filepath")
+    
+                        with gr.Tab("LOFO por fundo"):
+                            lofo_table = gr.Dataframe(label="Tabla LOFO")
+                            lofo_rank = gr.Plot(label="Ranking de fundos por MAE")
+    
+    
+                        with gr.Tab("Importancia"):
+                            tipo_imp_dd = gr.Dropdown(label="tipo_importancia", choices=["permutation", "shap", "mae_shap"], value="permutation")
+                            imp_msg = gr.Markdown()
+                            imp_plot = gr.Plot(label="Importancia")
+                            imp_table = gr.Dataframe(label="Tabla importancia")
+    
+                        with gr.Tab("Comparador de combinaciones"):
+                            combo_mult = gr.Dropdown(label="Selecciona 2+ combinaciones", multiselect=True, choices=combo_opts, value=[])
+                            cmp_table = gr.Dataframe(label="Tabla comparativa")
+                            cmp_mae = gr.Plot(label="MAE")
+                            cmp_r2 = gr.Plot(label="R2")
+                            cmp_mej = gr.Plot(label="Mejora MAE %")
+    
+                        with gr.Tab("Explorador archivos"):
+                            explorer_table = gr.Dataframe(label="Archivos detectados")
+    
+                        with gr.Tab("Exportación"):
+                            export_btn = gr.Button("Exportar tablas filtradas")
+                            out_metrics_file = gr.File(label="Descargar métricas CSV")
+                            out_preds_file = gr.File(label="Descargar predicciones CSV")
+                            out_imp_file = gr.File(label="Descargar importancia CSV")
+                            out_md_file = gr.File(label="Descargar resumen Markdown")
+    
+            def _sync_filters(state, target, scheme):
+                return refresh_options(state, target, scheme)
+    
+            refresh_btn.click(
+                _sync_filters,
+                inputs=[app_state, target_dd, scheme_dd],
+                outputs=[target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd, combo_h_dd],
+            )
+            target_dd.change(
+                _sync_filters,
+                inputs=[app_state, target_dd, scheme_dd],
+                outputs=[target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd, combo_h_dd],
+            )
+            scheme_dd.change(
+                _sync_filters,
+                inputs=[app_state, target_dd, scheme_dd],
+                outputs=[target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd, combo_h_dd],
+            )
+    
+            def _combo_from_human(state, target, scheme, combo_h):
+                combos_df = available_combos(state["metrics"], target, scheme)
+                if combo_h == "Todos" or combos_df.empty:
+                    return "Todos"
+                m = combos_df[combos_df["combo_human"] == combo_h]
+                return m["predictors"].iloc[0] if not m.empty else "Todos"
+    
+            combo_h_dd.change(_combo_from_human, inputs=[app_state, target_dd, scheme_dd, combo_h_dd], outputs=[combo_dd])
+    
+            def _update_all_main(state, target, scheme, combo, variedad, fundo):
+                r_md, r_tbl, r_sc = update_resumen(state, target, scheme)
+                o_msg, b1, t1, b2, t2, pred_dd_new = update_datos_originales(target, variedad, fundo, "")
+                fs = filtered_summary(state, target, scheme)
+                perf_img, perf_msg = _performance_boxplot_image(target, scheme)
+                lo_tbl, lo_fig = update_lofo(state, target, combo)
+                return r_md, r_tbl, r_sc, o_msg, b1, t1, b2, t2, pred_dd_new, fs, r_sc, perf_msg, perf_img, lo_tbl, lo_fig
+    
+            refresh_btn.click(
+                _update_all_main,
+                inputs=[app_state, target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd],
+                outputs=[
+                    resumen_md,
+                    resumen_table,
+                    resumen_scatter,
+                    orig_msg,
+                    fig_box_var,
+                    fig_ts_target,
+                    fig_box_fundo,
+                    fig_ts_pred,
+                    predictor_dd,
+                    perf_table,
+                    perf_scatter,
+                    perf_boxplot_msg,
+                    perf_boxplot_img,
+                    lofo_table,
+                    lofo_rank,
+                ],
+            )
+    
+            predictor_dd.change(
+                lambda t, v, f, p: update_datos_originales(t, v, f, p)[4],
+                inputs=[target_dd, variedad_dd, fundo_dd, predictor_dd],
+                outputs=[fig_ts_pred],
+            )
+    
+            for trigger in [target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd]:
+                trigger.change(
+                    _update_all_main,
+                    inputs=[app_state, target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd],
+                    outputs=[
+                        resumen_md,
+                        resumen_table,
+                        resumen_scatter,
+                        orig_msg,
+                        fig_box_var,
+                        fig_ts_target,
+                        fig_box_fundo,
+                        fig_ts_pred,
+                        predictor_dd,
+                        perf_table,
+                        perf_scatter,
+                        perf_boxplot_msg,
+                        perf_boxplot_img,
+                        lofo_table,
+                        lofo_rank,
+                    ],
+                )
+    
+            tipo_imp_dd.change(
+                update_importancia,
+                inputs=[app_state, target_dd, scheme_dd, combo_dd, tipo_imp_dd],
+                outputs=[imp_msg, imp_plot, imp_table],
+            )
+            for trigger in [target_dd, scheme_dd, combo_dd]:
+                trigger.change(
+                    update_importancia,
+                    inputs=[app_state, target_dd, scheme_dd, combo_dd, tipo_imp_dd],
+                    outputs=[imp_msg, imp_plot, imp_table],
+                )
+    
+            def _update_combo_mult(state, target, scheme):
+                combos_df = available_combos(state["metrics"], target, scheme)
+                opts = combos_df["predictors"].tolist() if not combos_df.empty else []
+                return gr.Dropdown(choices=["Todos"] + opts, value=[])
+    
+            def _expand_combo_todos(state, target, scheme, selected):
+                combos_df = available_combos(state["metrics"], target, scheme)
+                all_opts = combos_df["predictors"].tolist() if not combos_df.empty else []
+                selected = selected or []
+                if "Todos" in selected:
+                    return all_opts
+                return [x for x in selected if x in all_opts]
+    
+            refresh_btn.click(_update_combo_mult, inputs=[app_state, target_dd, scheme_dd], outputs=[combo_mult])
+            target_dd.change(_update_combo_mult, inputs=[app_state, target_dd, scheme_dd], outputs=[combo_mult])
+            scheme_dd.change(_update_combo_mult, inputs=[app_state, target_dd, scheme_dd], outputs=[combo_mult])
+    
+            combo_mult.change(
+                _expand_combo_todos,
+                inputs=[app_state, target_dd, scheme_dd, combo_mult],
+                outputs=[combo_mult],
+            ).then(
+                update_comparador,
+                inputs=[app_state, target_dd, scheme_dd, combo_mult],
+                outputs=[cmp_table, cmp_mae, cmp_r2, cmp_mej],
+            )
+    
+            refresh_btn.click(update_explorer, inputs=[app_state], outputs=[explorer_table])
+            demo.load(update_explorer, inputs=[app_state], outputs=[explorer_table])
+    
+            export_btn.click(
+                export_tables,
+                inputs=[app_state, target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd],
+                outputs=[out_metrics_file, out_preds_file, out_imp_file, out_md_file],
+            )
+    
+    
+        
         with gr.Tab("🔗 Integración conceptual"):
             gr.Markdown(
                 """

@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetivo 3 – Validación temporal train 2025 -> test 2026 (Baseline Interno v2)</title>
+    <!-- Chart.js desde CDN para visualizaciones interactivas -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
+            
+            /* Colores Semáforo y Métricas */
+            --status-robust: #10b981;       /* Verde */
+            --status-robust-bg: #d1fae5;
+            --status-medium: #f59e0b;       /* Naranja/Amarillo */
+            --status-medium-bg: #fef3c7;
+            --status-weak: #ef4444;         /* Rojo */
+            --status-weak-bg: #fee2e2;
+            
+            /* Colores por Validación */
+            --col-cv5: #94a3b8;
+            --col-gkf: #3b82f6;
+            --col-lofo: #8b5cf6;
+            --col-temporal: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-main);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        /* Header / Título */
+        header {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+
+        header h1 {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.025em;
+        }
+
+        header .subtitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #3b82f6;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+
+        header .meta-info {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            background: #f1f5f9;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        /* Resumen Ejecutivo Top Blocks */
+        .exec-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .summary-box {
+            background: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .summary-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+        }
+
+        .summary-box.success::before { background-color: var(--status-robust); }
+        .summary-box.warning::before { background-color: var(--status-medium); }
+        .summary-box.caution::before { background-color: var(--status-weak); }
+
+        .summary-box h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .summary-box.success h3 { color: #065f46; }
+        .summary-box.warning h3 { color: #92400e; }
+        .summary-box.caution h3 { color: #991b1b; }
+
+        .summary-box p {
+            font-size: 0.925rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tarjetas por Target */
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .target-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.25rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .target-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .badge.robust { background: var(--status-robust-bg); color: #065f46; border: 1px solid #a7f3d0; }
+        .badge.medium { background: var(--status-medium-bg); color: #92400e; border: 1px solid #fde68a; }
+        .badge.weak { background: var(--status-weak-bg); color: #991b1b; border: 1px solid #fecaca; }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+            background: #f8fafc;
+            padding: 0.75rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .metric-item {
+            text-align: center;
+        }
+
+        .metric-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+
+        .metric-value {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .metric-value.r2-high { color: var(--status-robust); }
+        .metric-value.r2-med { color: #d97706; }
+        .metric-value.r2-low { color: var(--status-weak); }
+
+        .card-interpretation {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            border-top: 1px solid #f1f5f9;
+            padding-top: 0.75rem;
+        }
+
+        /* Gráficos Section */
+        .charts-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(580px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .chart-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.03);
+        }
+
+        .chart-card.full-width {
+            grid-column: 1 / -1;
+        }
+
+        .chart-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .chart-card p.chart-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 320px;
+            width: 100%;
+        }
+
+        .chart-wrapper.tall {
+            height: 400px;
+        }
+
+        /* Interpretaciones en Profundidad */
+        .interpretations-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.25rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .interp-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .interp-box h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 0.5rem;
+        }
+
+        .interp-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.875rem;
+        }
+
+        .interp-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .interp-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #3b82f6;
+            font-weight: bold;
+            font-size: 1.25rem;
+            line-height: 1;
+        }
+
+        .interp-list li strong {
+            color: var(--text-primary);
+        }
+
+        /* Qué sí demuestra / Qué no demuestra */
+        .conclusions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .conclusion-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.75rem;
+        }
+
+        .conclusion-card.positive { border-top: 4px solid var(--status-robust); }
+        .conclusion-card.negative { border-top: 4px solid var(--status-weak); }
+
+        .conclusion-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .conclusion-card.positive h3 { color: #065f46; }
+        .conclusion-card.negative h3 { color: #991b1b; }
+
+        .conclusion-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .conclusion-card ul li {
+            font-size: 0.925rem;
+            color: var(--text-secondary);
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .conclusion-card.positive ul li::before { content: '✓'; position: absolute; left: 0; color: var(--status-robust); font-weight: bold; }
+        .conclusion-card.negative ul li::before { content: '✕'; position: absolute; left: 0; color: var(--status-weak); font-weight: bold; }
+
+        /* Tabla Resumen Metodológico */
+        .table-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 1.75rem;
+            overflow-x: auto;
+            margin-bottom: 3rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.875rem;
+            text-align: left;
+        }
+
+        thead tr {
+            background: #f8fafc;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        th, td {
+            padding: 0.875rem 1rem;
+        }
+
+        th {
+            font-weight: 700;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background: #f8fafc;
+        }
+
+        .td-target {
+            font-weight: 700;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .dot {
+            width: 10px;
+            height: 100px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsiveness para pantallas menores a 640px */
+        @media (max-width: 640px) {
+            .charts-container { grid-template-columns: 1fr; }
+            .conclusions-grid { grid-template-columns: 1fr; }
+            header { padding: 1.5rem; }
+            body { padding: 1rem 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER PRINCIPAL -->
+    <header>
+        <div class="subtitle">Objetivo 3 – Vendimia 5.0</div>
+        <h1>Validación Temporal <code>train 2025 &rarr; test 2026</code></h1>
+        <div class="meta-info">
+            <strong>Fuente oficial:</strong> <code>reports/internal_modeling_baseline_v2/reporte_linea_base_modelacion_interna_obj3_v2.md</code> &bull; 
+            <strong>Módulo:</strong> Madurez Técnica &bull; 
+            <strong>Estado:</strong> Baseline Interno v2 Auditado
+        </div>
+    </header>
+
+    <!-- RESUMEN EJECUTIVO (3 BLOQUES) -->
+    <section class="exec-summary">
+        <div class="summary-box success">
+            <h3>🟢 Targets con Transferencia Sólida</h3>
+            <p><strong>Brix</strong> demuestra una excelente generalización temporal hacia 2026 (<strong>R² = 0.809</strong>, MAE = 1.435°Brix). La acumulación de azúcares está fuertemente explicada por el bloque térmico y bioclimático acumulado en todas las macro-zonas, siendo el target más confiable del pipeline.</p>
+        </div>
+        <div class="summary-box warning">
+            <h3>🟡 Targets que Mueven Señal pero Caen</h3>
+            <p><strong>pH</strong> (R² = 0.524), <strong>Acidez Tartárica</strong> (R² = 0.581) y <strong>Acidez Sulfúrica</strong> (R² = 0.543) conservan señal predictiva útil en transferencia temporal, pero caen de forma notable frente a la validación interna cruzada (LOFO R² ~0.75–0.78). La acidez depende de factores estacionales y equilibrios hídricos más volátiles.</p>
+        </div>
+        <div class="summary-box caution">
+            <h3>🔴 Límite Metodológico Próximo</h3>
+            <p><strong>Peso de Baya</strong> no generaliza temporalmente (<strong>R² = 0.221</strong>), ya que su biometría responde a carga en planta, riego y raleo no capturados en clima puro. <strong>Importante:</strong> Este HTML evalúa el <em>baseline interno v2</em> y no prueba todavía una mejora incremental del nuevo paquete para Luis salvo comparación controlada idéntica.</p>
+        </div>
+    </section>
+
+    <!-- TARJETAS POR TARGET -->
+    <div class="section-title">
+        <span>📊 Desempeño en Validación Temporal <code>train 2025 &rarr; test 2026</code></span>
+        <span style="font-size: 0.85rem; font-weight: normal; color: var(--text-muted);">Entrenamiento: Temporada 2024_2025 (228 filas) | Prueba: Temporada 2025_2026 (312 filas)</span>
+    </div>
+
+    <section class="cards-grid">
+        <!-- BRIX -->
+        <div class="target-card" style="border-top: 4px solid var(--status-robust);">
+            <div>
+                <div class="card-header">
+                    <span class="card-title">Sólidos Solubles (Brix)</span>
+                    <span class="badge robust">Robusto</span>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-label">MAE Temporal</div>
+                        <div class="metric-value">1.435</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-label">R² Temporal</div>
+                        <div class="metric-value r2-high">0.809</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-interpretation">
+                Modelo <strong>HistGradientBoosting</strong> con set conservador v1. Retiene el 95% del desempeño obtenido en validación cruzada por fundo (LOFO R² = 0.853).
+            </div>
+        </div>
+
+        <!-- PH -->
+        <div class="target-card" style="border-top: 4px solid var(--status-medium);">
+            <div>
+                <div class="card-header">
+                    <span class="card-title">pH del Mosto</span>
+                    <span class="badge medium">Intermedio</span>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-label">MAE Temporal</div>
+                        <div class="metric-value">0.156</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-label">R² Temporal</div>
+                        <div class="metric-value r2-med">0.524</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-interpretation">
+                Modelo <strong>HistGradientBoosting</strong> con clima + variedad. Aunque mantiene un MAE acotado (±0.15 pH), su R² cae un 30% frente al LOFO interno (0.756).
+            </div>
+        </div>
+
+        <!-- ACIDEZ TARTÁRICA -->
+        <div class="target-card" style="border-top: 4px solid var(--status-medium);">
+            <div>
+                <div class="card-header">
+                    <span class="card-title">Acidez Tartárica (g/L)</span>
+                    <span class="badge medium">Intermedio</span>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-label">MAE Temporal</div>
+                        <div class="metric-value">2.325</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-label">R² Temporal</div>
+                        <div class="metric-value r2-med">0.581</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-interpretation">
+                Modelo <strong>Random Forest</strong> con clima + variedad. Explica más de la mitad de la varianza en 2026, pero el error de predicción aumenta frente a 2025 (LOFO MAE = 1.901).
+            </div>
+        </div>
+
+        <!-- ACIDEZ SULFÚRICA -->
+        <div class="target-card" style="border-top: 4px solid var(--status-medium);">
+            <div>
+                <div class="card-header">
+                    <span class="card-title">Acidez Sulfúrica (g/L)</span>
+                    <span class="badge medium">Intermedio</span>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-label">MAE Temporal</div>
+                        <div class="metric-value">1.481</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-label">R² Temporal</div>
+                        <div class="metric-value r2-med">0.543</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-interpretation">
+                Modelo <strong>HistGradientBoosting</strong> con set conservador v1. Comportamiento par excellence en bodegas: señal predictiva moderada pero sujeta a sesgos por sitio.
+            </div>
+        </div>
+
+        <!-- PESO BAYA -->
+        <div class="target-card" style="border-top: 4px solid var(--status-weak);">
+            <div>
+                <div class="card-header">
+                    <span class="card-title">Peso de Baya (g)</span>
+                    <span class="badge weak">Débil</span>
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-label">MAE Temporal</div>
+                        <div class="metric-value">0.235</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-label">R² Temporal</div>
+                        <div class="metric-value r2-low">0.221</div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-interpretation">
+                Modelo <strong>Random Forest</strong> con set conservador. Sufre un colapso severo fuera de muestra (R² = 0.221 temporal y 0.172 LOFO vs 0.831 en CV5 optimista).
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNER DE ACCESO A GUÍA INTERACTIVA DE REUNIÓN -->
+    <style>
+        .meeting-guide-section {
+            background: #ffffff;
+            border: 2px solid #3b82f6;
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1);
+        }
+        .meeting-guide-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .meeting-guide-subtitle {
+            font-size: 1rem;
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 1rem;
+        }
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+        .tab-btn {
+            background: #f1f5f9;
+            color: #475569;
+            border: 1px solid #cbd5e1;
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .tab-btn:hover {
+            background: #e2e8f0;
+            color: #0f172a;
+        }
+        .tab-btn.active {
+            background: #3b82f6;
+            color: #ffffff;
+            border-color: #2563eb;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Bloques estratégicos */
+        .block-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.5rem;
+        }
+        .block-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid #3b82f6;
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .block-card.green { border-left-color: #10b981; }
+        .block-card.purple { border-left-color: #8b5cf6; }
+        .block-card.orange { border-left-color: #f59e0b; }
+        .block-card h4 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .block-card .block-time {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: #e2e8f0;
+            color: #475569;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .block-card p {
+            font-size: 0.95rem;
+            color: #334155;
+            margin-bottom: 0.75rem;
+            line-height: 1.5;
+        }
+        .speech-box {
+            background: #ffffff;
+            border: 1px dashed #cbd5e1;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            color: #1e293b;
+            font-style: italic;
+        }
+        /* Guía paso a paso Camilo */
+        .camilo-point {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            position: relative;
+            overflow: hidden;
+        }
+        .camilo-point::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 6px; height: 100%;
+            background: #3b82f6;
+        }
+        .camilo-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .camilo-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #0f172a;
+        }
+        .camilo-badge {
+            background: #eff6ff;
+            color: #2563eb;
+            border: 1px solid #bfdbfe;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.82rem;
+            font-weight: 700;
+        }
+        .camilo-action {
+            background: #f8fafc;
+            border-left: 4px solid #10b981;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .camilo-action strong {
+            color: #065f46;
+        }
+        .camilo-speech {
+            background: #fefce8;
+            border: 1px solid #fef08a;
+            border-left: 4px solid #eab308;
+            padding: 1.25rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            color: #713f12;
+            font-size: 0.96rem;
+            line-height: 1.6;
+        }
+        .camilo-speech strong {
+            color: #854d0e;
+        }
+        .camilo-meta {
+            font-size: 0.88rem;
+            color: #64748b;
+            background: #f1f5f9;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+        }
+    </style>
+
+    <section class="meeting-guide-section">
+        <div class="meeting-guide-title">
+            <span>🎯</span> Guía Operativa y Speech Estratégico para la Reunión con Camilo Riveros
+        </div>
+        <div class="meeting-guide-subtitle">
+            Herramienta interactiva de apoyo para la mesa técnica (Viernes 10 de julio de 2026). Selecciona una pestaña para ver la estrategia hablada en 3 bloques o el desglose punto a punto del Informe Corfo de INRIA.
+        </div>
+
+        <!-- Botones de Pestañas -->
+        <div class="nav-tabs">
+            <button class="tab-btn active" onclick="switchTab('tab-bloques')">
+                <span>🎙️</span> Speech: Los 3 Bloques Estratégicos
+            </button>
+            <button class="tab-btn" onclick="switchTab('tab-camilo')">
+                <span>📑</span> Guía de los 5 Puntos de Camilo (INRIA Corfo)
+            </button>
+            <button class="tab-btn" onclick="switchTab('tab-graficos')">
+                <span>📊</span> Gráficos de Semáforo y Línea Base v2
+            </button>
+        </div>
+
+        <!-- PESTAÑA 1: LOS 3 BLOQUES ESTRATÉGICOS -->
+        <div id="tab-bloques" class="tab-content active">
+            <p style="margin-bottom: 1.5rem; color: #475569; font-size: 1rem;">
+                Este es el encuadre ejecutivo para conducir la reunión de 60 minutos con sobriedad y sin "vomitar información", dividiendo la discusión en los tres pilares biofísicos del Objetivo 3:
+            </p>
+            <div class="block-grid">
+                <!-- Bloque 1 -->
+                <div class="block-card green">
+                    <span class="block-time">Minutos 00:00 - 00:20 | Bloque 1</span>
+                    <h4>📈 Certificación de Madurez Técnica</h4>
+                    <p>
+                        <strong>Objetivo:</strong> Sancionar la línea base canónica en extrapolación estacional (<code>train 2025 &rarr; test 2026</code> y <code>LOFO</code>) proscribiendo el <code>CV5_row</code>.
+                    </p>
+                    <div class="speech-box">
+                        <strong>Qué decir en voz alta:</strong><br>
+                        "Camilo, al auditar en tiempo real con nuestra línea base V2 (<code>visualizacion_train2025_test2026.html</code>), el semáforo es nítido: el <strong>Brix ($R^2=0.809$, $MAE=1.43^\circ$)</strong> transfiere excelentemente porque responde mecánicamente a las integrales de calor; el <strong>pH y Acideces ($R^2 \sim 0.55$)</strong> los formalizamos con bandas de incertidumbre territorial; pero el <strong>Peso de Baya ($R^2=0.221$)</strong> colapsa por clima atmosférico puro porque obedece a poda, raleo y riego presurizado. Proponemos estratificar el dashboard exactamente en estas 3 capas."
+                    </div>
+                </div>
+
+                <!-- Bloque 2 -->
+                <div class="block-card purple">
+                    <span class="block-time">Minutos 00:20 - 00:40 | Bloque 2</span>
+                    <h4>🌱 Indicador Biológico y Fenología ELP</h4>
+                    <p>
+                        <strong>Objetivo:</strong> Separar el GDA operativo del GDD senoidal y transparentar el alcance exploratorio del modelo espacial de $T_0$.
+                    </p>
+                    <div class="speech-box">
+                        <strong>Qué decir en voz alta:</strong><br>
+                        "En fenología ELP no podemos usar el acumulado simple que parte en mayo; aplicamos <strong>seno simple con corte a 35°C</strong> y biofix dual (<code>combine_first</code> entre el $T_0$ del fundo y el 1 de septiembre) para resolver casos costeros extremos como <strong>Keule (0.0 GDD al brotar)</strong>. Y respecto al <strong>Indicador Biológico v2 por Regresión Latitudinal</strong>, mostramos que en Lourdes el Cabernet requiere $\sim 70 \text{ GDD}$, pero aclaramos con rigor que es un <strong>módulo exploratorio y científico</strong>, ya que en variedades de 1 año arroja alertas explícitas de baja robustez en nuestros logs."
+                    </div>
+                </div>
+
+                <!-- Bloque 3 -->
+                <div class="block-card orange">
+                    <span class="block-time">Minutos 00:40 - 01:00 | Bloque 3</span>
+                    <h4>⚡ Clima Datavid e Índices XAI (PySR)</h4>
+                    <p>
+                        <strong>Objetivo:</strong> Ratificar el Índice de Frío Nocturno (<code>IFN_acum</code>) y mandatar depuración pre-ingesta en BigQuery.
+                    </p>
+                    <div class="speech-box">
+                        <strong>Qué decir en voz alta:</strong><br>
+                        "Como demuestra la Regresión Simbólica (`PySR`) de INRIA en el Informe Corfo (Fig. 89), el <strong>Frío Nocturno (`IFN_acum`)</strong> lidera el $>90\%$ de las ecuaciones de Sauvignon Blanc al frenar la quema de ácido málico. Sin embargo, al auditar con Miguel la nueva API <strong>Datavid en BigQuery</strong>, confirmamos que Temperatura y Radiación presentan saltos intermitentes sin truncamiento pre-ingesta. Proponemos mandatar como urgencia máxima una <strong>Capa Conformance en BigQuery con Filtros Intercuartílicos</strong> antes de calcular integrales de 180 días."
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PESTAÑA 2: GUÍA DE LOS 5 PUNTOS DE CAMILO (INRIA CORFO) -->
+        <div id="tab-camilo" class="tab-content">
+            <p style="margin-bottom: 1.5rem; color: #475569; font-size: 1rem;">
+                Guía quirúrgica para conducir la lectura del Cuarto Informe Corfo de INRIA (Julio 2026) siguiendo exactamente los 5 puntos priorizados en el correo enviado a Camilo Riveros:
+            </p>
+
+            <!-- Punto 1 -->
+            <div class="camilo-point">
+                <div class="camilo-header">
+                    <div class="camilo-title">1. Biplots de PCA y Relaciones Fisiológicas</div>
+                    <div class="camilo-badge">Páginas 39 a 45 | Figuras 44, 46, 48 y 50</div>
+                </div>
+                <div class="camilo-action">
+                    <strong>👉 Qué hacer en la reunión:</strong> Abre el PDF de INRIA en las páginas 39 a 45 y proyecta en pantalla los biplots del Análisis de Componentes Principales ($PC_1$ vs $PC_2$).
+                </div>
+                <div class="camilo-speech">
+                    <strong>🎙️ Ahora muestra el gráfico y haz hincapié en esto:</strong><br>
+                    "Camilo, si observamos el primer componente principal ($PC_1$), los biplots evidencian de manera rotunda cómo los <strong>Sólidos Solubles (Brix)</strong> presentan una colinealidad casi directa con los índices de acumulación térmica (<code>GDA</code>, <code>BEDD_acum</code>, <code>IFN_acum</code>). En contraste, las <strong>Acideces (Tartárica y Sulfúrica)</strong> y el <strong>Peso de Baya</strong> se proyectan en componentes ortogonales u opuestos. Esto fundamenta agronómicamente por qué nuestro Brix mantiene una solidez térmica estacional de élite ($R^2=0.809$), mientras que el peso y la acidez dependen del balance hídrico, de la humedad del suelo y del manejo de canopia en campo."
+                </div>
+                <div class="camilo-meta">
+                    💡 <em>Sustento Metodológico:</em> En viticultura, la translocación de sacarosa es un proceso físico-catalizado por calor continuo estacional. El tamaño de la baya, en cambio, está determinado por división y expansión celular regulada por el riego presurizado del agrónomo en envero.
+                </div>
+            </div>
+
+            <!-- Punto 2 -->
+            <div class="camilo-point">
+                <div class="camilo-header">
+                    <div class="camilo-title">2. Tabla Maestra de Cobertura y Temporadas</div>
+                    <div class="camilo-badge">Página 63 | Tabla 3 (Matriz Canónica)</div>
+                </div>
+                <div class="camilo-action">
+                    <strong>👉 Qué hacer en la reunión:</strong> Desplázate a la página 63 del Informe Corfo y enfoca con el zoom la Tabla 3 ("Resumen de observaciones del Dataset Canónico").
+                </div>
+                <div class="camilo-speech">
+                    <strong>🎙️ Ahora enfoca la Tabla 3 y haz hincapié en esto:</strong><br>
+                    "Aquí tenemos la fotografía censal oficial de nuestro paquete. La Tabla 3 consolida la matriz canónica de <strong>540 observaciones para Madurez Técnica</strong> (temporadas 2024-2025 y 2025-2026). Pero quiero que notemos un dato de auditoría vital: en el módulo de <strong>Madurez Fenólica (phenolic) para 2025-2026, la tabla registra exactamente 0 observaciones disponibles</strong>. Con esta evidencia censal, validamos formalmente la decisión de restringir nuestra prueba de generalización temporal estrictamente a madurez técnica, separando fenólica como un track exploratorio de I+D sin hacer promesas infundadas."
+                </div>
+                <div class="camilo-meta">
+                    💡 <em>Sustento Metodológico:</em> No se puede certificar una regresión de antocianinas o taninos interanual si la última campaña ($2026$) no cuenta con espectrofotometría/HPLC empírico en la base canónica de entrenamiento/prueba.
+                </div>
+            </div>
+
+            <!-- Punto 3 -->
+            <div class="camilo-point">
+                <div class="camilo-header">
+                    <div class="camilo-title">3. Curvas de Optimización de Complejidad y Saturación</div>
+                    <div class="camilo-badge">Páginas 75, 79, 83 y 87 | Figuras 70, 74, 78 y 82</div>
+                </div>
+                <div class="camilo-action">
+                    <strong>👉 Qué hacer en la reunión:</strong> Proyecta secuencialmente las curvas de saturación de variables en las figuras 70 (Cabernet), 74 (Carménère), 78 (Chardonnay) y 82 (Sauvignon Blanc).
+                </div>
+                <div class="camilo-speech">
+                    <strong>🎙️ Ahora muestra las figuras y haz hincapié en esto:</strong><br>
+                    "Camilo, el análisis de sensibilidad ($p < 0.05$) ejecutado por INRIA demuestra en estas curvas que la precisión predictiva del modelo alcanza su meseta o estabilización definitiva entre las <strong>11 y 17 variables predictoras</strong>, según la variedad. Agregar 40, 50 o 70 variables meteorológicas adicionales no genera ninguna mejora estadísticamente significativa en el error predictivo. Esto nos entrega un respaldo cuantitativo absoluto para aplicar el <strong>criterio de parsimonia</strong>, purgar columnas redundantes y quedarnos con un Feature Store V5 limpio, interpretable y rápido en producción."
+                </div>
+                <div class="camilo-meta">
+                    💡 <em>Sustento Metodológico:</em> En Machine Learning agrícola tabular, la maldición de la dimensionalidad (*Curse of Dimensionality*) provoca que inyectar variables colineales diluya las divisiones de los árboles de decisión y aumente la varianza del error en extrapolación temporal.
+                </div>
+            </div>
+
+            <!-- Punto 4 -->
+            <div class="camilo-point">
+                <div class="camilo-header">
+                    <div class="camilo-title">4. Regresión Simbólica (PySR) e Importancia de `IFN_acum`</div>
+                    <div class="camilo-badge">Páginas 91 a 93 | Figuras 86, 87, 88 y 89</div>
+                </div>
+                <div class="camilo-action">
+                    <strong>👉 Qué hacer en la reunión:</strong> Abre las figuras 88 y 89 del Informe Corfo mostrando los Heatmaps (matrices de calor) de frecuencia de variables en las ecuaciones de PySR.
+                </div>
+                <div class="camilo-speech">
+                    <strong>🎙️ Ahora enfoca el heatmap de la Figura 89 y haz hincapié en esto:</strong><br>
+                    "Este es uno de los hallazgos explicativos (XAI) más potentes del informe. La Inteligencia Artificial evolutiva de <code>PySR</code> evaluó millones de combinaciones algebraicas y determinó que, en <strong>Sauvignon Blanc (Figura 89)</strong>, el <strong>Índice de Frío Nocturno Acumulado (<code>IFN_acum</code>)</strong> es el término líder absoluto en más del <strong>90% de las 25 mejores ecuaciones</strong>. Y en Chardonnay dominan las combinaciones <code>BEDD/PTQ</code>. Esto demuestra matemáticamente que las noches frías protegen al racimo de la respiración celular nocturna que quema ácido málico, justificando al 100% el rescate canónico que hicimos de estos índices en el paquete V5."
+                </div>
+                <div class="camilo-meta">
+                    💡 <em>Sustento Metodológico:</em> La tasa respiratoria de la uva blanca ($Q_{10}$) se duplica por cada 10°C de ascenso nocturno. Al mantener noches frescas (`IFN_acum` alto), la vid retiene su acidez natural y sintetiza tioles enológicos de alta gama.
+                </div>
+            </div>
+
+            <!-- Punto 5 -->
+            <div class="camilo-point">
+                <div class="camilo-header">
+                    <div class="camilo-title">5. Evaluación de Generalización Temporal `train 2025 -> test 2026`</div>
+                    <div class="camilo-badge">Páginas 94 y 98 | Sección 3.8 y Figuras 96 - 97</div>
+                </div>
+                <div class="camilo-action">
+                    <strong>👉 Qué hacer en la reunión:</strong> Lee el párrafo introductorio de la Sección 3.8 (pág. 94) y proyecta los boxplots de la Figura 96/97 sobre transferencia estacional (<code>SEASON_TRANSFER</code>).
+                </div>
+                <div class="camilo-speech">
+                    <strong>🎙️ Ahora muestra los diagramas de caja y haz hincapié en esto:</strong><br>
+                    "Finalmente, la Sección 3.8 del informe ratifica formalmente nuestro diagnóstico interno de auditoría: mientras que los esquemas de validación cruzada clásica (`CV5_row`) obtienen métricas artificialmente elevadas por interpolación intra-estacional, la evaluación por transferencia temporal (<code>train 2025 -> test 2026</code>) incrementa severamente la dificultad, generando caídas sustanciales en la mediana de $R^2$ en corridas masivas no calibradas. Que nuestro <strong>Brix interno conserve un $R^2 = 0.809$</strong> bajo esta misma prueba demuestra que nuestra curación termodinámica de índices es la base más sólida de todo el proyecto."
+                </div>
+                <div class="camilo-meta">
+                    💡 <em>Sustento Metodológico:</em> Un modelo que solo aprende a memorizar hileras o cuarteles colapsa al cambiar de año climatológico. Solo una matriz con variables causales puras resiste el test fuera de temporada (`train 2025 -> test 2026`).
+                </div>
+            </div>
+        </div>
+
+        <!-- PESTAÑA 3: GRÁFICOS Y SEMÁFORO -->
+        <div id="tab-graficos" class="tab-content">
+            <p style="margin-bottom: 1.5rem; color: #475569; font-size: 1rem;">
+                A continuación se presentan los gráficos interactivos e interpretaciones metodológicas del semáforo de generalización de la Línea Base Canónica V2:
+            </p>
+        </div>
+    </section>
+
+    <script>
+        function switchTab(tabId) {
+            const buttons = document.querySelectorAll('.nav-tabs .tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            const contents = document.querySelectorAll('.meeting-guide-section .tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+            
+            document.getElementById(tabId).classList.add('active');
+            
+            buttons.forEach(btn => {
+                if (btn.getAttribute('onclick').includes(tabId)) {
+                    btn.classList.add('active');
+                }
+            });
+        }
+    </script>
+
+    <!-- GRÁFICOS VISUALES -->
+    <section class="charts-container">
+        <!-- Gráfico A: R2 train2025 -> test2026 -->
+        <div class="chart-card">
+            <h3>Gráfico A: Coeficiente de Determinación (R²) en <code>train 2025 &rarr; test 2026</code></h3>
+            <p class="chart-subtitle">Capacidad del modelo entrenado en 2025 para explicar la varianza real de la vendimia 2026.</p>
+            <div class="chart-wrapper">
+                <canvas id="chartR2"></canvas>
+            </div>
+        </div>
+
+        <!-- Gráfico B: MAE train2025 -> test2026 -->
+        <div class="chart-card">
+            <h3>Gráfico B: Error Absoluto Medio (MAE) en <code>train 2025 &rarr; test 2026</code></h3>
+            <p class="chart-subtitle">Magnitud media del error de pronóstico en las unidades originales de cada target en 2026.</p>
+            <div class="chart-wrapper">
+                <canvas id="chartMAE"></canvas>
+            </div>
+        </div>
+
+        <!-- Gráfico C: Comparación de Esquemas de Validación (R2) -->
+        <div class="chart-card full-width">
+            <h3>Gráfico C: Caída del Desempeño según Esquema de Validación (R² Comparativo)</h3>
+            <p class="chart-subtitle">Demostración forense de por qué <code>cv5_row</code> es optimista por dependencia intra-serie y cómo el desempeño cae al auditar por sitio (LOFO) y temporada (Test 2026).</p>
+            <div class="chart-wrapper tall">
+                <canvas id="chartComparison"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE INTERPRETACIÓN METODOLÓGICA -->
+    <section class="interpretations-grid">
+        <div class="interp-box">
+            <h3>📖 Lectura e Interpretación Agronómica y Metodológica de los Resultados</h3>
+            <ul class="interp-list">
+                <li>
+                    <strong>Sólidos solubles (Brix) muestra la máxima transferencia predictiva hacia 2026 (R² = 0.809):</strong> La acumulación de azúcar en la vid (*Vitis vinifera*) responde casi de forma determinista y universal al calor acumulado (GDA/GDD) y la radiación térmica de la temporada. Por eso, una regresión entrenada estrictamente con curvas 2025 logra predecir con alta precisión (MAE de solo ±1.43°Brix) la evolución del mosto en 2026, validando su idoneidad para la planificación o ventana de vendimia.
+                </li>
+                <li>
+                    <strong>El pH y las Acideces (Tartárica y Sulfúrica) mantienen señal útil pero sufren pérdida de generalización (R² cae de ~0.86 a ~0.55):</strong> A diferencia de los azúcares, el consumo respiratorio del ácido málico y la salinización por potasio dependen de la interacción del suelo, riego y microclima del canopia de ese año. En la validación temporal hacia 2026, los modelos de acidez pierden ~30% de poder explicativo porque las temperaturas extremas estivales o déficits hídricos puntuales alteran el equilibrio ácido-base de una forma que las acumulaciones bioclimáticas medias no logran capturar solas sin ajustes de sitio.
+                </li>
+                <li>
+                    <strong>El Peso de Baya confirma su debilidad de generalización en modelos de clima puro (R² = 0.221 temporal vs R² = 0.831 en CV5 optimista):</strong> Este es el hallazgo de auditoría más valioso. Si evaluamos con un CV5 clásico fila por fila, el peso de la baya parece tener un modelo excelente (0.831). Sin embargo, al probar fuera de temporada (0.221) o fuera de fundo (LOFO = 0.172), el modelo colapsa. Esto demuestra cuantitativamente que el tamaño y peso de la uva está gobernado fundamentalmente por manejos culturales (carga de cargadores, raleo de racimos, vigor y estrategia hídrica) y no por el clima regional.
+                </li>
+                <li>
+                    <strong>Clarificación Crítica del Alcance de este Reporte (Baseline Interno v2):</strong> Estos resultados representan exactamente el comportamiento del <em>baseline interno v2</em> sobre el bloque estricto/conservador (`reporte_linea_base_modelacion_interna_obj3_v2.md`). <strong>Esto demuestra la capacidad real de transferencia temporal del proyecto, pero no prueba todavía que el nuevo paquete canónico V5 enviado a Luis Valenzuela / INRIA produzca una mejora incremental o superioridad en métricas</strong>, lo cual requerirá una comparación controlada explícita (p. ej. RF Baseline vs PySR INRIA bajo el exacto mismo split 2025 $\rightarrow$ 2026).
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- QUÉ SÍ DEMUESTRA / QUÉ NO DEMUESTRA -->
+    <section class="conclusions-grid">
+        <div class="conclusion-card positive">
+            <h3>✓ Qué SÍ demuestra este análisis</h3>
+            <ul>
+                <li>Que el proyecto Vendimia 5.0 cuenta con una auditoría metodológica rigurosa que separa el sobreajuste optimista (<code>cv5_row</code>) de la capacidad de generalización real en cosecha (<code>train 2025 -> test 2026</code>).</li>
+                <li>Que <strong>Brix</strong> es una variable térmica robusta y transferible entre temporadas sin requerir recalibración masiva por fundo o año.</li>
+                <li>Que los modelos de aprendizaje automático (RF / HistGBM) capturan una señal no lineal genuina y comparable para madurez técnica basándose exclusivamente en índices bioclimáticos acumulados.</li>
+                <li>Que el diseño muestral y la partición canónica <code>2024_2025 vs 2025_2026</code> es viable y funcional como benchmark de comparación objetivo.</li>
+            </ul>
+        </div>
+
+        <div class="conclusion-card negative">
+            <h3>✕ Qué NO demuestra todavía</h3>
+            <ul>
+                <li><strong>No demuestra que las nuevas fórmulas o el dataset V5 enviado a Luis en junio 2026 superen estos números:</strong> Hasta no recibir y contrastar las predicciones de las corridas del INRIA en igualdad de condiciones, este HTML representa el piso de referencia (baseline) y no el techo del nuevo paquete.</li>
+                <li><strong>No demuestra que estos modelos sean aplicables en variedades no evaluadas:</strong> Los resultados reflejan el desempeño sobre las 4 variedades del proyecto (Cabernet, Carménère, Chardonnay, Sauvignon Blanc).</li>
+                <li><strong>No prueba relaciones de causalidad biológica directa:</strong> Las importancias no lineales de RF/GBM reflejan correlación estacional predictiva, no necesariamente el mecanismo fisiológico molecular exacto.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- TABLA RESUMEN METODOLÓGICA -->
+    <div class="section-title">
+        <span>📋 Matriz Forense Completa de Métricas y Algoritmos por Validación</span>
+    </div>
+    <section class="table-section">
+        <table>
+            <thead>
+                <tr>
+                    <th>Target Madurez Técnica</th>
+                    <th>R² <code>train2025&rarr;test2026</code></th>
+                    <th>MAE <code>train2025&rarr;test2026</code></th>
+                    <th>R² <code>lofo</code> (Sitio)</th>
+                    <th>R² <code>groupkfold</code> (Serie)</th>
+                    <th>R² <code>cv5_row</code> (Optimista)</th>
+                    <th>Algoritmo / Escenario Mejor en Test</th>
+                    <th>Diagnóstico de Generalización</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td-target">
+                        <span style="width:10px; height:10px; border-radius:50%; background:var(--status-robust); display:inline-block;"></span>
+                        Brix
+                    </td>
+                    <td><strong style="color:var(--status-robust); font-size:1.05rem;">0.809</strong></td>
+                    <td>1.435</td>
+                    <td>0.853</td>
+                    <td>0.845</td>
+                    <td>0.917</td>
+                    <td><code>HistGBM / F_set_conservador_v1</code></td>
+                    <td><span class="badge robust" style="font-size:0.7rem;">Transferencia Alta</span></td>
+                </tr>
+                <tr>
+                    <td class="td-target">
+                        <span style="width:10px; height:10px; border-radius:50%; background:var(--status-medium); display:inline-block;"></span>
+                        Acidez Tartárica
+                    </td>
+                    <td><strong style="color:#d97706; font-size:1.05rem;">0.581</strong></td>
+                    <td>2.325</td>
+                    <td>0.785</td>
+                    <td>0.815</td>
+                    <td>0.868</td>
+                    <td><code>RF / C_clima_variedad</code></td>
+                    <td><span class="badge medium" style="font-size:0.7rem;">Transferencia Media</span></td>
+                </tr>
+                <tr>
+                    <td class="td-target">
+                        <span style="width:10px; height:10px; border-radius:50%; background:var(--status-medium); display:inline-block;"></span>
+                        Acidez Sulfúrica
+                    </td>
+                    <td><strong style="color:#d97706; font-size:1.05rem;">0.543</strong></td>
+                    <td>1.481</td>
+                    <td>0.784</td>
+                    <td>0.814</td>
+                    <td>0.873</td>
+                    <td><code>HistGBM / F_set_conservador_v1</code></td>
+                    <td><span class="badge medium" style="font-size:0.7rem;">Transferencia Media</span></td>
+                </tr>
+                <tr>
+                    <td class="td-target">
+                        <span style="width:10px; height:10px; border-radius:50%; background:var(--status-medium); display:inline-block;"></span>
+                        pH
+                    </td>
+                    <td><strong style="color:#d97706; font-size:1.05rem;">0.524</strong></td>
+                    <td>0.156</td>
+                    <td>0.756</td>
+                    <td>0.755</td>
+                    <td>0.861</td>
+                    <td><code>HistGBM / C_clima_variedad</code></td>
+                    <td><span class="badge medium" style="font-size:0.7rem;">Transferencia Media</span></td>
+                </tr>
+                <tr>
+                    <td class="td-target">
+                        <span style="width:10px; height:10px; border-radius:50%; background:var(--status-weak); display:inline-block;"></span>
+                        Peso de Baya
+                    </td>
+                    <td><strong style="color:var(--status-weak); font-size:1.05rem;">0.221</strong></td>
+                    <td>0.235</td>
+                    <td>0.172</td>
+                    <td>0.522</td>
+                    <td>0.831</td>
+                    <td><code>RF / F_set_conservador_v1</code></td>
+                    <td><span class="badge weak" style="font-size:0.7rem;">Colapso Temporal</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p><strong>Vendimia 5.0 – Objetivo 3</strong> &bull; Visualización Técnica Estática para Revisión Metodológica &bull; Generado sin dependencias de servidor ni backend.</p>
+        <p style="margin-top:0.4rem; font-size:0.75rem;">Archivos de respaldo: <code>reports/internal_modeling_baseline_v2/reporte_linea_base_modelacion_interna_obj3_v2.md</code> | <code>reports/inria/README_RECONSTRUCCION_TAREA_LUIS_TRAIN2025_TEST2026.md</code></p>
+    </footer>
+
+</div>
+
+<!-- SCRIPT DE CONFIGURACIÓN DE GRÁFICOS (CHART.JS) -->
+<script>
+    // Configuración global de fuentes y colores de Chart.js
+    Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+    Chart.defaults.color = '#475569';
+
+    const targets = ['Brix', 'Acidez Tartárica', 'Acidez Sulfúrica', 'pH', 'Peso Baya'];
+
+    // --- GRÁFICO A: R2 temporal ---
+    const ctxR2 = document.getElementById('chartR2').getContext('2d');
+    new Chart(ctxR2, {
+        type: 'bar',
+        data: {
+            labels: targets,
+            datasets: [{
+                label: 'R² en train 2025 -> test 2026',
+                data: [0.809, 0.581, 0.543, 0.524, 0.221],
+                backgroundColor: [
+                    '#10b981', // Brix - Verde
+                    '#f59e0b', // A. Tartárica - Naranja
+                    '#f59e0b', // A. Sulfúrica - Naranja
+                    '#f59e0b', // pH - Naranja
+                    '#ef4444'  // Peso Baya - Rojo
+                ],
+                borderRadius: 6,
+                borderWidth: 1,
+                borderColor: [
+                    '#059669',
+                    '#d97706',
+                    '#d97706',
+                    '#d97706',
+                    '#dc2626'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return ` R² Test 2026: ${context.parsed.y.toFixed(3)}`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 1.0,
+                    grid: { color: '#f1f5f9' },
+                    title: { display: true, text: 'Coeficiente de Determinación (R²)' }
+                },
+                x: {
+                    grid: { display: false }
+                }
+            }
+        }
+    });
+
+    // --- GRÁFICO B: MAE temporal ---
+    const ctxMAE = document.getElementById('chartMAE').getContext('2d');
+    new Chart(ctxMAE, {
+        type: 'bar',
+        data: {
+            labels: targets,
+            datasets: [{
+                label: 'MAE en train 2025 -> test 2026',
+                data: [1.435, 2.325, 1.481, 0.156, 0.235],
+                backgroundColor: '#3b82f6',
+                borderRadius: 6,
+                borderWidth: 1,
+                borderColor: '#2563eb'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            let unit = context.label === 'Brix' ? '°Brix' : (context.label === 'pH' ? ' pH' : ' g/L (o g)');
+                            return ` MAE temporal: ±${context.parsed.y.toFixed(3)}${unit}`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: { color: '#f1f5f9' },
+                    title: { display: true, text: 'Error Absoluto Medio (MAE - Unidades originales)' }
+                },
+                x: {
+                    grid: { display: false }
+                }
+            }
+        }
+    });
+
+    // --- GRÁFICO C: Comparativa de Esquemas (R2) ---
+    const ctxComp = document.getElementById('chartComparison').getContext('2d');
+    new Chart(ctxComp, {
+        type: 'bar',
+        data: {
+            labels: targets,
+            datasets: [
+                {
+                    label: 'CV5 Fila-a-Fila (Optimista)',
+                    data: [0.917, 0.868, 0.873, 0.861, 0.831],
+                    backgroundColor: '#94a3b8',
+                    borderRadius: 4
+                },
+                {
+                    label: 'GroupKFold por Serie',
+                    data: [0.845, 0.815, 0.814, 0.755, 0.522],
+                    backgroundColor: '#3b82f6',
+                    borderRadius: 4
+                },
+                {
+                    label: 'LOFO / Leave-One-Fundo-Out (Por Sitio)',
+                    data: [0.853, 0.785, 0.784, 0.756, 0.172],
+                    backgroundColor: '#8b5cf6',
+                    borderRadius: 4
+                },
+                {
+                    label: 'train 2025 -> test 2026 (Generalización Temporal Real)',
+                    data: [0.809, 0.581, 0.543, 0.524, 0.221],
+                    backgroundColor: '#10b981',
+                    borderRadius: 4,
+                    borderWidth: 1,
+                    borderColor: '#059669'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: { boxWidth: 12, padding: 16, font: { weight: 600 } }
+                },
+                tooltip: {
+                    mode: 'index',
+                    intersect: false,
+                    callbacks: {
+                        label: function(context) {
+                            return ` ${context.dataset.label}: ${context.parsed.y.toFixed(3)}`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 1.0,
+                    grid: { color: '#f1f5f9' },
+                    title: { display: true, text: 'Coeficiente de Determinación (R²)' }
+                },
+                x: {
+                    grid: { display: false }
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

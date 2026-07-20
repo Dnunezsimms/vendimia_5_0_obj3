@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Interactivo — Compensación Frío-Calor (Chilling-Forcing) en Vid</title>
+    <!-- Plotly CDN -->
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+    <style>
+        :root {
+            --wine-dark: #4A1525;
+            --wine-primary: #6B1D2F;
+            --wine-accent: #9B2C46;
+            --cold-blue: #2B6CB0;
+            --cold-light: #EBF8FF;
+            --warm-orange: #DD6B20;
+            --warm-light: #FFFAF0;
+            --bg-main: #F4F6F9;
+            --text-dark: #1A202C;
+            --border-color: #E2E8F0;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+        }
+        header {
+            background: linear-gradient(135deg, var(--wine-dark), #1A365D);
+            color: white;
+            padding: 2.2rem 3rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            border-bottom: 4px solid var(--wine-accent);
+        }
+        header h1 { margin: 0; font-size: 2.1rem; font-weight: 800; letter-spacing: -0.5px; }
+        header p { margin: 0.6rem 0 0; font-size: 1.1rem; opacity: 0.92; max-width: 900px; line-height: 1.5; }
+        
+        .container {
+            max-width: 1450px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .controls-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+        }
+        .controls-card h2 {
+            margin-top: 0;
+            color: var(--wine-primary);
+            font-size: 1.4rem;
+            border-bottom: 2px solid #EDF2F7;
+            padding-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .controls-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        @media (max-width: 960px) { .controls-grid { grid-template-columns: 1fr; } }
+
+        .slider-group {
+            background: var(--cold-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--cold-blue);
+        }
+        .slider-group label {
+            font-weight: 700;
+            color: #2C5282;
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+        }
+        input[type=range] {
+            width: 100%;
+            height: 8px;
+            border-radius: 5px;
+            background: #CBD5E0;
+            outline: none;
+            cursor: pointer;
+        }
+        .select-group {
+            background: #FFF5F5;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--wine-accent);
+        }
+        .select-group label {
+            font-weight: 700;
+            color: var(--wine-dark);
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 0.8rem;
+        }
+        select {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 6px;
+            border: 1px solid #CBD5E0;
+            font-size: 1rem;
+            font-weight: 600;
+            background: white;
+            color: var(--text-dark);
+            cursor: pointer;
+        }
+
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 1100px) { .kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .kpi-grid { grid-template-columns: 1fr; } }
+
+        .kpi-card {
+            background: white;
+            padding: 1.4rem;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .kpi-card:hover { transform: translateY(-3px); }
+        .kpi-title { font-size: 0.88rem; font-weight: 700; color: #718096; text-transform: uppercase; letter-spacing: 0.5px; }
+        .kpi-value { font-size: 2.2rem; font-weight: 800; margin: 0.5rem 0; color: var(--wine-dark); }
+        .kpi-subtitle { font-size: 0.85rem; font-weight: 600; }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        @media (max-width: 1150px) { .charts-grid { grid-template-columns: 1fr; } }
+
+        .chart-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+        }
+        .chart-card h3 {
+            margin-top: 0;
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            border-bottom: 1px solid #EDF2F7;
+            padding-bottom: 0.8rem;
+        }
+
+        .theory-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+            line-height: 1.7;
+        }
+        .theory-section h2 { color: var(--wine-primary); margin-top: 0; border-bottom: 2px solid #EDF2F7; padding-bottom: 0.8rem; }
+        .theory-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 1.5rem; }
+        @media (max-width: 960px) { .theory-grid { grid-template-columns: 1fr; } }
+        
+        .theory-box {
+            background: #F7FAFC;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid var(--wine-accent);
+        }
+        .theory-box h4 { margin-top: 0; color: var(--wine-dark); font-size: 1.1rem; }
+        
+        .badge-saturado { color: #276749; background: #C6F6D5; padding: 3px 8px; border-radius: 12px; }
+        .badge-deficit { color: #C53030; background: #FED7D7; padding: 3px 8px; border-radius: 12px; }
+        .badge-moderado { color: #DD6B20; background: #FEEBC8; padding: 3px 8px; border-radius: 12px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>❄️☀️ Simulador Ecofisiológico de Compensación Frío-Calor (Chilling-Forcing)</h1>
+        <p>Herramienta visual interactiva para ilustrar cómo el receso invernal regula las exigencias térmicas de brotación en <i>Vitis vinifera</i> L. Basado en la síntesis bibliográfica y meta-análisis internacional (Objetivo 3 — Vendimia 5.0).</p>
+    </header>
+
+    <div class="container">
+        <!-- PANEL DE CONTROL -->
+        <div class="controls-card">
+            <h2>⚙️ Panel de Simulación Ecofisiológica en Tiempo Real</h2>
+            <div class="controls-grid">
+                <div class="slider-group">
+                    <label>
+                        <span>Acumulación de Frío Invernal (Mayo — Julio)</span>
+                        <span id="slider-val-display">35 Porciones ( ~450 HF )</span>
+                    </label>
+                    <input type="range" id="chill-slider" min="10" max="65" step="1" value="35" oninput="updateSimulation()">
+                    <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:#4A5568; margin-top:0.4rem;">
+                        <span>Invierno Cálido / Costero (10 CP)</span>
+                        <span>Umbral Saturación (~40 CP)</span>
+                        <span>Invierno Frío / Cordillera (65 CP)</span>
+                    </div>
+                </div>
+
+                <div class="select-group">
+                    <label>Selección de Variedad de Vid (Perfil de Exigencia Fisiológica)</label>
+                    <select id="variety-select" onchange="updateSimulation()">
+                        <option value="chardonnay">Chardonnay (Temprana — Bajo Requerimiento de Frío y Calor)</option>
+                        <option value="merlot">Merlot (Media — Moderada Sensibilidad)</option>
+                        <option value="cabernet" selected>Cabernet Sauvignon (Tardía — Alta Inercia Fisiológica)</option>
+                        <option value="carmenere">Carménère (Muy Tardía — Exigencia Térmica Estricta)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- KPIS EN VIVO -->
+            <div class="kpi-grid">
+                <div class="kpi-card" style="border-top: 4px solid var(--cold-blue);">
+                    <div class="kpi-title">Frío Recibido</div>
+                    <div class="kpi-value" id="kpi-chill">35 CP</div>
+                    <div class="kpi-subtitle" id="kpi-chill-status">Estado: Moderado</div>
+                </div>
+                <div class="kpi-card" style="border-top: 4px solid var(--warm-orange);">
+                    <div class="kpi-title">Requerimiento GDD Real</div>
+                    <div class="kpi-value" id="kpi-gdd-req">168 GDD</div>
+                    <div class="kpi-subtitle" style="color:#DD6B20;">Umbral Fisiológico Compensado</div>
+                </div>
+                <div class="kpi-card" style="border-top: 4px solid #718096;">
+                    <div class="kpi-title">Modelo Clásico Fijo (1 Etapa)</div>
+                    <div class="kpi-value" id="kpi-gdd-fixed">150 GDD</div>
+                    <div class="kpi-subtitle" style="color:#718096;">Asume Saturación Siempre</div>
+                </div>
+                <div class="kpi-card" style="border-top: 4px solid var(--wine-accent);">
+                    <div class="kpi-title">Desfase de Predicción Clásica</div>
+                    <div class="kpi-value" id="kpi-error" style="color:#C53030;">+4 Días</div>
+                    <div class="kpi-subtitle" id="kpi-error-desc">Error por ignorar déficit de frío</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- GRÁFICOS DINÁMICOS -->
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h3>📉 1. Curva de Compensación Inversa (Chilling vs. Forcing)</h3>
+                <div id="plot-compensation" style="height: 400px;"></div>
+            </div>
+            <div class="chart-card">
+                <h3>📅 2. Acumulación Térmica Primaveral y Predicción de Brotación</h3>
+                <div id="plot-spring" style="height: 400px;"></div>
+            </div>
+        </div>
+
+        <!-- EXPLICACIÓN PEDAGÓGICA -->
+        <div class="theory-section">
+            <h2>📚 Síntesis y Relevancia Metodológica (Para Discusión con Camilo)</h2>
+            <p style="font-size:1.05rem; color:#4A5568;">
+                La simulación superior demuestra empíricamente por qué los modelos térmicos tradicionales de 1 etapa (acumulación pura de GDD desde un calendario fijo como el 1 de agosto) generan <b>errores sistemáticos (*leakage* y sesgo)</b> cuando se aplican en territorios heterogéneos o bajo primaveras precedidas por inviernos benignos.
+            </p>
+            <div class="theory-grid">
+                <div class="theory-box">
+                    <h4>1. La Compensación Exponencial</h4>
+                    <p>A medida que disminuye el frío invernal recibido durante la endodormancia (hacia la izquierda en la simulación), las yemas no logran un desbloqueo total. Para compensar este déficit hormonal y metabólico, la planta exige un <b>forzamiento térmico primaveral significativamente mayor</b> (hasta +60% GDD) para poder brotar.</p>
+                </div>
+                <div class="theory-box">
+                    <h4>2. La Meseta de Saturación (~40 CP)</h4>
+                    <p>En años fríos o viñedos precordilleranos (> 40 Chilling Portions), el frío entra en una zona de saturación. En esta meseta, añadir más frío ya no reduce el requerimiento térmico. Aquí es el único escenario donde un modelo clásico de 1 etapa acierta, porque el umbral de GDD se vuelve constante.</p>
+                </div>
+                <div class="theory-box">
+                    <h4>3. El Rol Operacional del Valle Térmico</h4>
+                    <p>Dado que en Vendimia 5.0 no siempre contamos con sensores horarios ininterrumpidos en todos los fundos históricos para calcular CP, nuestro <b>Panel de Auditoría de Valle Térmico</b> (GDD diario y curva móvil) actúa como una alternativa ecofisiológica robusta para verificar que el conteo térmico inicie justo en el punto de mínima actividad del invierno.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Parámetros por variedad: a (GDD asintótico saturado), b (Amplitud de penalización por déficit), c (Tasa decrecimiento)
+        const VAR_PARAMS = {
+            chardonnay: { a: 110, b: 180, c: 0.085, fixed: 120, name: "Chardonnay" },
+            merlot:     { a: 130, b: 210, c: 0.075, fixed: 140, name: "Merlot" },
+            cabernet:   { a: 148, b: 240, c: 0.068, fixed: 155, name: "Cabernet Sauvignon" },
+            carmenere:  { a: 170, b: 270, c: 0.062, fixed: 180, name: "Carménère" }
+        };
+
+        // Generar curva de GDD sintética de primavera (agosto - septiembre)
+        const DAYS = [];
+        const GDD_ACCUM = [];
+        let currGDD = 0;
+        for (let i = 1; i <= 60; i++) {
+            DAYS.push(`Día ${i} (Ago/Sep)`);
+            // Tasa diaria de GDD que va incrementando a medida que avanza la primavera (de 1.5 GDD/día a 6 GDD/día)
+            let dailyGDD = 1.2 + (i * 0.08) + (Math.sin(i * 0.5) * 0.5);
+            currGDD += dailyGDD;
+            GDD_ACCUM.push(currGDD);
+        }
+
+        function getDayForGDD(targetGDD) {
+            for (let i = 0; i < GDD_ACCUM.length; i++) {
+                if (GDD_ACCUM[i] >= targetGDD) return i + 1;
+            }
+            return 60;
+        }
+
+        function calcReqGDD(cp, params) {
+            return params.a + params.b * Math.exp(-params.c * cp);
+        }
+
+        function updateSimulation() {
+            const cp = parseFloat(document.getElementById('chill-slider').value);
+            const varKey = document.getElementById('variety-select').value;
+            const params = VAR_PARAMS[varKey];
+
+            // 1. Actualizar textos de UI
+            const hfApprox = Math.round(cp * 13);
+            document.getElementById('slider-val-display').innerText = `${cp} Porciones ( ~${hfApprox} HF )`;
+            
+            let statusText, statusClass;
+            if (cp < 25) {
+                statusText = '<span class="badge-deficit">Déficit Severo (Incompleto)</span>';
+            } else if (cp < 38) {
+                statusText = '<span class="badge-moderado">Transición / Sub-óptimo</span>';
+            } else {
+                statusText = '<span class="badge-saturado">Saturación Óptima</span>';
+            }
+            document.getElementById('kpi-chill').innerText = `${cp} CP`;
+            document.getElementById('kpi-chill-status').innerHTML = statusText;
+
+            const reqGDD = Math.round(calcReqGDD(cp, params));
+            document.getElementById('kpi-gdd-req').innerText = `${reqGDD} GDD`;
+            document.getElementById('kpi-gdd-fixed').innerText = `${params.fixed} GDD`;
+
+            const dayReal = getDayForGDD(reqGDD);
+            const dayFixed = getDayForGDD(params.fixed);
+            const diffDays = dayReal - dayFixed;
+
+            const errorEl = document.getElementById('kpi-error');
+            const descEl = document.getElementById('kpi-error-desc');
+            if (diffDays > 0) {
+                errorEl.innerText = `+${diffDays} Días Retraso`;
+                errorEl.style.color = "#C53030";
+                descEl.innerText = `Modelo clásico predice brotación ${diffDays} días ANTES de la realidad.`;
+            } else if (diffDays < 0) {
+                errorEl.innerText = `${diffDays} Días Adelanto`;
+                errorEl.style.color = "#2B6CB0";
+                descEl.innerText = `Brotación ligeramente adelantada por saturación.`;
+            } else {
+                errorEl.innerText = `0 Días (Exacto)`;
+                errorEl.style.color = "#276749";
+                descEl.innerText = `Coincidencia en la zona de saturación.`;
+            }
+
+            // 2. Actualizar Gráfico 1: Curva de Compensación
+            const cpRange = [];
+            const gddCurve = [];
+            for (let x = 10; x <= 65; x += 1) {
+                cpRange.push(x);
+                gddCurve.push(calcReqGDD(x, params));
+            }
+
+            const traceCurve = {
+                x: cpRange,
+                y: gddCurve,
+                type: 'scatter',
+                mode: 'lines',
+                name: `Curva ${params.name}`,
+                line: { color: '#6B1D2F', width: 3.5 }
+            };
+
+            const tracePoint = {
+                x: [cp],
+                y: [reqGDD],
+                type: 'scatter',
+                mode: 'markers',
+                name: 'Estado Actual Simulado',
+                marker: { size: 14, color: '#DD6B20', line: { color: 'white', width: 2 } }
+            };
+
+            const layoutComp = {
+                margin: { t: 20, r: 20, b: 50, l: 60 },
+                xaxis: { title: 'Frío Invernal Acumulado (Chilling Portions)', range: [8, 67] },
+                yaxis: { title: 'Calor Requerido para Brotación (GDD)', range: [90, 340] },
+                shapes: [
+                    // Zona de saturación
+                    {
+                        type: 'rect', x0: 40, x1: 67, y0: 90, y1: 340,
+                        fillcolor: '#C6F6D5', opacity: 0.25, line: { width: 0 }
+                    },
+                    // Línea vertical del umbral de saturación
+                    {
+                        type: 'line', x0: 40, x1: 40, y0: 90, y1: 340,
+                        line: { color: '#276749', width: 1.5, dash: 'dot' }
+                    }
+                ],
+                annotations: [
+                    { x: 53, y: 310, text: '<b>Meseta de Saturación de Frío</b><br>(GDD mínimo estable)', showarrow: false, font: { color: '#276749' } },
+                    { x: 22, y: 310, text: '<b>Zona de Penalización Térmica</b><br>(Déficit de Frío eleva GDD)', showarrow: false, font: { color: '#C53030' } }
+                ],
+                showlegend: false
+            };
+
+            Plotly.react('plot-compensation', [traceCurve, tracePoint], layoutComp, {responsive: true});
+
+            // 3. Actualizar Gráfico 2: Trayectoria de Acumulación Primaveral
+            const traceAccum = {
+                x: DAYS,
+                y: GDD_ACCUM,
+                type: 'scatter',
+                mode: 'lines',
+                name: 'GDD Acumulado Observado',
+                line: { color: '#2B6CB0', width: 3 }
+            };
+
+            const traceFixedReq = {
+                x: [DAYS[0], DAYS[DAYS.length - 1]],
+                y: [params.fixed, params.fixed],
+                type: 'scatter',
+                mode: 'lines',
+                name: 'Umbral Fijo Clásico (1 Etapa)',
+                line: { color: '#718096', width: 2, dash: 'dash' }
+            };
+
+            const traceRealReq = {
+                x: [DAYS[0], DAYS[DAYS.length - 1]],
+                y: [reqGDD, reqGDD],
+                type: 'scatter',
+                mode: 'lines',
+                name: 'Umbral Fisiológico Compensado',
+                line: { color: '#DD6B20', width: 2.5 }
+            };
+
+            const layoutSpring = {
+                margin: { t: 20, r: 20, b: 60, l: 60 },
+                xaxis: { title: 'Progreso Primaveral (Días desde Inicio de Conteo / Valle Térmico)' },
+                yaxis: { title: 'GDD Acumulado' },
+                shapes: [
+                    // Hito brotación clásica
+                    {
+                        type: 'line', x0: dayFixed - 1, x1: dayFixed - 1, y0: 0, y1: params.fixed,
+                        line: { color: '#718096', width: 1.5, dash: 'dot' }
+                    },
+                    // Hito brotación fisiológica real
+                    {
+                        type: 'line', x0: dayReal - 1, x1: dayReal - 1, y0: 0, y1: reqGDD,
+                        line: { color: '#DD6B20', width: 2 }
+                    }
+                ],
+                annotations: [
+                    { x: dayFixed - 1, y: params.fixed + 18, text: `<b>Predicción Clásica</b><br>(Día ${dayFixed})`, showarrow: true, arrowhead: 2, ax: 0, ay: -30, font: { color: '#4A5568', size: 11 } },
+                    { x: dayReal - 1, y: reqGDD - 18, text: `<b>Brotación Fisiológica Real</b><br>(Día ${dayReal})`, showarrow: true, arrowhead: 2, ax: 0, ay: 35, font: { color: '#DD6B20', size: 11 } }
+                ],
+                legend: { orientation: 'h', y: -0.2 }
+            };
+
+            Plotly.react('plot-spring', [traceAccum, traceFixedReq, traceRealReq], layoutSpring, {responsive: true});
+        }
+
+        // Inicializar simulación al cargar
+        window.addEventListener('DOMContentLoaded', () => {
+            updateSimulation();
+            window.addEventListener('resize', () => {
+                Plotly.Plots.resize('plot-compensation');
+                Plotly.Plots.resize('plot-spring');
+            });
+        });
+    </script>
+</body>
+</html>

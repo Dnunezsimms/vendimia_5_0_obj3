@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suite de Dashboards HTML — Vendimia 5.0 (Objetivo 3)</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #31102f 100%);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.12);
+            --card-hover-border: rgba(236, 72, 153, 0.5);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent-pink: #ec4899;
+            --accent-purple: #8b5cf6;
+            --accent-gold: #f59e0b;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow-x: hidden;
+        }
+
+        /* Ambient glow background */
+        .ambient-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.15) 0%, rgba(139, 92, 246, 0.1) 50%, transparent 70%);
+            top: -200px;
+            right: -150px;
+            z-index: 0;
+            pointer-events: none;
+            filter: blur(80px);
+            animation: pulse-glow 10s infinite alternate;
+        }
+        .ambient-glow-2 {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(16, 185, 129, 0.08) 50%, transparent 70%);
+            bottom: -150px;
+            left: -100px;
+            z-index: 0;
+            pointer-events: none;
+            filter: blur(80px);
+            animation: pulse-glow 12s infinite alternate-reverse;
+        }
+
+        @keyframes pulse-glow {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.2); opacity: 1; }
+        }
+
+        header {
+            position: relative;
+            z-index: 10;
+            padding: 4rem 2rem 2rem;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(236, 72, 153, 0.15);
+            border: 1px solid rgba(236, 72, 153, 0.4);
+            color: #f472b6;
+            padding: 0.5rem 1.25rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, #ffffff, #e2e8f0, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        main {
+            position: relative;
+            z-index: 10;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 2rem;
+            flex-grow: 1;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+            gap: 2.5rem;
+            margin-top: 1rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            padding: 2.5rem 2rem;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            transition: background 0.4s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: var(--card-hover-border);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(236, 72, 153, 0.15);
+        }
+
+        .card.frio:hover::before { background: linear-gradient(90deg, #3b82f6, #06b6d4); }
+        .card.frio:hover { border-color: rgba(59, 130, 246, 0.5); box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 30px rgba(59, 130, 246, 0.2); }
+        
+        .card.obj3:hover::before { background: linear-gradient(90deg, #ec4899, #8b5cf6); }
+        .card.obj3:hover { border-color: rgba(236, 72, 153, 0.5); box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 30px rgba(236, 72, 153, 0.2); }
+        
+        .card.mapa:hover::before { background: linear-gradient(90deg, #10b981, #059669); }
+        .card.mapa:hover { border-color: rgba(16, 185, 129, 0.5); box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 30px rgba(16, 185, 129, 0.2); }
+
+        .card.vinewise:hover::before { background: linear-gradient(90deg, #f59e0b, #ef4444); }
+        .card.vinewise:hover { border-color: rgba(245, 158, 11, 0.5); box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 30px rgba(245, 158, 11, 0.2); }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .icon-wrapper {
+            width: 64px;
+            height: 64px;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover .icon-wrapper {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .frio .icon-wrapper { background: rgba(59, 130, 246, 0.15); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.3); }
+        .obj3 .icon-wrapper { background: rgba(236, 72, 153, 0.15); color: #f472b6; border: 1px solid rgba(236, 72, 153, 0.3); }
+        .mapa .icon-wrapper { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
+        .vinewise .icon-wrapper { background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245, 158, 11, 0.3); }
+
+        .tag {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+        .frio .tag { background: rgba(59, 130, 246, 0.2); color: #93c5fd; }
+        .obj3 .tag { background: rgba(236, 72, 153, 0.2); color: #fbcfe8; }
+        .mapa .tag { background: rgba(16, 185, 129, 0.2); color: #a7f3d0; }
+        .vinewise .tag { background: rgba(245, 158, 11, 0.2); color: #fde68a; }
+
+        .card-content h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.85rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #ffffff;
+        }
+
+        .card-content p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .btn-launch {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: gap 0.3s ease;
+        }
+
+        .frio .btn-launch { color: #60a5fa; }
+        .obj3 .btn-launch { color: #f472b6; }
+        .mapa .btn-launch { color: #34d399; }
+        .vinewise .btn-launch { color: #fbbf24; }
+
+        .card:hover .btn-launch {
+            gap: 1.1rem;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+            box-shadow: 0 0 10px #10b981;
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        .meta-text {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+        }
+
+        footer {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+
+        footer strong {
+            color: var(--text-main);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .dashboard-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow"></div>
+    <div class="ambient-glow-2"></div>
+
+    <header>
+        <div class="badge">
+            <i class="fa-solid fa-wine-glass"></i> Proyecto CORFO Vendimia 5.0
+        </div>
+        <h1>Suite de Dashboards HTML</h1>
+        <p class="subtitle">
+            Plataforma visual autónoma de alto rendimiento para la exploración interactiva de compensación térmica, auditoría ecofisiológica y cobertura agrometeorológica del Objetivo Específico 3.
+        </p>
+    </header>
+
+    <main>
+        <div class="dashboard-grid">
+            <!-- 1. Explorador de Frío -->
+            <a href="explorador_frio.html" target="_blank" class="card frio">
+                <div>
+                    <div class="card-header">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-snowflake"></i>
+                        </div>
+                        <span class="tag">Ecofisiología</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Explorador Frío</h2>
+                        <p>
+                            Simulador interactivo de compensación Frío-Calor (<em>Chilling-Forcing</em>). Modela dinámicamente cómo el déficit de frío invernal eleva los requerimientos térmicos de brotación (GDD) en primavera.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="meta-text"><span class="status-dot"></span> Interactivo HTML5</span>
+                    <span class="btn-launch">Abrir Visor <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- 2. Visor Objetivo 3 -->
+            <a href="../../ACCESO_DASHBOARD.html" target="_blank" class="card obj3">
+                <div>
+                    <div class="card-header">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <span class="tag">Auditoría 360°</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Visor Obj3</h2>
+                        <p>
+                            Auditoría integral del pipeline biológico, agroclimático y de reanálisis satelital <strong>ERA5-Land</strong>. Explora la cobertura, acumulación térmica, validación satelital y curvas de madurez.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="meta-text"><span class="status-dot"></span> Interactivo HTML5</span>
+                    <span class="btn-launch">Abrir Visor <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- 3. Mapa de Estaciones -->
+            <a href="mapa_estaciones.html" target="_blank" class="card mapa">
+                <div>
+                    <div class="card-header">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <span class="tag">Georreferencia</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Mapa Estaciones</h2>
+                        <p>
+                            Cartografía interactiva georreferenciada con la red de estaciones agrometeorológicas INIA y RAN conectadas al proyecto para la monitorización climática territorial de los viñedos.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="meta-text"><span class="status-dot"></span> Interactivo HTML5</span>
+                    <span class="btn-launch">Abrir Visor <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- 4. vinewise-rs ERA5 Satelital -->
+            <a href="visor_vinewise_era5_vs_local.html" target="_blank" class="card vinewise">
+                <div>
+                    <div class="card-header">
+                        <div class="icon-wrapper">
+                            <i class="fa-solid fa-satellite"></i>
+                        </div>
+                        <span class="tag">vinewise-rs</span>
+                    </div>
+                    <div class="card-content">
+                        <h2>Satelital vinewise</h2>
+                        <p>
+                            Auditoría satelital <strong>ERA5-Land vs. Superficie Local</strong>. Explora la viabilidad por fundo ($r > 0.967$), corrección de sesgo altitudinal, imputación ante caídas de sensores y matriz de decisiones.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <span class="meta-text"><span class="status-dot"></span> Interactivo HTML5</span>
+                    <span class="btn-launch">Abrir Visor <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <strong>Vendimia 5.0 — Objetivo Específico 3</strong> &bull; Sistema de Inteligencia Artificial Explicable (XAI) para Optimización de Cosecha en Vid.<br>
+            Responsable Técnico: <strong>Diego Núñez Simms</strong> &bull; Repositorio canónico local de I+D.
+        </p>
+    </footer>
+</body>
+</html>
