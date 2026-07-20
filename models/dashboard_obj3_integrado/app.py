@@ -1029,6 +1029,35 @@ def build_app() -> gr.Blocks:
                 inputs=[app_state, target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd],
                 outputs=[out_metrics_file, out_preds_file, out_imp_file, out_md_file],
             )
+
+            # initial render
+            demo.load(
+                _update_all_main,
+                inputs=[app_state, target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd],
+                outputs=[
+                    resumen_md,
+                    resumen_table,
+                    resumen_scatter,
+                    orig_msg,
+                    fig_box_var,
+                    fig_ts_target,
+                    fig_box_fundo,
+                    fig_ts_pred,
+                    predictor_dd,
+                    perf_table,
+                    perf_scatter,
+                    perf_boxplot_msg,
+                    perf_boxplot_img,
+                    lofo_table,
+                    lofo_rank,
+                ],
+            )
+
+            demo.load(
+                update_importancia,
+                inputs=[app_state, target_dd, scheme_dd, combo_dd, tipo_imp_dd],
+                outputs=[imp_msg, imp_plot, imp_table],
+            )
     
     
         
