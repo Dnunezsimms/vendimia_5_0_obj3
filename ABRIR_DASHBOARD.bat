@@ -15,11 +15,11 @@ start /b cmd /c "timeout /t 3 /nobreak >nul & start "" "%~dp0ACCESO_DASHBOARD.ht
 
 :: Lanzar motor python
 if exist "%LOCALAPPDATA%\miniconda3\envs\vendimia_obj3\python.exe" (
-    "%LOCALAPPDATA%\miniconda3\envs\vendimia_obj3\python.exe" -m models.dashboard_obj3_integrado.app
+    "%LOCALAPPDATA%\miniconda3\envs\vendimia_obj3\python.exe" -m models.dashboard_obj3_integrado.app --share
 ) else if exist "%USERPROFILE%\miniconda3\envs\vendimia_obj3\python.exe" (
-    "%USERPROFILE%\miniconda3\envs\vendimia_obj3\python.exe" -m models.dashboard_obj3_integrado.app
+    "%USERPROFILE%\miniconda3\envs\vendimia_obj3\python.exe" -m models.dashboard_obj3_integrado.app --share
 ) else (
-    python -m models.dashboard_obj3_integrado.app
+    python -m models.dashboard_obj3_integrado.app --share
 )
 
 pause

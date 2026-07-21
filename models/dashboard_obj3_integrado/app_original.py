@@ -57,8 +57,20 @@ except ImportError:
         panel_d_chill_table,
         gdd_biofix_timeseries_plot,
     )
-# Luis dependencies have been stripped to improve dashboard performance.
-# Run app_original.py to access the full Interactive ML models suite.
+try:
+    from .src.luis_config import BASE_DIR as LUIS_BASE_DIR, CACHE_DIR as LUIS_CACHE_DIR
+    from .src.luis_data_loader import (
+        available_combos, available_schemes, available_targets, detect_predictor_columns,
+        discover_artifacts, load_experiment_config, load_importance, load_metrics,
+        load_original_data, load_predictions
+    )
+    from .src.luis_metrics import aggregate_metrics, attach_deltas, combine_shap_mae, executive_summary, lofo_fundo_table
+    from .src.luis_plots import (
+        box_target_by_fundo, box_target_by_variety, combo_compare_bars,
+        importance_bar as luis_importance_bar, lofo_ranking_bar, observed_vs_pred as luis_observed_vs_pred,
+        performance_scatter as luis_performance_scatter, predictor_timeseries, residual_plots, timeseries_target
+    )
+    from .src.luis_utils import setup_logging as luis_setup_logging
 except ImportError:
     from src.luis_config import BASE_DIR as LUIS_BASE_DIR, CACHE_DIR as LUIS_CACHE_DIR
     from src.luis_data_loader import (
@@ -82,6 +94,7 @@ def _safe(df: pd.DataFrame | None) -> pd.DataFrame:
 
 def _markdown_status(state: dict) -> str:
     climate = state["climate"]
+    luis = state["luis"]
     audit = state["audit"]
     resumen = climate["resumen"]
     n_ok = int((resumen.get("estado", pd.Series(dtype=str)) == "OK").sum()) if "estado" in resumen.columns else 0
@@ -100,8 +113,10 @@ def _markdown_status(state: dict) -> str:
         "### 🔎 Auditoría de Orígenes de Datos\n"
         f"- **Repositorio Base:** `{REPO_ROOT}`\n"
         f"- **Red Climática:** `{n_ok}` fundos consolidados OK, `{n_val}` en verificación manual.\n"
-        f"- **Modelos de Luis:** Interfaz completa preservada en `app_original.py` para optimizar rendimiento.\\n"
-        f"- **Control de Integridad (SHA/Path):** `{len(audit)}` archivos verificados.\\n"
+        f"- **Métricas RF (Luis):** `{len(luis['metrics_rf'])}` registros.\n"
+        f"- **Métricas PySR / Regresión Simbólica:** `{len(luis['metrics_pysr'])}` fórmulas evaluadas.\n"
+        f"- **Predicciones RF Espaciales:** `{len(luis['predictions_rf'])}` puntos.\n"
+        f"- **Control de Integridad (SHA/Path):** `{len(audit)}` archivos verificados.\n"
     )
 
 
@@ -483,6 +498,7 @@ def build_app() -> gr.Blocks:
     gdd = state["gdd"]
     phenology = state["phenology"]
     maturity = state["maturity"]
+    luis = state["luis"]
     climate_catalog = state["climate_catalog"]
     gdd_latitudinal = state["gdd_latitudinal"]
 
@@ -813,15 +829,250 @@ def build_app() -> gr.Blocks:
     
     
         with gr.Tab("🤖 Modelos de Madurez Fenólica (IA/RF)"):
-            gr.Markdown(
-                "> **🛡️ RENDIMIENTO OPTIMIZADO:** Los módulos de Machine Learning (Random Forest) e IA Simbólica "
-                "han sido aislados de este panel principal para garantizar tiempos de carga y respuesta inmediatos.\\n\\n"
-                "### 📑 Resumen Ejecutivo\\n"
-                "1. **Brix y pH (Trazabilidad Térmica):** El análisis de Importancia SHAP demostró que los sólidos solubles y la caída del pH se explican abrumadoramente por índices térmicos acumulados (`IFN_acum`, `BEDD_acum`).\\n"
-                "2. **Peso de Baya:** Todos los modelos Random Forest colapsaron predictivamente al intentar extrapolar espacialmente el peso de baya usando solo el clima, validando que depende de variables de manejo agronómico (riego, poda).\\n\\n"
-                "> 💡 **Para acceder al Explorador ML Completo:** Ejecute `python app_original.py` en la terminal para levantar la suite pesada interactiva."
+            app_state = gr.State(state)
+            with gr.Row():
+                with gr.Column(scale=1):
+                    target_dd = gr.Dropdown(label="Target", choices=targets, value=target0)
+                    scheme_dd = gr.Dropdown(label="Estrategia de validación", choices=schemes0, value=scheme0)
+                    variedad_dd = gr.Dropdown(label="Variedad", choices=var_opts, value="Todas", visible=False, interactive=False)
+                    fundo_dd = gr.Dropdown(label="Fundo", choices=fundo_opts, value="Todos")
+                    combo_dd = gr.Dropdown(label="Combinación (raw)", choices=combo_opts, value="Todos")
+                    combo_h_dd = gr.Dropdown(label="Combinación legible", choices=combo_h_opts, value="Todos")
+                    viz_type_dd = gr.Dropdown(
+                        label="Tipo de visualización",
+                        choices=[
+                            "resumen general",
+                            "distribución por variedad",
+                            "series temporales",
+                            "boxplots por fundo",
+                            "predicho vs observado",
+                            "residuos",
+                            "ranking de fundos por MAE",
+                            "importancia por permutación",
+                            "importancia SHAP",
+                            "comparación MAE/SHAP",
+                            "tabla de métricas",
+                            "tabla de mejores combinaciones",
+                        ],
+                        value="resumen general",
+                    )
+                    refresh_btn = gr.Button("Recargar y actualizar filtros")
+    
+                with gr.Column(scale=3):
+                    with gr.Tabs():
+                        with gr.Tab("Resumen general"):
+                            resumen_md = gr.Markdown()
+                            resumen_table = gr.Dataframe(label="Tabla de métricas agregadas")
+                            resumen_scatter = gr.Plot(label="MAE vs R2")
+    
+                        with gr.Tab("Datos originales"):
+                            orig_msg = gr.Markdown()
+                            fig_box_var = gr.Plot(label="Boxplot target por variedad")
+                            fig_ts_target = gr.Plot(label="Serie temporal target")
+                            fig_box_fundo = gr.Plot(label="Boxplot target por fundo")
+                            predictor_dd = gr.Dropdown(label="Variable original / predictor", choices=[], value=None)
+                            fig_ts_pred = gr.Plot(label="Serie temporal predictor")
+    
+                        with gr.Tab("Desempeño modelos"):
+                            perf_table = gr.Dataframe(label="Métricas por combinación")
+                            perf_scatter = gr.Plot(label="Scatter MAE vs R2")
+                            perf_boxplot_msg = gr.Markdown()
+                            perf_boxplot_img = gr.Image(label="Boxplot global por combinación (precomputado)", type="filepath")
+    
+                        with gr.Tab("LOFO por fundo"):
+                            lofo_table = gr.Dataframe(label="Tabla LOFO")
+                            lofo_rank = gr.Plot(label="Ranking de fundos por MAE")
+    
+    
+                        with gr.Tab("Importancia"):
+                            tipo_imp_dd = gr.Dropdown(label="tipo_importancia", choices=["permutation", "shap", "mae_shap"], value="permutation")
+                            imp_msg = gr.Markdown()
+                            imp_plot = gr.Plot(label="Importancia")
+                            imp_table = gr.Dataframe(label="Tabla importancia")
+    
+                        with gr.Tab("Comparador de combinaciones"):
+                            combo_mult = gr.Dropdown(label="Selecciona 2+ combinaciones", multiselect=True, choices=combo_opts, value=[])
+                            cmp_table = gr.Dataframe(label="Tabla comparativa")
+                            cmp_mae = gr.Plot(label="MAE")
+                            cmp_r2 = gr.Plot(label="R2")
+                            cmp_mej = gr.Plot(label="Mejora MAE %")
+    
+                        with gr.Tab("Explorador archivos"):
+                            explorer_table = gr.Dataframe(label="Archivos detectados")
+    
+                        with gr.Tab("Exportación"):
+                            export_btn = gr.Button("Exportar tablas filtradas")
+                            out_metrics_file = gr.File(label="Descargar métricas CSV")
+                            out_preds_file = gr.File(label="Descargar predicciones CSV")
+                            out_imp_file = gr.File(label="Descargar importancia CSV")
+                            out_md_file = gr.File(label="Descargar resumen Markdown")
+    
+            def _sync_filters(state, target, scheme):
+                return refresh_options(state, target, scheme)
+    
+            refresh_btn.click(
+                _sync_filters,
+                inputs=[app_state, target_dd, scheme_dd],
+                outputs=[target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd, combo_h_dd],
+            )
+            target_dd.change(
+                _sync_filters,
+                inputs=[app_state, target_dd, scheme_dd],
+                outputs=[target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd, combo_h_dd],
+            )
+            scheme_dd.change(
+                _sync_filters,
+                inputs=[app_state, target_dd, scheme_dd],
+                outputs=[target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd, combo_h_dd],
+            )
+    
+            def _combo_from_human(state, target, scheme, combo_h):
+                combos_df = available_combos(state["metrics"], target, scheme)
+                if combo_h == "Todos" or combos_df.empty:
+                    return "Todos"
+                m = combos_df[combos_df["combo_human"] == combo_h]
+                return m["predictors"].iloc[0] if not m.empty else "Todos"
+    
+            combo_h_dd.change(_combo_from_human, inputs=[app_state, target_dd, scheme_dd, combo_h_dd], outputs=[combo_dd])
+    
+            def _update_all_main(state, target, scheme, combo, variedad, fundo):
+                r_md, r_tbl, r_sc = update_resumen(state, target, scheme)
+                o_msg, b1, t1, b2, t2, pred_dd_new = update_datos_originales(target, variedad, fundo, "")
+                fs = filtered_summary(state, target, scheme)
+                perf_img, perf_msg = _performance_boxplot_image(target, scheme)
+                lo_tbl, lo_fig = update_lofo(state, target, combo)
+                return r_md, r_tbl, r_sc, o_msg, b1, t1, b2, t2, pred_dd_new, fs, r_sc, perf_msg, perf_img, lo_tbl, lo_fig
+    
+            refresh_btn.click(
+                _update_all_main,
+                inputs=[app_state, target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd],
+                outputs=[
+                    resumen_md,
+                    resumen_table,
+                    resumen_scatter,
+                    orig_msg,
+                    fig_box_var,
+                    fig_ts_target,
+                    fig_box_fundo,
+                    fig_ts_pred,
+                    predictor_dd,
+                    perf_table,
+                    perf_scatter,
+                    perf_boxplot_msg,
+                    perf_boxplot_img,
+                    lofo_table,
+                    lofo_rank,
+                ],
+            )
+    
+            predictor_dd.change(
+                lambda t, v, f, p: update_datos_originales(t, v, f, p)[4],
+                inputs=[target_dd, variedad_dd, fundo_dd, predictor_dd],
+                outputs=[fig_ts_pred],
+            )
+    
+            for trigger in [target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd]:
+                trigger.change(
+                    _update_all_main,
+                    inputs=[app_state, target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd],
+                    outputs=[
+                        resumen_md,
+                        resumen_table,
+                        resumen_scatter,
+                        orig_msg,
+                        fig_box_var,
+                        fig_ts_target,
+                        fig_box_fundo,
+                        fig_ts_pred,
+                        predictor_dd,
+                        perf_table,
+                        perf_scatter,
+                        perf_boxplot_msg,
+                        perf_boxplot_img,
+                        lofo_table,
+                        lofo_rank,
+                    ],
+                )
+    
+            tipo_imp_dd.change(
+                update_importancia,
+                inputs=[app_state, target_dd, scheme_dd, combo_dd, tipo_imp_dd],
+                outputs=[imp_msg, imp_plot, imp_table],
+            )
+            for trigger in [target_dd, scheme_dd, combo_dd]:
+                trigger.change(
+                    update_importancia,
+                    inputs=[app_state, target_dd, scheme_dd, combo_dd, tipo_imp_dd],
+                    outputs=[imp_msg, imp_plot, imp_table],
+                )
+    
+            def _update_combo_mult(state, target, scheme):
+                combos_df = available_combos(state["metrics"], target, scheme)
+                opts = combos_df["predictors"].tolist() if not combos_df.empty else []
+                return gr.Dropdown(choices=["Todos"] + opts, value=[])
+    
+            def _expand_combo_todos(state, target, scheme, selected):
+                combos_df = available_combos(state["metrics"], target, scheme)
+                all_opts = combos_df["predictors"].tolist() if not combos_df.empty else []
+                selected = selected or []
+                if "Todos" in selected:
+                    return all_opts
+                return [x for x in selected if x in all_opts]
+    
+            refresh_btn.click(_update_combo_mult, inputs=[app_state, target_dd, scheme_dd], outputs=[combo_mult])
+            target_dd.change(_update_combo_mult, inputs=[app_state, target_dd, scheme_dd], outputs=[combo_mult])
+            scheme_dd.change(_update_combo_mult, inputs=[app_state, target_dd, scheme_dd], outputs=[combo_mult])
+    
+            combo_mult.change(
+                _expand_combo_todos,
+                inputs=[app_state, target_dd, scheme_dd, combo_mult],
+                outputs=[combo_mult],
+            ).then(
+                update_comparador,
+                inputs=[app_state, target_dd, scheme_dd, combo_mult],
+                outputs=[cmp_table, cmp_mae, cmp_r2, cmp_mej],
+            )
+    
+            refresh_btn.click(update_explorer, inputs=[app_state], outputs=[explorer_table])
+            demo.load(update_explorer, inputs=[app_state], outputs=[explorer_table])
+    
+            export_btn.click(
+                export_tables,
+                inputs=[app_state, target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd],
+                outputs=[out_metrics_file, out_preds_file, out_imp_file, out_md_file],
             )
 
+            # initial render
+            demo.load(
+                _update_all_main,
+                inputs=[app_state, target_dd, scheme_dd, combo_dd, variedad_dd, fundo_dd],
+                outputs=[
+                    resumen_md,
+                    resumen_table,
+                    resumen_scatter,
+                    orig_msg,
+                    fig_box_var,
+                    fig_ts_target,
+                    fig_box_fundo,
+                    fig_ts_pred,
+                    predictor_dd,
+                    perf_table,
+                    perf_scatter,
+                    perf_boxplot_msg,
+                    perf_boxplot_img,
+                    lofo_table,
+                    lofo_rank,
+                ],
+            )
+
+            demo.load(
+                update_importancia,
+                inputs=[app_state, target_dd, scheme_dd, combo_dd, tipo_imp_dd],
+                outputs=[imp_msg, imp_plot, imp_table],
+            )
+    
+    
+        
         with gr.Tab("🔗 Integración conceptual"):
             gr.Markdown(
                 """
