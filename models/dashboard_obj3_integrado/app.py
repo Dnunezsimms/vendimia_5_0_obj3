@@ -76,8 +76,10 @@ except ImportError:
 
 
 
-def _safe(df: pd.DataFrame | None) -> pd.DataFrame:
-    return df if isinstance(df, pd.DataFrame) else pd.DataFrame()
+def _safe(df: pd.DataFrame | None, max_rows: int = 1000) -> pd.DataFrame:
+    if not isinstance(df, pd.DataFrame) or df.empty:
+        return pd.DataFrame()
+    return df.head(max_rows)
 
 
 def _markdown_status(state: dict) -> str:

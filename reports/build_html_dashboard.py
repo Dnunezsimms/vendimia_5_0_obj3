@@ -236,14 +236,19 @@ def build_complete_html_dashboard():
     # Pre-calcular mapa JS para menús en cascada y paneles TS
     catalog_js_map = {}
     ts_panels_html = ""
+    # To avoid 450+ MB HTML files, we restrict the pre-generated plots to just the first combination.
+    _sources = _sources[:1]
+    _first_stations = _first_stations[:1]
+    _first_vars = _first_vars[:1]
+
     for source in _sources:
         catalog_js_map[source] = {}
-        stations = _catalog_stations.get(source, [])
+        stations = _first_stations
         for st in stations:
             vars_avail = get_climate_station_variables(source, st) if st else []
             catalog_js_map[source][st] = vars_avail
             freqs = ["diaria"] if source == "INIA/Agromet" else ["horaria", "diaria"]
-            for freq in freqs:
+            for freq in freqs[:1]:
                 freq_key = "daily" if freq == "diaria" else "hourly"
                 df_clim = load_climate_station_series(source, st, freq_key) if st else pd.DataFrame()
                 for var in vars_avail:
@@ -282,6 +287,11 @@ def build_complete_html_dashboard():
     tv_tipo_options = "".join([f'<option value="{b}" {"selected" if b == default_tipo else ""}>{b.replace("_", " ").title()}</option>' for b in bf_tipos])
 
     tv_panels_html = ""
+    bf_fundos = [default_fundo]
+    bf_temps = [default_temp]
+    bf_vars = [default_var]
+    bf_tipos = [default_tipo]
+
     for f in bf_fundos:
         for t in bf_temps:
             for v in bf_vars:
@@ -335,6 +345,9 @@ def build_complete_html_dashboard():
     t0_var_options = "".join([f'<option value="{v}" {"selected" if v == "Todas" else ""}>{v}</option>' for v in vars_t0])
 
     t0_panels_html = ""
+    fundos_t0 = fundos_t0[:1]
+    vars_t0 = vars_t0[:1]
+
     for f in fundos_t0:
         for v in vars_t0:
             panel_id = f"t0_{clean_id(f)}_{clean_id(v)}"
@@ -380,6 +393,11 @@ def build_complete_html_dashboard():
     mat_temp_options = "".join([f'<option value="{t}" {"selected" if t == "Todas las temporadas" else ""}>{t}</option>' for t in mat_temps])
 
     mat_panels_html = ""
+    mat_fundos = ["Todos"]
+    mat_vars = ["Todas"]
+    mat_temps = ["Todas las temporadas"]
+    maturity_vars_choices = [c for c in maturity_vars_choices if c[1] == default_mat_col] if default_mat_col else maturity_vars_choices[:1]
+
     for _, col in maturity_vars_choices:
         for f in mat_fundos:
             for v in mat_vars:
@@ -406,6 +424,8 @@ def build_complete_html_dashboard():
 
     phen_var_options = "".join([f'<option value="{v}" {"selected" if v == default_phen_var else ""}>{v}</option>' for v in phenolic_vars])
     phen_panels_html = ""
+    phenolic_vars = phenolic_vars[:1]
+
     for v in phenolic_vars:
         panel_id = f"phen_{clean_id(v)}"
         is_active = (v == default_phen_var)
@@ -426,6 +446,9 @@ def build_complete_html_dashboard():
     mod_scheme_options = "".join([f'<option value="{s}" {"selected" if s == "Todos" else ""}>{s}</option>' for s in schemes])
 
     mod_panels_html = ""
+    model_targets = model_targets[:1]
+    schemes = schemes[:1]
+
     for t in model_targets:
         for s in schemes:
             panel_id = f"mod_{clean_id(t)}_{clean_id(s)}"

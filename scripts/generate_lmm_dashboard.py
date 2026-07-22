@@ -80,12 +80,27 @@ def generate_dashboard():
     fig_mae.update_layout(template="plotly_dark", plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
 
     # 3. Bar plot of AIC
-    class NumpyEncoder(json.JSONEncoder):
-        def default(self, obj):
-            import numpy as np
-            if isinstance(obj, np.ndarray):
-                return obj.tolist()
-            return super().default(obj)
+    def strip_bdata(d):
+        import base64, struct
+        import numpy as np
+        import pandas as pd
+        if isinstance(d, np.ndarray):
+            return d.tolist()
+        if isinstance(d, dict):
+            if 'bdata' in d and 'dtype' in d:
+                decoded = base64.b64decode(d['bdata'])
+                if d['dtype'] == 'f8':
+                    return list(struct.unpack(f"{len(decoded)//8}d", decoded))
+                elif d['dtype'] == 'i8':
+                    return list(struct.unpack(f"{len(decoded)//8}q", decoded))
+                elif d['dtype'] == 'i4':
+                    return list(struct.unpack(f"{len(decoded)//4}i", decoded))
+            return {k: strip_bdata(v) for k, v in d.items()}
+        elif isinstance(d, (list, tuple)):
+            return [strip_bdata(i) for i in d]
+        elif pd.isna(d):
+            return None
+        return d
 
     if 'AIC_Global' in df_res.columns:
         fig_aic = px.bar(
@@ -95,13 +110,13 @@ def generate_dashboard():
         )
         fig_aic.update_layout(template="plotly_dark", plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
         
-        html_content += f"var aic_data = {json.dumps(fig_aic.to_dict(), cls=NumpyEncoder)};\n"
+        html_content += f"var aic_data = {json.dumps(strip_bdata(fig_aic.to_dict()))};\n"
         html_content += f"Plotly.newPlot('aic_plot', aic_data.data, aic_data.layout);\n"
     
-    html_content += f"var r2_data = {json.dumps(fig_r2.to_dict(), cls=NumpyEncoder)};\n"
+    html_content += f"var r2_data = {json.dumps(strip_bdata(fig_r2.to_dict()))};\n"
     html_content += f"Plotly.newPlot('bar_plot', r2_data.data, r2_data.layout);\n"
     
-    html_content += f"var mae_data = {json.dumps(fig_mae.to_dict(), cls=NumpyEncoder)};\n"
+    html_content += f"var mae_data = {json.dumps(strip_bdata(fig_mae.to_dict()))};\n"
     html_content += f"Plotly.newPlot('mae_plot', mae_data.data, mae_data.layout);\n"
     
     # 3. Scatter for Brix vs GDA (if exists)
@@ -119,7 +134,7 @@ def generate_dashboard():
         fig_scatter.add_shape(type="line", x0=min_val, y0=min_val, x1=max_val, y1=max_val, line=dict(color="white", dash="dash"))
         fig_scatter.update_layout(template="plotly_dark", plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
         
-        html_content += f"var scatter_data = {json.dumps(fig_scatter.to_dict(), cls=NumpyEncoder)};\n"
+        html_content += f"var scatter_data = {json.dumps(strip_bdata(fig_scatter.to_dict()))};\n"
         html_content += f"Plotly.newPlot('scatter_brix', scatter_data.data, scatter_data.layout);\n"
     
     html_content += """
