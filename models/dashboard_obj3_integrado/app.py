@@ -503,11 +503,6 @@ def build_app() -> gr.Blocks:
     maturity_vars = [c for c in ["brix", "pH", "acidez_sulfurica", "acidez_tartarica", "peso_baya", "azucar_real_baya_g"] if c in maturity_technical.columns]
     if not maturity_vars:
         maturity_vars = find_columns(maturity_df, ["brix", "ph", "acidez", "peso", "azucar"]) or numeric_columns(maturity_df)
-    phenolic_df = pd.concat([luis["original_tintas"], maturity["raw_2026"]], ignore_index=True, sort=False)
-    phenolic_vars = find_columns(phenolic_df, ["antoc", "tanino", "fenol", "hplc", "uv"]) or numeric_columns(phenolic_df)
-    model_metrics = pd.concat([luis["metrics_rf"], luis["metrics_pysr"]], ignore_index=True, sort=False)
-    model_targets = ["Todos"] + sorted(model_metrics.get("target_key", pd.Series(dtype=str)).dropna().astype(str).unique().tolist())
-    schemes = ["Todos"] + sorted(model_metrics.get("scheme", pd.Series(dtype=str)).dropna().astype(str).unique().tolist())
 
     with gr.Blocks(title="Vendimia 5.0 — Plataforma Exploratoria Objetivo 3") as demo:
         gr.Markdown(
