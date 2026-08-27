@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos Terreno - Vendimia 5.0</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #31102f 100%);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #8b5cf6;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-gradient);
+            background-attachment: fixed;
+            color: var(--text-main);
+            margin: 0;
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #ffffff, #e2e8f0, #c4b5fd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .directory-container {
+            width: 100%;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .region-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+        .region-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(139, 92, 246, 0.4);
+        }
+        .region-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #c4b5fd;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 0.5rem;
+        }
+        .contact-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .contact-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        .fund-name {
+            font-weight: 500;
+            color: #f1f5f9;
+        }
+        .person-info {
+            color: var(--text-muted);
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .phone {
+            color: #a7f3d0;
+            font-family: monospace;
+            font-size: 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+        }
+        .btn-back {
+            margin-top: 3rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #c4b5fd;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+        }
+        .btn-back:hover {
+            background: rgba(139, 92, 246, 0.2);
+            transform: translateX(-5px);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Directorio de Contactos en Terreno</h1>
+        <p class="subtitle">Personal clave y administradores de fundos para coordinación de accesos y mantenimientos operativos (Vendimia 5.0)</p>
+    </header>
+    
+    <div class="directory-container">
+        
+        <div class="region-card">
+            <div class="region-title"><i class="fa-solid fa-mountain"></i> Norte / RM</div>
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <span class="fund-name">Quinta Maipo</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Alonso <span class="phone">+56 9 7306 4624</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="region-card">
+            <div class="region-title"><i class="fa-solid fa-sun"></i> Limarí</div>
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <span class="fund-name">Quebrada Seca</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Merlín <span class="phone">+56 9 6834 0709</span></span>
+                </li>
+                <li class="contact-item">
+                    <span class="fund-name">Los Acacios</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Por confirmar <span class="phone">+56 9 3413 5771</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="region-card">
+            <div class="region-title"><i class="fa-solid fa-leaf"></i> Cachapoal / Rapel</div>
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <span class="fund-name">Idahue</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Patricio Yáñez <span class="phone">+56 9 5864 2479</span></span>
+                </li>
+                <li class="contact-item">
+                    <span class="fund-name">Idahue</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Ítalo <span class="phone">+56 9 8838 0723</span></span>
+                </li>
+                <li class="contact-item">
+                    <span class="fund-name">Peumo</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Por definir <span class="phone">Pendiente</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="region-card">
+            <div class="region-title"><i class="fa-solid fa-wine-glass"></i> Colchagua</div>
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <span class="fund-name">Nilahue</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Joksan <span class="phone">+56 9 4071 2980</span></span>
+                </li>
+                <li class="contact-item">
+                    <span class="fund-name">Nilahue</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Luis Parra <span class="phone">+56 9 5400 4890</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="region-card">
+            <div class="region-title"><i class="fa-solid fa-water"></i> Maule</div>
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <span class="fund-name">Lourdes</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Raúl Morales <span class="phone">+56 9 6236 9396</span></span>
+                </li>
+                <li class="contact-item">
+                    <span class="fund-name">Keule</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Héctor <span class="phone">+56 9 3374 8344</span></span>
+                </li>
+                <li class="contact-item">
+                    <span class="fund-name">Keule / Villa Alegre</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Ariel Contreras <span class="phone">+56 9 8823 4736</span></span>
+                </li>
+                <li class="contact-item">
+                    <span class="fund-name">Villa Alegre</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Damián <span class="phone">+56 9 5056 2343</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="region-card">
+            <div class="region-title"><i class="fa-solid fa-truck-fast"></i> Otros</div>
+            <ul class="contact-list">
+                <li class="contact-item">
+                    <span class="fund-name">Pesos de Cosechas</span>
+                    <span class="person-info"><i class="fa-solid fa-user"></i> Romana <span class="phone">+56 9 9826 3803</span></span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="btn-back">
+        <i class="fa-solid fa-arrow-left"></i> Volver a la Suite
+    </a>
+</body>
+</html>
