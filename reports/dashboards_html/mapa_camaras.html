@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_aa9245f0560dc4f271f545b5f9419b9a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+</head>
+<body>
+<a href="index.html" style="position: absolute; top: 20px; left: 20px; z-index: 2000; background-color: #10b981; color: white; padding: 10px 20px; text-decoration: none; font-family: sans-serif; font-weight: bold; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.3);"><i class="fa fa-arrow-left"></i> Volver a la Suite</a>
+
+    
+    
+ <h3 align="center" style="font-size:20px; font-family: sans-serif; background-color: rgba(255,255,255,0.85); 
+ padding: 10px; margin: 0; position: absolute; top: 10px; left: 50%; transform: translateX(-50%); 
+ z-index: 1000; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.2);"><b>Red de Cámaras Fenológicas - Vendimia 5.0</b></h3>
+ 
+    
+            <div class="folium-map" id="map_aa9245f0560dc4f271f545b5f9419b9a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_aa9245f0560dc4f271f545b5f9419b9a = L.map(
+                "map_aa9245f0560dc4f271f545b5f9419b9a",
+                {
+                    center: [-33.5, -71.2],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d58568af36d777b612e44d43a8385c5a = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Tiles \u0026copy; Esri \u0026mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_d58568af36d777b612e44d43a8385c5a.addTo(map_aa9245f0560dc4f271f545b5f9419b9a);
+        
+    
+            var marker_f0475c79038123e719ce5716c423b97a = L.marker(
+                [-33.734866, -70.799143],
+                {
+}
+            ).addTo(map_aa9245f0560dc4f271f545b5f9419b9a);
+        
+    
+            var icon_6af1de2a7b8c3a55e80a60481dfa0945 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_70e2d1c5d69ba405e8b67dea06674ade = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_df0c1e37d93950fe9f1c374782308c6b = $(`<div id="html_df0c1e37d93950fe9f1c374782308c6b" style="width: 100.0%; height: 100.0%;"><div style='font-family: sans-serif; min-width: 120px;'><b>QUINTA MAIPO</b><br>Lat: -33.7349<br>Lon: -70.7991</div></div>`)[0];
+                popup_70e2d1c5d69ba405e8b67dea06674ade.setContent(html_df0c1e37d93950fe9f1c374782308c6b);
+            
+        
+
+        marker_f0475c79038123e719ce5716c423b97a.bindPopup(popup_70e2d1c5d69ba405e8b67dea06674ade)
+        ;
+
+        
+    
+    
+            marker_f0475c79038123e719ce5716c423b97a.bindTooltip(
+                `<div>
+                     <span style='font-family: sans-serif; font-weight: bold;'>QUINTA MAIPO</span>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f0475c79038123e719ce5716c423b97a.setIcon(icon_6af1de2a7b8c3a55e80a60481dfa0945);
+            
+    
+            var marker_9441599cf30224f44368eedfd7e938b0 = L.marker(
+                [-35.444119, -71.832144],
+                {
+}
+            ).addTo(map_aa9245f0560dc4f271f545b5f9419b9a);
+        
+    
+            var icon_c28856ccd3752964fcb92215c95cc558 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5d34362a6d9fa6ba9f7df529f916261b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59b8b5689f71a9326e323aa92906bbd1 = $(`<div id="html_59b8b5689f71a9326e323aa92906bbd1" style="width: 100.0%; height: 100.0%;"><div style='font-family: sans-serif; min-width: 120px;'><b>LOURDES</b><br>Lat: -35.4441<br>Lon: -71.8321</div></div>`)[0];
+                popup_5d34362a6d9fa6ba9f7df529f916261b.setContent(html_59b8b5689f71a9326e323aa92906bbd1);
+            
+        
+
+        marker_9441599cf30224f44368eedfd7e938b0.bindPopup(popup_5d34362a6d9fa6ba9f7df529f916261b)
+        ;
+
+        
+    
+    
+            marker_9441599cf30224f44368eedfd7e938b0.bindTooltip(
+                `<div>
+                     <span style='font-family: sans-serif; font-weight: bold;'>LOURDES</span>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9441599cf30224f44368eedfd7e938b0.setIcon(icon_c28856ccd3752964fcb92215c95cc558);
+            
+    
+            var marker_31eb79122398b38fc6f04919bab8b925 = L.marker(
+                [-34.69985, -71.768892],
+                {
+}
+            ).addTo(map_aa9245f0560dc4f271f545b5f9419b9a);
+        
+    
+            var icon_d66651b2283cdcf995e5f1ecf0f5e34e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f98ef687362f1a35230a4ef25fc51ecf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_057e2e5deff3c7476a3c12956af915aa = $(`<div id="html_057e2e5deff3c7476a3c12956af915aa" style="width: 100.0%; height: 100.0%;"><div style='font-family: sans-serif; min-width: 120px;'><b>NILAHUE</b><br>Lat: -34.6998<br>Lon: -71.7689</div></div>`)[0];
+                popup_f98ef687362f1a35230a4ef25fc51ecf.setContent(html_057e2e5deff3c7476a3c12956af915aa);
+            
+        
+
+        marker_31eb79122398b38fc6f04919bab8b925.bindPopup(popup_f98ef687362f1a35230a4ef25fc51ecf)
+        ;
+
+        
+    
+    
+            marker_31eb79122398b38fc6f04919bab8b925.bindTooltip(
+                `<div>
+                     <span style='font-family: sans-serif; font-weight: bold;'>NILAHUE</span>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_31eb79122398b38fc6f04919bab8b925.setIcon(icon_d66651b2283cdcf995e5f1ecf0f5e34e);
+            
+    
+            var marker_55ed253bb676c01fb842f804ab92e9d2 = L.marker(
+                [-34.490654, -71.203366],
+                {
+}
+            ).addTo(map_aa9245f0560dc4f271f545b5f9419b9a);
+        
+    
+            var icon_7de9e40c95f8ad8496ded958eb8e7d1a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_24ff645e8c67245611984937868c2052 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4a3a287b7ead4b932f87facbf97f0281 = $(`<div id="html_4a3a287b7ead4b932f87facbf97f0281" style="width: 100.0%; height: 100.0%;"><div style='font-family: sans-serif; min-width: 120px;'><b>IDAHUE</b><br>Lat: -34.4907<br>Lon: -71.2034</div></div>`)[0];
+                popup_24ff645e8c67245611984937868c2052.setContent(html_4a3a287b7ead4b932f87facbf97f0281);
+            
+        
+
+        marker_55ed253bb676c01fb842f804ab92e9d2.bindPopup(popup_24ff645e8c67245611984937868c2052)
+        ;
+
+        
+    
+    
+            marker_55ed253bb676c01fb842f804ab92e9d2.bindTooltip(
+                `<div>
+                     <span style='font-family: sans-serif; font-weight: bold;'>IDAHUE</span>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_55ed253bb676c01fb842f804ab92e9d2.setIcon(icon_7de9e40c95f8ad8496ded958eb8e7d1a);
+            
+    
+            var marker_6cd678e921c9b0790b3bd80b2253787f = L.marker(
+                [-30.612, -71.196],
+                {
+}
+            ).addTo(map_aa9245f0560dc4f271f545b5f9419b9a);
+        
+    
+            var icon_4d51a73bb7ca9a70fcfc70916df93b67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c58368059bdb0d6587deb978b6f365e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6929f5420a8fd5d6c5c8038162152027 = $(`<div id="html_6929f5420a8fd5d6c5c8038162152027" style="width: 100.0%; height: 100.0%;"><div style='font-family: sans-serif; min-width: 120px;'><b>LOS ACACIOS</b><br>Lat: -30.6120<br>Lon: -71.1960</div></div>`)[0];
+                popup_5c58368059bdb0d6587deb978b6f365e.setContent(html_6929f5420a8fd5d6c5c8038162152027);
+            
+        
+
+        marker_6cd678e921c9b0790b3bd80b2253787f.bindPopup(popup_5c58368059bdb0d6587deb978b6f365e)
+        ;
+
+        
+    
+    
+            marker_6cd678e921c9b0790b3bd80b2253787f.bindTooltip(
+                `<div>
+                     <span style='font-family: sans-serif; font-weight: bold;'>LOS ACACIOS</span>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6cd678e921c9b0790b3bd80b2253787f.setIcon(icon_4d51a73bb7ca9a70fcfc70916df93b67);
+            
+    
+            var marker_3acba3a3b86df49b9e68f56a5f685517 = L.marker(
+                [-30.527093, -71.450252],
+                {
+}
+            ).addTo(map_aa9245f0560dc4f271f545b5f9419b9a);
+        
+    
+            var icon_73a5f6d34b0e390865d69a6abc0ff2af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_44529c87dac1e261fa581e4ef02cd35f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9d74cf60d988ebfda7bb2dee3912473d = $(`<div id="html_9d74cf60d988ebfda7bb2dee3912473d" style="width: 100.0%; height: 100.0%;"><div style='font-family: sans-serif; min-width: 120px;'><b>QUEBRADA SECA</b><br>Lat: -30.5271<br>Lon: -71.4503</div></div>`)[0];
+                popup_44529c87dac1e261fa581e4ef02cd35f.setContent(html_9d74cf60d988ebfda7bb2dee3912473d);
+            
+        
+
+        marker_3acba3a3b86df49b9e68f56a5f685517.bindPopup(popup_44529c87dac1e261fa581e4ef02cd35f)
+        ;
+
+        
+    
+    
+            marker_3acba3a3b86df49b9e68f56a5f685517.bindTooltip(
+                `<div>
+                     <span style='font-family: sans-serif; font-weight: bold;'>QUEBRADA SECA</span>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3acba3a3b86df49b9e68f56a5f685517.setIcon(icon_73a5f6d34b0e390865d69a6abc0ff2af);
+            
+    
+            var marker_5c9a0ae34210a66b169f2cbc5cc13724 = L.marker(
+                [-35.867432, -72.051043],
+                {
+}
+            ).addTo(map_aa9245f0560dc4f271f545b5f9419b9a);
+        
+    
+            var icon_2719100e41ae7730d790e682f469dc56 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_49f7b38301bfd423298cb2034603e971 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_287124a0bbf0fe9505a821eb61ecb8ec = $(`<div id="html_287124a0bbf0fe9505a821eb61ecb8ec" style="width: 100.0%; height: 100.0%;"><div style='font-family: sans-serif; min-width: 120px;'><b>KEULE</b><br>Lat: -35.8674<br>Lon: -72.0510</div></div>`)[0];
+                popup_49f7b38301bfd423298cb2034603e971.setContent(html_287124a0bbf0fe9505a821eb61ecb8ec);
+            
+        
+
+        marker_5c9a0ae34210a66b169f2cbc5cc13724.bindPopup(popup_49f7b38301bfd423298cb2034603e971)
+        ;
+
+        
+    
+    
+            marker_5c9a0ae34210a66b169f2cbc5cc13724.bindTooltip(
+                `<div>
+                     <span style='font-family: sans-serif; font-weight: bold;'>KEULE</span>
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5c9a0ae34210a66b169f2cbc5cc13724.setIcon(icon_2719100e41ae7730d790e682f469dc56);
+            
+    
+            L.control.fullscreen(
+                {
+  "position": "topright",
+  "title": "Pantalla Completa",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_aa9245f0560dc4f271f545b5f9419b9a);
+        
+    
+            var measure_control_213f271416b80e8e54e1a96ce44f3e3f = new L.Control.Measure(
+                {
+  "position": "bottomleft",
+  "primaryLengthUnit": "meters",
+  "secondaryLengthUnit": "miles",
+  "primaryAreaUnit": "sqmeters",
+  "secondaryAreaUnit": "acres",
+  "activeColor": "orange",
+  "completedColor": "red",
+});
+            map_aa9245f0560dc4f271f545b5f9419b9a.addControl(measure_control_213f271416b80e8e54e1a96ce44f3e3f);
+
+            // Workaround for using this plugin with Leaflet>=1.8.0
+            // https://github.com/ljagis/leaflet-measure/issues/171
+            L.Control.Measure.include({
+                _setCaptureMarkerIcon: function () {
+                    // disable autopan
+                    this._captureMarker.options.autoPanOnFocus = false;
+                    // default function
+                    this._captureMarker.setIcon(
+                        L.divIcon({
+                            iconSize: this._map.getSize().multiplyBy(2)
+                        })
+                    );
+                },
+            });
+
+        
+    
+            map_aa9245f0560dc4f271f545b5f9419b9a.fitBounds(
+                [[-36.067432000000004, -72.25104300000001], [-30.327093, -70.599143]],
+                {}
+            );
+        
+</script>
+</html>
