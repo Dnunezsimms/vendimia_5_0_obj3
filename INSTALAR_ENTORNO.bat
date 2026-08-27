@@ -1,4 +1,4 @@
-﻿@echo off
+@echo off
 echo ========================================================
 echo   Instalador de Entorno - Suite Vendimia 5.0
 echo ========================================================
