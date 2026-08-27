@@ -1,9 +1,9 @@
-import pandas as pd
+﻿import pandas as pd
 import numpy as np
 from pathlib import Path
 
 def audit_gaps():
-    root_dir = Path(r"C:\projects\vendimia_5_0_obj3_clean")
+    root_dir = Path(__file__).resolve().parent.parent.parent
     raw_hourly_dir = root_dir / "data" / "raw" / "climate" / "hourly"
     
     results = []
@@ -84,3 +84,4 @@ def audit_gaps():
 
 if __name__ == "__main__":
     audit_gaps()
+
