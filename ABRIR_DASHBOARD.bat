@@ -1,25 +1,15 @@
 @echo off
-title Vendimia 5.0 - Dashboard Obj3
-cd /d "%~dp0"
-
-echo ==========================================================
-echo    Iniciando Servidor del Dashboard Integrado Obj. 3...
-echo ==========================================================
+echo ========================================================
+echo   Iniciando Suite Vendimia 5.0 - Objetivo 3
+echo ========================================================
 echo.
-echo Carga de modelos y tablas pesadas en progreso...
-echo Por favor no cierres esta ventana negra mientras utilices el dashboard.
+echo 1) Levantando Servidor Gradio en segundo plano (Puerto 7860)...
+start "Servidor Gradio Obj3" /min "C:\Users\dnunezs\AppData\Local\miniconda3\envs\vendimia_obj3\python.exe" "C:\projects\vendimia_5_0_obj3_clean\reports\run_gradio_dashboard.py"
+
+echo 2) Abriendo la Suite Central (HTML) en tu navegador...
+timeout /t 3 /nobreak >nul
+start "" "C:\projects\vendimia_5_0_obj3_clean\reports\dashboards_html\index.html"
+
 echo.
-
-:: Abrir la pagina de espera/acceso en segundo plano tras 3 segundos
-start /b cmd /c "timeout /t 3 /nobreak >nul & start "" "%~dp0ACCESO_DASHBOARD.html""
-
-:: Lanzar motor python
-if exist "%LOCALAPPDATA%\miniconda3\envs\vendimia_obj3\python.exe" (
-    "%LOCALAPPDATA%\miniconda3\envs\vendimia_obj3\python.exe" -m models.dashboard_obj3_integrado.app --share
-) else if exist "%USERPROFILE%\miniconda3\envs\vendimia_obj3\python.exe" (
-    "%USERPROFILE%\miniconda3\envs\vendimia_obj3\python.exe" -m models.dashboard_obj3_integrado.app --share
-) else (
-    python -m models.dashboard_obj3_integrado.app --share
-)
-
-pause
+echo Listo. Puedes cerrar esta ventana.
+exit

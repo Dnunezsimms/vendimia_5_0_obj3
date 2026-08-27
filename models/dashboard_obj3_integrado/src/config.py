@@ -30,4 +30,4 @@ PHENOLOGY_PREPARED_DIR = REPO_ROOT / "data" / "processed" / "phenology_climate"
 LOG_DIR = DASHBOARD_DIR / "logs"
 
 HOST = "127.0.0.1"
-PORT = 7862
+PORT = 7860

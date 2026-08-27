@@ -599,7 +599,6 @@ def build_app() -> gr.Blocks:
             with gr.Tabs():
                 with gr.Tab("A. Curva Latitudinal T0 / Brotación"):
                     gr.Markdown(
-                        "> ⚠️ **EVALUACIÓN DE ERROR OPERACIONAL:** Los residuos (MAE y Sesgo) observados aquí reflejan la diferencia estricta entre el indicador de la regresión latitudinal vs la brotación real observada en campo.\n\n"
                         "**Auditoría espacial del gradiente fenológico.** "
                         "Muestra cómo el DOY de brotación y T0 (biofix Cabernet) varían con la latitud en los fundos monitoreados. "
                         "Los Acacios se excluye de la regresión por inconsistencias en la cobertura de datos."
@@ -608,13 +607,37 @@ def build_app() -> gr.Blocks:
                         gdd_latitudinal["diagnostico"],
                         gdd_latitudinal["regresiones"],
                     ))
+                    # Ecuaciones de Regresión
+                    reg_lat = gdd_latitudinal.get("regresiones", pd.DataFrame())
+                    eq_md = ""
+                    if not reg_lat.empty:
+                        reg_brot = reg_lat[reg_lat["regresion"].astype(str).str.contains("brotacion", case=False, na=False)]
+                        reg_t0 = reg_lat[reg_lat["regresion"].astype(str).str.contains("t0", case=False, na=False)]
+                        
+                        brot_str = ""
+                        if not reg_brot.empty:
+                            p = reg_brot.iloc[0]["pendiente"]
+                            i = reg_brot.iloc[0]["intercepto"]
+                            r2 = reg_brot.iloc[0]["r2"]
+                            brot_str = f"> **🌱 Ecuación de Brotación:** `DOY Brotación = {p:.2f} × Latitud + {i:.2f}` &nbsp; *(R² = {r2:.2f})*"
+                            
+                        t0_str = ""
+                        if not reg_t0.empty:
+                            p2 = reg_t0.iloc[0]["pendiente"]
+                            i2 = reg_t0.iloc[0]["intercepto"]
+                            r2_2 = reg_t0.iloc[0]["r2"]
+                            t0_str = f"\n> \n> **🍇 Ecuación T0 Latitudinal:** `DOY T0 = {p2:.2f} × Latitud + {i2:.2f}` &nbsp; *(R² = {r2_2:.2f})*"
+                            
+                        if brot_str or t0_str:
+                            eq_md = brot_str + t0_str
+                    
+                    if eq_md:
+                        gr.Markdown(eq_md)
+
                     gr.Markdown("### 📋 Tabla de Diagnóstico por Fundo (Cabernet Sauvignon 2025–2026)")
                     gr.Dataframe(value=_safe(gdd_latitudinal["diagnostico"][[c for c in [
-                        "Fundo", "lat", "t0_operativo", "doy_t0_operativo",
-                        "fecha_brotacion", "doy_brotacion",
-                        "doy_brotacion_pred_reg_lat", "residuo_brotacion_latitud",
-                        "doy_t0_pred_reg_lat", "residuo_t0_latitud",
-                        "incluido_en_regresion", "motivo_exclusion",
+                        "Fundo", "lat", "doy_brotacion", "fecha_brotacion",
+                        "doy_t0_operativo", "fecha_t0"
                     ] if c in gdd_latitudinal["diagnostico"].columns]]), interactive=False, wrap=True)
 
                 with gr.Tab("B. Valle Térmico y Auditoría de Fecha de Inicio"):
@@ -632,20 +655,18 @@ def build_app() -> gr.Blocks:
                     bf_fundos = sorted(bf_df["fundo"].dropna().unique().tolist()) if not bf_df.empty else ["qba_seca"]
                     bf_temps = sorted(bf_df["temporada"].dropna().unique().tolist()) if not bf_df.empty else ["2025_2026"]
                     bf_vars = sorted(bf_df["variedad"].dropna().unique().tolist()) if not bf_df.empty else ["cabernet_sauvignon"]
-                    bf_tipos = sorted(bf_df["biofix_tipo"].dropna().unique().tolist()) if not bf_df.empty else ["1_agosto"]
 
                     with gr.Row():
                         bf_fundo_dd = gr.Dropdown(bf_fundos, value=bf_fundos[0] if bf_fundos else "", label="Fundo / Viñedo")
                         bf_temp_dd = gr.Dropdown(bf_temps, value=bf_temps[0] if bf_temps else "", label="Temporada")
                         bf_var_dd = gr.Dropdown(bf_vars, value=bf_vars[0] if bf_vars else "", label="Variedad")
-                        bf_tipo_dd = gr.Dropdown(bf_tipos, value="1_agosto" if "1_agosto" in bf_tipos else (bf_tipos[0] if bf_tipos else ""), label="Fecha candidata auditada")
 
                     init_bf_fig = gdd_biofix_timeseries_plot(
                         bf_df,
                         bf_fundos[0] if bf_fundos else "",
                         bf_temps[0] if bf_temps else "",
                         bf_vars[0] if bf_vars else "",
-                        "1_agosto" if "1_agosto" in bf_tipos else (bf_tipos[0] if bf_tipos else ""),
+                        "1_agosto",
                     )
                     bf_plot = gr.Plot(value=init_bf_fig)
 
@@ -655,8 +676,8 @@ def build_app() -> gr.Blocks:
                     gr.Markdown("### 🏔️ Matriz de Diagnóstico Detallado de Valle Térmico (`thermal_valley_diagnostics_by_biofix.csv`)")
                     tv_table = gr.Dataframe(value=_safe(tv_df), interactive=False, wrap=True)
 
-                    def update_bf_panel(f, t, v, b):
-                        fig = gdd_biofix_timeseries_plot(bf_df, f, t, v, b)
+                    def update_bf_panel(f, t, v):
+                        fig = gdd_biofix_timeseries_plot(bf_df, f, t, v, "1_agosto")
                         sub_sum = pd.DataFrame()
                         if not bf_sum.empty:
                             sub_sum = bf_sum[
@@ -673,41 +694,10 @@ def build_app() -> gr.Blocks:
                             ].copy()
                         return fig, _safe(sub_sum), _safe(sub_tv)
 
-                    for dd in [bf_fundo_dd, bf_temp_dd, bf_var_dd, bf_tipo_dd]:
-                        dd.change(update_bf_panel, [bf_fundo_dd, bf_temp_dd, bf_var_dd, bf_tipo_dd], [bf_plot, bf_table, tv_table])
+                    for dd in [bf_fundo_dd, bf_temp_dd, bf_var_dd]:
+                        dd.change(update_bf_panel, [bf_fundo_dd, bf_temp_dd, bf_var_dd], [bf_plot, bf_table, tv_table])
 
-                with gr.Tab("C. Evaluación Operacional (Residuo T0 Latitudinal)"):
-                    gr.Markdown("> ⚠️ **RECUERDE:** El T0 evaluado aquí es retrospectivo de referencia. Sirve para evaluar si el modelo latitudinal tiene sesgos geográficos sistemáticos.")
-                    f_lat_error_plot = gr.Plot(value=panel_a_operativo_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
-
-                with gr.Tab("D. Diagnóstico de Leakage (T0 Cerrado vs Latitudinal)"):
-                    gr.Markdown(
-                        "> **🔍 EVALUACIÓN METODOLÓGICA DE LEAKAGE:** El **T0 Cerrado** se infirió retrospectivamente ajustando el umbral a la fecha de brotación observada (*data leakage*). "
-                        "El **T0 Latitudinal** es un candidato predictivo operacional legítimo, ciego a brotación observada."
-                    )
-                    with gr.Row():
-                        f_t0_comparison_plot = gr.Plot(value=panel_b_diagnostico_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
-                        f_baseline_plot = gr.Plot(value=baseline_comparison_plot(gdd.get("diagnostico_cs_reg", pd.DataFrame())))
-                    gr.Markdown("### 📋 Matriz de Diagnóstico y Alertas de Leakage (Cabernet Sauvignon)")
-                    f_alert_table = gr.Dataframe(value=_safe(cabernet_diagnostic_table(gdd.get("diagnostico_cs_reg", pd.DataFrame()))), interactive=False, wrap=True)
-
-                with gr.Tab("E. Auditoría Varietal"):
-                    gr.Markdown("### 📂 Comportamiento por Variedad en Pipeline Histórico\n*(Nota: Módulo configurado sobre T0 retrospectivo de referencia).*")
-                    with gr.Row():
-                        f_fundo = gr.Dropdown(fundos, value="Todos", label="Fundo / Viñedo")
-                        f_var = gr.Dropdown(variedades, value="Todas", label="Variedad")
-                    f_table = gr.Dataframe(value=_safe(gdd["resumen_t0"]), interactive=False, wrap=True)
-                    gr.Markdown("### 🧬 Registro de Matrices Emparejadas (Fenología + Clima)")
-                    gr.Dataframe(value=_safe(phenology["prepared_manifest"]), interactive=False, wrap=True)
-
-                    def update_fenologia(fundo, variedad):
-                        d = _filter_table(gdd["resumen_t0"], fundo, variedad)
-                        return _safe(d)
-
-                    f_fundo.change(update_fenologia, [f_fundo, f_var], [f_table])
-                    f_var.change(update_fenologia, [f_fundo, f_var], [f_table])
-
-                with gr.Tab("F. Plausibilidad Fisiológica (Frío Invernal)"):
+                with gr.Tab("C. Plausibilidad Fisiológica (Frío Invernal)"):
                     gr.Markdown("> **🧪 NOTA DE INVESTIGACIÓN:** Evaluación exploratoria de balance bioclimático previo a brotación.")
                     gr.Markdown("> ⚠️ **DATOS INCOMPLETOS:** La red climática presenta cortes de cobertura en julio-octubre 2025 que imposibilitan proyectar con certeza la acumulación final completa de letargo invernal.")
                     gr.Markdown("> **💡 DESGLOSE HORARIO VS DIARIO:** El cálculo de **Frío Invernal (Chill Portions)** requiere integración horaria continua (disponible hasta Junio 2025). La **Acumulación Térmica (GDD)** se integra desde registros diarios completos con alta precisión operacional.")

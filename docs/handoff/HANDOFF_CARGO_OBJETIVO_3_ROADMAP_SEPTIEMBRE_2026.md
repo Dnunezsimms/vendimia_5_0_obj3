@@ -2,7 +2,7 @@
 **Proyecto:** Vendimia 5.0 — Objetivo Específico 3 (Madurez y Fenología Predictiva)  
 **Titular del Cargo / Autor:** Diego Núñez Simms  
 **Líder Técnico / Receptor:** Sebastián Vargas Soto (`Seba`)  
-**Arquitectura e Integración:** Miguel Recabarren (`MR` / Vinewise) & Camilo Riveros (Asesoría Científica)  
+**Arquitectura e Integración:** Miguel Recabarren (`MR` / plataforma) & Camilo Riveros (Asesoría Científica)  
 **Fecha de Emisión del Documento:** 17 de julio de 2026  
 **Ubicación Canónica (`clean`):** `docs/handoff/HANDOFF_CARGO_OBJETIVO_3_ROADMAP_SEPTIEMBRE_2026.md`
 
@@ -34,7 +34,7 @@ C:\projects\vendimia_5_0_obj3\
 [Repositorio Limpio Instituciona / Entrega de Cargo]
 C:\projects\vendimia_5_0_obj3_clean\
  ├── docs/bitacora_reuniones/       # ACTAS OFICIALES Y DECISIONES SANCTIONADAS (Seba, Camilo, Miguel)
- ├── docs/handoff/                  # CATÁLOGO DE 3 CAPAS (Vinewise), ROADMAP y guías de traspaso
+ ├── docs/handoff/                  # CATÁLOGO DE 3 CAPAS (plataforma), ROADMAP y guías de traspaso
  ├── src/processing/                # Scripts de integración climatológica y biofixes (T0 / GDD)
  └── models/indicador_biologico/    # Notebooks canónicos de valles térmicos y gradiente latitudinal
 ```
@@ -46,7 +46,7 @@ C:\projects\vendimia_5_0_obj3_clean\
    Se fijó un único índice térmico canónico por modelo (`BEDD_acum` para Tintas/Chardonnay e `IFN_acum` para `Sauvignon Blanc`), eliminando la inflación espuria del $R^2$ observada en reportes automáticos (`PySR / PCA`).
 3. **Establecimiento del Biofix Fisiológico ($T_0$):**  
    Se formuló la regla de activación del receso invernal basada en el cumplimiento canónico de $>75\%$ de porciones de frío, eliminando el inicio arbitrario del 1 de septiembre (`MET-03`).
-4. **Empaquetamiento en Catálogo de 3 Capas para Vinewise:**  
+4. **Empaquetamiento en Catálogo de 3 Capas para plataforma:**  
    Traducción completa del Objetivo 3 (Datos $\to$ Cálculo $\to$ UI) para su consumo en la base de datos `PostgreSQL` en nube (`PLT-01 / Miguel Recabarren`).
 
 ---
@@ -78,8 +78,8 @@ Para garantizar un traspaso sin cabos sueltos, a continuación se distingue con 
   * `ACTA_02_SEBASTIAN_LOGISTICA_Y_OUTLIERS_20260717.md`
   * `ACTA_03_CAMILO_RIVEROS_LMM_Y_COLINEALIDAD_20260717.md`
   * `ACTA_04_MIGUEL_RECABARREN_PLATAFORMA_Y_CATALOGO_3_CAPAS_20260717.md`
-* ✔️ **Catálogo Canónico en 3 Capas de Vinewise (`docs/handoff/`):**
-  * `CATALOGO_FUNCIONAL_OBJ3_3_CAPAS_VINEWISE.md` (Traduce el LMM, los índices BEDD/IFN, el biofix y los dashboards al formato exigido por Miguel).
+* ✔️ **Catálogo Canónico en 3 Capas de plataforma (`docs/handoff/`):**
+  * `CATALOGO_FUNCIONAL_OBJ3_3_CAPAS_plataforma.md` (Traduce el LMM, los índices BEDD/IFN, el biofix y los dashboards al formato exigido por Miguel).
 * ✔️ **Código y Visores Interactivos de Diagnóstico (`LMM Engine`):**
   * Script `build_html_dashboard.py` y salida HTML `visor_lmm_madurez_obj3.html` con 4 paneles interactivos demostrando el ajuste canónico y los efectos aleatorios.
 * ✔️ **Borradores de Comunicación Gubernanza / Proveedores:**
@@ -114,4 +114,4 @@ Para garantizar un traspaso sin cabos sueltos, a continuación se distingue con 
 ---
 
 ## 5. CONCLUSIÓN Y CIERRE DE ETAPA
-Al completar la revisión manual de los 5 puntos anteriores entre julio y septiembre de 2026, Diego Núñez Simms entregará un Objetivo Específico 3 **científicamente irreprochable, informáticamente interoperable en la plataforma Vinewise y logísticamente ejecutado en terreno**, dejando un estándar metodológico de primer nivel para las futuras vendimias del proyecto.
+Al completar la revisión manual de los 5 puntos anteriores entre julio y septiembre de 2026, Diego Núñez Simms entregará un Objetivo Específico 3 **científicamente irreprochable, informáticamente interoperable en la plataforma plataforma y logísticamente ejecutado en terreno**, dejando un estándar metodológico de primer nivel para las futuras vendimias del proyecto.

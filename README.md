@@ -76,3 +76,17 @@ Para análisis profundos en tiempo real con ejecución de código Python:
 
 ## Contacto y Responsable Técnico
 - **Diego Núñez Simms** — Análisis de datos, modelamiento biológico y trazabilidad técnica del Objetivo 3.
+---
+
+## ⚠️ Instrucciones Importantes para el uso de la Suite (Visores)
+
+Para acceder a los visores de la Suite (como el Visor de Objetivo 3 o Modelos LMM), debes asegurarte de iniciar correctamente el servidor en segundo plano:
+
+1. Ejecuta el archivo **ABRIR_DASHBOARD.bat** haciendo doble clic **una sola vez**.
+2. Se abrirá una ventana negra de consola (cmd) y de forma automática se abrirá la "Suite Central" en tu navegador.
+3. **¡IMPORTANTE!** No hagas clic en los botones de "Abrir Visor" de inmediato. Debes esperar a que la ventana de la consola termine de cargar los datos (suele tomar entre 15 a 20 segundos). 
+4. Sabrás que ya puedes usar los visores cuando en la consola aparezca exactamente el siguiente mensaje:
+   * Running on local URL:  http://127.0.0.1:7860
+5. A partir de ese momento, puedes hacer clic libremente en los visores desde el navegador.
+
+> **Nota:** Si la consola indica un puerto diferente (por ejemplo, 7861 o 7862), significa que probablemente ejecutaste el .bat más de una vez. En ese caso, cierra TODAS las ventanas negras de consola que tengas abiertas e inténtalo de nuevo desde el paso 1.

@@ -1,4 +1,4 @@
-from __future__ import annotations
+﻿from __future__ import annotations
 
 import pandas as pd
 import numpy as np
@@ -724,23 +724,30 @@ def latitudinal_regression_plot(
     x_texts = [f"{v}<br>({_doy_a_fecha_str(v)})" for v in x_ticks]
 
     fig.update_layout(
-        title="Auditoría Latitudinal: Biofix T0 y Brotación ELP4 Cabernet Sauvignon 2025–2026",
+        xaxis_title="Día del Año (DOY)",
+        yaxis_title="Latitud Sur [grados decimales] (Norte arriba)",
+        height=550,
+        margin=dict(l=150, r=40, t=60, b=70),
+        legend=dict(
+            orientation="h",
+            yanchor="bottom",
+            y=1.02,
+            xanchor="center",
+            x=0.5,
+            bgcolor="rgba(255,255,255,0.9)"
+        ),
         xaxis=dict(
-            title="DOY (Día del año - Calendario Primavera)",
             tickmode="array",
             tickvals=x_ticks,
             ticktext=x_texts,
             showgrid=True,
         ),
         yaxis=dict(
-            title="Latitud Sur [grados decimales] (Norte arriba)",
             tickmode="array",
             tickvals=tick_vals,
             ticktext=tick_text,
             showgrid=False,
-        ),
-        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1, bgcolor="rgba(255,255,255,0.9)"),
-        margin=dict(l=150, r=40, t=90, b=70),
+        )
     )
     return apply_corporate_style(fig, height=560)
 
@@ -895,3 +902,68 @@ def gdd_biofix_timeseries_plot(
     )
     return apply_corporate_style(fig, height=550)
 
+
+
+def plot_chill_ranking_2024_2025(df: pd.DataFrame) -> go.Figure:
+    if df.empty:
+        return empty_figure('Sin datos de indicadores de fro por fundo.')
+    d = df.copy()
+    valid_fundos = 'acacio|quebrada[_\s]*seca|idahue|ideahue|ucuquer|nilahue|lourdes|villa[_\s]*alegre|keule'
+    d = d[d['fundo'].str.contains(valid_fundos, case=False, regex=True, na=False)].copy()
+    if 'dynamic_chill_portions' not in d.columns:
+        return empty_figure('Falta la mtrica dynamic_chill_portions.')
+    # Sort by dynamic_chill_portions mean or total
+    d = d.sort_values(by=['fundo', 'season'])
+    
+    fig = px.bar(
+        d, 
+        x='dynamic_chill_portions', 
+        y='fundo', 
+        orientation='h',
+        color_discrete_sequence=WINE_PALETTE,
+        title='Ranking Consolidado de Acumulación de Frío'
+    )
+    fig.update_layout(xaxis_title='Porciones de Frío (Dynamic Chill Portions)', yaxis_title='Fundo', showlegend=False, coloraxis_showscale=False)
+    return apply_corporate_style(fig, height=600)
+
+def plot_chill_daily_evolution(df: pd.DataFrame, selected_fundo: str) -> go.Figure:
+    if df.empty:
+        return empty_figure('Sin datos de acumulacin diaria de fro.')
+    d = df.copy()
+    valid_fundos = 'acacio|quebrada[_\s]*seca|idahue|ideahue|ucuquer|nilahue|lourdes|villa[_\s]*alegre|keule'
+    d = d[d['fundo'].str.contains(valid_fundos, case=False, regex=True, na=False)].copy()
+    if selected_fundo != 'Todos':
+        d = d[d['fundo'] == selected_fundo].copy()
+        
+    d['timestamp'] = pd.to_datetime(d['timestamp'])
+    d['day_of_year'] = d['timestamp'].dt.dayofyear
+    d['season'] = d['timestamp'].dt.year.astype(str)
+    
+    # Calculate cumulative sum per fundo and season
+    d = d.sort_values(by=['fundo', 'season', 'day_of_year'])
+    d['cumulative_chill'] = d.groupby(['fundo', 'season'])['dynamic_chill_portions'].cumsum()
+    
+    title = f'Evolucin Diaria del Fro Invernal - {selected_fundo}' if selected_fundo != 'Todos' else 'Evolucin Diaria del Fro Invernal'
+    
+    if selected_fundo == 'Todos':
+        # If all, maybe group by fundo and season
+        fig = px.line(
+            d, 
+            x='day_of_year', 
+            y='cumulative_chill', 
+            color='fundo',
+            line_dash='season',
+            color_discrete_sequence=WINE_PALETTE,
+            title=title
+        )
+    else:
+        fig = px.line(
+            d, 
+            x='day_of_year', 
+            y='cumulative_chill', 
+                color_discrete_sequence=WINE_PALETTE,
+            title=title
+        )
+        
+    fig.update_layout(xaxis_title='Da del Ao (Calendario)', yaxis_title='Porciones de Fro Acumuladas')
+    return apply_corporate_style(fig, height=500)
