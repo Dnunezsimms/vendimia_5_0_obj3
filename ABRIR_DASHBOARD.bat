@@ -1,31 +1,33 @@
-﻿@echo off
+@echo off
 echo ========================================================
 echo   Iniciando Suite Vendimia 5.0 - Objetivo 3
 echo ========================================================
 echo.
 
-:: Cambiar al directorio raÃ­z del proyecto (donde estÃ¡ el .bat)
+:: Cambiar al directorio raíz del proyecto
 cd /d "%~dp0"
 
-:: Encontrar Conda dinÃ¡micamente en el perfil del usuario actual (funciona para Diego y Sergio)
 set CONDA_PATH=%USERPROFILE%\AppData\Local\miniconda3
 
-:: Verificar si el entorno vendimia_obj3 existe
 if not exist "%CONDA_PATH%\envs\vendimia_obj3\python.exe" (
-    echo [ERROR] No se encontro el entorno 'vendimia_obj3' en %CONDA_PATH%\envs\
-    echo Por favor, asegurate de haber creado el entorno Conda o instalalo.
+    echo [ERROR] No se encontro el entorno 'vendimia_obj3'.
+    echo Por favor, asegurate de haber corrido INSTALAR_ENTORNO.bat primero.
     pause
     exit /b
 )
 
-echo 1) Levantando Servidor Gradio en segundo plano (Puerto 7860)...
-start "Servidor Gradio Obj3" cmd /k "%CONDA_PATH%\envs\vendimia_obj3\python.exe" "reports\run_gradio_dashboard.py"
-
-echo 2) Abriendo la Suite Central (HTML) en tu navegador...
-timeout /t 3 /nobreak >nul
+echo 1) Abriendo la Suite Central (HTML) en tu navegador...
 start "" "reports\dashboards_html\index.html"
 
 echo.
-echo Listo. Puedes cerrar esta ventana.
-exit
+echo 2) Levantando Servidor Gradio local...
+echo (Manten esta ventana abierta mientras usas el dashboard. Si la cierras, el servidor se apagara)
+echo.
 
+:: Activar entorno y ejecutar python en la misma ventana
+call "%CONDA_PATH%\Scripts\activate.bat" vendimia_obj3
+python "reports\run_gradio_dashboard.py"
+
+echo.
+echo [AVISO] El servidor se ha detenido o ha ocurrido un error.
+pause
