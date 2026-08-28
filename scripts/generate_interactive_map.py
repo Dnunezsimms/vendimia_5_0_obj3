@@ -1,4 +1,4 @@
-﻿import os
+import os
 import pandas as pd
 import folium
 import re
@@ -11,16 +11,17 @@ csv_out = os.path.join(metadata_dir, "puntos_geospaciales.csv")
 
 puntos = []
 
-# 1. CÃ¡maras FenolÃ³gicas Manuales (del input directo)
+# 1. Cámaras Fenológicas Manuales (del input directo)
 manual_points = [
     {"nombre": "Camara Fenologica Mariposas", "tipo": "Camara Fenologica", "lat": -35.528553, "lon": -71.444700, "fuente": "Usuario"},
     {"nombre": "Camara Fenologica Quebrada Seca", "tipo": "Camara Fenologica", "lat": -30.526184, "lon": -71.450934, "fuente": "Usuario"},
     {"nombre": "Estacion Quebrada Seca (ATMOS 41/Zentra)", "tipo": "Estacion", "lat": -30.527093, "lon": -71.450252, "fuente": "Usuario"},
-    {"nombre": "Camara Fenologica Los Acacios", "tipo": "Camara Fenologica", "lat": -30.69947605605556, "lon": -71.28792590185242, "fuente": "Usuario"}
+    {"nombre": "Camara Fenologica Los Acacios", "tipo": "Camara Fenologica", "lat": -30.69947605605556, "lon": -71.28792590185242, "fuente": "Usuario"},
+    {"nombre": "Camara Fenologica Ucuquer", "tipo": "Camara Fenologica", "lat": -33.977944, "lon": -71.694333, "fuente": "Usuario"}
 ]
 puntos.extend(manual_points)
 
-# 2. Fundos Reales del Muestreo Madurez de InterÃ©s
+# 2. Fundos Reales del Muestreo Madurez de Interés
 fundos_interes = [
     'lourdes', 'mariposa', 'villa alegre', 'keule', 'nilahue', 'idahue', 
     'quebrada seca', 'los acacios', 'ucuquer', 'santa isabel', 'quebrada de agua', 
@@ -28,7 +29,7 @@ fundos_interes = [
 ]
 
 # Extraer coordenadas desde el HTML de mapas
-html_map_path = r"C:\Users\dnunezs\ViÃ±a Concha y Toro S.A\Vendimia 5.0 - UC\Proyecto\Madurez uva - IC\Muestreo Madurez equipo viticultura y enologÃ­a\Temporada 2026\1_DATA\maps\fundos_estaciones.html"
+html_map_path = r"C:\Users\dnunezs\Viña Concha y Toro S.A\Vendimia 5.0 - UC\Proyecto\Madurez uva - IC\Muestreo Madurez equipo viticultura y enología\Temporada 2026\1_DATA\maps\fundos_estaciones.html"
 if os.path.exists(html_map_path):
     with open(html_map_path, 'r', encoding='utf-8', errors='ignore') as f:
         text = f.read()
@@ -53,7 +54,7 @@ if os.path.exists(html_map_path):
                         "fuente": "fundos_estaciones.html"
                     })
 
-# 3. Estaciones de Clima Recomendadas (que acompaÃ±an los tratamientos)
+# 3. Estaciones de Clima Recomendadas (que acompañan los tratamientos)
 estaciones_validas = []
 tabla_maestra = os.path.join(metadata_dir, "tabla_maestra_clima_obj3_2025_2026.csv")
 if os.path.exists(tabla_maestra):
