@@ -107,7 +107,11 @@ def discover_artifacts(base_dir: Path = BASE_DIR) -> pd.DataFrame:
 
 
 def load_metrics(base_dir: Path = BASE_DIR) -> pd.DataFrame:
-    files = list(base_dir.glob("outputs/*/*/predictors__*/rf/*/metrics_per_split.csv"))
+    try:
+        files = list(base_dir.glob("outputs/*/*/predictors__*/rf/*/metrics_per_split.csv"))
+    except OSError as e:
+        logging.warning("No se pudieron buscar archivos metrics (ruta muy larga?): %s", e)
+        files = []
     logging.info("Found %s metrics_per_split.csv files under %s", len(files), base_dir / "outputs")
     dfs = []
     for f in files:
@@ -123,7 +127,11 @@ def load_metrics(base_dir: Path = BASE_DIR) -> pd.DataFrame:
 
 
 def load_predictions(base_dir: Path = BASE_DIR) -> pd.DataFrame:
-    files = list(base_dir.glob("outputs/*/*/predictors__*/rf/*/predictions.csv"))
+    try:
+        files = list(base_dir.glob("outputs/*/*/predictors__*/rf/*/predictions.csv"))
+    except OSError as e:
+        logging.warning("No se pudieron buscar archivos predictions (ruta muy larga?): %s", e)
+        files = []
     logging.info("Found %s predictions.csv files under %s", len(files), base_dir / "outputs")
     dfs = []
     for f in files:
@@ -139,8 +147,12 @@ def load_predictions(base_dir: Path = BASE_DIR) -> pd.DataFrame:
 
 
 def load_importance(base_dir: Path = BASE_DIR) -> tuple[pd.DataFrame, pd.DataFrame]:
-    shap_files = list(base_dir.glob("outputs/*/*/predictors__*/rf/*/shap_importance.csv"))
-    perm_files = list(base_dir.glob("outputs/*/*/predictors__*/rf/*/permutation_importance.csv"))
+    try:
+        shap_files = list(base_dir.glob("outputs/*/*/predictors__*/rf/*/shap_importance.csv"))
+        perm_files = list(base_dir.glob("outputs/*/*/predictors__*/rf/*/permutation_importance.csv"))
+    except OSError as e:
+        logging.warning("No se pudieron buscar archivos importance (ruta muy larga?): %s", e)
+        shap_files, perm_files = [], []
     logging.info(
         "Found %s permutation_importance.csv and %s shap_importance.csv files under %s",
         len(perm_files),
