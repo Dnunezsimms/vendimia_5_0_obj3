@@ -159,7 +159,7 @@ for _, row in df_puntos.iterrows():
         tooltip=row['nombre']
     ).add_to(m)
 
-map_path = os.path.join(html_out_dir, "mapa_geospacial.html")
+map_path = os.path.join(html_out_dir, "mapa_camaras.html")
 m.save(map_path)
 print(f"Mapa interactivo HTML generado en {map_path}")
 
