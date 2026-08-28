@@ -334,22 +334,37 @@ def _iter_files(base_dir: Path, suffixes: set[str]) -> list[Path]:
 
 def load_luis_artifacts() -> dict[str, pd.DataFrame]:
     outputs = LUIS_DASHBOARD_DIR / "outputs"
-    metrics = _load_many_csv(outputs.glob("*/*/predictors__*/rf/*/metrics_per_split.csv"))
-    pysr_metrics = _load_many_csv(outputs.glob("*/*/predictors__*/pysr/*/metrics_per_split.csv"))
-    predictions = _load_many_csv(outputs.glob("*/*/predictors__*/rf/*/predictions.csv"))
-    shap = _load_many_csv(outputs.glob("*/*/predictors__*/rf/*/shap_importance.csv"))
-    perm = _load_many_csv(outputs.glob("*/*/predictors__*/rf/*/permutation_importance.csv"))
-    original = _load_many_csv((LUIS_DASHBOARD_DIR / "data" / "prepared").glob("tintas_*.csv"))
-    manifest = read_table(LUIS_DASHBOARD_DIR / "data" / "prepared" / "manifest.csv")
-    return {
-        "metrics_rf": metrics,
-        "metrics_pysr": pysr_metrics,
-        "predictions_rf": predictions,
-        "shap": shap,
-        "permutation": perm,
-        "original_tintas": original,
-        "manifest": manifest,
-    }
+    try:
+        metrics = _load_many_csv(outputs.glob("*/*/predictors__*/rf/*/metrics_per_split.csv"))
+        pysr_metrics = _load_many_csv(outputs.glob("*/*/predictors__*/pysr/*/metrics_per_split.csv"))
+        predictions = _load_many_csv(outputs.glob("*/*/predictors__*/rf/*/predictions.csv"))
+        shap = _load_many_csv(outputs.glob("*/*/predictors__*/rf/*/shap_importance.csv"))
+        perm = _load_many_csv(outputs.glob("*/*/predictors__*/rf/*/permutation_importance.csv"))
+        original = _load_many_csv((LUIS_DASHBOARD_DIR / "data" / "prepared").glob("tintas_*.csv"))
+        manifest = read_table(LUIS_DASHBOARD_DIR / "data" / "prepared" / "manifest.csv")
+        return {
+            "metrics_rf": metrics,
+            "metrics_pysr": pysr_metrics,
+            "predictions_rf": predictions,
+            "shap": shap,
+            "permutation": perm,
+            "original_tintas": original,
+            "manifest": manifest,
+        }
+    except Exception as e:
+        import logging
+        logging.error(f"Rutas exceden limite de Windows: {e}")
+        import pandas as pd
+        empty = pd.DataFrame()
+        return {
+            "metrics_rf": empty,
+            "metrics_pysr": empty,
+            "predictions_rf": empty,
+            "shap": empty,
+            "permutation": empty,
+            "original_tintas": empty,
+            "manifest": empty,
+        }
 
 
 def audit_artifacts() -> pd.DataFrame:
