@@ -59,7 +59,7 @@ except ImportError:
     )
 # Luis dependencies have been stripped to improve dashboard performance.
 # Run app_original.py to access the full Interactive ML models suite.
-except ImportError:
+try:
     from src.luis_config import BASE_DIR as LUIS_BASE_DIR, CACHE_DIR as LUIS_CACHE_DIR
     from src.luis_data_loader import (
         available_combos, available_schemes, available_targets, detect_predictor_columns,
