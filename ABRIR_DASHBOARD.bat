@@ -4,7 +4,7 @@ echo   Iniciando Suite Vendimia 5.0 - Objetivo 3
 echo ========================================================
 echo.
 
-:: Cambiar al directorio raíz del proyecto
+:: Cambiar al directorio raÃ­z del proyecto
 cd /d "%~dp0"
 
 set CONDA_PATH=%USERPROFILE%\AppData\Local\miniconda3
@@ -26,8 +26,9 @@ echo.
 
 :: Activar entorno y ejecutar python en la misma ventana
 call "%CONDA_PATH%\Scripts\activate.bat" vendimia_obj3
-python "reports\run_gradio_dashboard.py"
+python "models\dashboard_obj3_integrado\app.py"
 
 echo.
 echo [AVISO] El servidor se ha detenido o ha ocurrido un error.
 pause
+
