@@ -387,13 +387,16 @@ def audit_artifacts() -> pd.DataFrame:
                     "modificado": path.stat().st_mtime if path.exists() else None,
                 }
             )
-    output_counts = {
-        "rf_metrics": len(list((LUIS_DASHBOARD_DIR / "outputs").glob("*/*/predictors__*/rf/*/metrics_per_split.csv"))),
-        "pysr_metrics": len(list((LUIS_DASHBOARD_DIR / "outputs").glob("*/*/predictors__*/pysr/*/metrics_per_split.csv"))),
-        "rf_predictions": len(list((LUIS_DASHBOARD_DIR / "outputs").glob("*/*/predictors__*/rf/*/predictions.csv"))),
-        "shap": len(list((LUIS_DASHBOARD_DIR / "outputs").glob("*/*/predictors__*/rf/*/shap_importance.csv"))),
-        "permutation": len(list((LUIS_DASHBOARD_DIR / "outputs").glob("*/*/predictors__*/rf/*/permutation_importance.csv"))),
-    }
+    try:
+        output_counts = {
+            "rf_metrics": len(list((LUIS_DASHBOARD_DIR / "outputs").glob("*/*/predictors__*/rf/*/metrics_per_split.csv"))),
+            "pysr_metrics": len(list((LUIS_DASHBOARD_DIR / "outputs").glob("*/*/predictors__*/pysr/*/metrics_per_split.csv"))),
+            "rf_predictions": len(list((LUIS_DASHBOARD_DIR / "outputs").glob("*/*/predictors__*/rf/*/predictions.csv"))),
+            "shap": len(list((LUIS_DASHBOARD_DIR / "outputs").glob("*/*/predictors__*/rf/*/shap_importance.csv"))),
+            "permutation": len(list((LUIS_DASHBOARD_DIR / "outputs").glob("*/*/predictors__*/rf/*/permutation_importance.csv"))),
+        }
+    except Exception:
+        output_counts = {"rf_metrics": 0, "pysr_metrics": 0, "rf_predictions": 0, "shap": 0, "permutation": 0}
     for key, count in output_counts.items():
         rows.append({"dominio": "modelos_luis", "archivo": key, "existe": count > 0, "bytes": count, "modificado": None})
     return pd.DataFrame(rows)
